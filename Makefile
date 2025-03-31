@@ -42,9 +42,14 @@ lint:
 	bun run lint
 
 # Format code
-.PHONY: format
-format:
+.PHONY: fmt
+fmt:
 	bun run format
+
+.PHONY: fmt-check
+fmt-check:
+	bun run format:check
+
 
 # Clean install of dependencies
 .PHONY: clean-install
@@ -62,13 +67,15 @@ clean-install:
 init-vite:
 	@echo "WARNING: This will attempt to initialize Vite in the current directory."
 	@echo "Ensure the directory is suitable or empty before proceeding."
-	bun create vite@latest . --template react-ts
+	bun create vite@latest . --template react-swc-ts
 
 # Initialize Tailwind CSS (Run only if config files are missing)
 .PHONY: init-tailwind
 init-tailwind:
 	@echo "WARNING: This will create/overwrite Tailwind CSS config files."
+	bun install -D tailwindcss@3 postcss autoprefixer
 	bunx tailwindcss init -p
+
 
 # Initialize shadcn/ui (Run only if not already initialized)
 .PHONY: init-shadcn
