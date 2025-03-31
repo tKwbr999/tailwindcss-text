@@ -1,13 +1,26 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-import { HashRouter } from 'react-router-dom'; // HashRouter をインポート
-import './index.css';
-import App from './App.tsx';
+// HashRouter を使用して GitHub Pages での静的ホスティングに対応
+import { HashRouter } from 'react-router-dom';
+import './index.css'; // グローバル CSS (Tailwind ディレクティブを含む)
+import App from './App.tsx'; // ルートコンポーネント
 
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <HashRouter> {/* App を HashRouter でラップ */}
-      <App />
+// ルート要素を取得
+const rootElement = document.getElementById('root');
+
+// ルート要素が存在することを確認
+if (!rootElement) {
+  throw new Error("Failed to find the root element with id 'root'");
+}
+
+// React ルートを作成
+const root = createRoot(rootElement);
+
+// アプリケーションをレンダリング
+root.render(
+  <StrictMode> {/* 潜在的な問題を検出するための StrictMode */}
+    <HashRouter> {/* ルーティング機能を提供 */}
+      <App /> {/* アプリケーション本体 */}
     </HashRouter>
   </StrictMode>
 );
