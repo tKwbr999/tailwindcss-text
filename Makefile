@@ -86,6 +86,7 @@ init-shadcn:
 
 .PHONY: br-clean
 br-clean:
+	@git checkout main
 	@git branch | grep -v "main" | xargs git branch -D
 	@git fetch -p
 	@git branch -r | grep -v "main" | grep -v "HEAD" | sed 's/origin\///' | xargs -I {} git push origin --delete {}
