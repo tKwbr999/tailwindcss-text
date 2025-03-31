@@ -1,13 +1,13 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import App from "./App.tsx";
-import "./index.css";
-import { HashRouter } from "react-router-dom";
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+import { HashRouter } from 'react-router-dom'; // HashRouter をインポート
+import './index.css';
+import App from './App.tsx';
 
-ReactDOM.createRoot(document.getElementById("root")!).render(
-  <React.StrictMode>
-    <HashRouter>
+createRoot(document.getElementById('root')!).render(
+  <StrictMode>
+    <HashRouter> {/* App を HashRouter でラップ */}
       <App />
     </HashRouter>
-  </React.StrictMode>,
+  </StrictMode>
 );
