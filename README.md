@@ -31,7 +31,28 @@
         # make init-tailwind # または bunx tailwindcss init -p
         ```
 
-3.  **依存関係のインストール:**
+3.  **shadcn/ui の導入 (必要な場合のみ):**
+    *   **注意:** このリポジトリには既に shadcn/ui が導入されています。新規に導入する場合や、設定ファイルが失われた場合にのみ以下のコマンドを実行してください。
+    *   `tsconfig.json` に `baseUrl` と `paths` が設定されていることを確認してください（shadcn/ui はインポートエイリアスを必要とします）。
+        ```json
+        // tsconfig.json (抜粋)
+        {
+          "compilerOptions": {
+            "baseUrl": ".",
+            "paths": {
+              "@/*": ["./src/*"]
+            }
+            // ...
+          }
+        }
+        ```
+    *   shadcn/ui CLI を使用して初期化します。対話形式で設定を選択します。
+        ```bash
+        # make init-shadcn # または bunx shadcn@latest init
+        ```
+
+4.  **依存関係のインストール:**
+    *   shadcn/ui の初期化時に依存関係がインストールされますが、手動でインストールする場合は以下を実行します。
     ```bash
     bun install
     ```
@@ -40,7 +61,7 @@
     make install
     ```
 
-4.  **開発サーバーの起動:**
+5.  **開発サーバーの起動:**
     ```bash
     bun run dev
     ```
@@ -50,7 +71,7 @@
     ```
     ブラウザで `http://localhost:5173` (または表示されたポート) を開きます。
 
-5.  **静的ファイルのビルド:**
+6.  **静的ファイルのビルド:**
     ```bash
     bun run build
     ```
@@ -69,6 +90,8 @@
 ├── src/                      # アプリケーションソースコード
 │   ├── data/                 # データファイル (記事情報など)
 │   │   └── markdownFiles.ts
+│   ├── lib/                  # shadcn/ui ユーティリティ
+│   │   └── utils.ts
 │   ├── pages/                # ページコンポーネント
 │   │   └── HomePage.tsx
 │   ├── App.tsx               # ルートコンポーネント、ルーティング設定
@@ -78,7 +101,8 @@
 ├── .gitignore
 ├── bun.lockb
 ├── index.html                # HTML エントリーポイント
-├── Makefile                  # ビルド/開発用コマンド
+├── Makefile                  # ビルド/開発/初期化用コマンド
+├── components.json           # shadcn/ui 設定
 ├── package.json
 ├── postcss.config.js
 ├── tailwind.config.js

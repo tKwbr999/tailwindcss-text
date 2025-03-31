@@ -6,7 +6,6 @@
     "moduleResolution": "bundler",
     "allowSyntheticDefaultImports": true,
     "strict": true,
-    "noEmit": true, // tsconfig.json で noEmit: true なのでこちらも合わせる
     "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.node.tsbuildinfo" // ビルド情報ファイル
   },
   "include": ["vite.config.ts"] // vite.config.ts を対象とする
