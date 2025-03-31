@@ -20,11 +20,13 @@ const formatName = (rawName: string): string => {
     .join(' ');
 };
 
-// Helper function to create path
+// Helper function to create path, ensuring forward slashes for URL compatibility
 const createPath = (sectionDir: string, articleFile: string): string => {
   const sectionName = sectionDir.replace(/^\d+_/, '');
   const articleName = articleFile.replace(/^\d+_/, '').replace(/\.md$/, '');
-  return `#/${sectionName}/${articleName}`;
+  // Explicitly join path segments with forward slashes for URL
+  const pathSegments = ['', sectionName, articleName]; // Start with empty string for leading '/'
+  return `#${pathSegments.join('/')}`;
 };
 
 

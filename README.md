@@ -1,6 +1,6 @@
 # Tailwind CSS Utilities Documentation Site
 
-`tailwindcss-utilities-md/` ディレクトリ内のマークダウンファイルを元に生成された、Tailwind CSS ユーティリティクラスのドキュメントサイトです。
+`tailwindcss-utilities-md/` ディレクトリには、Tailwind CSS の各ユーティリティクラスを解説するマークダウンファイルがカテゴリ別に格納されています。このサイトは、これらのファイルを元に生成されています。
 
 関連 Issue: [#3](https://github.com/tKwbr999/tailwindcss-text/issues/3)
 
@@ -65,7 +65,7 @@
 ```
 .
 ├── docs/                     # (既存のドキュメント)
-├── tailwindcss-utilities-md/ # 元となるマークダウンファイル
+├── tailwindcss-utilities-md/ # 各ユーティリティクラス解説の元となるマークダウンファイル (カテゴリ別)
 ├── src/                      # アプリケーションソースコード
 │   ├── data/                 # データファイル (記事情報など)
 │   │   └── markdownFiles.ts
