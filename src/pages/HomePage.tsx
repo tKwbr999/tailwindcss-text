@@ -11,7 +11,7 @@ function HomePage() {
             {section.articles.map((article) => (
               <li key={article.path}>
                 <Link
-                  to={article.path.substring(1)} // Remove leading '#' for Link component
+                  to={article.path} // Use the full hash path
                   className="text-blue-600 hover:text-blue-800 hover:underline"
                 >
                   {article.name}
