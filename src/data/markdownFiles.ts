@@ -26,7 +26,7 @@ const createPath = (sectionDir: string, articleFile: string): string => {
   const articleName = articleFile.replace(/^\d+_/, '').replace(/\.md$/, '');
   // Explicitly join path segments with forward slashes for URL
   const pathSegments = ['', sectionName, articleName]; // Start with empty string for leading '/'
-  return `#${pathSegments.join('/')}`;
+  return pathSegments.join('/');
 };
 
 

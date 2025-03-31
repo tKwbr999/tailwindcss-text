@@ -1,5 +1,6 @@
 import { Routes, Route } from 'react-router-dom'; // Import Routes and Route
 import HomePage from './pages/HomePage'; // Import HomePage
+import ArticlePage from './pages/ArticlePage'; // Import ArticlePage
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
         <Routes> {/* Use Routes */}
           <Route path="/" element={<HomePage />} /> {/* Define route for HomePage */}
           {/* Add other routes here in the future */}
+          <Route path="/:section/:articleName" element={<ArticlePage />} /> {/* Route for individual articles */}
         </Routes>
       </main>
     </div>
