@@ -52,3 +52,9 @@ init-vite:
 init-tailwind:
 	@echo "WARNING: This will create/overwrite Tailwind CSS config files."
 	bunx tailwindcss init -p
+
+.PHONY: br-clean
+br-clean:
+	@git branch | grep -v "main" | xargs git branch -D
+	@git fetch -p
+	@git branch -r | grep -v "main" | grep -v "HEAD" | sed 's/origin\///' | xargs -I {} git push origin --delete {}
