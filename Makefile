@@ -8,7 +8,8 @@ help:
 	@echo "  make dev          Start the development server using bun"
 	@echo "  make build        Build the static site for production using bun"
 	@echo "  make preview      Preview the production build locally using bun"
-	@echo "  make lint         Run ESLint"
+	@echo "  make lint         Run ESLint for TypeScript files"
+	@echo "  make format       Format TypeScript files using Prettier"
 	@echo "  make clean-install Clean install of all dependencies"
 	@echo "  --- Initial Setup (Run only once if needed) ---"
 	@echo "  make init-vite    Initialize Vite project in current dir (Use with caution!)"
@@ -39,6 +40,11 @@ preview:
 .PHONY: lint
 lint:
 	bun run lint
+
+# Format code
+.PHONY: format
+format:
+	bun run format
 
 # Clean install of dependencies
 .PHONY: clean-install
