@@ -9,6 +9,7 @@ help:
 	@echo "  make build        Build the static site for production using bun"
 	@echo "  make preview      Preview the production build locally using bun"
 	@echo "  make lint         Run ESLint"
+	@echo "  make clean-install Clean install of all dependencies"
 	@echo "  --- Initial Setup (Run only once if needed) ---"
 	@echo "  make init-vite    Initialize Vite project in current dir (Use with caution!)"
 	@echo "  make init-tailwind Initialize Tailwind CSS config (Use with caution!)"
@@ -37,6 +38,15 @@ preview:
 .PHONY: lint
 lint:
 	bun run lint
+
+# Clean install of dependencies
+.PHONY: clean-install
+clean-install:
+	@echo "Cleaning node_modules and lock files..."
+	rm -rf node_modules
+	rm -f bun.lock
+	@echo "Installing dependencies..."
+	bun install
 
 # --- Initial Setup Commands (Use with caution!) ---
 
