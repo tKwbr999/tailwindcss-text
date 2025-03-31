@@ -13,6 +13,7 @@ help:
 	@echo "  --- Initial Setup (Run only once if needed) ---"
 	@echo "  make init-vite    Initialize Vite project in current dir (Use with caution!)"
 	@echo "  make init-tailwind Initialize Tailwind CSS config (Use with caution!)"
+	@echo "  make init-shadcn   Initialize shadcn/ui (Use with caution!)"
 
 # Install dependencies
 .PHONY: install
@@ -62,6 +63,13 @@ init-vite:
 init-tailwind:
 	@echo "WARNING: This will create/overwrite Tailwind CSS config files."
 	bunx tailwindcss init -p
+
+# Initialize shadcn/ui (Run only if not already initialized)
+.PHONY: init-shadcn
+init-shadcn:
+	@echo "WARNING: This will initialize shadcn/ui and may overwrite existing configurations."
+	@echo "Ensure tsconfig.json has baseUrl and paths configured."
+	bunx shadcn@latest init
 
 .PHONY: br-clean
 br-clean:
