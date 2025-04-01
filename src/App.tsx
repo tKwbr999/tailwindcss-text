@@ -1,7 +1,7 @@
 import { Routes, Route } from 'react-router-dom'; // ルーティング用コンポーネント
 import HomePage from './pages/HomePage'; // ホームページコンポーネント
 import ArticlePage from './pages/ArticlePage'; // 記事ページコンポーネント
-
+import AspectRatioPage from './pages/layout/aspect-ratio-page'; // Aspect Ratio ページ
 /**
  * アプリケーションのルートコンポーネント
  * 全体のレイアウトとルーティングを定義
@@ -16,9 +16,11 @@ function App() {
         <Routes>
           {/* ルートパス ("/") に HomePage を割り当て */}
           <Route path="/" element={<HomePage />} />
-          {/* 動的ルート: セクション名と記事名に基づいて ArticlePage を表示 */}
-          <Route path="/:section/:articleName" element={<ArticlePage />} />
-          {/* TODO: 他のルート (例: 検索結果ページなど) を将来的に追加 */}
+          {/* 動的ルート: ArticlePage は一旦コメントアウト or 削除 (必要に応じて調整) */}
+          {/* <Route path="/:section/:articleName" element={<ArticlePage />} /> */}
+          {/* 作成した静的ページへのルート */}
+          <Route path="/layout/aspect-ratio" element={<AspectRatioPage />} />
+          {/* TODO: 他の静的ページルートや動的ルートをここに追加 */}
         </Routes>
       </main>
     </div>
