@@ -1,9 +1,10 @@
 import React from 'react';
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'; // Card コンポーネントをインポート
 
 // 各コードサンプルに対応するReact実装コンポーネント
 const BasicExample1: React.FC = () => {
   return (
-    <div className="w-full max-w-xl mx-auto"> {/* 親要素で幅を指定 */}
+    <div className="w-full max-w-xl mx-auto">
       <div className="aspect-video">
         <iframe
           className="w-full h-full"
@@ -20,9 +21,10 @@ const BasicExample1: React.FC = () => {
 
 const BasicExample2: React.FC = () => {
   return (
-    <div className="w-48 mx-auto"> {/* 親要素で幅を指定 */}
-      <div className="aspect-square bg-gray-200 dark:bg-gray-700 rounded flex items-center justify-center">
-        <span className="text-gray-500 dark:text-gray-400">1:1</span>
+    <div className="w-48 mx-auto">
+      {/* 背景色を stone 系に変更 */}
+      <div className="aspect-square bg-stone-200 dark:bg-stone-700 rounded flex items-center justify-center">
+        <span className="text-stone-500 dark:text-stone-400">1:1</span>
         {/* <img src="..." alt="..." className="w-full h-full object-cover rounded"> */}
       </div>
     </div>
@@ -32,21 +34,20 @@ const BasicExample2: React.FC = () => {
 const ResponsiveExample: React.FC = () => {
   return (
     <div className="w-full max-w-md mx-auto">
-      <div className="aspect-square md:aspect-video bg-indigo-200 dark:bg-indigo-900 rounded flex items-center justify-center">
-        <span className="text-indigo-800 dark:text-indigo-200">aspect-square md:aspect-video</span>
+      {/* 背景色とテキスト色を stone 系に合わせた色 (例: indigo -> sky) に変更 */}
+      <div className="aspect-square md:aspect-video bg-sky-200 dark:bg-sky-900 rounded flex items-center justify-center">
+        <span className="text-sky-800 dark:text-sky-200">aspect-square md:aspect-video</span>
       </div>
     </div>
   );
 };
 
-// tailwind.config.js で aspect-4/3 が定義されている前提のコンポーネント
-// 実際の表示には tailwind.config.js の設定が必要です
 const CustomExample: React.FC = () => {
   return (
     <div className="w-64 mx-auto">
-      {/* aspect-4/3 は tailwind.config.js で定義されている必要があります */}
-      <div className="aspect-[4/3] bg-teal-200 dark:bg-teal-900 rounded flex items-center justify-center">
-        <span className="text-teal-800 dark:text-teal-200">aspect-4/3 (要設定)</span>
+      {/* 背景色とテキスト色を stone 系に合わせた色 (例: teal -> emerald) に変更 */}
+      <div className="aspect-[4/3] bg-emerald-200 dark:bg-emerald-900 rounded flex items-center justify-center">
+        <span className="text-emerald-800 dark:text-emerald-200">aspect-4/3 (要設定)</span>
       </div>
     </div>
   );
@@ -55,17 +56,17 @@ const CustomExample: React.FC = () => {
 const ArbitraryExample: React.FC = () => {
   return (
     <div className="w-full max-w-lg mx-auto">
-      <div className="aspect-[2/1] bg-rose-200 dark:bg-rose-900 rounded flex items-center justify-center">
-        <span className="text-rose-800 dark:text-rose-200">aspect-[2/1]</span>
+      {/* 背景色とテキスト色を stone 系に合わせた色 (例: rose -> pink) に変更 */}
+      <div className="aspect-[2/1] bg-pink-200 dark:bg-pink-900 rounded flex items-center justify-center">
+        <span className="text-pink-800 dark:text-pink-200">aspect-[2/1]</span>
       </div>
     </div>
   );
 };
 
-
 // ページコンポーネント本体
 const AspectRatioPage: React.FC = () => {
-  // コードスニペットを定義
+  // コードスニペットを定義 (変更なし)
   const basicHtml1 = `
 {/* 16:9 のアスペクト比を持つ iframe (例: YouTube埋め込み) */}
 <div class="w-full max-w-xl mx-auto"> {/* 親要素で幅を指定 */}
@@ -78,8 +79,8 @@ const AspectRatioPage: React.FC = () => {
   const basicHtml2 = `
 {/* 正方形のアスペクト比を持つ画像コンテナ */}
 <div class="w-48 mx-auto"> {/* 親要素で幅を指定 */}
-  <div class="aspect-square bg-gray-200 dark:bg-gray-700 rounded flex items-center justify-center">
-    <span class="text-gray-500 dark:text-gray-400">1:1</span>
+  <div class="aspect-square bg-stone-200 dark:bg-stone-700 rounded flex items-center justify-center"> {/* 背景色を更新 */}
+    <span class="text-stone-500 dark:text-stone-400">1:1</span> {/* テキスト色を更新 */}
     {/* <img src="..." alt="..." class="w-full h-full object-cover rounded"> */}
   </div>
 </div>
@@ -88,8 +89,8 @@ const AspectRatioPage: React.FC = () => {
   const responsiveHtml = `
 {/* デフォルトは正方形、md以上で 16:9 */}
 <div class="w-full max-w-md mx-auto">
-  <div class="aspect-square md:aspect-video bg-indigo-200 dark:bg-indigo-900 rounded flex items-center justify-center">
-    <span class="text-indigo-800 dark:text-indigo-200">aspect-square md:aspect-video</span>
+  <div class="aspect-square md:aspect-video bg-sky-200 dark:bg-sky-900 rounded flex items-center justify-center"> {/* 色を更新 */}
+    <span class="text-sky-800 dark:text-sky-200">aspect-square md:aspect-video</span> {/* 色を更新 */}
   </div>
 </div>
   `.trim();
@@ -112,8 +113,8 @@ module.exports = {
   const customizeHtml = `
 {/* カスタムアスペクト比を使用 */}
 <div class="w-64 mx-auto">
-  <div class="aspect-4/3 bg-teal-200 dark:bg-teal-900 rounded flex items-center justify-center">
-    <span class="text-teal-800 dark:text-teal-200">aspect-4/3</span>
+  <div class="aspect-4/3 bg-emerald-200 dark:bg-emerald-900 rounded flex items-center justify-center"> {/* 色を更新 */}
+    <span class="text-emerald-800 dark:text-emerald-200">aspect-4/3</span> {/* 色を更新 */}
   </div>
 </div>
   `.trim();
@@ -121,122 +122,281 @@ module.exports = {
   const arbitraryHtml = `
 {/* 任意のアスペクト比 2:1 を指定 */}
 <div class="w-full max-w-lg mx-auto">
-  <div class="aspect-[2/1] bg-rose-200 dark:bg-rose-900 rounded flex items-center justify-center">
-    <span class="text-rose-800 dark:text-rose-200">aspect-[2/1]</span>
+  <div class="aspect-[2/1] bg-pink-200 dark:bg-pink-900 rounded flex items-center justify-center"> {/* 色を更新 */}
+    <span class="text-pink-800 dark:text-pink-200">aspect-[2/1]</span> {/* 色を更新 */}
   </div>
 </div>
   `.trim();
 
   return (
-    // prose クラスで見出しやリストなどのスタイルを適用
-    <div className="prose lg:prose-xl max-w-none dark:prose-invert p-6">
-      {/* ページタイトル */}
-      <h1>Layout: Aspect Ratio (アスペクト比)</h1>
-
-      {/* 概要 */}
-      <h2>概要</h2>
-      <p>
-        要素のアスペクト比（幅に対する高さの比率）を固定するためのユーティリティクラスです。主に動画 (<code>iframe</code>) や画像の埋め込みで、親要素の幅に基づいて高さを自動調整し、指定した比率を維持したい場合に使用します。
-      </p>
-
-      {/* 基本的な使い方とパラメータ */}
-      <h2>基本的な使い方とパラメータ</h2>
-      <p>
-        <code>aspect-{'{ratio}'}</code> の形式でクラスを指定します。
-      </p>
-      <ul>
-        <li><strong><code>aspect-auto</code></strong>: デフォルト。要素固有のアスペクト比を使用します。</li>
-        <li><strong><code>aspect-square</code></strong>: アスペクト比を 1:1 (正方形) にします。</li>
-        <li><strong><code>aspect-video</code></strong>: アスペクト比を 16:9 (一般的な動画比率) にします。</li>
-      </ul>
-
-      {/* 基本例1 */}
-      <h3 className="mt-8">基本例 1: 動画 (16:9)</h3>
-      <p>16:9 のアスペクト比を持つ iframe (例: YouTube埋め込み)</p>
-      {/* コード表示 */}
-      <pre className="bg-gray-100 dark:bg-gray-800 p-4 rounded overflow-x-auto"><code className="language-html">{basicHtml1}</code></pre>
-      {/* 実装サンプル */}
-      <div className="my-4 p-4 border rounded dark:border-gray-700">
-        <BasicExample1 />
+    // ページ全体の背景色とパディング
+    <div className="bg-stone-200 dark:bg-stone-900 min-h-screen p-4 md:p-8 font-serif">
+      {/* コンテンツエリア: 最大幅、中央揃え、背景色、角丸、影 */}
+      <div className="max-w-4xl mx-auto bg-stone-100 dark:bg-stone-800 rounded-lg shadow-md p-6 space-y-8">
+        {' '}
+        {/* space-y で Card 間の余白を設定 */}
+        {/* ページタイトル */}
+        <h1 className="text-3xl font-bold text-center text-stone-900 dark:text-stone-100">
+          Layout: Aspect Ratio (アスペクト比)
+        </h1>
+        {/* 概要 Card */}
+        <Card>
+          <CardHeader>
+            <CardTitle className="text-2xl font-semibold text-stone-800 dark:text-stone-200">
+              概要
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="text-stone-700 dark:text-stone-300 space-y-4">
+            <p>
+              要素のアスペクト比（幅に対する高さの比率）を固定するためのユーティリティクラスです。主に動画
+              (<code>iframe</code>)
+              や画像の埋め込みで、親要素の幅に基づいて高さを自動調整し、指定した比率を維持したい場合に使用します。
+            </p>
+          </CardContent>
+        </Card>
+        {/* 基本的な使い方とパラメータ Card */}
+        <Card>
+          <CardHeader>
+            <CardTitle className="text-2xl font-semibold text-stone-800 dark:text-stone-200">
+              基本的な使い方とパラメータ
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="text-stone-700 dark:text-stone-300 space-y-4">
+            <p>
+              <code>aspect-{'{ratio}'}</code> の形式でクラスを指定します。
+            </p>
+            <ul className="list-disc list-inside space-y-1 pl-4">
+              <li>
+                <strong>
+                  <code>aspect-auto</code>
+                </strong>
+                : デフォルト。要素固有のアスペクト比を使用します。
+              </li>
+              <li>
+                <strong>
+                  <code>aspect-square</code>
+                </strong>
+                : アスペクト比を 1:1 (正方形) にします。
+              </li>
+              <li>
+                <strong>
+                  <code>aspect-video</code>
+                </strong>
+                : アスペクト比を 16:9 (一般的な動画比率) にします。
+              </li>
+            </ul>
+          </CardContent>
+        </Card>
+        {/* 基本例1 Card */}
+        <Card>
+          <CardHeader>
+            <CardTitle className="text-xl font-semibold text-stone-800 dark:text-stone-200">
+              基本例 1: 動画 (16:9)
+            </CardTitle>
+            <CardDescription className="text-stone-600 dark:text-stone-400">
+              16:9 のアスペクト比を持つ iframe (例: YouTube埋め込み)
+            </CardDescription>
+          </CardHeader>
+          <CardContent>
+            {/* コード表示 */}
+            <pre className="bg-stone-200 dark:bg-stone-700 p-4 rounded overflow-x-auto text-sm text-stone-800 dark:text-stone-200">
+              <code className="language-html">{basicHtml1}</code>
+            </pre>
+            {/* 実装サンプル */}
+            <div className="mt-4 p-4 border border-stone-300 dark:border-stone-600 rounded">
+              <BasicExample1 />
+            </div>
+          </CardContent>
+        </Card>
+        {/* 基本例2 Card */}
+        <Card>
+          <CardHeader>
+            <CardTitle className="text-xl font-semibold text-stone-800 dark:text-stone-200">
+              基本例 2: 画像コンテナ (正方形)
+            </CardTitle>
+            <CardDescription className="text-stone-600 dark:text-stone-400">
+              正方形のアスペクト比を持つ画像コンテナ
+            </CardDescription>
+          </CardHeader>
+          <CardContent>
+            {/* コード表示 */}
+            <pre className="bg-stone-200 dark:bg-stone-700 p-4 rounded overflow-x-auto text-sm text-stone-800 dark:text-stone-200">
+              <code className="language-html">{basicHtml2}</code>
+            </pre>
+            {/* 実装サンプル */}
+            <div className="mt-4 p-4 border border-stone-300 dark:border-stone-600 rounded">
+              <BasicExample2 />
+            </div>
+          </CardContent>
+        </Card>
+        {/* レスポンシブ Card */}
+        <Card>
+          <CardHeader>
+            <CardTitle className="text-2xl font-semibold text-stone-800 dark:text-stone-200">
+              レスポンシブ
+            </CardTitle>
+            <CardDescription className="text-stone-600 dark:text-stone-400">
+              ブレークポイントプレフィックス (<code>sm:</code>, <code>md:</code> など)
+              を使って、画面サイズに応じてアスペクト比を変更できます。
+            </CardDescription>
+          </CardHeader>
+          <CardContent>
+            <h3 className="text-xl font-semibold text-stone-800 dark:text-stone-200 mb-2">
+              レスポンシブ例
+            </h3>
+            <p className="text-stone-700 dark:text-stone-300 mb-4">
+              デフォルトは正方形、md以上で 16:9
+            </p>
+            {/* コード表示 */}
+            <pre className="bg-stone-200 dark:bg-stone-700 p-4 rounded overflow-x-auto text-sm text-stone-800 dark:text-stone-200">
+              <code className="language-html">{responsiveHtml}</code>
+            </pre>
+            {/* 実装サンプル */}
+            <div className="mt-4 p-4 border border-stone-300 dark:border-stone-600 rounded">
+              <ResponsiveExample />
+            </div>
+          </CardContent>
+        </Card>
+        {/* カスタマイズ Card */}
+        <Card>
+          <CardHeader>
+            <CardTitle className="text-2xl font-semibold text-stone-800 dark:text-stone-200">
+              カスタマイズ (<code>tailwind.config.js</code>)
+            </CardTitle>
+            <CardDescription className="text-stone-600 dark:text-stone-400">
+              <code>tailwind.config.js</code> の <code>theme.extend.aspectRatio</code>{' '}
+              でカスタムのアスペクト比を追加できます。キーがクラス名 (<code>aspect-{'{key}'}</code>)
+              になり、値が比率 (数値または <code>'width/height'</code> 形式の文字列) になります。
+            </CardDescription>
+          </CardHeader>
+          <CardContent>
+            {/* コード表示 (JS) */}
+            <pre className="bg-stone-200 dark:bg-stone-700 p-4 rounded overflow-x-auto text-sm text-stone-800 dark:text-stone-200">
+              <code className="language-javascript">{customizeJs}</code>
+            </pre>
+            <h3 className="text-xl font-semibold text-stone-800 dark:text-stone-200 mt-6 mb-2">
+              カスタム例
+            </h3>
+            <p className="text-stone-700 dark:text-stone-300 mb-4">
+              カスタムアスペクト比を使用 (<code>tailwind.config.js</code> での定義が必要です)
+            </p>
+            {/* コード表示 (HTML) */}
+            <pre className="bg-stone-200 dark:bg-stone-700 p-4 rounded overflow-x-auto text-sm text-stone-800 dark:text-stone-200">
+              <code className="language-html">{customizeHtml}</code>
+            </pre>
+            {/* 実装サンプル */}
+            <div className="mt-4 p-4 border border-stone-300 dark:border-stone-600 rounded">
+              <CustomExample />
+            </div>
+          </CardContent>
+        </Card>
+        {/* 任意の値 Card */}
+        <Card>
+          <CardHeader>
+            <CardTitle className="text-2xl font-semibold text-stone-800 dark:text-stone-200">
+              任意の値 (Arbitrary Values)
+            </CardTitle>
+            <CardDescription className="text-stone-600 dark:text-stone-400">
+              設定ファイルで定義されていない任意のアスペクト比を直接クラス名に記述することも可能です。
+              <code>aspect-[width/height]</code> の形式で指定します。
+            </CardDescription>
+          </CardHeader>
+          <CardContent>
+            <h3 className="text-xl font-semibold text-stone-800 dark:text-stone-200 mb-2">
+              任意の値の例
+            </h3>
+            <p className="text-stone-700 dark:text-stone-300 mb-4">任意のアスペクト比 2:1 を指定</p>
+            {/* コード表示 */}
+            <pre className="bg-stone-200 dark:bg-stone-700 p-4 rounded overflow-x-auto text-sm text-stone-800 dark:text-stone-200">
+              <code className="language-html">{arbitraryHtml}</code>
+            </pre>
+            {/* 実装サンプル */}
+            <div className="mt-4 p-4 border border-stone-300 dark:border-stone-600 rounded">
+              <ArbitraryExample />
+            </div>
+          </CardContent>
+        </Card>
+        {/* 注意点 Card */}
+        <Card>
+          <CardHeader>
+            <CardTitle className="text-2xl font-semibold text-stone-800 dark:text-stone-200">
+              注意点
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="text-stone-700 dark:text-stone-300 space-y-4">
+            <ul className="list-disc list-inside space-y-1 pl-4">
+              <li>
+                このユーティリティは、要素の<strong>幅</strong>に基づいて<strong>高さ</strong>
+                を自動調整します。したがって、通常は親要素や要素自身に幅を指定する必要があります (
+                <code>w-full</code>, <code>max-w-md</code> など)。
+              </li>
+              <li>
+                内部の要素 (例: <code>iframe</code>, <code>img</code>) には{' '}
+                <code>w-full h-full</code>{' '}
+                を適用して、アスペクト比コンテナいっぱいに広がるようにします。画像の場合は{' '}
+                <code>object-fit</code> (例: <code>object-cover</code>) も併用すると良いでしょう。
+              </li>
+              <li>
+                この機能は CSS の <code>aspect-ratio</code>{' '}
+                プロパティに基づいています。古いブラウザではサポートされていない場合があります。
+              </li>
+            </ul>
+          </CardContent>
+        </Card>
+        {/* 関連ユーティリティ Card */}
+        <Card>
+          <CardHeader>
+            <CardTitle className="text-2xl font-semibold text-stone-800 dark:text-stone-200">
+              関連ユーティリティ
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="text-stone-700 dark:text-stone-300 space-y-4">
+            <ul className="list-disc list-inside space-y-1 pl-4">
+              <li>
+                <code>object-fit</code> (<code>object-cover</code>, <code>object-contain</code>{' '}
+                など): <code>&amp;lt;img&amp;gt;</code> や <code>&amp;lt;video&amp;gt;</code>{' '}
+                要素の内容がコンテナにどうフィットするかを制御します。
+              </li>
+              <li>
+                <code>object-position</code> (<code>object-center</code>, <code>object-top</code>{' '}
+                など): <code>object-fit</code> を使用した際の要素内容の位置を制御します。
+              </li>
+            </ul>
+          </CardContent>
+        </Card>
+        {/* 公式ドキュメント参照 Card */}
+        <Card>
+          <CardHeader>
+            <CardTitle className="text-2xl font-semibold text-stone-800 dark:text-stone-200">
+              公式ドキュメント参照
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="text-stone-700 dark:text-stone-300 space-y-4">
+            <ul className="list-disc list-inside space-y-1 pl-4">
+              <li>
+                <a
+                  href="https://tailwindcss.com/docs/aspect-ratio"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sky-600 hover:text-sky-800 dark:text-sky-400 dark:hover:text-sky-300 underline"
+                >
+                  Tailwind CSS: Aspect Ratio
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://developer.mozilla.org/en-US/docs/Web/CSS/aspect-ratio"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sky-600 hover:text-sky-800 dark:text-sky-400 dark:hover:text-sky-300 underline"
+                >
+                  MDN: aspect-ratio
+                </a>
+              </li>
+            </ul>
+          </CardContent>
+        </Card>
       </div>
-
-      <hr className="my-8 border-dashed dark:border-gray-700" />
-
-      {/* 基本例2 */}
-      <h3 className="mt-8">基本例 2: 画像コンテナ (正方形)</h3>
-      <p>正方形のアスペクト比を持つ画像コンテナ</p>
-      {/* コード表示 */}
-      <pre className="bg-gray-100 dark:bg-gray-800 p-4 rounded overflow-x-auto"><code className="language-html">{basicHtml2}</code></pre>
-      {/* 実装サンプル */}
-      <div className="my-4 p-4 border rounded dark:border-gray-700">
-        <BasicExample2 />
-      </div>
-
-      {/* レスポンシブ */}
-      <h2 className="mt-12">レスポンシブ</h2>
-      <p>
-        ブレークポイントプレフィックス (<code>sm:</code>, <code>md:</code> など) を使って、画面サイズに応じてアスペクト比を変更できます。
-      </p>
-      <h3 className="mt-8">レスポンシブ例</h3>
-      <p>デフォルトは正方形、md以上で 16:9</p>
-      {/* コード表示 */}
-      <pre className="bg-gray-100 dark:bg-gray-800 p-4 rounded overflow-x-auto"><code className="language-html">{responsiveHtml}</code></pre>
-      {/* 実装サンプル */}
-      <div className="my-4 p-4 border rounded dark:border-gray-700">
-        <ResponsiveExample />
-      </div>
-
-      {/* カスタマイズ */}
-      <h2 className="mt-12">カスタマイズ (<code>tailwind.config.js</code>)</h2>
-      <p>
-        <code>tailwind.config.js</code> の <code>theme.extend.aspectRatio</code> でカスタムのアスペクト比を追加できます。キーがクラス名 (<code>aspect-{'{key}'}</code>) になり、値が比率 (数値または <code>'width/height'</code> 形式の文字列) になります。
-      </p>
-      {/* コード表示 (JS) */}
-      <pre className="bg-gray-100 dark:bg-gray-800 p-4 rounded overflow-x-auto"><code className="language-javascript">{customizeJs}</code></pre>
-      <h3 className="mt-8">カスタム例</h3>
-      <p>カスタムアスペクト比を使用 (<code>tailwind.config.js</code> での定義が必要です)</p>
-      {/* コード表示 (HTML) */}
-      <pre className="bg-gray-100 dark:bg-gray-800 p-4 rounded overflow-x-auto"><code className="language-html">{customizeHtml}</code></pre>
-      {/* 実装サンプル */}
-      <div className="my-4 p-4 border rounded dark:border-gray-700">
-        <CustomExample />
-      </div>
-
-      {/* 任意の値 */}
-      <h2 className="mt-12">任意の値 (Arbitrary Values)</h2>
-      <p>
-        設定ファイルで定義されていない任意のアスペクト比を直接クラス名に記述することも可能です。<code>aspect-[width/height]</code> の形式で指定します。
-      </p>
-      <h3 className="mt-8">任意の値の例</h3>
-      <p>任意のアスペクト比 2:1 を指定</p>
-      {/* コード表示 */}
-      <pre className="bg-gray-100 dark:bg-gray-800 p-4 rounded overflow-x-auto"><code className="language-html">{arbitraryHtml}</code></pre>
-      {/* 実装サンプル */}
-      <div className="my-4 p-4 border rounded dark:border-gray-700">
-        <ArbitraryExample />
-      </div>
-
-      {/* 注意点 */}
-      <h2 className="mt-12">注意点</h2>
-      <ul>
-        <li>このユーティリティは、要素の<strong>幅</strong>に基づいて<strong>高さ</strong>を自動調整します。したがって、通常は親要素や要素自身に幅を指定する必要があります (<code>w-full</code>, <code>max-w-md</code> など)。</li>
-        <li>内部の要素 (例: <code>iframe</code>, <code>img</code>) には <code>w-full h-full</code> を適用して、アスペクト比コンテナいっぱいに広がるようにします。画像の場合は <code>object-fit</code> (例: <code>object-cover</code>) も併用すると良いでしょう。</li>
-        <li>この機能は CSS の <code>aspect-ratio</code> プロパティに基づいています。古いブラウザではサポートされていない場合があります。</li>
-      </ul>
-
-      {/* 関連ユーティリティ */}
-      <h2 className="mt-12">関連ユーティリティ</h2>
-      <ul>
-        <li><code>object-fit</code> (<code>object-cover</code>, <code>object-contain</code> など): <code>&amp;lt;img&amp;gt;</code> や <code>&amp;lt;video&amp;gt;</code> 要素の内容がコンテナにどうフィットするかを制御します。</li>
-        <li><code>object-position</code> (<code>object-center</code>, <code>object-top</code> など): <code>object-fit</code> を使用した際の要素内容の位置を制御します。</li>
-      </ul>
-
-      {/* 公式ドキュメント参照 */}
-      <h2 className="mt-12">公式ドキュメント参照</h2>
-      <ul>
-        <li><a href="https://tailwindcss.com/docs/aspect-ratio" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300">Tailwind CSS: Aspect Ratio</a></li>
-        <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/aspect-ratio" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 dark:text-blue-400 dark:hover:text-blue-300">MDN: aspect-ratio</a></li>
-      </ul>
     </div>
   );
 };
