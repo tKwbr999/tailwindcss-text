@@ -13,9 +13,17 @@ const routes = Object.entries(modules).map(([path, module]) => {
     .replace('./pages', '') // './pages' を削除
     .replace(/-page\.tsx$/, ''); // '-page.tsx' を削除
 
-  // default export されたコンポーネントを取得
-  // 型アサーションを使用して React コンポーネント型であることを示す
-  const Component = (module as { default: React.ComponentType }).default;
+  // default export されたコンポーネントを取得し、検証する
+  const potentialComponent = (module as { default: unknown }).default;
+  const Component = typeof potentialComponent === 'function'
+    ? potentialComponent as React.ComponentType
+    : null;
+
+  // コンポーネントが無効な場合はエラーを出力し、null を返す
+  if (!Component) {
+    console.error(`Module ${path} does not export a valid React component.`);
+    return null;
+  }
 
   // ArticlePage は動的ルートで処理するため除外 (必要に応じて調整)
   // if (urlPath.includes('/ArticlePage')) {
