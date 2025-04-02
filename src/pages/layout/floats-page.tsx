@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import ArticleLayout from '@/components/layout/ArticleLayout'; // ArticleLayout をインポート
 
 // 各コードサンプルに対応するReact実装コンポーネント
 
@@ -82,18 +83,24 @@ const FloatsPage: React.FC = () => {
 </div>
   `.trim();
 
+// 参照リンクの定義を追加
+const links = [
+  {
+    title: 'Tailwind CSS: Floats',
+    url: 'https://tailwindcss.com/docs/float',
+  },
+  {
+    title: 'MDN: float',
+    url: 'https://developer.mozilla.org/en-US/docs/Web/CSS/float',
+  },
+  {
+    title: 'Tailwind CSS: Clear (関連)',
+    url: 'https://tailwindcss.com/docs/clear',
+  },
+];
 
   return (
-    // ページ全体の背景色とパディング
-    <div className="bg-stone-200 dark:bg-stone-900 min-h-screen p-4 md:p-8 font-serif">
-      {/* コンテンツエリア: 最大幅、中央揃え、背景色、角丸、影 */}
-      <div className="max-w-4xl mx-auto bg-stone-100 dark:bg-stone-800 rounded-lg shadow-md p-6 space-y-8">
-        {' '}
-        {/* space-y で Card 間の余白を設定 */}
-        {/* ページタイトル */}
-        <h1 className="text-3xl font-bold text-center text-stone-900 dark:text-stone-100">
-          Layout: Floats (フロート)
-        </h1>
+    <ArticleLayout title="Layout: Floats (フロート)" links={links}>
         {/* 概要 Card */}
         <Card>
           <CardHeader>
@@ -251,7 +258,7 @@ const FloatsPage: React.FC = () => {
             <ul className="list-disc list-inside space-y-1 pl-4">
               <li><strong><code>overflow-hidden</code> (または <code>overflow-auto</code>)</strong>: 親要素に適用します。これが最も簡単な方法の一つです。</li>
               <li><strong><code>display: flow-root;</code> (<code>flow-root</code> クラス)</strong>: 親要素に適用します。新しいブロック整形コンテキスト (BFC) を作成し、フロートを内包します。</li>
-              <li><strong><code>clear</code> ユーティリティ</strong>: フロートされた要素の後に、回り込みを解除するための要素 (例: <code>&lt;div className="clear-both"&gt;&lt;/div&gt;</code>) を追加します。</li>
+              <li><strong><code>clear</code> ユーティリティ</strong>: フロートされた要素の後に、回り込みを解除するための要素 (例: <code><div className="clear-both"></div></code>) を追加します。</li>
             </ul>
              <p>
               上記のサンプルコードでは、親の <code>div</code> に <code>overflow-hidden</code> を適用して Clearfix を行っています。
@@ -283,51 +290,7 @@ const FloatsPage: React.FC = () => {
             </ul>
           </CardContent>
         </Card>
-
-        {/* 公式ドキュメント参照 Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl font-semibold text-stone-800 dark:text-stone-200">
-              公式ドキュメント参照
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="text-stone-700 dark:text-stone-300 space-y-4">
-            <ul className="list-disc list-inside space-y-1 pl-4">
-              <li>
-                <a
-                  href="https://tailwindcss.com/docs/float"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sky-600 hover:text-sky-800 dark:text-sky-400 dark:hover:text-sky-300 underline"
-                >
-                  Tailwind CSS: Floats
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://developer.mozilla.org/en-US/docs/Web/CSS/float"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sky-600 hover:text-sky-800 dark:text-sky-400 dark:hover:text-sky-300 underline"
-                >
-                  MDN: float
-                </a>
-              </li>
-               <li>
-                <a
-                  href="https://tailwindcss.com/docs/clear"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sky-600 hover:text-sky-800 dark:text-sky-400 dark:hover:text-sky-300 underline"
-                >
-                  Tailwind CSS: Clear (関連)
-                </a>
-              </li>
-            </ul>
-          </CardContent>
-        </Card>
-      </div>
-    </div>
+    </ArticleLayout>
   );
 };
 

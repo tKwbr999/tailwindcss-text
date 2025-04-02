@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import ArticleLayout from '@/components/layout/ArticleLayout'; // ArticleLayout をインポート
 
 // 各コードサンプルに対応するReact実装コンポーネント
 
@@ -135,18 +136,20 @@ const DisplayPage: React.FC = () => {
   `.trim(); // table関連は複雑なので代表例のみ
   const hiddenHtml = `<div class="hidden ...">非表示</div>`;
 
+// 参照リンクの定義を追加
+const links = [
+  {
+    title: 'Tailwind CSS: Display',
+    url: 'https://tailwindcss.com/docs/display',
+  },
+  {
+    title: 'MDN: display',
+    url: 'https://developer.mozilla.org/en-US/docs/Web/CSS/display',
+  },
+];
 
   return (
-    // ページ全体の背景色とパディング
-    <div className="bg-stone-200 dark:bg-stone-900 min-h-screen p-4 md:p-8 font-serif">
-      {/* コンテンツエリア: 最大幅、中央揃え、背景色、角丸、影 */}
-      <div className="max-w-4xl mx-auto bg-stone-100 dark:bg-stone-800 rounded-lg shadow-md p-6 space-y-8">
-        {' '}
-        {/* space-y で Card 間の余白を設定 */}
-        {/* ページタイトル */}
-        <h1 className="text-3xl font-bold text-center text-stone-900 dark:text-stone-100">
-          Layout: Display (表示タイプ)
-        </h1>
+    <ArticleLayout title="Layout: Display (表示タイプ)" links={links}>
         {/* 概要 Card */}
         <Card>
           <CardHeader>
@@ -365,7 +368,7 @@ const DisplayPage: React.FC = () => {
                 <code>contents</code> は要素のボックス自体を無視させるため、予期しないレイアウトやアクセシビリティの問題を引き起こす可能性があります。慎重に使用してください。
               </li>
                <li>
-                テーブル関連の display 値 (<code>table</code>, <code>table-cell</code> など) は、HTML の <code>&lt;table&gt;</code> 要素を使わずにテーブルのようなレイアウトを模倣するために使用できますが、通常は Flexbox や Grid の方が柔軟性が高いです。
+                テーブル関連の display 値 (<code>table</code>, <code>table-cell</code> など) は、HTML の <code><table></code> 要素を使わずにテーブルのようなレイアウトを模倣するために使用できますが、通常は Flexbox や Grid の方が柔軟性が高いです。
               </li>
             </ul>
           </CardContent>
@@ -395,41 +398,7 @@ const DisplayPage: React.FC = () => {
             </ul>
           </CardContent>
         </Card>
-
-        {/* 公式ドキュメント参照 Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl font-semibold text-stone-800 dark:text-stone-200">
-              公式ドキュメント参照
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="text-stone-700 dark:text-stone-300 space-y-4">
-            <ul className="list-disc list-inside space-y-1 pl-4">
-              <li>
-                <a
-                  href="https://tailwindcss.com/docs/display"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sky-600 hover:text-sky-800 dark:text-sky-400 dark:hover:text-sky-300 underline"
-                >
-                  Tailwind CSS: Display
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://developer.mozilla.org/en-US/docs/Web/CSS/display"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sky-600 hover:text-sky-800 dark:text-sky-400 dark:hover:text-sky-300 underline"
-                >
-                  MDN: display
-                </a>
-              </li>
-            </ul>
-          </CardContent>
-        </Card>
-      </div>
-    </div>
+    </ArticleLayout>
   );
 };
 
