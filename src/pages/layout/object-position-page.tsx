@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import ArticleLayout from '@/components/layout/ArticleLayout'; // ArticleLayout をインポート
 
 // 各コードサンプルに対応するReact実装コンポーネント
 // object-position は object-fit が fill 以外の場合に効果があります。
@@ -111,18 +112,20 @@ const ObjectPositionPage: React.FC = () => {
 </div>
   `.trim(); // 他の組み合わせ (例: object-right-bottom) も同様
 
+// 参照リンクの定義を追加
+const links = [
+  {
+    title: 'Tailwind CSS: Object Position',
+    url: 'https://tailwindcss.com/docs/object-position',
+  },
+  {
+    title: 'MDN: object-position',
+    url: 'https://developer.mozilla.org/en-US/docs/Web/CSS/object-position',
+  },
+];
 
   return (
-    // ページ全体の背景色とパディング
-    <div className="bg-stone-200 dark:bg-stone-900 min-h-screen p-4 md:p-8 font-serif">
-      {/* コンテンツエリア: 最大幅、中央揃え、背景色、角丸、影 */}
-      <div className="max-w-4xl mx-auto bg-stone-100 dark:bg-stone-800 rounded-lg shadow-md p-6 space-y-8">
-        {' '}
-        {/* space-y で Card 間の余白を設定 */}
-        {/* ページタイトル */}
-        <h1 className="text-3xl font-bold text-center text-stone-900 dark:text-stone-100">
-          Layout: Object Position (置換要素の位置)
-        </h1>
+    <ArticleLayout title="Layout: Object Position (置換要素の位置)" links={links}>
         {/* 概要 Card */}
         <Card>
           <CardHeader>
@@ -132,7 +135,7 @@ const ObjectPositionPage: React.FC = () => {
           </CardHeader>
           <CardContent className="text-stone-700 dark:text-stone-300 space-y-4">
             <p>
-              置換要素 (<code>&lt;img&gt;</code>, <code>&lt;video&gt;</code> など) のコンテンツが、その要素のコンテナ内でどのように配置されるかを制御するためのユーティリティクラスです。
+              置換要素 (<code>&amp;lt;img&amp;gt;</code>, <code>&amp;lt;video&amp;gt;</code> など) のコンテンツが、その要素のコンテナ内でどのように配置されるかを制御するためのユーティリティクラスです。
               これは、<code>object-fit</code> プロパティが <code>fill</code> (デフォルト) 以外の値 (例: <code>contain</code>, <code>none</code>, <code>scale-down</code>) に設定されている場合に効果があります。
             </p>
             <p>
@@ -269,7 +272,7 @@ const ObjectPositionPage: React.FC = () => {
                 <code>object-position</code> は、<code>object-fit</code> が <code>fill</code> (デフォルト) 以外の値に設定されている場合にのみ効果があります。<code>object-fill</code> の場合、コンテンツは常にコンテナ全体を埋めるため、位置指定は意味を持ちません。
               </li>
               <li>
-                このプロパティも置換要素 (<code>&lt;img&gt;</code>, <code>&lt;video&gt;</code> など) にのみ適用されます。
+                このプロパティも置換要素 (<code>&amp;lt;img&amp;gt;</code>, <code>&amp;lt;video&amp;gt;</code> など) にのみ適用されます。
               </li>
                <li>
                 任意の値 (例: <code>object-[25%_75%]</code>) を使用して、より細かい位置指定も可能です (Tailwind JIT モード)。
@@ -296,41 +299,7 @@ const ObjectPositionPage: React.FC = () => {
             </ul>
           </CardContent>
         </Card>
-
-        {/* 公式ドキュメント参照 Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl font-semibold text-stone-800 dark:text-stone-200">
-              公式ドキュメント参照
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="text-stone-700 dark:text-stone-300 space-y-4">
-            <ul className="list-disc list-inside space-y-1 pl-4">
-              <li>
-                <a
-                  href="https://tailwindcss.com/docs/object-position"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sky-600 hover:text-sky-800 dark:text-sky-400 dark:hover:text-sky-300 underline"
-                >
-                  Tailwind CSS: Object Position
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://developer.mozilla.org/en-US/docs/Web/CSS/object-position"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sky-600 hover:text-sky-800 dark:text-sky-400 dark:hover:text-sky-300 underline"
-                >
-                  MDN: object-position
-                </a>
-              </li>
-            </ul>
-          </CardContent>
-        </Card>
-      </div>
-    </div>
+    </ArticleLayout>
   );
 };
 

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import ArticleLayout from '@/components/layout/ArticleLayout'; // ArticleLayout をインポート
 
 // 各コードサンプルに対応するReact実装コンポーネント
 
@@ -120,18 +121,28 @@ const TopRightBottomLeftPage: React.FC = () => {
 </div>
   `.trim();
 
+// 参照リンクの定義を追加
+const links = [
+  {
+    title: 'Tailwind CSS: Top / Right / Bottom / Left',
+    url: 'https://tailwindcss.com/docs/top-right-bottom-left',
+  },
+  {
+    title: 'Tailwind CSS: Inset (ショートハンド)',
+    url: 'https://tailwindcss.com/docs/inset',
+  },
+  {
+    title: 'MDN: top (right, bottom, left も同様)',
+    url: 'https://developer.mozilla.org/en-US/docs/Web/CSS/top',
+  },
+  {
+    title: 'MDN: inset (ショートハンド)',
+    url: 'https://developer.mozilla.org/en-US/docs/Web/CSS/inset',
+  },
+];
 
   return (
-    // ページ全体の背景色とパディング
-    <div className="bg-stone-200 dark:bg-stone-900 min-h-screen p-4 md:p-8 font-serif">
-      {/* コンテンツエリア: 最大幅、中央揃え、背景色、角丸、影 */}
-      <div className="max-w-4xl mx-auto bg-stone-100 dark:bg-stone-800 rounded-lg shadow-md p-6 space-y-8">
-        {' '}
-        {/* space-y で Card 間の余白を設定 */}
-        {/* ページタイトル */}
-        <h1 className="text-3xl font-bold text-center text-stone-900 dark:text-stone-100">
-          Layout: Top / Right / Bottom / Left (配置オフセット)
-        </h1>
+    <ArticleLayout title="Layout: Top / Right / Bottom / Left (配置オフセット)" links={links}>
         {/* 概要 Card */}
         <Card>
           <CardHeader>
@@ -310,7 +321,7 @@ const TopRightBottomLeftPage: React.FC = () => {
                 <code>position</code> (<code>static</code>, <code>relative</code>, <code>absolute</code>, <code>fixed</code>, <code>sticky</code>): 要素の配置方法を設定します。これらのオフセットユーティリティの前提となります。
               </li>
               <li>
-                <code>z-index</code> (<code>z-10</code>, <code>z-auto</code> など): 配置された要素のスタッキング順序 (重なり順) を制御します。
+                <code>z-index</code> (<code>z-10</code>, <code>z-auto</code> など): 要素のスタッキング順序 (重なり順) を制御します。<code>static</code> 以外の position を持つ要素に適用されます。
               </li>
                <li>
                 <code>translate</code> (<code>translate-x-4</code>, <code>-translate-y-1/2</code> など): 要素を自身のサイズに基づいて相対的に移動させます。<code>position</code> とは異なり、レイアウト上の元のスペースは保持されます。中央揃えなどによく使われます。
@@ -318,61 +329,7 @@ const TopRightBottomLeftPage: React.FC = () => {
             </ul>
           </CardContent>
         </Card>
-
-        {/* 公式ドキュメント参照 Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl font-semibold text-stone-800 dark:text-stone-200">
-              公式ドキュメント参照
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="text-stone-700 dark:text-stone-300 space-y-4">
-            <ul className="list-disc list-inside space-y-1 pl-4">
-              <li>
-                <a
-                  href="https://tailwindcss.com/docs/top-right-bottom-left"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sky-600 hover:text-sky-800 dark:text-sky-400 dark:hover:text-sky-300 underline"
-                >
-                  Tailwind CSS: Top / Right / Bottom / Left
-                </a>
-              </li>
-               <li>
-                <a
-                  href="https://tailwindcss.com/docs/inset"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sky-600 hover:text-sky-800 dark:text-sky-400 dark:hover:text-sky-300 underline"
-                >
-                  Tailwind CSS: Inset (ショートハンド)
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://developer.mozilla.org/en-US/docs/Web/CSS/top"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sky-600 hover:text-sky-800 dark:text-sky-400 dark:hover:text-sky-300 underline"
-                >
-                  MDN: top (right, bottom, left も同様)
-                </a>
-              </li>
-               <li>
-                <a
-                  href="https://developer.mozilla.org/en-US/docs/Web/CSS/inset"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sky-600 hover:text-sky-800 dark:text-sky-400 dark:hover:text-sky-300 underline"
-                >
-                  MDN: inset (ショートハンド)
-                </a>
-              </li>
-            </ul>
-          </CardContent>
-        </Card>
-      </div>
-    </div>
+    </ArticleLayout>
   );
 };
 

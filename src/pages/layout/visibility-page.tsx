@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import ArticleLayout from '@/components/layout/ArticleLayout'; // ArticleLayout をインポート
 
 // 各コードサンプルに対応するReact実装コンポーネント
 
@@ -49,18 +50,20 @@ const VisibilityPage: React.FC = () => {
   const invisibleHtml = `<div class="invisible ...">Invisible Element (Space Reserved)</div>`;
   const collapseHtml = `<div class="collapse ...">Collapsed Element</div>`;
 
+// 参照リンクの定義を追加
+const links = [
+  {
+    title: 'Tailwind CSS: Visibility',
+    url: 'https://tailwindcss.com/docs/visibility',
+  },
+  {
+    title: 'MDN: visibility',
+    url: 'https://developer.mozilla.org/en-US/docs/Web/CSS/visibility',
+  },
+];
 
   return (
-    // ページ全体の背景色とパディング
-    <div className="bg-stone-200 dark:bg-stone-900 min-h-screen p-4 md:p-8 font-serif">
-      {/* コンテンツエリア: 最大幅、中央揃え、背景色、角丸、影 */}
-      <div className="max-w-4xl mx-auto bg-stone-100 dark:bg-stone-800 rounded-lg shadow-md p-6 space-y-8">
-        {' '}
-        {/* space-y で Card 間の余白を設定 */}
-        {/* ページタイトル */}
-        <h1 className="text-3xl font-bold text-center text-stone-900 dark:text-stone-100">
-          Layout: Visibility (可視性)
-        </h1>
+    <ArticleLayout title="Layout: Visibility (可視性)" links={links}>
         {/* 概要 Card */}
         <Card>
           <CardHeader>
@@ -208,41 +211,7 @@ const VisibilityPage: React.FC = () => {
             </ul>
           </CardContent>
         </Card>
-
-        {/* 公式ドキュメント参照 Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl font-semibold text-stone-800 dark:text-stone-200">
-              公式ドキュメント参照
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="text-stone-700 dark:text-stone-300 space-y-4">
-            <ul className="list-disc list-inside space-y-1 pl-4">
-              <li>
-                <a
-                  href="https://tailwindcss.com/docs/visibility"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sky-600 hover:text-sky-800 dark:text-sky-400 dark:hover:text-sky-300 underline"
-                >
-                  Tailwind CSS: Visibility
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://developer.mozilla.org/en-US/docs/Web/CSS/visibility"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sky-600 hover:text-sky-800 dark:text-sky-400 dark:hover:text-sky-300 underline"
-                >
-                  MDN: visibility
-                </a>
-              </li>
-            </ul>
-          </CardContent>
-        </Card>
-      </div>
-    </div>
+    </ArticleLayout>
   );
 };
 

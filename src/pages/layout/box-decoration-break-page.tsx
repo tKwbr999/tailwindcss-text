@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import ArticleLayout from '@/components/layout/ArticleLayout'; // ArticleLayout をインポート
 
 // 各コードサンプルに対応するReact実装コンポーネント
 // 注意: box-decoration-break の効果は、要素が複数行に分割された場合に顕著になります。
@@ -63,17 +64,20 @@ const BoxDecorationBreakPage: React.FC = () => {
   `.trim();
 
 
+// 参照リンクの定義を追加
+const links = [
+  {
+    title: 'Tailwind CSS: Box Decoration Break',
+    url: 'https://tailwindcss.com/docs/box-decoration-break',
+  },
+  {
+    title: 'MDN: box-decoration-break',
+    url: 'https://developer.mozilla.org/en-US/docs/Web/CSS/box-decoration-break',
+  },
+];
+
   return (
-    // ページ全体の背景色とパディング
-    <div className="bg-stone-200 dark:bg-stone-900 min-h-screen p-4 md:p-8 font-serif">
-      {/* コンテンツエリア: 最大幅、中央揃え、背景色、角丸、影 */}
-      <div className="max-w-4xl mx-auto bg-stone-100 dark:bg-stone-800 rounded-lg shadow-md p-6 space-y-8">
-        {' '}
-        {/* space-y で Card 間の余白を設定 */}
-        {/* ページタイトル */}
-        <h1 className="text-3xl font-bold text-center text-stone-900 dark:text-stone-100">
-          Layout: Box Decoration Break (要素分割時の装飾)
-        </h1>
+    <ArticleLayout title="Layout: Box Decoration Break (要素分割時の装飾)" links={links}>
         {/* 概要 Card */}
         <Card>
           <CardHeader>
@@ -200,7 +204,7 @@ const BoxDecorationBreakPage: React.FC = () => {
                 このプロパティの効果は、要素が実際に複数行や複数カラムに分割される場合にのみ現れます。単一行のインライン要素や、分割されないブロック要素には影響しません。
               </li>
               <li>
-                特にインライン要素 (<code>&lt;span&gt;</code> など) が複数行にわたる場合に、背景やパディングの表示を制御するのに役立ちます。
+                特にインライン要素 (<code>&amp;lt;span&amp;gt;</code> など) が複数行にわたる場合に、背景やパディングの表示を制御するのに役立ちます。
               </li>
               <li>
                 ブラウザのサポート状況を確認してください。比較的新しい CSS プロパティです。
@@ -230,41 +234,7 @@ const BoxDecorationBreakPage: React.FC = () => {
             </ul>
           </CardContent>
         </Card>
-
-        {/* 公式ドキュメント参照 Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl font-semibold text-stone-800 dark:text-stone-200">
-              公式ドキュメント参照
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="text-stone-700 dark:text-stone-300 space-y-4">
-            <ul className="list-disc list-inside space-y-1 pl-4">
-              <li>
-                <a
-                  href="https://tailwindcss.com/docs/box-decoration-break"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sky-600 hover:text-sky-800 dark:text-sky-400 dark:hover:text-sky-300 underline"
-                >
-                  Tailwind CSS: Box Decoration Break
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://developer.mozilla.org/en-US/docs/Web/CSS/box-decoration-break"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sky-600 hover:text-sky-800 dark:text-sky-400 dark:hover:text-sky-300 underline"
-                >
-                  MDN: box-decoration-break
-                </a>
-              </li>
-            </ul>
-          </CardContent>
-        </Card>
-      </div>
-    </div>
+    </ArticleLayout>
   );
 };
 

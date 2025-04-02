@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import ArticleLayout from '@/components/layout/ArticleLayout'; // ArticleLayout をインポート
 
 // 各コードサンプルに対応するReact実装コンポーネント
 // 注意: overscroll-behavior の効果は、ネストされたスクロール可能な要素で顕著になります。
@@ -87,18 +88,20 @@ const OverscrollBehaviorPage: React.FC = () => {
   const noneHtml = `<div class="overscroll-none h-32 overflow-auto ...">...</div>`;
   const yContainHtml = `<div class="overscroll-y-contain overscroll-x-auto h-32 overflow-auto ...">...</div>`; // x方向も指定
 
+// 参照リンクの定義を追加
+const links = [
+  {
+    title: 'Tailwind CSS: Overscroll Behavior',
+    url: 'https://tailwindcss.com/docs/overscroll-behavior',
+  },
+  {
+    title: 'MDN: overscroll-behavior',
+    url: 'https://developer.mozilla.org/en-US/docs/Web/CSS/overscroll-behavior',
+  },
+];
 
   return (
-    // ページ全体の背景色とパディング
-    <div className="bg-stone-200 dark:bg-stone-900 min-h-screen p-4 md:p-8 font-serif">
-      {/* コンテンツエリア: 最大幅、中央揃え、背景色、角丸、影 */}
-      <div className="max-w-4xl mx-auto bg-stone-100 dark:bg-stone-800 rounded-lg shadow-md p-6 space-y-8">
-        {' '}
-        {/* space-y で Card 間の余白を設定 */}
-        {/* ページタイトル */}
-        <h1 className="text-3xl font-bold text-center text-stone-900 dark:text-stone-100">
-          Layout: Overscroll Behavior (オーバースクロール挙動)
-        </h1>
+    <ArticleLayout title="Layout: Overscroll Behavior (オーバースクロール挙動)" links={links}>
         {/* 概要 Card */}
         <Card>
           <CardHeader>
@@ -109,7 +112,7 @@ const OverscrollBehaviorPage: React.FC = () => {
           <CardContent className="text-stone-700 dark:text-stone-300 space-y-4">
             <p>
               スクロール可能な領域の境界に達したときに、ブラウザがどのように振る舞うかを制御するためのユーティリティクラスです。
-              主に、モーダルウィンドウやチャットボックスなど、ネストされたスクロール領域内でスクロールした際に、背後にある親要素 (例: <code>&lt;body&gt;</code>) が意図せずスクロールしてしまう「スクロールチェーン」現象を防ぐために使用されます。
+              主に、モーダルウィンドウやチャットボックスなど、ネストされたスクロール領域内でスクロールした際に、背後にある親要素 (例: <code><body></code>) が意図せずスクロールしてしまう「スクロールチェーン」現象を防ぐために使用されます。
             </p>
             <p>
               CSS の <code>overscroll-behavior</code>, <code>overscroll-behavior-x</code>, <code>overscroll-behavior-y</code> プロパティを制御します。
@@ -250,41 +253,7 @@ const OverscrollBehaviorPage: React.FC = () => {
             </ul>
           </CardContent>
         </Card>
-
-        {/* 公式ドキュメント参照 Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl font-semibold text-stone-800 dark:text-stone-200">
-              公式ドキュメント参照
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="text-stone-700 dark:text-stone-300 space-y-4">
-            <ul className="list-disc list-inside space-y-1 pl-4">
-              <li>
-                <a
-                  href="https://tailwindcss.com/docs/overscroll-behavior"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sky-600 hover:text-sky-800 dark:text-sky-400 dark:hover:text-sky-300 underline"
-                >
-                  Tailwind CSS: Overscroll Behavior
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://developer.mozilla.org/en-US/docs/Web/CSS/overscroll-behavior"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sky-600 hover:text-sky-800 dark:text-sky-400 dark:hover:text-sky-300 underline"
-                >
-                  MDN: overscroll-behavior
-                </a>
-              </li>
-            </ul>
-          </CardContent>
-        </Card>
-      </div>
-    </div>
+    </ArticleLayout>
   );
 };
 

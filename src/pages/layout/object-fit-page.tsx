@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import ArticleLayout from '@/components/layout/ArticleLayout'; // ArticleLayout をインポート
 
 // 各コードサンプルに対応するReact実装コンポーネント
 
@@ -113,18 +114,20 @@ const ObjectFitPage: React.FC = () => {
 </div>
   `.trim();
 
+// 参照リンクの定義を追加
+const links = [
+  {
+    title: 'Tailwind CSS: Object Fit',
+    url: 'https://tailwindcss.com/docs/object-fit',
+  },
+  {
+    title: 'MDN: object-fit',
+    url: 'https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit',
+  },
+];
 
   return (
-    // ページ全体の背景色とパディング
-    <div className="bg-stone-200 dark:bg-stone-900 min-h-screen p-4 md:p-8 font-serif">
-      {/* コンテンツエリア: 最大幅、中央揃え、背景色、角丸、影 */}
-      <div className="max-w-4xl mx-auto bg-stone-100 dark:bg-stone-800 rounded-lg shadow-md p-6 space-y-8">
-        {' '}
-        {/* space-y で Card 間の余白を設定 */}
-        {/* ページタイトル */}
-        <h1 className="text-3xl font-bold text-center text-stone-900 dark:text-stone-100">
-          Layout: Object Fit (置換要素のフィット方法)
-        </h1>
+    <ArticleLayout title="Layout: Object Fit (置換要素のフィット方法)" links={links}>
         {/* 概要 Card */}
         <Card>
           <CardHeader>
@@ -134,7 +137,7 @@ const ObjectFitPage: React.FC = () => {
           </CardHeader>
           <CardContent className="text-stone-700 dark:text-stone-300 space-y-4">
             <p>
-              置換要素 (replaced element) のコンテンツ (主に <code>&lt;img&gt;</code> や <code>&lt;video&gt;</code>) が、その要素のコンテナにどのようにフィットするかを制御するためのユーティリティクラスです。
+              置換要素 (replaced element) のコンテンツ (主に <code><img></code> や <code><video></code>) が、その要素のコンテナにどのようにフィットするかを制御するためのユーティリティクラスです。
               画像のトリミングやアスペクト比の維持に使用されます。
             </p>
             <p>
@@ -151,7 +154,7 @@ const ObjectFitPage: React.FC = () => {
           </CardHeader>
           <CardContent className="text-stone-700 dark:text-stone-300 space-y-4">
             <p>
-              <code>object-{'{value}'}</code> の形式でクラスを置換要素 (<code>&lt;img&gt;</code>, <code>&lt;video&gt;</code> など) に適用します。
+              <code>object-{'{value}'}</code> の形式でクラスを置換要素 (<code><img></code>, <code><video></code> など) に適用します。
             </p>
             <ul className="list-disc list-inside space-y-1 pl-4">
               <li><strong><code>object-contain</code></strong>: コンテンツのアスペクト比を維持したまま、要素のコンテナ内に収まるようにサイズ調整されます。コンテナとコンテンツのアスペクト比が異なる場合、余白ができます。</li>
@@ -268,7 +271,7 @@ const ObjectFitPage: React.FC = () => {
           <CardContent className="text-stone-700 dark:text-stone-300 space-y-4">
             <ul className="list-disc list-inside space-y-1 pl-4">
               <li>
-                <code>object-fit</code> は置換要素 (<code>&lt;img&gt;</code>, <code>&lt;video&gt;</code>, <code>&lt;iframe&gt;</code>, <code>&lt;embed&gt;</code> など) にのみ効果があります。通常の <code>&lt;div&gt;</code> などには適用されません。
+                <code>object-fit</code> は置換要素 (<code><img></code>, <code><video></code>, <code><iframe></code>, <code><embed></code> など) にのみ効果があります。通常の <code><div></code> などには適用されません。
               </li>
               <li>
                 効果を発揮させるためには、通常、要素に明示的な幅と高さが指定されている必要があります。
@@ -304,41 +307,7 @@ const ObjectFitPage: React.FC = () => {
             </ul>
           </CardContent>
         </Card>
-
-        {/* 公式ドキュメント参照 Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl font-semibold text-stone-800 dark:text-stone-200">
-              公式ドキュメント参照
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="text-stone-700 dark:text-stone-300 space-y-4">
-            <ul className="list-disc list-inside space-y-1 pl-4">
-              <li>
-                <a
-                  href="https://tailwindcss.com/docs/object-fit"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sky-600 hover:text-sky-800 dark:text-sky-400 dark:hover:text-sky-300 underline"
-                >
-                  Tailwind CSS: Object Fit
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sky-600 hover:text-sky-800 dark:text-sky-400 dark:hover:text-sky-300 underline"
-                >
-                  MDN: object-fit
-                </a>
-              </li>
-            </ul>
-          </CardContent>
-        </Card>
-      </div>
-    </div>
+    </ArticleLayout>
   );
 };
 
