@@ -15,8 +15,8 @@ function HomePage() {
             <h2 className="text-2xl font-semibold mb-4 text-stone-800 dark:text-stone-200 border-b border-stone-300 dark:border-stone-700 pb-2">
               {section.name}
             </h2>
-            {/* リスト: マーカーなし、スペース調整 */}
-            <ul className="list-none space-y-3 pl-2">
+            {/* リスト: Flexboxで横並び、折り返し、間隔調整 */}
+            <ul className="list-none flex flex-wrap gap-x-3 gap-y-1">
               {section.articles.map(article => (
                 <li key={article.path}>
                   <Link
