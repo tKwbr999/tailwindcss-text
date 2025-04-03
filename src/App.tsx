@@ -1,4 +1,5 @@
 import { useEffect } from 'react'; // Reactフック
+import { Helmet } from 'react-helmet-async'; // Helmet をインポート
 
 import { Routes, Route } from 'react-router-dom'; // ルーティング用コンポーネント
 import { useLocation } from 'react-router-dom'; // ルーティング用フック
@@ -54,6 +55,13 @@ function App() {
   return (
     // 全体のコンテナ、左右に自動マージン、上下左右にパディング
     <div className="container mx-auto p-4">
+      {/* デフォルトのメタ情報を設定 */}
+      <Helmet>
+        <title>Tailwind CSS Text Utilities Cheatsheet</title>
+        <meta name="description" content="A comprehensive cheatsheet for Tailwind CSS text-related utility classes. Find examples for typography, spacing, alignment, decoration, and more." />
+        {/* 必要に応じて他のデフォルトメタタグ（言語指定など）を追加 */}
+        {/* <html lang="ja" /> */}
+      </Helmet>
       {/* 各ページのコンテンツを表示するメインエリア */}
       <main>
         {/* ルーティング設定 */}
