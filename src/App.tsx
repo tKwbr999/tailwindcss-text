@@ -55,12 +55,21 @@ function App() {
   return (
     // 全体のコンテナ、左右に自動マージン、上下左右にパディング
     <div className="container mx-auto p-4">
-      {/* デフォルトのメタ情報を設定 */}
-      <Helmet>
+      {/* デフォルトのメタ情報とHTML属性を設定 */}
+      <Helmet htmlAttributes={{ lang: 'ja' }}>
+        {/* 基本的なメタ情報 */}
         <title>Tailwind CSS Text Utilities Cheatsheet</title>
         <meta name="description" content="A comprehensive cheatsheet for Tailwind CSS text-related utility classes. Find examples for typography, spacing, alignment, decoration, and more." />
-        {/* 必要に応じて他のデフォルトメタタグ（言語指定など）を追加 */}
-        {/* <html lang="ja" /> */}
+        {/* OGP タグ */}
+        <meta property="og:site_name" content="Tailwind CSS 日本語解説" />
+        <meta property="og:locale" content="ja_JP" />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="/ogp-image.png" />
+        <meta property="og:url" content={import.meta.env.VITE_SITE_DOMAIN || 'https://tKwbr999.github.io/tailwindcss-text/'} />
+        {/* Twitter Card タグ */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@tKwbr999" />
+        <meta name="twitter:image" content="/ogp-image.png" />
       </Helmet>
       {/* 各ページのコンテンツを表示するメインエリア */}
       <main>
