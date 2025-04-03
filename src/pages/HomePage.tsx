@@ -4,14 +4,22 @@ import { sections } from '../data/markdownFiles'; // データファイルをイ
 
 function HomePage() {
   const [searchKeyword, setSearchKeyword] = useState(''); // 検索キーワード用の State
+  const [domainError, setDomainError] = useState(false); // ドメイン未設定エラー表示用の State
 
   const handleSearch = () => {
     const currentSiteDomain = import.meta.env.VITE_SITE_DOMAIN || ''; // 最新の環境変数を取得
-    if (searchKeyword.trim() === '' || currentSiteDomain === '') {
-      // キーワードが空、またはドメインが未設定の場合は何もしない
-      if (currentSiteDomain === '') {
-        alert('サイトのドメイン名が .env ファイルに設定されていません。(VITE_SITE_DOMAIN)');
-      }
+
+    // ドメイン設定チェック
+    if (currentSiteDomain === '') {
+      setDomainError(true); // エラー State を true に設定
+      return; // 処理を中断
+    } else {
+      setDomainError(false); // ドメインが設定されていればエラー State を false に戻す
+    }
+
+    // キーワードチェック
+    if (searchKeyword.trim() === '') {
+      // キーワードが空の場合は何もしない
       return;
     }
     const encodedKeyword = encodeURIComponent(searchKeyword);
@@ -32,27 +40,39 @@ function HomePage() {
         </h1>
 
         {/* サイト内検索フォーム */}
-        <div className="mb-8 flex items-center gap-2">
-          <input
-            type="text"
-            value={searchKeyword}
-            onChange={e => setSearchKeyword(e.target.value)}
-            placeholder="サイト内を検索..."
-            className="flex-grow px-3 py-2 border border-stone-300 dark:border-stone-700 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-stone-700 dark:text-stone-100"
-            // Enter キーでも検索を実行
-            onKeyDown={e => {
-              if (e.key === 'Enter') {
-                handleSearch();
-              }
-            }}
-          />
+        <div className="mb-2"> {/* エラーメッセージ表示のためマージン調整 */}
+          <label htmlFor="site-search-input" className="sr-only"> {/* スクリーンリーダー向けラベル */}
+            サイト内検索
+          </label>
+          <div className="flex items-center gap-2">
+            <input
+              type="text"
+              id="site-search-input" // label と紐付けるための id
+              value={searchKeyword}
+              onChange={e => setSearchKeyword(e.target.value)}
+              placeholder="サイト内を検索..."
+              className="flex-grow px-3 py-2 border border-stone-300 dark:border-stone-700 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-stone-700 dark:text-stone-100"
+              // Enter キーでも検索を実行
+              onKeyDown={e => {
+                if (e.key === 'Enter') {
+                  handleSearch();
+                }
+              }}
+            />
           <button
             onClick={handleSearch}
             className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-stone-800 transition-colors duration-150"
           >
             検索
           </button>
+          </div>
         </div>
+        {/* ドメイン未設定時のエラーメッセージ */}
+        {domainError && (
+          <p className="mb-6 text-sm text-red-600 dark:text-red-400">
+            検索機能を利用するには、管理者によるサイトドメインの設定が必要です。(.env ファイルの VITE_SITE_DOMAIN)
+          </p>
+        )}
         {sections.map(section => (
           <section key={section.name} className="mb-8 last:mb-0">
             {/* セクションタイトル: サイズ、太さ、色、下線 */}
