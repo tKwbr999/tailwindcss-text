@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async'; // Helmet をインポート
 import ArticleLayout from '@/components/layout/ArticleLayout';
 import React from 'react';
 
@@ -119,6 +120,17 @@ const VerticalAlignPage: React.FC = () => {
 
   return (
     <ArticleLayout title={title} links={links}>
+
+      <Helmet>
+        <title>Vertical Align - Tailwind CSS Cheatsheet</title>
+        <meta name="description" content="Learn about the Vertical Align utility in Tailwind CSS. Examples and usage details for Vertical Align." />
+        {/* OGP タグ */}
+        <meta property="og:title" content="Vertical Align - Tailwind CSS Cheatsheet" />
+        <meta property="og:description" content="Learn about the Vertical Align utility in Tailwind CSS. Examples and usage details for Vertical Align." />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content="https://tKwbr999.github.io/tailwindcss-text/#/typography/vertical-align" />
+        {/* <meta property="og:image" content="[画像のURL]" /> */} {/* 必要に応じて画像URLを設定 */}
+      </Helmet>
       <div className="space-y-8">
         {' '}
         {/* 元のCard間のマージンを再現 */}

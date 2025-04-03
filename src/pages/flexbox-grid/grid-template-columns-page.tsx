@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async'; // Helmet をインポート
 import ArticleLayout from '@/components/layout/ArticleLayout';
 import React from 'react';
 
@@ -115,6 +116,17 @@ const GridTemplateColumnsPage: React.FC = () => {
 
   return (
     <ArticleLayout title={title} links={links}>
+
+      <Helmet>
+        <title>Grid Template Columns - Tailwind CSS Cheatsheet</title>
+        <meta name="description" content="Learn about the Grid Template Columns utility in Tailwind CSS. Examples and usage details for Grid Template Columns." />
+        {/* OGP タグ */}
+        <meta property="og:title" content="Grid Template Columns - Tailwind CSS Cheatsheet" />
+        <meta property="og:description" content="Learn about the Grid Template Columns utility in Tailwind CSS. Examples and usage details for Grid Template Columns." />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content="https://tKwbr999.github.io/tailwindcss-text/#/flexbox-grid/grid-template-columns" />
+        {/* <meta property="og:image" content="[画像のURL]" /> */} {/* 必要に応じて画像URLを設定 */}
+      </Helmet>
       <div className="space-y-8">
         {' '}
         {/* 元のCard間のマージンを再現 */}

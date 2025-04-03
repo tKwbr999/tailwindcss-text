@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async'; // Helmet をインポート
 import ArticleLayout from '@/components/layout/ArticleLayout';
 import React from 'react';
 
@@ -79,6 +80,17 @@ const BackdropSepiaPage: React.FC = () => {
 
   return (
     <ArticleLayout title={title} links={links}>
+
+      <Helmet>
+        <title>Backdrop Sepia - Tailwind CSS Cheatsheet</title>
+        <meta name="description" content="Learn about the Backdrop Sepia utility in Tailwind CSS. Examples and usage details for Backdrop Sepia." />
+        {/* OGP タグ */}
+        <meta property="og:title" content="Backdrop Sepia - Tailwind CSS Cheatsheet" />
+        <meta property="og:description" content="Learn about the Backdrop Sepia utility in Tailwind CSS. Examples and usage details for Backdrop Sepia." />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content="https://tKwbr999.github.io/tailwindcss-text/#/filters/backdrop-sepia" />
+        {/* <meta property="og:image" content="[画像のURL]" /> */} {/* 必要に応じて画像URLを設定 */}
+      </Helmet>
       <div className="space-y-8">
         {' '}
         {/* 元のCard間のマージンを再現 */}

@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async'; // Helmet をインポート
 import React from 'react';
 import ArticleLayout from '@/components/layout/ArticleLayout';
 
@@ -67,6 +68,17 @@ const TranslatePage: React.FC = () => {
 
   return (
     <ArticleLayout title={title} links={links}>
+
+      <Helmet>
+        <title>Translate - Tailwind CSS Cheatsheet</title>
+        <meta name="description" content="Learn about the Translate utility in Tailwind CSS. Examples and usage details for Translate." />
+        {/* OGP タグ */}
+        <meta property="og:title" content="Translate - Tailwind CSS Cheatsheet" />
+        <meta property="og:description" content="Learn about the Translate utility in Tailwind CSS. Examples and usage details for Translate." />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content="https://tKwbr999.github.io/tailwindcss-text/#/transforms/translate" />
+        {/* <meta property="og:image" content="[画像のURL]" /> */} {/* 必要に応じて画像URLを設定 */}
+      </Helmet>
       <div className="space-y-8"> {/* 元のCard間のマージンを再現 */}
         {/* 概要 */}
         <section>

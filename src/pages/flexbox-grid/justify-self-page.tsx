@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async'; // Helmet をインポート
 import ArticleLayout from '@/components/layout/ArticleLayout';
 import React from 'react';
 
@@ -47,6 +48,17 @@ const JustifySelfPage: React.FC = () => {
 
   return (
     <ArticleLayout title={title} links={links}>
+
+      <Helmet>
+        <title>Justify Self - Tailwind CSS Cheatsheet</title>
+        <meta name="description" content="Learn about the Justify Self utility in Tailwind CSS. Examples and usage details for Justify Self." />
+        {/* OGP タグ */}
+        <meta property="og:title" content="Justify Self - Tailwind CSS Cheatsheet" />
+        <meta property="og:description" content="Learn about the Justify Self utility in Tailwind CSS. Examples and usage details for Justify Self." />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content="https://tKwbr999.github.io/tailwindcss-text/#/flexbox-grid/justify-self" />
+        {/* <meta property="og:image" content="[画像のURL]" /> */} {/* 必要に応じて画像URLを設定 */}
+      </Helmet>
       <div className="space-y-8">
         {' '}
         {/* 元のCard間のマージンを再現 */}

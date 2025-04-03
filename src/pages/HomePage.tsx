@@ -1,4 +1,5 @@
 import { useState } from 'react'; // useState フックをインポート
+import { Helmet } from 'react-helmet-async'; // Helmet をインポート
 import { Link } from 'react-router-dom';
 import { sections } from '../data/markdownFiles'; // データファイルをインポート
 
@@ -30,6 +31,18 @@ function HomePage() {
   return (
     // ページ全体に背景色とパディング (もう一段暗く)
     <div className="bg-stone-200 dark:bg-stone-900 min-h-screen p-4 md:p-8 font-serif">
+      <Helmet>
+        {/* ページタイトル: App.tsx のデフォルトを上書き */}
+        <title>Tailwind CSS Utilities Cheatsheet - Home</title>
+        {/* ページの説明: App.tsx のデフォルトを上書き */}
+        <meta name="description" content="Explore all Tailwind CSS utility classes with examples. Find sections for layout, flexbox, grid, spacing, typography, and more." />
+        {/* OGP タグ */}
+        <meta property="og:title" content="Tailwind CSS Utilities Cheatsheet - Home" />
+        <meta property="og:description" content="Explore all Tailwind CSS utility classes with examples. Find sections for layout, flexbox, grid, spacing, typography, and more." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://tKwbr999.github.io/tailwindcss-text/" />
+        {/* <meta property="og:image" content="[画像のURL]" /> */} {/* 必要に応じて画像URLを設定 */}
+      </Helmet>
       {' '}
       {/* bg-stone-100 を bg-stone-200 に変更 */}
       {/* コンテナ: 最大幅、中央揃え、背景色、角丸、影 */}

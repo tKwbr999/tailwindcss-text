@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async'; // Helmet をインポート
 import React from 'react';
 import ArticleLayout from '@/components/layout/ArticleLayout';
 
@@ -78,6 +79,17 @@ const TextAlignPage: React.FC = () => {
 
   return (
     <ArticleLayout title={title} links={links}>
+
+      <Helmet>
+        <title>Text Align - Tailwind CSS Cheatsheet</title>
+        <meta name="description" content="Learn about the Text Align utility in Tailwind CSS. Examples and usage details for Text Align." />
+        {/* OGP タグ */}
+        <meta property="og:title" content="Text Align - Tailwind CSS Cheatsheet" />
+        <meta property="og:description" content="Learn about the Text Align utility in Tailwind CSS. Examples and usage details for Text Align." />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content="https://tKwbr999.github.io/tailwindcss-text/#/typography/text-align" />
+        {/* <meta property="og:image" content="[画像のURL]" /> */} {/* 必要に応じて画像URLを設定 */}
+      </Helmet>
       <div className="space-y-8"> {/* 元のCard間のマージンを再現 */}
         {/* 概要 */}
         <section>

@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async'; // Helmet をインポート
 import ArticleLayout from '@/components/layout/ArticleLayout';
 import React, { useRef } from 'react';
 
@@ -163,6 +164,17 @@ const ScrollPaddingPage: React.FC = () => {
 
   return (
     <ArticleLayout title={title} links={links}>
+
+      <Helmet>
+        <title>Scroll Padding - Tailwind CSS Cheatsheet</title>
+        <meta name="description" content="Learn about the Scroll Padding utility in Tailwind CSS. Examples and usage details for Scroll Padding." />
+        {/* OGP タグ */}
+        <meta property="og:title" content="Scroll Padding - Tailwind CSS Cheatsheet" />
+        <meta property="og:description" content="Learn about the Scroll Padding utility in Tailwind CSS. Examples and usage details for Scroll Padding." />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content="https://tKwbr999.github.io/tailwindcss-text/#/interactivity/scroll-padding" />
+        {/* <meta property="og:image" content="[画像のURL]" /> */} {/* 必要に応じて画像URLを設定 */}
+      </Helmet>
       <div className="space-y-8">
         {' '}
         {/* 元のCard間のマージンを再現 */}
