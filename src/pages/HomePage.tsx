@@ -36,12 +36,7 @@ function HomePage() {
         <title>Tailwind CSS Utilities Cheatsheet - Home</title>
         {/* ページの説明: App.tsx のデフォルトを上書き */}
         <meta name="description" content="Explore all Tailwind CSS utility classes with examples. Find sections for layout, flexbox, grid, spacing, typography, and more." />
-        {/* OGP タグ */}
-        <meta property="og:title" content="Tailwind CSS Utilities Cheatsheet - Home" />
-        <meta property="og:description" content="Explore all Tailwind CSS utility classes with examples. Find sections for layout, flexbox, grid, spacing, typography, and more." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://tKwbr999.github.io/tailwindcss-text/" />
-        {/* <meta property="og:image" content="[画像のURL]" /> */} {/* 必要に応じて画像URLを設定 */}
+        {/* OGP タグは App.tsx でデフォルト設定 */}
       </Helmet>
       {' '}
       {/* bg-stone-100 を bg-stone-200 に変更 */}
