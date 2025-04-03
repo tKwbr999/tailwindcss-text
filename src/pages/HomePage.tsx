@@ -1,7 +1,24 @@
+import { useState } from 'react'; // useState フックをインポート
 import { Link } from 'react-router-dom';
 import { sections } from '../data/markdownFiles'; // データファイルをインポート
 
 function HomePage() {
+  const [searchKeyword, setSearchKeyword] = useState(''); // 検索キーワード用の State
+
+  const handleSearch = () => {
+    const currentSiteDomain = import.meta.env.VITE_SITE_DOMAIN || ''; // 最新の環境変数を取得
+    if (searchKeyword.trim() === '' || currentSiteDomain === '') {
+      // キーワードが空、またはドメインが未設定の場合は何もしない
+      if (currentSiteDomain === '') {
+        alert('サイトのドメイン名が .env ファイルに設定されていません。(VITE_SITE_DOMAIN)');
+      }
+      return;
+    }
+    const encodedKeyword = encodeURIComponent(searchKeyword);
+    const searchUrl = `https://www.google.com/search?q=site:${currentSiteDomain}+${encodedKeyword}`;
+    window.open(searchUrl, '_blank'); // 新しいタブで Google 検索を開く
+  };
+
   return (
     // ページ全体に背景色とパディング (もう一段暗く)
     <div className="bg-stone-200 dark:bg-stone-900 min-h-screen p-4 md:p-8 font-serif">
@@ -13,6 +30,29 @@ function HomePage() {
         <h1 className="text-3xl font-bold mb-8 text-center text-stone-900 dark:text-stone-100">
           Tailwind CSS Utilities
         </h1>
+
+        {/* サイト内検索フォーム */}
+        <div className="mb-8 flex items-center gap-2">
+          <input
+            type="text"
+            value={searchKeyword}
+            onChange={e => setSearchKeyword(e.target.value)}
+            placeholder="サイト内を検索..."
+            className="flex-grow px-3 py-2 border border-stone-300 dark:border-stone-700 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-stone-700 dark:text-stone-100"
+            // Enter キーでも検索を実行
+            onKeyDown={e => {
+              if (e.key === 'Enter') {
+                handleSearch();
+              }
+            }}
+          />
+          <button
+            onClick={handleSearch}
+            className="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-stone-800 transition-colors duration-150"
+          >
+            検索
+          </button>
+        </div>
         {sections.map(section => (
           <section key={section.name} className="mb-8 last:mb-0">
             {/* セクションタイトル: サイズ、太さ、色、下線 */}
