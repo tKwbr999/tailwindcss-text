@@ -1,4 +1,8 @@
+import { useEffect } from 'react'; // Reactフック
+
 import { Routes, Route } from 'react-router-dom'; // ルーティング用コンポーネント
+import { useLocation } from 'react-router-dom'; // ルーティング用フック
+
 import HomePage from './pages/HomePage'; // ホームページコンポーネント
 // import ArticlePage from './pages/ArticlePage'; // 必要に応じてコメント解除
 
@@ -39,6 +43,14 @@ const routes = Object.entries(modules).map(([path, module]) => {
  * 全体のレイアウトとルーティングを定義
  */
 function App() {
+  const location = useLocation(); // 現在の location を取得
+
+  // location.pathname が変更されたときにスクロールをトップに移動
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location.pathname]);
+
+
   return (
     // 全体のコンテナ、左右に自動マージン、上下左右にパディング
     <div className="container mx-auto p-4">
