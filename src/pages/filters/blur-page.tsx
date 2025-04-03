@@ -62,12 +62,6 @@ const BlurPage: React.FC = () => {
       <Helmet>
         <title>Blur - Tailwind CSS Cheatsheet</title>
         <meta name="description" content="Learn about the Blur utility in Tailwind CSS. Examples and usage details for Blur." />
-        {/* OGP タグ */}
-        <meta property="og:title" content="Blur - Tailwind CSS Cheatsheet" />
-        <meta property="og:description" content="Learn about the Blur utility in Tailwind CSS. Examples and usage details for Blur." />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://tKwbr999.github.io/tailwindcss-text/#/filters/blur" />
-        {/* <meta property="og:image" content="[画像のURL]" /> */} {/* 必要に応じて画像URLを設定 */}
       </Helmet>
       <div className="space-y-8">
         {' '}

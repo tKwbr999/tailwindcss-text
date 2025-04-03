@@ -99,12 +99,6 @@ const BackdropSaturatePage: React.FC = () => {
       <Helmet>
         <title>Backdrop Saturate - Tailwind CSS Cheatsheet</title>
         <meta name="description" content="Learn about the Backdrop Saturate utility in Tailwind CSS. Examples and usage details for Backdrop Saturate." />
-        {/* OGP タグ */}
-        <meta property="og:title" content="Backdrop Saturate - Tailwind CSS Cheatsheet" />
-        <meta property="og:description" content="Learn about the Backdrop Saturate utility in Tailwind CSS. Examples and usage details for Backdrop Saturate." />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://tKwbr999.github.io/tailwindcss-text/#/filters/backdrop-saturate" />
-        {/* <meta property="og:image" content="[画像のURL]" /> */} {/* 必要に応じて画像URLを設定 */}
       </Helmet>
       <div className="space-y-8">
         {' '}

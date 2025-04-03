@@ -116,12 +116,6 @@ const WidthPage: React.FC = () => {
       <Helmet>
         <title>Width - Tailwind CSS Cheatsheet</title>
         <meta name="description" content="Learn about the Width utility in Tailwind CSS. Examples and usage details for Width." />
-        {/* OGP タグ */}
-        <meta property="og:title" content="Width - Tailwind CSS Cheatsheet" />
-        <meta property="og:description" content="Learn about the Width utility in Tailwind CSS. Examples and usage details for Width." />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://tKwbr999.github.io/tailwindcss-text/#/sizing/width" />
-        {/* <meta property="og:image" content="[画像のURL]" /> */} {/* 必要に応じて画像URLを設定 */}
       </Helmet>
       <div className="space-y-8">
         {' '}

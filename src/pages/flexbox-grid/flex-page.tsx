@@ -125,12 +125,6 @@ const FlexPage: React.FC = () => {
       <Helmet>
         <title>Flex - Tailwind CSS Cheatsheet</title>
         <meta name="description" content="Learn about the Flex utility in Tailwind CSS. Examples and usage details for Flex." />
-        {/* OGP タグ */}
-        <meta property="og:title" content="Flex - Tailwind CSS Cheatsheet" />
-        <meta property="og:description" content="Learn about the Flex utility in Tailwind CSS. Examples and usage details for Flex." />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://tKwbr999.github.io/tailwindcss-text/#/flexbox-grid/flex" />
-        {/* <meta property="og:image" content="[画像のURL]" /> */} {/* 必要に応じて画像URLを設定 */}
       </Helmet>
       <div className="space-y-8">
         {' '}

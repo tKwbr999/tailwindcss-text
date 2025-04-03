@@ -71,12 +71,6 @@ const TransitionDurationPage: React.FC = () => {
       <Helmet>
         <title>Transition Duration - Tailwind CSS Cheatsheet</title>
         <meta name="description" content="Learn about the Transition Duration utility in Tailwind CSS. Examples and usage details for Transition Duration." />
-        {/* OGP タグ */}
-        <meta property="og:title" content="Transition Duration - Tailwind CSS Cheatsheet" />
-        <meta property="og:description" content="Learn about the Transition Duration utility in Tailwind CSS. Examples and usage details for Transition Duration." />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://tKwbr999.github.io/tailwindcss-text/#/transitions-animation/transition-duration" />
-        {/* <meta property="og:image" content="[画像のURL]" /> */} {/* 必要に応じて画像URLを設定 */}
       </Helmet>
       <div className="space-y-8"> {/* 元のCard間のマージンを再現 */}
         {/* 概要 */}

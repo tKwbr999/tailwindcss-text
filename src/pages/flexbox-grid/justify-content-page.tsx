@@ -121,12 +121,6 @@ const JustifyContentPage: React.FC = () => {
       <Helmet>
         <title>Justify Content - Tailwind CSS Cheatsheet</title>
         <meta name="description" content="Learn about the Justify Content utility in Tailwind CSS. Examples and usage details for Justify Content." />
-        {/* OGP タグ */}
-        <meta property="og:title" content="Justify Content - Tailwind CSS Cheatsheet" />
-        <meta property="og:description" content="Learn about the Justify Content utility in Tailwind CSS. Examples and usage details for Justify Content." />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://tKwbr999.github.io/tailwindcss-text/#/flexbox-grid/justify-content" />
-        {/* <meta property="og:image" content="[画像のURL]" /> */} {/* 必要に応じて画像URLを設定 */}
       </Helmet>
       <div className="space-y-8">
         {' '}

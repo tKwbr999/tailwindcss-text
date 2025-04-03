@@ -56,12 +56,6 @@ const SaturatePage: React.FC = () => {
       <Helmet>
         <title>Saturate - Tailwind CSS Cheatsheet</title>
         <meta name="description" content="Learn about the Saturate utility in Tailwind CSS. Examples and usage details for Saturate." />
-        {/* OGP タグ */}
-        <meta property="og:title" content="Saturate - Tailwind CSS Cheatsheet" />
-        <meta property="og:description" content="Learn about the Saturate utility in Tailwind CSS. Examples and usage details for Saturate." />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://tKwbr999.github.io/tailwindcss-text/#/filters/saturate" />
-        {/* <meta property="og:image" content="[画像のURL]" /> */} {/* 必要に応じて画像URLを設定 */}
       </Helmet>
       <div className="space-y-8">
         {' '}

@@ -132,12 +132,6 @@ const TouchActionPage: React.FC = () => {
       <Helmet>
         <title>Touch Action - Tailwind CSS Cheatsheet</title>
         <meta name="description" content="Learn about the Touch Action utility in Tailwind CSS. Examples and usage details for Touch Action." />
-        {/* OGP タグ */}
-        <meta property="og:title" content="Touch Action - Tailwind CSS Cheatsheet" />
-        <meta property="og:description" content="Learn about the Touch Action utility in Tailwind CSS. Examples and usage details for Touch Action." />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://tKwbr999.github.io/tailwindcss-text/#/interactivity/touch-action" />
-        {/* <meta property="og:image" content="[画像のURL]" /> */} {/* 必要に応じて画像URLを設定 */}
       </Helmet>
       <div className="space-y-8">
         {' '}

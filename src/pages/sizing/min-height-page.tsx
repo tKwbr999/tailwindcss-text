@@ -101,12 +101,6 @@ const MinHeightPage: React.FC = () => {
       <Helmet>
         <title>Min Height - Tailwind CSS Cheatsheet</title>
         <meta name="description" content="Learn about the Min Height utility in Tailwind CSS. Examples and usage details for Min Height." />
-        {/* OGP タグ */}
-        <meta property="og:title" content="Min Height - Tailwind CSS Cheatsheet" />
-        <meta property="og:description" content="Learn about the Min Height utility in Tailwind CSS. Examples and usage details for Min Height." />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://tKwbr999.github.io/tailwindcss-text/#/sizing/min-height" />
-        {/* <meta property="og:image" content="[画像のURL]" /> */} {/* 必要に応じて画像URLを設定 */}
       </Helmet>
       <div className="space-y-8">
         {' '}

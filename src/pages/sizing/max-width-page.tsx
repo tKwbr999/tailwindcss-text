@@ -100,12 +100,6 @@ const MaxWidthPage: React.FC = () => {
       <Helmet>
         <title>Max Width - Tailwind CSS Cheatsheet</title>
         <meta name="description" content="Learn about the Max Width utility in Tailwind CSS. Examples and usage details for Max Width." />
-        {/* OGP タグ */}
-        <meta property="og:title" content="Max Width - Tailwind CSS Cheatsheet" />
-        <meta property="og:description" content="Learn about the Max Width utility in Tailwind CSS. Examples and usage details for Max Width." />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://tKwbr999.github.io/tailwindcss-text/#/sizing/max-width" />
-        {/* <meta property="og:image" content="[画像のURL]" /> */} {/* 必要に応じて画像URLを設定 */}
       </Helmet>
       <div className="space-y-8">
         {' '}

@@ -117,12 +117,6 @@ const FlexWrapPage: React.FC = () => {
       <Helmet>
         <title>Flex Wrap - Tailwind CSS Cheatsheet</title>
         <meta name="description" content="Learn about the Flex Wrap utility in Tailwind CSS. Examples and usage details for Flex Wrap." />
-        {/* OGP タグ */}
-        <meta property="og:title" content="Flex Wrap - Tailwind CSS Cheatsheet" />
-        <meta property="og:description" content="Learn about the Flex Wrap utility in Tailwind CSS. Examples and usage details for Flex Wrap." />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://tKwbr999.github.io/tailwindcss-text/#/flexbox-grid/flex-wrap" />
-        {/* <meta property="og:image" content="[画像のURL]" /> */} {/* 必要に応じて画像URLを設定 */}
       </Helmet>
       <div className="space-y-8">
         {' '}

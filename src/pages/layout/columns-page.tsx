@@ -116,12 +116,6 @@ const links = [
       <Helmet>
         <title>Layout: Columns - Tailwind CSS Cheatsheet</title>
         <meta name="description" content="Learn about the Layout: Columns utility in Tailwind CSS. Examples and usage details for Layout: Columns." />
-        {/* OGP タグ */}
-        <meta property="og:title" content="Layout: Columns - Tailwind CSS Cheatsheet" />
-        <meta property="og:description" content="Learn about the Layout: Columns utility in Tailwind CSS. Examples and usage details for Layout: Columns." />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://tKwbr999.github.io/tailwindcss-text/#/layout/columns" />
-        {/* <meta property="og:image" content="[画像のURL]" /> */} {/* 必要に応じて画像URLを設定 */}
       </Helmet>
         {/* 概要 Card */}
         <Card>

@@ -141,12 +141,6 @@ const OverscrollBehaviorPage: React.FC = () => {
       <Helmet>
         <title>Layout: Overscroll Behavior - Tailwind CSS Cheatsheet</title>
         <meta name="description" content="Learn about the Layout: Overscroll Behavior utility in Tailwind CSS. Examples and usage details for Layout: Overscroll Behavior." />
-        {/* OGP タグ */}
-        <meta property="og:title" content="Layout: Overscroll Behavior - Tailwind CSS Cheatsheet" />
-        <meta property="og:description" content="Learn about the Layout: Overscroll Behavior utility in Tailwind CSS. Examples and usage details for Layout: Overscroll Behavior." />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://tKwbr999.github.io/tailwindcss-text/#/layout/overscroll-behavior" />
-        {/* <meta property="og:image" content="[画像のURL]" /> */} {/* 必要に応じて画像URLを設定 */}
       </Helmet>
       {/* 概要 Card */}
       <Card>

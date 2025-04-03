@@ -81,12 +81,6 @@ const BoxShadowPage: React.FC = () => {
       <Helmet>
         <title>Box Shadow - Tailwind CSS Cheatsheet</title>
         <meta name="description" content="Learn about the Box Shadow utility in Tailwind CSS. Examples and usage details for Box Shadow." />
-        {/* OGP タグ */}
-        <meta property="og:title" content="Box Shadow - Tailwind CSS Cheatsheet" />
-        <meta property="og:description" content="Learn about the Box Shadow utility in Tailwind CSS. Examples and usage details for Box Shadow." />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://tKwbr999.github.io/tailwindcss-text/#/effects/box-shadow" />
-        {/* <meta property="og:image" content="[画像のURL]" /> */} {/* 必要に応じて画像URLを設定 */}
       </Helmet>
       <div className="space-y-8">
         {' '}

@@ -83,12 +83,6 @@ const links = [
       <Helmet>
         <title>Layout: Box Decoration Break - Tailwind CSS Cheatsheet</title>
         <meta name="description" content="Learn about the Layout: Box Decoration Break utility in Tailwind CSS. Examples and usage details for Layout: Box Decoration Break." />
-        {/* OGP タグ */}
-        <meta property="og:title" content="Layout: Box Decoration Break - Tailwind CSS Cheatsheet" />
-        <meta property="og:description" content="Learn about the Layout: Box Decoration Break utility in Tailwind CSS. Examples and usage details for Layout: Box Decoration Break." />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://tKwbr999.github.io/tailwindcss-text/#/layout/box-decoration-break" />
-        {/* <meta property="og:image" content="[画像のURL]" /> */} {/* 必要に応じて画像URLを設定 */}
       </Helmet>
         {/* 概要 Card */}
         <Card>

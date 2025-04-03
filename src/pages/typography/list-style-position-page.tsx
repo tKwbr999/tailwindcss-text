@@ -51,12 +51,6 @@ const ListStylePositionPage: React.FC = () => {
       <Helmet>
         <title>List Style Position - Tailwind CSS Cheatsheet</title>
         <meta name="description" content="Learn about the List Style Position utility in Tailwind CSS. Examples and usage details for List Style Position." />
-        {/* OGP タグ */}
-        <meta property="og:title" content="List Style Position - Tailwind CSS Cheatsheet" />
-        <meta property="og:description" content="Learn about the List Style Position utility in Tailwind CSS. Examples and usage details for List Style Position." />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://tKwbr999.github.io/tailwindcss-text/#/typography/list-style-position" />
-        {/* <meta property="og:image" content="[画像のURL]" /> */} {/* 必要に応じて画像URLを設定 */}
       </Helmet>
       <div className="space-y-8"> {/* 元のCard間のマージンを再現 */}
         {/* 概要 */}

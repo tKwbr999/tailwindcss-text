@@ -65,12 +65,6 @@ const OpacityPage: React.FC = () => {
       <Helmet>
         <title>Opacity - Tailwind CSS Cheatsheet</title>
         <meta name="description" content="Learn about the Opacity utility in Tailwind CSS. Examples and usage details for Opacity." />
-        {/* OGP タグ */}
-        <meta property="og:title" content="Opacity - Tailwind CSS Cheatsheet" />
-        <meta property="og:description" content="Learn about the Opacity utility in Tailwind CSS. Examples and usage details for Opacity." />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://tKwbr999.github.io/tailwindcss-text/#/effects/opacity" />
-        {/* <meta property="og:image" content="[画像のURL]" /> */} {/* 必要に応じて画像URLを設定 */}
       </Helmet>
       <div className="space-y-8">
         {' '}

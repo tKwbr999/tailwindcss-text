@@ -126,12 +126,6 @@ const ScrollSnapAlignPage: React.FC = () => {
       <Helmet>
         <title>Scroll Snap Align - Tailwind CSS Cheatsheet</title>
         <meta name="description" content="Learn about the Scroll Snap Align utility in Tailwind CSS. Examples and usage details for Scroll Snap Align." />
-        {/* OGP タグ */}
-        <meta property="og:title" content="Scroll Snap Align - Tailwind CSS Cheatsheet" />
-        <meta property="og:description" content="Learn about the Scroll Snap Align utility in Tailwind CSS. Examples and usage details for Scroll Snap Align." />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://tKwbr999.github.io/tailwindcss-text/#/interactivity/scroll-snap-align" />
-        {/* <meta property="og:image" content="[画像のURL]" /> */} {/* 必要に応じて画像URLを設定 */}
       </Helmet>
       <div className="space-y-8">
         {' '}

@@ -130,12 +130,6 @@ const MarginPage: React.FC = () => {
       <Helmet>
         <title>Margin - Tailwind CSS Cheatsheet</title>
         <meta name="description" content="Learn about the Margin utility in Tailwind CSS. Examples and usage details for Margin." />
-        {/* OGP タグ */}
-        <meta property="og:title" content="Margin - Tailwind CSS Cheatsheet" />
-        <meta property="og:description" content="Learn about the Margin utility in Tailwind CSS. Examples and usage details for Margin." />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://tKwbr999.github.io/tailwindcss-text/#/spacing/margin" />
-        {/* <meta property="og:image" content="[画像のURL]" /> */} {/* 必要に応じて画像URLを設定 */}
       </Helmet>
       <div className="space-y-8">
         {' '}

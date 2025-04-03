@@ -103,12 +103,6 @@ const GridAutoRowsPage: React.FC = () => {
       <Helmet>
         <title>Grid Auto Rows - Tailwind CSS Cheatsheet</title>
         <meta name="description" content="Learn about the Grid Auto Rows utility in Tailwind CSS. Examples and usage details for Grid Auto Rows." />
-        {/* OGP タグ */}
-        <meta property="og:title" content="Grid Auto Rows - Tailwind CSS Cheatsheet" />
-        <meta property="og:description" content="Learn about the Grid Auto Rows utility in Tailwind CSS. Examples and usage details for Grid Auto Rows." />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://tKwbr999.github.io/tailwindcss-text/#/flexbox-grid/grid-auto-rows" />
-        {/* <meta property="og:image" content="[画像のURL]" /> */} {/* 必要に応じて画像URLを設定 */}
       </Helmet>
       <div className="space-y-8">
         {' '}

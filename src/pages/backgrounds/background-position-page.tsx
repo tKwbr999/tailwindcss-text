@@ -112,12 +112,6 @@ const BackgroundPositionPage: React.FC = () => {
       <Helmet>
         <title>Background Position - Tailwind CSS Cheatsheet</title>
         <meta name="description" content="Learn about the Background Position utility in Tailwind CSS. Examples and usage details for Background Position." />
-        {/* OGP タグ */}
-        <meta property="og:title" content="Background Position - Tailwind CSS Cheatsheet" />
-        <meta property="og:description" content="Learn about the Background Position utility in Tailwind CSS. Examples and usage details for Background Position." />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://tKwbr999.github.io/tailwindcss-text/#/backgrounds/background-position" />
-        {/* <meta property="og:image" content="[画像のURL]" /> */} {/* 必要に応じて画像URLを設定 */}
       </Helmet>
       <div className="space-y-8">
         {' '}

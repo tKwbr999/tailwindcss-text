@@ -77,12 +77,6 @@ const TransformOriginPage: React.FC = () => {
       <Helmet>
         <title>Transform Origin - Tailwind CSS Cheatsheet</title>
         <meta name="description" content="Learn about the Transform Origin utility in Tailwind CSS. Examples and usage details for Transform Origin." />
-        {/* OGP タグ */}
-        <meta property="og:title" content="Transform Origin - Tailwind CSS Cheatsheet" />
-        <meta property="og:description" content="Learn about the Transform Origin utility in Tailwind CSS. Examples and usage details for Transform Origin." />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://tKwbr999.github.io/tailwindcss-text/#/transforms/transform-origin" />
-        {/* <meta property="og:image" content="[画像のURL]" /> */} {/* 必要に応じて画像URLを設定 */}
       </Helmet>
       <div className="space-y-8"> {/* 元のCard間のマージンを再現 */}
         {/* 概要 */}

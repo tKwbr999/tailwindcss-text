@@ -164,12 +164,6 @@ const DisplayPage: React.FC = () => {
       <Helmet>
         <title>Layout: Display - Tailwind CSS Cheatsheet</title>
         <meta name="description" content="Learn about the Layout: Display utility in Tailwind CSS. Examples and usage details for Layout: Display." />
-        {/* OGP タグ */}
-        <meta property="og:title" content="Layout: Display - Tailwind CSS Cheatsheet" />
-        <meta property="og:description" content="Learn about the Layout: Display utility in Tailwind CSS. Examples and usage details for Layout: Display." />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://tKwbr999.github.io/tailwindcss-text/#/layout/display" />
-        {/* <meta property="og:image" content="[画像のURL]" /> */} {/* 必要に応じて画像URLを設定 */}
       </Helmet>
       {/* 概要 Card */}
       <Card>

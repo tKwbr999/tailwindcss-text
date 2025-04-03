@@ -106,12 +106,6 @@ const links = [
       <Helmet>
         <title>Layout: Floats - Tailwind CSS Cheatsheet</title>
         <meta name="description" content="Learn about the Layout: Floats utility in Tailwind CSS. Examples and usage details for Layout: Floats." />
-        {/* OGP タグ */}
-        <meta property="og:title" content="Layout: Floats - Tailwind CSS Cheatsheet" />
-        <meta property="og:description" content="Learn about the Layout: Floats utility in Tailwind CSS. Examples and usage details for Layout: Floats." />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://tKwbr999.github.io/tailwindcss-text/#/layout/floats" />
-        {/* <meta property="og:image" content="[画像のURL]" /> */} {/* 必要に応じて画像URLを設定 */}
       </Helmet>
         {/* 概要 Card */}
         <Card>

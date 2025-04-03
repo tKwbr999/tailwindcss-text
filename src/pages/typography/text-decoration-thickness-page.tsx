@@ -59,12 +59,6 @@ const TextDecorationThicknessPage: React.FC = () => {
       <Helmet>
         <title>Text Decoration Thickness - Tailwind CSS Cheatsheet</title>
         <meta name="description" content="Learn about the Text Decoration Thickness utility in Tailwind CSS. Examples and usage details for Text Decoration Thickness." />
-        {/* OGP タグ */}
-        <meta property="og:title" content="Text Decoration Thickness - Tailwind CSS Cheatsheet" />
-        <meta property="og:description" content="Learn about the Text Decoration Thickness utility in Tailwind CSS. Examples and usage details for Text Decoration Thickness." />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://tKwbr999.github.io/tailwindcss-text/#/typography/text-decoration-thickness" />
-        {/* <meta property="og:image" content="[画像のURL]" /> */} {/* 必要に応じて画像URLを設定 */}
       </Helmet>
       <div className="space-y-8"> {/* 元のCard間のマージンを再現 */}
         {/* 概要 */}

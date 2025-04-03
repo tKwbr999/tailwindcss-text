@@ -116,12 +116,6 @@ const ScrollBehaviorPage: React.FC = () => {
       <Helmet>
         <title>Scroll Behavior - Tailwind CSS Cheatsheet</title>
         <meta name="description" content="Learn about the Scroll Behavior utility in Tailwind CSS. Examples and usage details for Scroll Behavior." />
-        {/* OGP タグ */}
-        <meta property="og:title" content="Scroll Behavior - Tailwind CSS Cheatsheet" />
-        <meta property="og:description" content="Learn about the Scroll Behavior utility in Tailwind CSS. Examples and usage details for Scroll Behavior." />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://tKwbr999.github.io/tailwindcss-text/#/interactivity/scroll-behavior" />
-        {/* <meta property="og:image" content="[画像のURL]" /> */} {/* 必要に応じて画像URLを設定 */}
       </Helmet>
       <div className="space-y-8">
         {' '}

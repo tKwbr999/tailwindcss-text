@@ -92,12 +92,6 @@ const BackgroundSizePage: React.FC = () => {
       <Helmet>
         <title>Background Size - Tailwind CSS Cheatsheet</title>
         <meta name="description" content="Learn about the Background Size utility in Tailwind CSS. Examples and usage details for Background Size." />
-        {/* OGP タグ */}
-        <meta property="og:title" content="Background Size - Tailwind CSS Cheatsheet" />
-        <meta property="og:description" content="Learn about the Background Size utility in Tailwind CSS. Examples and usage details for Background Size." />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://tKwbr999.github.io/tailwindcss-text/#/backgrounds/background-size" />
-        {/* <meta property="og:image" content="[画像のURL]" /> */} {/* 必要に応じて画像URLを設定 */}
       </Helmet>
       <div className="space-y-8">
         {' '}

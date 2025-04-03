@@ -73,12 +73,6 @@ const BackgroundOriginPage: React.FC = () => {
       <Helmet>
         <title>Background Origin - Tailwind CSS Cheatsheet</title>
         <meta name="description" content="Learn about the Background Origin utility in Tailwind CSS. Examples and usage details for Background Origin." />
-        {/* OGP タグ */}
-        <meta property="og:title" content="Background Origin - Tailwind CSS Cheatsheet" />
-        <meta property="og:description" content="Learn about the Background Origin utility in Tailwind CSS. Examples and usage details for Background Origin." />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://tKwbr999.github.io/tailwindcss-text/#/backgrounds/background-origin" />
-        {/* <meta property="og:image" content="[画像のURL]" /> */} {/* 必要に応じて画像URLを設定 */}
       </Helmet>
       <div className="space-y-8">
         {' '}

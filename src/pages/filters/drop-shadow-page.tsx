@@ -97,12 +97,6 @@ const DropShadowPage: React.FC = () => {
       <Helmet>
         <title>Drop Shadow - Tailwind CSS Cheatsheet</title>
         <meta name="description" content="Learn about the Drop Shadow utility in Tailwind CSS. Examples and usage details for Drop Shadow." />
-        {/* OGP タグ */}
-        <meta property="og:title" content="Drop Shadow - Tailwind CSS Cheatsheet" />
-        <meta property="og:description" content="Learn about the Drop Shadow utility in Tailwind CSS. Examples and usage details for Drop Shadow." />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://tKwbr999.github.io/tailwindcss-text/#/filters/drop-shadow" />
-        {/* <meta property="og:image" content="[画像のURL]" /> */} {/* 必要に応じて画像URLを設定 */}
       </Helmet>
       <div className="space-y-8">
         {' '}
