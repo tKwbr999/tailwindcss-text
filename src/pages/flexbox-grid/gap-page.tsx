@@ -1,5 +1,5 @@
+import ArticleLayout from '@/components/layout/ArticleLayout';
 import React from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 
 // 各コードサンプルに対応するReact実装コンポーネント
 
@@ -19,7 +19,9 @@ const GapExample: React.FC = () => {
 
 const GapXExample: React.FC = () => {
   return (
-    <div className="grid grid-cols-3 gap-x-8 gap-y-2 bg-gray-100 dark:bg-gray-800 p-4 rounded"> {/* gap-y-2 で行間の溝を小さく */}
+    <div className="grid grid-cols-3 gap-x-8 gap-y-2 bg-gray-100 dark:bg-gray-800 p-4 rounded">
+      {' '}
+      {/* gap-y-2 で行間の溝を小さく */}
       <div className="bg-green-300 dark:bg-green-700 p-4 rounded text-center">1</div>
       <div className="bg-green-300 dark:bg-green-700 p-4 rounded text-center">2</div>
       <div className="bg-green-300 dark:bg-green-700 p-4 rounded text-center">3</div>
@@ -32,34 +34,58 @@ const GapXExample: React.FC = () => {
 };
 
 const GapYExample: React.FC = () => {
-    return (
-      <div className="grid grid-cols-3 gap-x-2 gap-y-6 bg-gray-100 dark:bg-gray-800 p-4 rounded"> {/* gap-x-2 で列間の溝を小さく */}
-        <div className="bg-yellow-300 dark:bg-yellow-700 p-4 rounded text-center">1</div>
-        <div className="bg-yellow-300 dark:bg-yellow-700 p-4 rounded text-center">2</div>
-        <div className="bg-yellow-300 dark:bg-yellow-700 p-4 rounded text-center">3</div>
-        <div className="bg-yellow-300 dark:bg-yellow-700 p-4 rounded text-center">4</div>
-        <div className="bg-yellow-300 dark:bg-yellow-700 p-4 rounded text-center">5</div>
-        <div className="bg-yellow-300 dark:bg-yellow-700 p-4 rounded text-center">6</div>
-        {/* 行間の溝のみ gap-y-6 (1.5rem) が適用される */}
-      </div>
-    );
-  };
+  return (
+    <div className="grid grid-cols-3 gap-x-2 gap-y-6 bg-gray-100 dark:bg-gray-800 p-4 rounded">
+      {' '}
+      {/* gap-x-2 で列間の溝を小さく */}
+      <div className="bg-yellow-300 dark:bg-yellow-700 p-4 rounded text-center">1</div>
+      <div className="bg-yellow-300 dark:bg-yellow-700 p-4 rounded text-center">2</div>
+      <div className="bg-yellow-300 dark:bg-yellow-700 p-4 rounded text-center">3</div>
+      <div className="bg-yellow-300 dark:bg-yellow-700 p-4 rounded text-center">4</div>
+      <div className="bg-yellow-300 dark:bg-yellow-700 p-4 rounded text-center">5</div>
+      <div className="bg-yellow-300 dark:bg-yellow-700 p-4 rounded text-center">6</div>
+      {/* 行間の溝のみ gap-y-6 (1.5rem) が適用される */}
+    </div>
+  );
+};
 
 const FlexGapExample: React.FC = () => {
-    return (
-      <div className="flex flex-wrap gap-4 bg-gray-100 dark:bg-gray-800 p-4 rounded w-64"> {/* Flexbox で使用 */}
-        <div className="bg-red-300 dark:bg-red-700 p-4 rounded text-center">Flex 1</div>
-        <div className="bg-red-300 dark:bg-red-700 p-4 rounded text-center">Flex 2</div>
-        <div className="bg-red-300 dark:bg-red-700 p-4 rounded text-center">Flex 3</div>
-        <div className="bg-red-300 dark:bg-red-700 p-4 rounded text-center">Flex 4</div>
-        {/* Flexbox でも gap を使用してアイテム間の溝を設定できる */}
-      </div>
-    );
-  };
-
+  return (
+    <div className="flex flex-wrap gap-4 bg-gray-100 dark:bg-gray-800 p-4 rounded w-64">
+      {' '}
+      {/* Flexbox で使用 */}
+      <div className="bg-red-300 dark:bg-red-700 p-4 rounded text-center">Flex 1</div>
+      <div className="bg-red-300 dark:bg-red-700 p-4 rounded text-center">Flex 2</div>
+      <div className="bg-red-300 dark:bg-red-700 p-4 rounded text-center">Flex 3</div>
+      <div className="bg-red-300 dark:bg-red-700 p-4 rounded text-center">Flex 4</div>
+      {/* Flexbox でも gap を使用してアイテム間の溝を設定できる */}
+    </div>
+  );
+};
 
 // ページコンポーネント本体
 const GapPage: React.FC = () => {
+  // ArticleLayout に渡すデータ
+  const title = 'Flexbox & Grid: Gap (溝)';
+  const links = [
+    {
+      title: 'Tailwind CSS: Gap',
+      url: 'https://tailwindcss.com/docs/gap',
+    },
+    {
+      title: 'MDN: gap',
+      url: 'https://developer.mozilla.org/en-US/docs/Web/CSS/gap',
+    },
+    {
+      title: 'MDN: row-gap',
+      url: 'https://developer.mozilla.org/en-US/docs/Web/CSS/row-gap',
+    },
+    {
+      title: 'MDN: column-gap',
+      url: 'https://developer.mozilla.org/en-US/docs/Web/CSS/column-gap',
+    },
+  ];
+
   // コードスニペットを定義
   const gapHtml = `
 <div class="grid grid-cols-3 gap-4 ...">
@@ -79,76 +105,79 @@ const GapPage: React.FC = () => {
 </div>
   `.trim();
 
-    const flexGapHtml = `
+  const flexGapHtml = `
 <div class="flex flex-wrap gap-4 ..."> {/* Works with Flexbox too! */}
   {/* Flex items */}
 </div>
   `.trim();
 
-
   return (
-    // ページ全体の背景色とパディング
-    <div className="bg-stone-200 dark:bg-stone-900 min-h-screen p-4 md:p-8 font-serif">
-      {/* コンテンツエリア: 最大幅、中央揃え、背景色、角丸、影 */}
-      <div className="max-w-4xl mx-auto bg-stone-100 dark:bg-stone-800 rounded-lg shadow-md p-6 space-y-8">
+    <ArticleLayout title={title} links={links}>
+      <div className="space-y-8">
         {' '}
-        {/* space-y で Card 間の余白を設定 */}
-        {/* ページタイトル */}
-        <h1 className="text-3xl font-bold text-center text-stone-900 dark:text-stone-100">
-          Flexbox & Grid: Gap (溝)
-        </h1>
-        {/* 概要 Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl font-semibold text-stone-800 dark:text-stone-200">
-              概要
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="text-stone-700 dark:text-stone-300 space-y-4">
+        {/* 元のCard間のマージンを再現 */}
+        {/* 概要 */}
+        <section>
+          <h2 className="text-2xl font-semibold text-stone-800 dark:text-stone-200 mb-4">概要</h2>
+          <div className="text-stone-700 dark:text-stone-300 space-y-4">
             <p>
-              グリッドレイアウトまたはフレックスボックスレイアウトにおいて、アイテム (行、列、またはフレックスアイテム) 間の溝 (gutter) のサイズを設定するためのユーティリティクラスです。
+              グリッドレイアウトまたはフレックスボックスレイアウトにおいて、アイテム
+              (行、列、またはフレックスアイテム) 間の溝 (gutter)
+              のサイズを設定するためのユーティリティクラスです。
             </p>
             <p>
-              CSS の <code>gap</code>, <code>row-gap</code> (<code>grid-row-gap</code>), <code>column-gap</code> (<code>grid-column-gap</code>) プロパティを制御します。
+              CSS の <code>gap</code>, <code>row-gap</code> (<code>grid-row-gap</code>),{' '}
+              <code>column-gap</code> (<code>grid-column-gap</code>) プロパティを制御します。
             </p>
-          </CardContent>
-        </Card>
+          </div>
+        </section>
         {/* 基本的な使い方とパラメータ Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl font-semibold text-stone-800 dark:text-stone-200">
-              基本的な使い方とパラメータ
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="text-stone-700 dark:text-stone-300 space-y-4">
-            <p>
-              以下の形式でクラスをグリッドコンテナまたはフレックスコンテナに適用します:
-            </p>
+        <section>
+          <h2 className="text-2xl font-semibold text-stone-800 dark:text-stone-200 mb-4">
+            基本的な使い方とパラメータ
+          </h2>
+          <div className="text-stone-700 dark:text-stone-300 space-y-4">
+            <p>以下の形式でクラスをグリッドコンテナまたはフレックスコンテナに適用します:</p>
             <ul className="list-disc list-inside space-y-1 pl-4">
-              <li><strong><code>gap-{'{size}'}</code></strong>: 行間と列間の両方に同じサイズの溝を設定します。</li>
-              <li><strong><code>gap-x-{'{size}'}</code></strong>: 列間の溝 (水平方向の溝) のみを設定します (<code>column-gap</code>)。</li>
-              <li><strong><code>gap-y-{'{size}'}</code></strong>: 行間の溝 (垂直方向の溝) のみを設定します (<code>row-gap</code>)。</li>
+              <li>
+                <strong>
+                  <code>gap-{'{size}'}</code>
+                </strong>
+                : 行間と列間の両方に同じサイズの溝を設定します。
+              </li>
+              <li>
+                <strong>
+                  <code>gap-x-{'{size}'}</code>
+                </strong>
+                : 列間の溝 (水平方向の溝) のみを設定します (<code>column-gap</code>)。
+              </li>
+              <li>
+                <strong>
+                  <code>gap-y-{'{size}'}</code>
+                </strong>
+                : 行間の溝 (垂直方向の溝) のみを設定します (<code>row-gap</code>)。
+              </li>
             </ul>
-             <p className="mt-4">
-              <code>{'{size}'}</code> には、Tailwind のデフォルトのスペーシングスケール (例: <code>0</code>, <code>px</code>, <code>0.5</code>, <code>1</code>, ..., <code>96</code>) を使用できます。任意の値 (例: <code>gap-[1.25rem]</code>, <code>gap-x-[5%]</code>) も使用可能です (Tailwind JIT モード)。
+            <p className="mt-4">
+              <code>{'{size}'}</code> には、Tailwind のデフォルトのスペーシングスケール (例:{' '}
+              <code>0</code>, <code>px</code>, <code>0.5</code>, <code>1</code>, ...,{' '}
+              <code>96</code>) を使用できます。任意の値 (例: <code>gap-[1.25rem]</code>,{' '}
+              <code>gap-x-[5%]</code>) も使用可能です (Tailwind JIT モード)。
             </p>
-          </CardContent>
-        </Card>
-
+          </div>
+        </section>
         {/* 各パラメータの例 Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-xl font-semibold text-stone-800 dark:text-stone-200">
-              使用例
-            </CardTitle>
-             <CardDescription className="text-stone-600 dark:text-stone-400">
-              異なる gap ユーティリティの適用例。
-            </CardDescription>
-          </CardHeader>
-          <CardContent className="space-y-6">
+        <section>
+          <h2 className="text-xl font-semibold text-stone-800 dark:text-stone-200 mb-2">使用例</h2>
+          <p className="text-stone-600 dark:text-stone-400 mb-4">
+            異なる gap ユーティリティの適用例。
+          </p>
+          <div className="space-y-6">
             {/* Gap */}
             <div>
-              <h3 className="font-semibold text-stone-700 dark:text-stone-300 mb-2">gap (行間・列間)</h3>
+              <h3 className="font-semibold text-stone-700 dark:text-stone-300 mb-2">
+                gap (行間・列間)
+              </h3>
               <pre className="bg-stone-200 dark:bg-stone-700 p-2 rounded overflow-x-auto text-sm text-stone-800 dark:text-stone-200 mb-2">
                 <code className="language-html">{gapHtml}</code>
               </pre>
@@ -156,160 +185,120 @@ const GapPage: React.FC = () => {
             </div>
             {/* Gap X */}
             <div>
-              <h3 className="font-semibold text-stone-700 dark:text-stone-300 mb-2">gap-x (列間)</h3>
+              <h3 className="font-semibold text-stone-700 dark:text-stone-300 mb-2">
+                gap-x (列間)
+              </h3>
               <pre className="bg-stone-200 dark:bg-stone-700 p-2 rounded overflow-x-auto text-sm text-stone-800 dark:text-stone-200 mb-2">
                 <code className="language-html">{gapXHtml}</code>
               </pre>
               <GapXExample />
             </div>
-             {/* Gap Y */}
-             <div>
-              <h3 className="font-semibold text-stone-700 dark:text-stone-300 mb-2">gap-y (行間)</h3>
+            {/* Gap Y */}
+            <div>
+              <h3 className="font-semibold text-stone-700 dark:text-stone-300 mb-2">
+                gap-y (行間)
+              </h3>
               <pre className="bg-stone-200 dark:bg-stone-700 p-2 rounded overflow-x-auto text-sm text-stone-800 dark:text-stone-200 mb-2">
                 <code className="language-html">{gapYHtml}</code>
               </pre>
               <GapYExample />
             </div>
-             {/* Flexbox Gap */}
-             <div>
-              <h3 className="font-semibold text-stone-700 dark:text-stone-300 mb-2">Flexbox での Gap</h3>
+            {/* Flexbox Gap */}
+            <div>
+              <h3 className="font-semibold text-stone-700 dark:text-stone-300 mb-2">
+                Flexbox での Gap
+              </h3>
               <pre className="bg-stone-200 dark:bg-stone-700 p-2 rounded overflow-x-auto text-sm text-stone-800 dark:text-stone-200 mb-2">
                 <code className="language-html">{flexGapHtml}</code>
               </pre>
               <FlexGapExample />
             </div>
-          </CardContent>
-        </Card>
-
+          </div>
+        </section>
         {/* レスポンシブ Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl font-semibold text-stone-800 dark:text-stone-200">
-              レスポンシブ
-            </CardTitle>
-            <CardDescription className="text-stone-600 dark:text-stone-400">
-              ブレークポイントプレフィックス (<code>sm:</code>, <code>md:</code> など) を使って、画面サイズに応じて溝のサイズを変更できます。
-            </CardDescription>
-          </CardHeader>
-          <CardContent>
+        <section>
+          <h2 className="text-2xl font-semibold text-stone-800 dark:text-stone-200 mb-2">
+            レスポンシブ
+          </h2>
+          <p className="text-stone-600 dark:text-stone-400 mb-4">
+            ブレークポイントプレフィックス (<code>sm:</code>, <code>md:</code> など)
+            を使って、画面サイズに応じて溝のサイズを変更できます。
+          </p>
+          <div>
             <p className="text-stone-700 dark:text-stone-300 mb-4">
-              例えば、<code>gap-2 md:gap-4</code> はデフォルトで <code>0.5rem</code>、中程度の画面サイズ以上で <code>1rem</code> の溝を設定します。<code>md:gap-x-8</code> のように軸ごとに指定することも可能です。
+              例えば、<code>gap-2 md:gap-4</code> はデフォルトで <code>0.5rem</code>
+              、中程度の画面サイズ以上で <code>1rem</code> の溝を設定します。<code>md:gap-x-8</code>{' '}
+              のように軸ごとに指定することも可能です。
             </p>
             {/* コード表示 */}
             <pre className="bg-stone-200 dark:bg-stone-700 p-4 rounded overflow-x-auto text-sm text-stone-800 dark:text-stone-200">
-              <code className="language-html">{`
+              <code className="language-html">
+                {`
 <div class="grid grid-cols-2 gap-2 md:gap-4 lg:gap-x-8 lg:gap-y-4 ...">
   {/* ... items */}
 </div>
-              `.trim()}</code>
+              `.trim()}
+              </code>
             </pre>
-          </CardContent>
-        </Card>
-
+          </div>
+        </section>
         {/* 注意点 Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl font-semibold text-stone-800 dark:text-stone-200">
-              注意点
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="text-stone-700 dark:text-stone-300 space-y-4">
+        <section>
+          <h2 className="text-2xl font-semibold text-stone-800 dark:text-stone-200 mb-4">注意点</h2>
+          <div className="text-stone-700 dark:text-stone-300 space-y-4">
             <ul className="list-disc list-inside space-y-1 pl-4">
               <li>
-                <code>gap</code> ユーティリティはグリッドコンテナまたはフレックスコンテナに適用します。
+                <code>gap</code>{' '}
+                ユーティリティはグリッドコンテナまたはフレックスコンテナに適用します。
               </li>
               <li>
-                <code>gap</code> はアイテム「間」のスペースを設定します。コンテナの端とアイテム間のスペースは設定しません (それは <code>padding</code> で行います)。
+                <code>gap</code>{' '}
+                はアイテム「間」のスペースを設定します。コンテナの端とアイテム間のスペースは設定しません
+                (それは <code>padding</code> で行います)。
               </li>
-               <li>
-                Flexbox での <code>gap</code> のサポートは比較的新しいため、非常に古いブラウザでは動作しない可能性があります。Grid でのサポートはより広範です。
+              <li>
+                Flexbox での <code>gap</code>{' '}
+                のサポートは比較的新しいため、非常に古いブラウザでは動作しない可能性があります。Grid
+                でのサポートはより広範です。
               </li>
-               <li>
-                Flexbox で <code>gap</code> を使用する場合、<code>justify-content: space-between</code> などとは異なり、アイテム間に一貫した溝ができます。
+              <li>
+                Flexbox で <code>gap</code> を使用する場合、
+                <code>justify-content: space-between</code>{' '}
+                などとは異なり、アイテム間に一貫した溝ができます。
               </li>
-               <li>
-                <code>gap-x-*</code> と <code>gap-y-*</code> を個別に指定することで、行と列で異なる溝サイズを設定できます。<code>gap-*</code> は両方を同じ値に設定するショートハンドです。
+              <li>
+                <code>gap-x-*</code> と <code>gap-y-*</code>{' '}
+                を個別に指定することで、行と列で異なる溝サイズを設定できます。<code>gap-*</code>{' '}
+                は両方を同じ値に設定するショートハンドです。
               </li>
             </ul>
-          </CardContent>
-        </Card>
-
+          </div>
+        </section>
         {/* 関連ユーティリティ Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl font-semibold text-stone-800 dark:text-stone-200">
-              関連ユーティリティ
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="text-stone-700 dark:text-stone-300 space-y-4">
-            <ul className="list-disc list-inside space-y-1 pl-4">
-               <li>
-                <code>display</code> (<code>grid</code>, <code>inline-grid</code>, <code>flex</code>, <code>inline-flex</code>): 要素をグリッドまたはフレックスコンテナにします。
-              </li>
-              <li>
-                <code>padding</code> (<code>p-*</code>, <code>px-*</code>, <code>py-*</code>): コンテナの内側の余白を設定します。
-              </li>
-              <li>
-                <code>space</code> (<code>space-x-*</code>, <code>space-y-*</code>): Flexbox でアイテム間にマージンを追加する代替方法 (gap が使えない場合や特定のデザインで)。
-              </li>
-            </ul>
-          </CardContent>
-        </Card>
-
-        {/* 公式ドキュメント参照 Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl font-semibold text-stone-800 dark:text-stone-200">
-              公式ドキュメント参照
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="text-stone-700 dark:text-stone-300 space-y-4">
+        <section>
+          <h2 className="text-2xl font-semibold text-stone-800 dark:text-stone-200 mb-4">
+            関連ユーティリティ
+          </h2>
+          <div className="text-stone-700 dark:text-stone-300 space-y-4">
             <ul className="list-disc list-inside space-y-1 pl-4">
               <li>
-                <a
-                  href="https://tailwindcss.com/docs/gap"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sky-600 hover:text-sky-800 dark:text-sky-400 dark:hover:text-sky-300 underline"
-                >
-                  Tailwind CSS: Gap
-                </a>
+                <code>display</code> (<code>grid</code>, <code>inline-grid</code>, <code>flex</code>
+                , <code>inline-flex</code>): 要素をグリッドまたはフレックスコンテナにします。
               </li>
               <li>
-                <a
-                  href="https://developer.mozilla.org/en-US/docs/Web/CSS/gap"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sky-600 hover:text-sky-800 dark:text-sky-400 dark:hover:text-sky-300 underline"
-                >
-                  MDN: gap
-                </a>
+                <code>padding</code> (<code>p-*</code>, <code>px-*</code>, <code>py-*</code>):
+                コンテナの内側の余白を設定します。
               </li>
-               <li>
-                <a
-                  href="https://developer.mozilla.org/en-US/docs/Web/CSS/row-gap"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sky-600 hover:text-sky-800 dark:text-sky-400 dark:hover:text-sky-300 underline"
-                >
-                  MDN: row-gap
-                </a>
-              </li>
-               <li>
-                <a
-                  href="https://developer.mozilla.org/en-US/docs/Web/CSS/column-gap"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sky-600 hover:text-sky-800 dark:text-sky-400 dark:hover:text-sky-300 underline"
-                >
-                  MDN: column-gap
-                </a>
+              <li>
+                <code>space</code> (<code>space-x-*</code>, <code>space-y-*</code>): Flexbox
+                でアイテム間にマージンを追加する代替方法 (gap が使えない場合や特定のデザインで)。
               </li>
             </ul>
-          </CardContent>
-        </Card>
+          </div>
+        </section>
+        {/* 参照リンクは ArticleLayout に移動 */}
       </div>
-    </div>
+    </ArticleLayout>
   );
 };
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import ArticleLayout from '@/components/layout/ArticleLayout';
 
 // 各コードサンプルに対応するReact実装コンポーネント
 
@@ -67,6 +67,19 @@ const AnimationExample: React.FC = () => {
 
 // ページコンポーネント本体
 const AnimationPage: React.FC = () => {
+  // ArticleLayout に渡すデータ
+  const title = 'Transitions & Animation: Animation (アニメーション)';
+  const links = [
+    {
+      title: 'Tailwind CSS: Animation',
+      url: 'https://tailwindcss.com/docs/animation',
+    },
+    {
+      title: 'MDN: animation',
+      url: 'https://developer.mozilla.org/en-US/docs/Web/CSS/animation',
+    },
+  ];
+
   // コードスニペットを定義
   const animationHtml = `
 {/* Spin */}
@@ -92,40 +105,29 @@ const AnimationPage: React.FC = () => {
 
 
   return (
-    // ページ全体の背景色とパディング
-    <div className="bg-stone-200 dark:bg-stone-900 min-h-screen p-4 md:p-8 font-serif">
-      {/* コンテンツエリア: 最大幅、中央揃え、背景色、角丸、影 */}
-      <div className="max-w-4xl mx-auto bg-stone-100 dark:bg-stone-800 rounded-lg shadow-md p-6 space-y-8">
-        {' '}
-        {/* space-y で Card 間の余白を設定 */}
-        {/* ページタイトル */}
-        <h1 className="text-3xl font-bold text-center text-stone-900 dark:text-stone-100">
-          Transitions & Animation: Animation (アニメーション)
-        </h1>
-        {/* 概要 Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl font-semibold text-stone-800 dark:text-stone-200">
+    <ArticleLayout title={title} links={links}>
+      <div className="space-y-8"> {/* 元のCard間のマージンを再現 */}
+        {/* 概要 */}
+        <section>
+          <h2 className="text-2xl font-semibold text-stone-800 dark:text-stone-200 mb-4">
               概要
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="text-stone-700 dark:text-stone-300 space-y-4">
+          </h2>
+          <div className="text-stone-700 dark:text-stone-300 space-y-4">
             <p>
               要素に基本的な CSS アニメーションを適用するためのユーティリティクラスです。ローディングスピナーや通知などの UI 要素に動きを加えるのに便利です。
             </p>
             <p>
               CSS の <code>animation</code> プロパティと関連する <code>@keyframes</code> を制御します。
             </p>
-          </CardContent>
-        </Card>
+          </div>
+        </section>
+
         {/* 基本的な使い方とパラメータ Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl font-semibold text-stone-800 dark:text-stone-200">
+        <section>
+          <h2 className="text-2xl font-semibold text-stone-800 dark:text-stone-200 mb-4">
               基本的な使い方とパラメータ
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="text-stone-700 dark:text-stone-300 space-y-4">
+          </h2>
+          <div className="text-stone-700 dark:text-stone-300 space-y-4">
             <p>
               要素に以下のクラスを適用します。
             </p>
@@ -139,20 +141,18 @@ const AnimationPage: React.FC = () => {
              <p className="mt-4">
               カスタムアニメーションは <code>tailwind.config.js</code> の <code>theme.extend.animation</code> と <code>theme.extend.keyframes</code> で定義できます。
             </p>
-          </CardContent>
-        </Card>
+          </div>
+        </section>
 
         {/* 各パラメータの例 Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-xl font-semibold text-stone-800 dark:text-stone-200">
+        <section>
+          <h2 className="text-xl font-semibold text-stone-800 dark:text-stone-200 mb-2">
               使用例
-            </CardTitle>
-             <CardDescription className="text-stone-600 dark:text-stone-400">
+          </h2>
+           <p className="text-stone-600 dark:text-stone-400 mb-4">
               Tailwind が提供する基本的なアニメーションの例。
-            </CardDescription>
-          </CardHeader>
-          <CardContent className="space-y-6">
+          </p>
+          <div className="space-y-6">
             {/* Standard Animations */}
             <div>
               <h3 className="font-semibold text-stone-700 dark:text-stone-300 mb-2">標準アニメーション</h3>
@@ -161,20 +161,18 @@ const AnimationPage: React.FC = () => {
               </pre>
               <AnimationExample />
             </div>
-          </CardContent>
-        </Card>
+          </div>
+        </section>
 
         {/* レスポンシブと状態変化 Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl font-semibold text-stone-800 dark:text-stone-200">
+        <section>
+          <h2 className="text-2xl font-semibold text-stone-800 dark:text-stone-200 mb-2">
               レスポンシブと状態変化
-            </CardTitle>
-            <CardDescription className="text-stone-600 dark:text-stone-400">
+          </h2>
+          <p className="text-stone-600 dark:text-stone-400 mb-4">
               アニメーションユーティリティは、ブレークポイント (<code>md:animate-spin</code> など) や状態 (<code>hover:animate-none</code> など) に応じて適用または削除できます。
-            </CardDescription>
-          </CardHeader>
-          <CardContent>
+          </p>
+          <div>
             <p className="text-stone-700 dark:text-stone-300 mb-4">
               ホバー時にスピンアニメーションを停止する例:
             </p>
@@ -184,17 +182,15 @@ const AnimationPage: React.FC = () => {
 <svg class="animate-spin hover:animate-none h-5 w-5 ..." viewBox="0 0 24 24">...</svg>
               `.trim()}</code>
             </pre>
-          </CardContent>
-        </Card>
+          </div>
+        </section>
 
         {/* 関連ユーティリティ Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl font-semibold text-stone-800 dark:text-stone-200">
+        <section>
+          <h2 className="text-2xl font-semibold text-stone-800 dark:text-stone-200 mb-4">
               関連ユーティリティ
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="text-stone-700 dark:text-stone-300 space-y-4">
+          </h2>
+          <div className="text-stone-700 dark:text-stone-300 space-y-4">
             <ul className="list-disc list-inside space-y-1 pl-4">
                <li>
                 <code>transition-*</code>: プロパティの変化を滑らかにするトランジション関連ユーティリティ。
@@ -203,43 +199,11 @@ const AnimationPage: React.FC = () => {
                 <code>transform</code>, <code>scale-*</code>, <code>rotate-*</code>, <code>translate-*</code>, <code>skew-*</code>: アニメーション内でよく使用される変形ユーティリティ。
               </li>
             </ul>
-          </CardContent>
-        </Card>
-
-        {/* 公式ドキュメント参照 Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl font-semibold text-stone-800 dark:text-stone-200">
-              公式ドキュメント参照
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="text-stone-700 dark:text-stone-300 space-y-4">
-            <ul className="list-disc list-inside space-y-1 pl-4">
-              <li>
-                <a
-                  href="https://tailwindcss.com/docs/animation"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sky-600 hover:text-sky-800 dark:text-sky-400 dark:hover:text-sky-300 underline"
-                >
-                  Tailwind CSS: Animation
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://developer.mozilla.org/en-US/docs/Web/CSS/animation"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sky-600 hover:text-sky-800 dark:text-sky-400 dark:hover:text-sky-300 underline"
-                >
-                  MDN: animation
-                </a>
-              </li>
-            </ul>
-          </CardContent>
-        </Card>
+          </div>
+        </section>
+        {/* 参照リンクは ArticleLayout に移動 */}
       </div>
-    </div>
+    </ArticleLayout>
   );
 };
 

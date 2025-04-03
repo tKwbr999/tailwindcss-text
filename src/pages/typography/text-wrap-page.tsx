@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import ArticleLayout from '@/components/layout/ArticleLayout';
 
 // 各コードサンプルに対応するReact実装コンポーネント
 // 注意: text-wrap, text-balance は比較的新しい CSS 機能です。
@@ -42,6 +42,23 @@ const TextBalanceExample: React.FC = () => {
 
 // ページコンポーネント本体
 const TextWrapPage: React.FC = () => {
+  // ArticleLayout に渡すデータ
+  const title = 'Typography: Text Wrap (テキスト折り返し)';
+  const links = [
+    {
+      title: 'Tailwind CSS: Text Wrap (v3.3+)',
+      url: 'https://tailwindcss.com/docs/text-wrap',
+    },
+    {
+      title: 'MDN: text-wrap',
+      url: 'https://developer.mozilla.org/en-US/docs/Web/CSS/text-wrap',
+    },
+     {
+      title: 'Tailwind CSS: Whitespace (関連)',
+      url: 'https://tailwindcss.com/docs/whitespace',
+    },
+  ];
+
   // コードスニペットを定義
   const textWrapHtml = `<p class="text-wrap ...">...</p>`; // Default
   const textNowrapHtml = `<p class="text-nowrap ...">...</p>`;
@@ -49,43 +66,32 @@ const TextWrapPage: React.FC = () => {
 
 
   return (
-    // ページ全体の背景色とパディング
-    <div className="bg-stone-200 dark:bg-stone-900 min-h-screen p-4 md:p-8 font-serif">
-      {/* コンテンツエリア: 最大幅、中央揃え、背景色、角丸、影 */}
-      <div className="max-w-4xl mx-auto bg-stone-100 dark:bg-stone-800 rounded-lg shadow-md p-6 space-y-8">
-        {' '}
-        {/* space-y で Card 間の余白を設定 */}
-        {/* ページタイトル */}
-        <h1 className="text-3xl font-bold text-center text-stone-900 dark:text-stone-100">
-          Typography: Text Wrap (テキスト折り返し)
-        </h1>
-        {/* 概要 Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl font-semibold text-stone-800 dark:text-stone-200">
+    <ArticleLayout title={title} links={links}>
+      <div className="space-y-8"> {/* 元のCard間のマージンを再現 */}
+        {/* 概要 */}
+        <section>
+          <h2 className="text-2xl font-semibold text-stone-800 dark:text-stone-200 mb-4">
               概要
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="text-stone-700 dark:text-stone-300 space-y-4">
+          </h2>
+          <div className="text-stone-700 dark:text-stone-300 space-y-4">
             <p>
               テキストがコンテナの境界に達したときに、どのように折り返すかを制御するためのユーティリティクラスです。通常の折り返し、折り返しなし、または行間の文字数を均等にするバランス調整などを指定できます。
             </p>
             <p>
               CSS の <code>text-wrap</code> プロパティ (および古い <code>white-space: nowrap;</code>) を制御します。<strong><code>text-wrap</code> と <code>text-balance</code> は Tailwind CSS v3.3 で追加された比較的新しい機能です。</strong>
             </p>
-          </CardContent>
-        </Card>
+          </div>
+        </section>
+
         {/* 基本的な使い方とパラメータ Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl font-semibold text-stone-800 dark:text-stone-200">
-              基本的な使い方とパラメータ
-            </CardTitle>
-             <CardDescription className="text-stone-600 dark:text-stone-400">
+        <section>
+          <h2 className="text-2xl font-semibold text-stone-800 dark:text-stone-200 mb-4">
+              基本的な使い方とパラメータ (text-wrap, text-balance は v3.3+)
+          </h2>
+           <p className="text-stone-600 dark:text-stone-400 mb-4">
               (text-wrap, text-balance は v3.3+)
-            </CardDescription>
-          </CardHeader>
-          <CardContent className="text-stone-700 dark:text-stone-300 space-y-4">
+          </p>
+          <div className="text-stone-700 dark:text-stone-300 space-y-4">
             <p>
               以下のクラスをテキストを含む要素に適用します。
             </p>
@@ -94,20 +100,18 @@ const TextWrapPage: React.FC = () => {
               <li><strong><code>text-nowrap</code></strong> (<code>text-wrap: nowrap;</code> または古いブラウザ向けに <code>white-space: nowrap;</code>): テキストは折り返さず、一行で表示されます。コンテナからはみ出す可能性があります。</li>
               <li><strong><code>text-balance</code></strong> (<code>text-wrap: balance;</code>): ブラウザが行間の文字数を均等にしようと試みます。短い複数行の見出しなどで、よりバランスの取れた見た目になります。効果はブラウザの実装に依存し、常に保証されるわけではありません。</li>
             </ul>
-          </CardContent>
-        </Card>
+          </div>
+        </section>
 
         {/* 各パラメータの例 Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-xl font-semibold text-stone-800 dark:text-stone-200">
+        <section>
+          <h2 className="text-xl font-semibold text-stone-800 dark:text-stone-200 mb-2">
               使用例
-            </CardTitle>
-             <CardDescription className="text-stone-600 dark:text-stone-400">
+          </h2>
+           <p className="text-stone-600 dark:text-stone-400 mb-4">
               異なるテキスト折り返しユーティリティの適用例。
-            </CardDescription>
-          </CardHeader>
-          <CardContent className="space-y-6">
+          </p>
+          <div className="space-y-6">
             {/* Wrap */}
             <div>
               <h3 className="font-semibold text-stone-700 dark:text-stone-300 mb-2">text-wrap (デフォルト)</h3>
@@ -132,20 +136,18 @@ const TextWrapPage: React.FC = () => {
               </pre>
               <TextBalanceExample />
             </div>
-          </CardContent>
-        </Card>
+          </div>
+        </section>
 
         {/* レスポンシブ Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl font-semibold text-stone-800 dark:text-stone-200">
+        <section>
+          <h2 className="text-2xl font-semibold text-stone-800 dark:text-stone-200 mb-2">
               レスポンシブ
-            </CardTitle>
-            <CardDescription className="text-stone-600 dark:text-stone-400">
+          </h2>
+          <p className="text-stone-600 dark:text-stone-400 mb-4">
               ブレークポイントプレフィックス (<code>sm:</code>, <code>md:</code> など) を使って、画面サイズに応じてテキストの折り返し挙動を変更できます。
-            </CardDescription>
-          </CardHeader>
-          <CardContent>
+          </p>
+          <div>
             <p className="text-stone-700 dark:text-stone-300 mb-4">
               例えば、<code>text-nowrap md:text-wrap</code> は小さい画面では折り返さず、中程度の画面サイズ以上で折り返すようにします。
             </p>
@@ -157,17 +159,15 @@ const TextWrapPage: React.FC = () => {
 </p>
               `.trim()}</code>
             </pre>
-          </CardContent>
-        </Card>
+          </div>
+        </section>
 
         {/* 注意点 Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl font-semibold text-stone-800 dark:text-stone-200">
+        <section>
+          <h2 className="text-2xl font-semibold text-stone-800 dark:text-stone-200 mb-4">
               注意点
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="text-stone-700 dark:text-stone-300 space-y-4">
+          </h2>
+          <div className="text-stone-700 dark:text-stone-300 space-y-4">
             <ul className="list-disc list-inside space-y-1 pl-4">
               <li>
                 <code>text-wrap</code> と <code>text-balance</code> は比較的新しい CSS プロパティであり、Tailwind CSS v3.3 で追加されました。古いブラウザではサポートされていない可能性があります。
@@ -182,17 +182,15 @@ const TextWrapPage: React.FC = () => {
                 <code>text-nowrap</code> を使用すると、テキストがコンテナからはみ出す可能性があるため、<code>overflow-hidden</code> や <code>overflow-x-auto</code> と組み合わせて使用することがあります。
               </li>
             </ul>
-          </CardContent>
-        </Card>
+          </div>
+        </section>
 
         {/* 関連ユーティリティ Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl font-semibold text-stone-800 dark:text-stone-200">
+        <section>
+          <h2 className="text-2xl font-semibold text-stone-800 dark:text-stone-200 mb-4">
               関連ユーティリティ
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="text-stone-700 dark:text-stone-300 space-y-4">
+          </h2>
+          <div className="text-stone-700 dark:text-stone-300 space-y-4">
             <ul className="list-disc list-inside space-y-1 pl-4">
                <li>
                 <code>whitespace</code> (<code>whitespace-nowrap</code>, <code>whitespace-normal</code> など): テキストの折り返しやスペースの扱いを制御します。<code>text-nowrap</code> は <code>whitespace-nowrap</code> と関連があります。
@@ -207,53 +205,11 @@ const TextWrapPage: React.FC = () => {
                 <code>hyphens</code> (<code>hyphens-auto</code>, <code>hyphens-manual</code>): ハイフネーション (単語の分割) を制御します。
               </li>
             </ul>
-          </CardContent>
-        </Card>
-
-        {/* 公式ドキュメント参照 Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl font-semibold text-stone-800 dark:text-stone-200">
-              公式ドキュメント参照
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="text-stone-700 dark:text-stone-300 space-y-4">
-            <ul className="list-disc list-inside space-y-1 pl-4">
-              <li>
-                <a
-                  href="https://tailwindcss.com/docs/text-wrap"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sky-600 hover:text-sky-800 dark:text-sky-400 dark:hover:text-sky-300 underline"
-                >
-                  Tailwind CSS: Text Wrap (v3.3+)
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-wrap"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sky-600 hover:text-sky-800 dark:text-sky-400 dark:hover:text-sky-300 underline"
-                >
-                  MDN: text-wrap
-                </a>
-              </li>
-               <li>
-                <a
-                  href="https://tailwindcss.com/docs/whitespace"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sky-600 hover:text-sky-800 dark:text-sky-400 dark:hover:text-sky-300 underline"
-                >
-                  Tailwind CSS: Whitespace (関連)
-                </a>
-              </li>
-            </ul>
-          </CardContent>
-        </Card>
+          </div>
+        </section>
+        {/* 参照リンクは ArticleLayout に移動 */}
       </div>
-    </div>
+    </ArticleLayout>
   );
 };
 

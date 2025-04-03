@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import ArticleLayout from '@/components/layout/ArticleLayout';
 
 // 各コードサンプルに対応するReact実装コンポーネント
 
@@ -40,6 +40,23 @@ const NoUnderlineExample: React.FC = () => {
 
 // ページコンポーネント本体
 const TextDecorationPage: React.FC = () => {
+  // ArticleLayout に渡すデータ
+  const title = 'Typography: Text Decoration (テキスト装飾線)';
+  const links = [
+    {
+      title: 'Tailwind CSS: Text Decoration',
+      url: 'https://tailwindcss.com/docs/text-decoration',
+    },
+    {
+      title: 'MDN: text-decoration-line',
+      url: 'https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration-line',
+    },
+     {
+      title: 'MDN: text-decoration (shorthand)',
+      url: 'https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration',
+    },
+  ];
+
   // コードスニペットを定義
   const underlineHtml = `<p class="underline ...">...</p>`;
   const overlineHtml = `<p class="overline ...">...</p>`;
@@ -48,40 +65,29 @@ const TextDecorationPage: React.FC = () => {
 
 
   return (
-    // ページ全体の背景色とパディング
-    <div className="bg-stone-200 dark:bg-stone-900 min-h-screen p-4 md:p-8 font-serif">
-      {/* コンテンツエリア: 最大幅、中央揃え、背景色、角丸、影 */}
-      <div className="max-w-4xl mx-auto bg-stone-100 dark:bg-stone-800 rounded-lg shadow-md p-6 space-y-8">
-        {' '}
-        {/* space-y で Card 間の余白を設定 */}
-        {/* ページタイトル */}
-        <h1 className="text-3xl font-bold text-center text-stone-900 dark:text-stone-100">
-          Typography: Text Decoration (テキスト装飾線)
-        </h1>
-        {/* 概要 Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl font-semibold text-stone-800 dark:text-stone-200">
+    <ArticleLayout title={title} links={links}>
+      <div className="space-y-8"> {/* 元のCard間のマージンを再現 */}
+        {/* 概要 */}
+        <section>
+          <h2 className="text-2xl font-semibold text-stone-800 dark:text-stone-200 mb-4">
               概要
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="text-stone-700 dark:text-stone-300 space-y-4">
+          </h2>
+          <div className="text-stone-700 dark:text-stone-300 space-y-4">
             <p>
               テキストに下線 (underline)、上線 (overline)、取り消し線 (line-through) などの装飾線を追加したり、削除したりするためのユーティリティクラスです。
             </p>
             <p>
               CSS の <code>text-decoration-line</code> プロパティ (および <code>text-decoration: none;</code>) を制御します。
             </p>
-          </CardContent>
-        </Card>
+          </div>
+        </section>
+
         {/* 基本的な使い方とパラメータ Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl font-semibold text-stone-800 dark:text-stone-200">
+        <section>
+          <h2 className="text-2xl font-semibold text-stone-800 dark:text-stone-200 mb-4">
               基本的な使い方とパラメータ
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="text-stone-700 dark:text-stone-300 space-y-4">
+          </h2>
+          <div className="text-stone-700 dark:text-stone-300 space-y-4">
             <p>
               以下のクラスをテキストを含む要素または親要素に適用します。
             </p>
@@ -91,20 +97,18 @@ const TextDecorationPage: React.FC = () => {
               <li><strong><code>line-through</code></strong>: テキストに取り消し線を引きます (<code>text-decoration-line: line-through;</code>)。</li>
               <li><strong><code>no-underline</code></strong>: テキストの装飾線を削除します (<code>text-decoration-line: none;</code>)。リンク (<code>&lt;a&gt;</code> タグ) のデフォルトの下線を消す場合などによく使用されます。</li>
             </ul>
-          </CardContent>
-        </Card>
+          </div>
+        </section>
 
         {/* 各パラメータの例 Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-xl font-semibold text-stone-800 dark:text-stone-200">
+        <section>
+          <h2 className="text-xl font-semibold text-stone-800 dark:text-stone-200 mb-2">
               使用例
-            </CardTitle>
-             <CardDescription className="text-stone-600 dark:text-stone-400">
+          </h2>
+           <p className="text-stone-600 dark:text-stone-400 mb-4">
               異なるテキスト装飾ユーティリティの適用例。
-            </CardDescription>
-          </CardHeader>
-          <CardContent className="space-y-6">
+          </p>
+          <div className="space-y-6">
             {/* Underline */}
             <div>
               <h3 className="font-semibold text-stone-700 dark:text-stone-300 mb-2">underline</h3>
@@ -137,20 +141,18 @@ const TextDecorationPage: React.FC = () => {
               </pre>
               <NoUnderlineExample />
             </div>
-          </CardContent>
-        </Card>
+          </div>
+        </section>
 
         {/* レスポンシブと状態変化 Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl font-semibold text-stone-800 dark:text-stone-200">
+        <section>
+          <h2 className="text-2xl font-semibold text-stone-800 dark:text-stone-200 mb-2">
               レスポンシブと状態変化
-            </CardTitle>
-            <CardDescription className="text-stone-600 dark:text-stone-400">
+          </h2>
+          <p className="text-stone-600 dark:text-stone-400 mb-4">
               ブレークポイント (<code>md:underline</code> など) や状態 (<code>hover:underline</code>, <code>focus:no-underline</code> など) に応じてテキスト装飾を変更できます。
-            </CardDescription>
-          </CardHeader>
-          <CardContent>
+          </p>
+          <div>
             <p className="text-stone-700 dark:text-stone-300 mb-4">
               リンクのホバー時に下線を表示するのは一般的なパターンです。
             </p>
@@ -158,21 +160,19 @@ const TextDecorationPage: React.FC = () => {
             <pre className="bg-stone-200 dark:bg-stone-700 p-4 rounded overflow-x-auto text-sm text-stone-800 dark:text-stone-200">
               <code className="language-html">{`
 <a href="#" class="no-underline hover:underline ...">
-  Hover me
+  Hover Me
 </a>
               `.trim()}</code>
             </pre>
-          </CardContent>
-        </Card>
+          </div>
+        </section>
 
         {/* 注意点 Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl font-semibold text-stone-800 dark:text-stone-200">
+        <section>
+          <h2 className="text-2xl font-semibold text-stone-800 dark:text-stone-200 mb-4">
               注意点
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="text-stone-700 dark:text-stone-300 space-y-4">
+          </h2>
+          <div className="text-stone-700 dark:text-stone-300 space-y-4">
             <ul className="list-disc list-inside space-y-1 pl-4">
               <li>
                 複数の装飾線 (例: 下線と上線) を同時に適用することは、CSS の仕様上、<code>text-decoration-line</code> プロパティで直接行うことはできません (Tailwind の基本クラスでは不可)。ただし、<code>text-decoration</code> ショートハンドプロパティを使えば可能です (任意の値やカスタム CSS で対応)。
@@ -181,17 +181,15 @@ const TextDecorationPage: React.FC = () => {
                 装飾線の色、スタイル (点線など)、太さ、オフセット (テキストからの距離) は、それぞれ別のユーティリティクラス (<code>decoration-*</code>, <code>decoration-style-*</code>, <code>decoration-thickness-*</code>, <code>underline-offset-*</code>) で制御します。
               </li>
             </ul>
-          </CardContent>
-        </Card>
+          </div>
+        </section>
 
         {/* 関連ユーティリティ Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl font-semibold text-stone-800 dark:text-stone-200">
+        <section>
+          <h2 className="text-2xl font-semibold text-stone-800 dark:text-stone-200 mb-4">
               関連ユーティリティ
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="text-stone-700 dark:text-stone-300 space-y-4">
+          </h2>
+          <div className="text-stone-700 dark:text-stone-300 space-y-4">
             <ul className="list-disc list-inside space-y-1 pl-4">
                <li>
                 <code>text-decoration-color</code> (<code>decoration-*</code>): 装飾線の色を設定します。
@@ -206,53 +204,11 @@ const TextDecorationPage: React.FC = () => {
                 <code>text-underline-offset</code> (<code>underline-offset-*</code>): 下線のテキストからのオフセット距離を設定します。
               </li>
             </ul>
-          </CardContent>
-        </Card>
-
-        {/* 公式ドキュメント参照 Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl font-semibold text-stone-800 dark:text-stone-200">
-              公式ドキュメント参照
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="text-stone-700 dark:text-stone-300 space-y-4">
-            <ul className="list-disc list-inside space-y-1 pl-4">
-              <li>
-                <a
-                  href="https://tailwindcss.com/docs/text-decoration"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sky-600 hover:text-sky-800 dark:text-sky-400 dark:hover:text-sky-300 underline"
-                >
-                  Tailwind CSS: Text Decoration
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration-line"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sky-600 hover:text-sky-800 dark:text-sky-400 dark:hover:text-sky-300 underline"
-                >
-                  MDN: text-decoration-line
-                </a>
-              </li>
-               <li>
-                <a
-                  href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sky-600 hover:text-sky-800 dark:text-sky-400 dark:hover:text-sky-300 underline"
-                >
-                  MDN: text-decoration (shorthand)
-                </a>
-              </li>
-            </ul>
-          </CardContent>
-        </Card>
+          </div>
+        </section>
+        {/* 参照リンクは ArticleLayout に移動 */}
       </div>
-    </div>
+    </ArticleLayout>
   );
 };
 

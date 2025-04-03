@@ -1,5 +1,5 @@
+import ArticleLayout from '@/components/layout/ArticleLayout';
 import React from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 
 // 各コードサンプルに対応するReact実装コンポーネント
 // 背景画像の上にテキストを重ねて効果を示します。
@@ -28,6 +28,19 @@ const BlendModeExample: React.FC<{ blendMode: string; label: string }> = ({ blen
 
 // ページコンポーネント本体
 const MixBlendModePage: React.FC = () => {
+  // ArticleLayout に渡すデータ
+  const title = 'Effects: Mix Blend Mode (混合ブレンドモード)';
+  const links = [
+    {
+      title: 'Tailwind CSS: Mix Blend Mode',
+      url: 'https://tailwindcss.com/docs/mix-blend-mode',
+    },
+    {
+      title: 'MDN: mix-blend-mode',
+      url: 'https://developer.mozilla.org/en-US/docs/Web/CSS/mix-blend-mode',
+    },
+  ];
+
   // // コードスニペットを定義 (代表例)
   // const blendMultiplyHtml = `<div class="mix-blend-multiply ...">...</div>`;
   // const blendScreenHtml = `<div class="mix-blend-screen ...">...</div>`;
@@ -35,24 +48,14 @@ const MixBlendModePage: React.FC = () => {
   // const blendNormalHtml = `<div class="mix-blend-normal ...">...</div>`; // Default
 
   return (
-    // ページ全体の背景色とパディング
-    <div className="bg-stone-200 dark:bg-stone-900 min-h-screen p-4 md:p-8 font-serif">
-      {/* コンテンツエリア: 最大幅、中央揃え、背景色、角丸、影 */}
-      <div className="max-w-4xl mx-auto bg-stone-100 dark:bg-stone-800 rounded-lg shadow-md p-6 space-y-8">
+    <ArticleLayout title={title} links={links}>
+      <div className="space-y-8">
         {' '}
-        {/* space-y で Card 間の余白を設定 */}
-        {/* ページタイトル */}
-        <h1 className="text-3xl font-bold text-center text-stone-900 dark:text-stone-100">
-          Effects: Mix Blend Mode (混合ブレンドモード)
-        </h1>
-        {/* 概要 Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl font-semibold text-stone-800 dark:text-stone-200">
-              概要
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="text-stone-700 dark:text-stone-300 space-y-4">
+        {/* 元のCard間のマージンを再現 */}
+        {/* 概要 */}
+        <section>
+          <h2 className="text-2xl font-semibold text-stone-800 dark:text-stone-200 mb-4">概要</h2>
+          <div className="text-stone-700 dark:text-stone-300 space-y-4">
             <p>
               要素のコンテンツが、その要素の背景や下にある要素とどのように色が混合 (ブレンド)
               されるかを設定するためのユーティリティクラスです。画像の上にテキストを重ねて特殊な効果を出す場合などに使用されます。
@@ -60,16 +63,14 @@ const MixBlendModePage: React.FC = () => {
             <p>
               CSS の <code>mix-blend-mode</code> プロパティを制御します。
             </p>
-          </CardContent>
-        </Card>
+          </div>
+        </section>
         {/* 基本的な使い方とパラメータ Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl font-semibold text-stone-800 dark:text-stone-200">
-              基本的な使い方とパラメータ
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="text-stone-700 dark:text-stone-300 space-y-4">
+        <section>
+          <h2 className="text-2xl font-semibold text-stone-800 dark:text-stone-200 mb-4">
+            基本的な使い方とパラメータ
+          </h2>
+          <div className="text-stone-700 dark:text-stone-300 space-y-4">
             <p>
               <code>mix-blend-{'{mode}'}</code> の形式でクラスを要素に適用します。
             </p>
@@ -179,19 +180,15 @@ const MixBlendModePage: React.FC = () => {
                 : 加算 (より明るく)。 (v3.1+)
               </li>
             </ul>
-          </CardContent>
-        </Card>
+          </div>
+        </section>
         {/* 各パラメータの例 Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-xl font-semibold text-stone-800 dark:text-stone-200">
-              使用例
-            </CardTitle>
-            <CardDescription className="text-stone-600 dark:text-stone-400">
-              異なる混合ブレンドモードの適用例。背景画像の上にテキストを重ねています。
-            </CardDescription>
-          </CardHeader>
-          <CardContent className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <section>
+          <h2 className="text-xl font-semibold text-stone-800 dark:text-stone-200 mb-2">使用例</h2>
+          <p className="text-stone-600 dark:text-stone-400 mb-4">
+            異なる混合ブレンドモードの適用例。背景画像の上にテキストを重ねています。
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             <BlendModeExample blendMode="mix-blend-normal" label="Normal" />
             <BlendModeExample blendMode="mix-blend-multiply" label="Multiply" />
             <BlendModeExample blendMode="mix-blend-screen" label="Screen" />
@@ -208,20 +205,18 @@ const MixBlendModePage: React.FC = () => {
             <BlendModeExample blendMode="mix-blend-luminosity" label="Luminosity" />
             {/* <BlendModeExample blendMode="mix-blend-plus-lighter" label="Plus Lighter" /> */}{' '}
             {/* v3.1+ */}
-          </CardContent>
-        </Card>
+          </div>
+        </section>
         {/* レスポンシブと状態変化 Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl font-semibold text-stone-800 dark:text-stone-200">
-              レスポンシブと状態変化
-            </CardTitle>
-            <CardDescription className="text-stone-600 dark:text-stone-400">
-              ブレークポイント (<code>md:mix-blend-screen</code> など) や状態 (
-              <code>hover:mix-blend-multiply</code> など) に応じて混合ブレンドモードを変更できます。
-            </CardDescription>
-          </CardHeader>
-          <CardContent>
+        <section>
+          <h2 className="text-2xl font-semibold text-stone-800 dark:text-stone-200 mb-2">
+            レスポンシブと状態変化
+          </h2>
+          <p className="text-stone-600 dark:text-stone-400 mb-4">
+            ブレークポイント (<code>md:mix-blend-screen</code> など) や状態 (
+            <code>hover:mix-blend-multiply</code> など) に応じて混合ブレンドモードを変更できます。
+          </p>
+          <div>
             <p className="text-stone-700 dark:text-stone-300 mb-4">
               例えば、ホバー時にブレンドモードを変更して視覚的なフィードバックを与えることができます。
             </p>
@@ -238,16 +233,12 @@ const MixBlendModePage: React.FC = () => {
               `.trim()}
               </code>
             </pre>
-          </CardContent>
-        </Card>
+          </div>
+        </section>
         {/* 注意点 Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl font-semibold text-stone-800 dark:text-stone-200">
-              注意点
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="text-stone-700 dark:text-stone-300 space-y-4">
+        <section>
+          <h2 className="text-2xl font-semibold text-stone-800 dark:text-stone-200 mb-4">注意点</h2>
+          <div className="text-stone-700 dark:text-stone-300 space-y-4">
             <ul className="list-disc list-inside space-y-1 pl-4">
               <li>
                 <code>mix-blend-mode</code>{' '}
@@ -263,16 +254,14 @@ const MixBlendModePage: React.FC = () => {
                 <code>mix-blend-plus-lighter</code> は Tailwind CSS v3.1 で追加されました。
               </li>
             </ul>
-          </CardContent>
-        </Card>
+          </div>
+        </section>
         {/* 関連ユーティリティ Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl font-semibold text-stone-800 dark:text-stone-200">
-              関連ユーティリティ
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="text-stone-700 dark:text-stone-300 space-y-4">
+        <section>
+          <h2 className="text-2xl font-semibold text-stone-800 dark:text-stone-200 mb-4">
+            関連ユーティリティ
+          </h2>
+          <div className="text-stone-700 dark:text-stone-300 space-y-4">
             <ul className="list-disc list-inside space-y-1 pl-4">
               <li>
                 <code>background-blend-mode</code> (<code>bg-blend-*</code>):
@@ -287,42 +276,11 @@ const MixBlendModePage: React.FC = () => {
                 要素全体の不透明度を設定します。ブレンド結果に影響します。
               </li>
             </ul>
-          </CardContent>
-        </Card>
-        {/* 公式ドキュメント参照 Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl font-semibold text-stone-800 dark:text-stone-200">
-              公式ドキュメント参照
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="text-stone-700 dark:text-stone-300 space-y-4">
-            <ul className="list-disc list-inside space-y-1 pl-4">
-              <li>
-                <a
-                  href="https://tailwindcss.com/docs/mix-blend-mode"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sky-600 hover:text-sky-800 dark:text-sky-400 dark:hover:text-sky-300 underline"
-                >
-                  Tailwind CSS: Mix Blend Mode
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://developer.mozilla.org/en-US/docs/Web/CSS/mix-blend-mode"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sky-600 hover:text-sky-800 dark:text-sky-400 dark:hover:text-sky-300 underline"
-                >
-                  MDN: mix-blend-mode
-                </a>
-              </li>
-            </ul>
-          </CardContent>
-        </Card>
+          </div>
+        </section>
+        {/* 参照リンクは ArticleLayout に移動 */}
       </div>
-    </div>
+    </ArticleLayout>
   );
 };
 

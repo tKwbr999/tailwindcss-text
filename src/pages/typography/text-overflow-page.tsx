@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import ArticleLayout from '@/components/layout/ArticleLayout';
 
 // 各コードサンプルに対応するReact実装コンポーネント
 // text-overflow は通常、overflow: hidden と whitespace: nowrap と組み合わせて使用します。
@@ -37,6 +37,19 @@ const TextClipExample: React.FC = () => {
 
 // ページコンポーネント本体
 const TextOverflowPage: React.FC = () => {
+  // ArticleLayout に渡すデータ
+  const title = 'Typography: Text Overflow (テキストオーバーフロー)';
+  const links = [
+    {
+      title: 'Tailwind CSS: Text Overflow',
+      url: 'https://tailwindcss.com/docs/text-overflow',
+    },
+    {
+      title: 'MDN: text-overflow',
+      url: 'https://developer.mozilla.org/en-US/docs/Web/CSS/text-overflow',
+    },
+  ];
+
   // コードスニペットを定義
   const truncateHtml = `<p class="truncate ...">...</p>`; // Includes overflow, whitespace, and text-overflow
   const ellipsisHtml = `<p class="overflow-hidden whitespace-nowrap text-ellipsis ...">...</p>`;
@@ -44,24 +57,14 @@ const TextOverflowPage: React.FC = () => {
 
 
   return (
-    // ページ全体の背景色とパディング
-    <div className="bg-stone-200 dark:bg-stone-900 min-h-screen p-4 md:p-8 font-serif">
-      {/* コンテンツエリア: 最大幅、中央揃え、背景色、角丸、影 */}
-      <div className="max-w-4xl mx-auto bg-stone-100 dark:bg-stone-800 rounded-lg shadow-md p-6 space-y-8">
-        {' '}
-        {/* space-y で Card 間の余白を設定 */}
-        {/* ページタイトル */}
-        <h1 className="text-3xl font-bold text-center text-stone-900 dark:text-stone-100">
-          Typography: Text Overflow (テキストオーバーフロー)
-        </h1>
-        {/* 概要 Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl font-semibold text-stone-800 dark:text-stone-200">
+    <ArticleLayout title={title} links={links}>
+      <div className="space-y-8"> {/* 元のCard間のマージンを再現 */}
+        {/* 概要 */}
+        <section>
+          <h2 className="text-2xl font-semibold text-stone-800 dark:text-stone-200 mb-4">
               概要
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="text-stone-700 dark:text-stone-300 space-y-4">
+          </h2>
+          <div className="text-stone-700 dark:text-stone-300 space-y-4">
             <p>
               コンテナに収まりきらないテキストがどのように処理されるかを制御するためのユーティリティクラスです。通常、テキストを切り詰めて省略記号 (...) を表示したり、単純に切り取ったりします。
             </p>
@@ -71,16 +74,15 @@ const TextOverflowPage: React.FC = () => {
             <p>
               Tailwind は便利な <code>truncate</code> クラスを提供しており、これら3つのプロパティ (<code>overflow: hidden;</code>, <code>white-space: nowrap;</code>, <code>text-overflow: ellipsis;</code>) を一括で設定します。
             </p>
-          </CardContent>
-        </Card>
+          </div>
+        </section>
+
         {/* 基本的な使い方とパラメータ Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl font-semibold text-stone-800 dark:text-stone-200">
+        <section>
+          <h2 className="text-2xl font-semibold text-stone-800 dark:text-stone-200 mb-4">
               基本的な使い方とパラメータ
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="text-stone-700 dark:text-stone-300 space-y-4">
+          </h2>
+          <div className="text-stone-700 dark:text-stone-300 space-y-4">
             <p>
               以下のクラスをテキストを含む要素に適用します。多くの場合、親要素または自身に <code>overflow-hidden</code> と <code>whitespace-nowrap</code> も必要です。
             </p>
@@ -89,20 +91,18 @@ const TextOverflowPage: React.FC = () => {
               <li><strong><code>text-ellipsis</code></strong> (<code>text-overflow: ellipsis;</code>): はみ出したテキストを省略記号 (...) で置き換えます。<code>overflow</code> と <code>whitespace</code> の設定が別途必要です。</li>
               <li><strong><code>text-clip</code></strong> (<code>text-overflow: clip;</code>): はみ出したテキストをコンテナの境界で単純に切り取ります。省略記号は表示されません。<code>overflow</code> と <code>whitespace</code> の設定が別途必要です。</li>
             </ul>
-          </CardContent>
-        </Card>
+          </div>
+        </section>
 
         {/* 各パラメータの例 Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-xl font-semibold text-stone-800 dark:text-stone-200">
+        <section>
+          <h2 className="text-xl font-semibold text-stone-800 dark:text-stone-200 mb-2">
               使用例
-            </CardTitle>
-             <CardDescription className="text-stone-600 dark:text-stone-400">
+          </h2>
+           <p className="text-stone-600 dark:text-stone-400 mb-4">
               異なるテキストオーバーフローユーティリティの適用例。コンテナ幅は w-64。
-            </CardDescription>
-          </CardHeader>
-          <CardContent className="space-y-6">
+          </p>
+          <div className="space-y-6">
             {/* Truncate */}
             <div>
               <h3 className="font-semibold text-stone-700 dark:text-stone-300 mb-2">truncate (推奨)</h3>
@@ -127,20 +127,18 @@ const TextOverflowPage: React.FC = () => {
               </pre>
               <TextClipExample />
             </div>
-          </CardContent>
-        </Card>
+          </div>
+        </section>
 
         {/* レスポンシブ Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl font-semibold text-stone-800 dark:text-stone-200">
+        <section>
+          <h2 className="text-2xl font-semibold text-stone-800 dark:text-stone-200 mb-2">
               レスポンシブ
-            </CardTitle>
-            <CardDescription className="text-stone-600 dark:text-stone-400">
+          </h2>
+          <p className="text-stone-600 dark:text-stone-400 mb-4">
               ブレークポイントプレフィックス (<code>sm:</code>, <code>md:</code> など) を使って、画面サイズに応じてテキストオーバーフローの挙動を変更できます。
-            </CardDescription>
-          </CardHeader>
-          <CardContent>
+          </p>
+          <div>
             <p className="text-stone-700 dark:text-stone-300 mb-4">
               例えば、<code>md:truncate</code> は中程度の画面サイズ以上でのみテキストを切り詰めます。小さい画面では通常通り折り返します (<code>whitespace-normal</code> などがデフォルトの場合)。
             </p>
@@ -152,17 +150,15 @@ const TextOverflowPage: React.FC = () => {
 </p>
               `.trim()}</code>
             </pre>
-          </CardContent>
-        </Card>
+          </div>
+        </section>
 
         {/* 注意点 Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl font-semibold text-stone-800 dark:text-stone-200">
+        <section>
+          <h2 className="text-2xl font-semibold text-stone-800 dark:text-stone-200 mb-4">
               注意点
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="text-stone-700 dark:text-stone-300 space-y-4">
+          </h2>
+          <div className="text-stone-700 dark:text-stone-300 space-y-4">
             <ul className="list-disc list-inside space-y-1 pl-4">
               <li>
                 <code>text-ellipsis</code> と <code>text-clip</code> は、効果を発揮するために通常 <code>overflow-hidden</code> と <code>whitespace-nowrap</code> が必要です。<code>truncate</code> クラスはこれらをまとめて適用します。
@@ -171,17 +167,15 @@ const TextOverflowPage: React.FC = () => {
                 これらのユーティリティは、テキストが単一行に収まらない場合にのみ効果があります。複数行のテキストを指定行数で切り詰めたい場合は <code>line-clamp-*</code> ユーティリティ (プラグインが必要) を使用します。
               </li>
             </ul>
-          </CardContent>
-        </Card>
+          </div>
+        </section>
 
         {/* 関連ユーティリティ Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl font-semibold text-stone-800 dark:text-stone-200">
+        <section>
+          <h2 className="text-2xl font-semibold text-stone-800 dark:text-stone-200 mb-4">
               関連ユーティリティ
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="text-stone-700 dark:text-stone-300 space-y-4">
+          </h2>
+          <div className="text-stone-700 dark:text-stone-300 space-y-4">
             <ul className="list-disc list-inside space-y-1 pl-4">
                <li>
                 <code>overflow</code> (<code>overflow-hidden</code>): コンテンツのはみ出しを隠します。
@@ -196,43 +190,11 @@ const TextOverflowPage: React.FC = () => {
                 <code>word-break</code> (<code>break-all</code>, <code>break-words</code>): 単語の途中での改行を制御します。
               </li>
             </ul>
-          </CardContent>
-        </Card>
-
-        {/* 公式ドキュメント参照 Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl font-semibold text-stone-800 dark:text-stone-200">
-              公式ドキュメント参照
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="text-stone-700 dark:text-stone-300 space-y-4">
-            <ul className="list-disc list-inside space-y-1 pl-4">
-              <li>
-                <a
-                  href="https://tailwindcss.com/docs/text-overflow"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sky-600 hover:text-sky-800 dark:text-sky-400 dark:hover:text-sky-300 underline"
-                >
-                  Tailwind CSS: Text Overflow
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-overflow"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sky-600 hover:text-sky-800 dark:text-sky-400 dark:hover:text-sky-300 underline"
-                >
-                  MDN: text-overflow
-                </a>
-              </li>
-            </ul>
-          </CardContent>
-        </Card>
+          </div>
+        </section>
+        {/* 参照リンクは ArticleLayout に移動 */}
       </div>
-    </div>
+    </ArticleLayout>
   );
 };
 

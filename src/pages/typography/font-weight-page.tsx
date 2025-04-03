@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import ArticleLayout from '@/components/layout/ArticleLayout';
 
 // 各コードサンプルに対応するReact実装コンポーネント
 
@@ -22,6 +22,19 @@ const FontWeightExample: React.FC = () => {
 
 // ページコンポーネント本体
 const FontWeightPage: React.FC = () => {
+  // ArticleLayout に渡すデータ
+  const title = 'Typography: Font Weight (フォントの太さ)';
+  const links = [
+    {
+      title: 'Tailwind CSS: Font Weight',
+      url: 'https://tailwindcss.com/docs/font-weight',
+    },
+    {
+      title: 'MDN: font-weight',
+      url: 'https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight',
+    },
+  ];
+
   // コードスニペットを定義
   const fontWeightHtml = `
 <p class="font-thin ...">Thin</p>
@@ -35,40 +48,29 @@ const FontWeightPage: React.FC = () => {
 
 
   return (
-    // ページ全体の背景色とパディング
-    <div className="bg-stone-200 dark:bg-stone-900 min-h-screen p-4 md:p-8 font-serif">
-      {/* コンテンツエリア: 最大幅、中央揃え、背景色、角丸、影 */}
-      <div className="max-w-4xl mx-auto bg-stone-100 dark:bg-stone-800 rounded-lg shadow-md p-6 space-y-8">
-        {' '}
-        {/* space-y で Card 間の余白を設定 */}
-        {/* ページタイトル */}
-        <h1 className="text-3xl font-bold text-center text-stone-900 dark:text-stone-100">
-          Typography: Font Weight (フォントの太さ)
-        </h1>
-        {/* 概要 Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl font-semibold text-stone-800 dark:text-stone-200">
+    <ArticleLayout title={title} links={links}>
+      <div className="space-y-8"> {/* 元のCard間のマージンを再現 */}
+        {/* 概要 */}
+        <section>
+          <h2 className="text-2xl font-semibold text-stone-800 dark:text-stone-200 mb-4">
               概要
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="text-stone-700 dark:text-stone-300 space-y-4">
+          </h2>
+          <div className="text-stone-700 dark:text-stone-300 space-y-4">
             <p>
               テキストのフォントの太さ (weight) を制御するためのユーティリティクラスです。Thin から Black までの様々な太さを指定できます。
             </p>
             <p>
               CSS の <code>font-weight</code> プロパティを制御します。
             </p>
-          </CardContent>
-        </Card>
+          </div>
+        </section>
+
         {/* 基本的な使い方とパラメータ Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl font-semibold text-stone-800 dark:text-stone-200">
+        <section>
+          <h2 className="text-2xl font-semibold text-stone-800 dark:text-stone-200 mb-4">
               基本的な使い方とパラメータ
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="text-stone-700 dark:text-stone-300 space-y-4">
+          </h2>
+          <div className="text-stone-700 dark:text-stone-300 space-y-4">
             <p>
               <code>font-{'{weight}'}</code> の形式でクラスを要素に適用します。
             </p>
@@ -90,38 +92,34 @@ const FontWeightPage: React.FC = () => {
              <p>
               任意の値 (例: <code>font-[550]</code>) も使用可能です (Tailwind JIT モード)。ただし、使用するフォントがその太さをサポートしている必要があります。
             </p>
-          </CardContent>
-        </Card>
+          </div>
+        </section>
 
         {/* 使用例 Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-xl font-semibold text-stone-800 dark:text-stone-200">
+        <section>
+          <h2 className="text-xl font-semibold text-stone-800 dark:text-stone-200 mb-2">
               使用例
-            </CardTitle>
-             <CardDescription className="text-stone-600 dark:text-stone-400">
+          </h2>
+           <p className="text-stone-600 dark:text-stone-400 mb-4">
               異なるフォントの太さの適用例。
-            </CardDescription>
-          </CardHeader>
-          <CardContent>
+          </p>
+          <div>
             <pre className="bg-stone-200 dark:bg-stone-700 p-2 rounded overflow-x-auto text-sm text-stone-800 dark:text-stone-200 mb-2">
               <code className="language-html">{fontWeightHtml}</code>
             </pre>
             <FontWeightExample />
-          </CardContent>
-        </Card>
+          </div>
+        </section>
 
         {/* レスポンシブ Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl font-semibold text-stone-800 dark:text-stone-200">
+        <section>
+          <h2 className="text-2xl font-semibold text-stone-800 dark:text-stone-200 mb-2">
               レスポンシブ
-            </CardTitle>
-            <CardDescription className="text-stone-600 dark:text-stone-400">
+          </h2>
+          <p className="text-stone-600 dark:text-stone-400 mb-4">
               ブレークポイントプレフィックス (<code>sm:</code>, <code>md:</code> など) を使って、画面サイズに応じてフォントの太さを変更できます。
-            </CardDescription>
-          </CardHeader>
-          <CardContent>
+          </p>
+          <div>
             <p className="text-stone-700 dark:text-stone-300 mb-4">
               例えば、<code>font-normal md:font-bold</code> はデフォルトで通常の太さ、中程度の画面サイズ以上で太字になります。
             </p>
@@ -133,17 +131,15 @@ const FontWeightPage: React.FC = () => {
 </p>
               `.trim()}</code>
             </pre>
-          </CardContent>
-        </Card>
+          </div>
+        </section>
 
         {/* 注意点 Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl font-semibold text-stone-800 dark:text-stone-200">
+        <section>
+          <h2 className="text-2xl font-semibold text-stone-800 dark:text-stone-200 mb-4">
               注意点
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="text-stone-700 dark:text-stone-300 space-y-4">
+          </h2>
+          <div className="text-stone-700 dark:text-stone-300 space-y-4">
             <ul className="list-disc list-inside space-y-1 pl-4">
               <li>
                 指定した太さが使用するフォントファミリーで利用可能である必要があります。利用できない場合、ブラウザは最も近い利用可能な太さで表示しようとするか、太さを合成しようとすることがあります (faux bold)。
@@ -152,17 +148,15 @@ const FontWeightPage: React.FC = () => {
                 Web フォントを使用する場合、必要な太さのフォントファイルをすべて読み込んでいることを確認してください。
               </li>
             </ul>
-          </CardContent>
-        </Card>
+          </div>
+        </section>
 
         {/* 関連ユーティリティ Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl font-semibold text-stone-800 dark:text-stone-200">
+        <section>
+          <h2 className="text-2xl font-semibold text-stone-800 dark:text-stone-200 mb-4">
               関連ユーティリティ
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="text-stone-700 dark:text-stone-300 space-y-4">
+          </h2>
+          <div className="text-stone-700 dark:text-stone-300 space-y-4">
             <ul className="list-disc list-inside space-y-1 pl-4">
                <li>
                 <code>font-family</code> (<code>font-*</code>): フォントファミリーを設定します。
@@ -174,43 +168,11 @@ const FontWeightPage: React.FC = () => {
                 <code>font-style</code> (<code>italic</code>, <code>not-italic</code>): フォントスタイルを設定します。
               </li>
             </ul>
-          </CardContent>
-        </Card>
-
-        {/* 公式ドキュメント参照 Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl font-semibold text-stone-800 dark:text-stone-200">
-              公式ドキュメント参照
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="text-stone-700 dark:text-stone-300 space-y-4">
-            <ul className="list-disc list-inside space-y-1 pl-4">
-              <li>
-                <a
-                  href="https://tailwindcss.com/docs/font-weight"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sky-600 hover:text-sky-800 dark:text-sky-400 dark:hover:text-sky-300 underline"
-                >
-                  Tailwind CSS: Font Weight
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sky-600 hover:text-sky-800 dark:text-sky-400 dark:hover:text-sky-300 underline"
-                >
-                  MDN: font-weight
-                </a>
-              </li>
-            </ul>
-          </CardContent>
-        </Card>
+          </div>
+        </section>
+        {/* 参照リンクは ArticleLayout に移動 */}
       </div>
-    </div>
+    </ArticleLayout>
   );
 };
 

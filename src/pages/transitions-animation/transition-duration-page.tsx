@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import ArticleLayout from '@/components/layout/ArticleLayout';
 
 // 各コードサンプルに対応するReact実装コンポーネント
 
@@ -36,6 +36,19 @@ const ArbitraryTransitionDurationExample: React.FC = () => {
 
 // ページコンポーネント本体
 const TransitionDurationPage: React.FC = () => {
+  // ArticleLayout に渡すデータ
+  const title = 'Transitions & Animation: Transition Duration (トランジション時間)';
+  const links = [
+    {
+      title: 'Tailwind CSS: Transition Duration',
+      url: 'https://tailwindcss.com/docs/transition-duration',
+    },
+    {
+      title: 'MDN: transition-duration',
+      url: 'https://developer.mozilla.org/en-US/docs/Web/CSS/transition-duration',
+    },
+  ];
+
   // コードスニペットを定義
   const transitionDurationHtml = `
 <button class="transition duration-75 ...">...</button>   {/* 75ms */}
@@ -52,40 +65,29 @@ const TransitionDurationPage: React.FC = () => {
 
 
   return (
-    // ページ全体の背景色とパディング
-    <div className="bg-stone-200 dark:bg-stone-900 min-h-screen p-4 md:p-8 font-serif">
-      {/* コンテンツエリア: 最大幅、中央揃え、背景色、角丸、影 */}
-      <div className="max-w-4xl mx-auto bg-stone-100 dark:bg-stone-800 rounded-lg shadow-md p-6 space-y-8">
-        {' '}
-        {/* space-y で Card 間の余白を設定 */}
-        {/* ページタイトル */}
-        <h1 className="text-3xl font-bold text-center text-stone-900 dark:text-stone-100">
-          Transitions & Animation: Transition Duration (トランジション時間)
-        </h1>
-        {/* 概要 Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl font-semibold text-stone-800 dark:text-stone-200">
+    <ArticleLayout title={title} links={links}>
+      <div className="space-y-8"> {/* 元のCard間のマージンを再現 */}
+        {/* 概要 */}
+        <section>
+          <h2 className="text-2xl font-semibold text-stone-800 dark:text-stone-200 mb-4">
               概要
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="text-stone-700 dark:text-stone-300 space-y-4">
+          </h2>
+          <div className="text-stone-700 dark:text-stone-300 space-y-4">
             <p>
               CSS トランジションの完了にかかる時間を制御するためのユーティリティクラスです。
             </p>
             <p>
               CSS の <code>transition-duration</code> プロパティを制御します。
             </p>
-          </CardContent>
-        </Card>
+          </div>
+        </section>
+
         {/* 基本的な使い方とパラメータ Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl font-semibold text-stone-800 dark:text-stone-200">
+        <section>
+          <h2 className="text-2xl font-semibold text-stone-800 dark:text-stone-200 mb-4">
               基本的な使い方とパラメータ
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="text-stone-700 dark:text-stone-300 space-y-4">
+          </h2>
+          <div className="text-stone-700 dark:text-stone-300 space-y-4">
             <p>
               <code>duration-{'{amount}'}</code> の形式でクラスを要素に適用します。<code>transition</code> または他の <code>transition-*</code> ユーティリティと一緒に使用します。
             </p>
@@ -106,20 +108,18 @@ const TransitionDurationPage: React.FC = () => {
              <p>
               デフォルトでは、Tailwind は 150ms のトランジション時間を提供します。<code>transition</code> クラスのみを使用した場合、このデフォルト値が適用されます。
             </p>
-          </CardContent>
-        </Card>
+          </div>
+        </section>
 
         {/* 各パラメータの例 Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-xl font-semibold text-stone-800 dark:text-stone-200">
+        <section>
+          <h2 className="text-xl font-semibold text-stone-800 dark:text-stone-200 mb-2">
               使用例
-            </CardTitle>
-             <CardDescription className="text-stone-600 dark:text-stone-400">
+          </h2>
+           <p className="text-stone-600 dark:text-stone-400 mb-4">
               異なるトランジション時間の適用例。ホバーして効果を確認してください。
-            </CardDescription>
-          </CardHeader>
-          <CardContent className="space-y-6">
+          </p>
+          <div className="space-y-6">
             {/* Standard Transition Duration */}
             <div>
               <h3 className="font-semibold text-stone-700 dark:text-stone-300 mb-2">標準のトランジション時間</h3>
@@ -136,20 +136,18 @@ const TransitionDurationPage: React.FC = () => {
               </pre>
               <ArbitraryTransitionDurationExample />
             </div>
-          </CardContent>
-        </Card>
+          </div>
+        </section>
 
         {/* レスポンシブと状態変化 Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl font-semibold text-stone-800 dark:text-stone-200">
+        <section>
+          <h2 className="text-2xl font-semibold text-stone-800 dark:text-stone-200 mb-2">
               レスポンシブと状態変化
-            </CardTitle>
-            <CardDescription className="text-stone-600 dark:text-stone-400">
+          </h2>
+          <p className="text-stone-600 dark:text-stone-400 mb-4">
               トランジション時間は通常、要素の基本スタイルとして定義され、状態変化 (<code>hover:</code> など) で変更されるプロパティに適用されます。ブレークポイント (<code>md:duration-500</code> など) で時間を変更することも可能です。
-            </CardDescription>
-          </CardHeader>
-          <CardContent>
+          </p>
+          <div>
             <p className="text-stone-700 dark:text-stone-300 mb-4">
               ホバー時に背景色を 500ms かけて変更する例:
             </p>
@@ -161,17 +159,15 @@ const TransitionDurationPage: React.FC = () => {
 </button>
               `.trim()}</code>
             </pre>
-          </CardContent>
-        </Card>
+          </div>
+        </section>
 
         {/* 関連ユーティリティ Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl font-semibold text-stone-800 dark:text-stone-200">
+        <section>
+          <h2 className="text-2xl font-semibold text-stone-800 dark:text-stone-200 mb-4">
               関連ユーティリティ
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="text-stone-700 dark:text-stone-300 space-y-4">
+          </h2>
+          <div className="text-stone-700 dark:text-stone-300 space-y-4">
             <ul className="list-disc list-inside space-y-1 pl-4">
                <li>
                 <code>transition-property-*</code> (<code>transition</code>, <code>transition-colors</code> など): どのプロパティをトランジションさせるかを指定します。
@@ -183,43 +179,11 @@ const TransitionDurationPage: React.FC = () => {
                 <code>transition-delay-*</code>: トランジションが開始するまでの遅延時間を設定します。
               </li>
             </ul>
-          </CardContent>
-        </Card>
-
-        {/* 公式ドキュメント参照 Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl font-semibold text-stone-800 dark:text-stone-200">
-              公式ドキュメント参照
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="text-stone-700 dark:text-stone-300 space-y-4">
-            <ul className="list-disc list-inside space-y-1 pl-4">
-              <li>
-                <a
-                  href="https://tailwindcss.com/docs/transition-duration"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sky-600 hover:text-sky-800 dark:text-sky-400 dark:hover:text-sky-300 underline"
-                >
-                  Tailwind CSS: Transition Duration
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://developer.mozilla.org/en-US/docs/Web/CSS/transition-duration"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sky-600 hover:text-sky-800 dark:text-sky-400 dark:hover:text-sky-300 underline"
-                >
-                  MDN: transition-duration
-                </a>
-              </li>
-            </ul>
-          </CardContent>
-        </Card>
+          </div>
+        </section>
+        {/* 参照リンクは ArticleLayout に移動 */}
       </div>
-    </div>
+    </ArticleLayout>
   );
 };
 

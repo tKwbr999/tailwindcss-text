@@ -1,5 +1,5 @@
+import ArticleLayout from '@/components/layout/ArticleLayout';
 import React from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 
 // 各コードサンプルに対応するReact実装コンポーネント
 
@@ -63,6 +63,19 @@ const ArbitraryRowsExample: React.FC = () => {
 
 // ページコンポーネント本体
 const GridTemplateRowsPage: React.FC = () => {
+  // ArticleLayout に渡すデータ
+  const title = 'Flexbox & Grid: Grid Template Rows (グリッド行テンプレート)';
+  const links = [
+    {
+      title: 'Tailwind CSS: Grid Template Rows',
+      url: 'https://tailwindcss.com/docs/grid-template-rows',
+    },
+    {
+      title: 'MDN: grid-template-rows',
+      url: 'https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-rows',
+    },
+  ];
+
   // コードスニペットを定義
   const gridRowsHtml = `
 <div class="grid grid-rows-3 grid-flow-col gap-4 h-48 ..."> {/* grid-flow-col, 高さを指定 */}
@@ -105,40 +118,27 @@ const GridTemplateRowsPage: React.FC = () => {
 
 
   return (
-    // ページ全体の背景色とパディング
-    <div className="bg-stone-200 dark:bg-stone-900 min-h-screen p-4 md:p-8 font-serif">
-      {/* コンテンツエリア: 最大幅、中央揃え、背景色、角丸、影 */}
-      <div className="max-w-4xl mx-auto bg-stone-100 dark:bg-stone-800 rounded-lg shadow-md p-6 space-y-8">
-        {' '}
-        {/* space-y で Card 間の余白を設定 */}
-        {/* ページタイトル */}
-        <h1 className="text-3xl font-bold text-center text-stone-900 dark:text-stone-100">
-          Flexbox & Grid: Grid Template Rows (グリッド行テンプレート)
-        </h1>
-        {/* 概要 Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl font-semibold text-stone-800 dark:text-stone-200">
-              概要
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="text-stone-700 dark:text-stone-300 space-y-4">
+    <ArticleLayout title={title} links={links}>
+      <div className="space-y-8"> {/* 元のCard間のマージンを再現 */}
+        {/* 概要 */}
+        <section>
+          <h2 className="text-2xl font-semibold text-stone-800 dark:text-stone-200 mb-4">概要</h2>
+          <div className="text-stone-700 dark:text-stone-300 space-y-4">
             <p>
               グリッドコンテナ内の行の数とサイズを定義するためのユーティリティクラスです。グリッドレイアウトの垂直方向の構造を作成します。
             </p>
             <p>
               CSS の <code>grid-template-rows</code> プロパティを制御します。
             </p>
-          </CardContent>
-        </Card>
-        {/* 基本的な使い方とパラメータ Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl font-semibold text-stone-800 dark:text-stone-200">
-              基本的な使い方とパラメータ
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="text-stone-700 dark:text-stone-300 space-y-4">
+          </div>
+        </section>
+
+        {/* 基本的な使い方とパラメータ */}
+        <section>
+          <h2 className="text-2xl font-semibold text-stone-800 dark:text-stone-200 mb-4">
+            基本的な使い方とパラメータ
+          </h2>
+          <div className="text-stone-700 dark:text-stone-300 space-y-4">
             <p>
               <code>grid-rows-{'{number}'}</code>, <code>grid-rows-none</code>, <code>grid-rows-subgrid</code>, または任意の値を使用してクラスをグリッドコンテナ (<code>display: grid</code> または <code>inline-grid</code> が適用された要素) に適用します。
             </p>
@@ -150,20 +150,16 @@ const GridTemplateRowsPage: React.FC = () => {
              <p className="mt-4">
               任意の値 (例: <code>grid-rows-[auto_1fr_50px]</code>) を使用して、より複雑な行定義 (自動高さ、可変高さ、固定高さなど) を行うことも可能です (Tailwind JIT モード)。<code>minmax()</code>, <code>repeat()</code>, <code>fit-content()</code> などの CSS グリッド関数も利用できます。
             </p>
-          </CardContent>
-        </Card>
+          </div>
+        </section>
 
-        {/* 各パラメータの例 Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-xl font-semibold text-stone-800 dark:text-stone-200">
-              使用例
-            </CardTitle>
-             <CardDescription className="text-stone-600 dark:text-stone-400">
+        {/* 使用例 */}
+        <section>
+          <h2 className="text-xl font-semibold text-stone-800 dark:text-stone-200 mb-2">使用例</h2>
+           <p className="text-stone-600 dark:text-stone-400 mb-4">
               異なる grid-template-rows 値の適用例。多くの場合、コンテナに高さ (例: <code>h-48</code>) と <code>grid-flow-col</code> が必要です。
-            </CardDescription>
-          </CardHeader>
-          <CardContent className="space-y-6">
+          </p>
+          <div className="space-y-6">
             {/* Numbered Rows */}
             <div>
               <h3 className="font-semibold text-stone-700 dark:text-stone-300 mb-2">数値指定 (grid-rows-3)</h3>
@@ -196,20 +192,18 @@ const GridTemplateRowsPage: React.FC = () => {
               </pre>
               <ArbitraryRowsExample />
             </div>
-          </CardContent>
-        </Card>
+          </div>
+        </section>
 
-        {/* レスポンシブ Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl font-semibold text-stone-800 dark:text-stone-200">
-              レスポンシブ
-            </CardTitle>
-            <CardDescription className="text-stone-600 dark:text-stone-400">
+        {/* レスポンシブ */}
+        <section>
+          <h2 className="text-2xl font-semibold text-stone-800 dark:text-stone-200 mb-2">
+            レスポンシブ
+          </h2>
+           <p className="text-stone-600 dark:text-stone-400 mb-4">
               ブレークポイントプレフィックス (<code>sm:</code>, <code>md:</code> など) を使って、画面サイズに応じて行の数や定義を変更できます。
-            </CardDescription>
-          </CardHeader>
-          <CardContent>
+          </p>
+          <div>
             <p className="text-stone-700 dark:text-stone-300 mb-4">
               例えば、<code>grid-rows-6 sm:grid-rows-3</code> はデフォルトで6行、スモールスクリーン以上で3行のグリッドを作成します。
             </p>
@@ -221,17 +215,13 @@ const GridTemplateRowsPage: React.FC = () => {
 </div>
               `.trim()}</code>
             </pre>
-          </CardContent>
-        </Card>
+          </div>
+        </section>
 
-        {/* 注意点 Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl font-semibold text-stone-800 dark:text-stone-200">
-              注意点
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="text-stone-700 dark:text-stone-300 space-y-4">
+        {/* 注意点 */}
+        <section>
+          <h2 className="text-2xl font-semibold text-stone-800 dark:text-stone-200 mb-4">注意点</h2>
+          <div className="text-stone-700 dark:text-stone-300 space-y-4">
             <ul className="list-disc list-inside space-y-1 pl-4">
               <li>
                 <code>grid-template-rows</code> はグリッドコンテナに適用します。
@@ -249,17 +239,15 @@ const GridTemplateRowsPage: React.FC = () => {
                 行間の溝 (gap) は <code>gap-*</code>, <code>gap-x-*</code>, <code>gap-y-*</code> ユーティリティで設定します。
               </li>
             </ul>
-          </CardContent>
-        </Card>
+          </div>
+        </section>
 
-        {/* 関連ユーティリティ Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl font-semibold text-stone-800 dark:text-stone-200">
-              関連ユーティリティ
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="text-stone-700 dark:text-stone-300 space-y-4">
+        {/* 関連ユーティリティ */}
+        <section>
+          <h2 className="text-2xl font-semibold text-stone-800 dark:text-stone-200 mb-4">
+            関連ユーティリティ
+          </h2>
+          <div className="text-stone-700 dark:text-stone-300 space-y-4">
             <ul className="list-disc list-inside space-y-1 pl-4">
                <li>
                 <code>display</code> (<code>grid</code>, <code>inline-grid</code>): 要素をグリッドコンテナにします。
@@ -286,43 +274,11 @@ const GridTemplateRowsPage: React.FC = () => {
                 <code>height</code> (<code>h-*</code>): グリッドコンテナの高さを設定します。<code>grid-rows-*</code> で均等分割する場合に重要です。
               </li>
             </ul>
-          </CardContent>
-        </Card>
-
-        {/* 公式ドキュメント参照 Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl font-semibold text-stone-800 dark:text-stone-200">
-              公式ドキュメント参照
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="text-stone-700 dark:text-stone-300 space-y-4">
-            <ul className="list-disc list-inside space-y-1 pl-4">
-              <li>
-                <a
-                  href="https://tailwindcss.com/docs/grid-template-rows"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sky-600 hover:text-sky-800 dark:text-sky-400 dark:hover:text-sky-300 underline"
-                >
-                  Tailwind CSS: Grid Template Rows
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-rows"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sky-600 hover:text-sky-800 dark:text-sky-400 dark:hover:text-sky-300 underline"
-                >
-                  MDN: grid-template-rows
-                </a>
-              </li>
-            </ul>
-          </CardContent>
-        </Card>
+          </div>
+        </section>
+        {/* 参照リンクは ArticleLayout に移動 */}
       </div>
-    </div>
+    </ArticleLayout>
   );
 };
 

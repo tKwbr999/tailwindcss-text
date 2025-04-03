@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import ArticleLayout from '@/components/layout/ArticleLayout';
 
 // 各コードサンプルに対応するReact実装コンポーネント
 
@@ -25,6 +25,19 @@ const ArbitraryOffsetExample: React.FC = () => {
 
 // ページコンポーネント本体
 const TextUnderlineOffsetPage: React.FC = () => {
+  // ArticleLayout に渡すデータ
+  const title = 'Typography: Text Underline Offset (下線のオフセット)';
+  const links = [
+    {
+      title: 'Tailwind CSS: Text Underline Offset',
+      url: 'https://tailwindcss.com/docs/text-underline-offset',
+    },
+    {
+      title: 'MDN: text-underline-offset',
+      url: 'https://developer.mozilla.org/en-US/docs/Web/CSS/text-underline-offset',
+    },
+  ];
+
   // コードスニペットを定義
   const offsetHtml = `
 <p class="underline underline-offset-auto ...">...</p> {/* Default */}
@@ -38,40 +51,29 @@ const TextUnderlineOffsetPage: React.FC = () => {
 
 
   return (
-    // ページ全体の背景色とパディング
-    <div className="bg-stone-200 dark:bg-stone-900 min-h-screen p-4 md:p-8 font-serif">
-      {/* コンテンツエリア: 最大幅、中央揃え、背景色、角丸、影 */}
-      <div className="max-w-4xl mx-auto bg-stone-100 dark:bg-stone-800 rounded-lg shadow-md p-6 space-y-8">
-        {' '}
-        {/* space-y で Card 間の余白を設定 */}
-        {/* ページタイトル */}
-        <h1 className="text-3xl font-bold text-center text-stone-900 dark:text-stone-100">
-          Typography: Text Underline Offset (下線のオフセット)
-        </h1>
-        {/* 概要 Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl font-semibold text-stone-800 dark:text-stone-200">
+    <ArticleLayout title={title} links={links}>
+      <div className="space-y-8"> {/* 元のCard間のマージンを再現 */}
+        {/* 概要 */}
+        <section>
+          <h2 className="text-2xl font-semibold text-stone-800 dark:text-stone-200 mb-4">
               概要
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="text-stone-700 dark:text-stone-300 space-y-4">
+          </h2>
+          <div className="text-stone-700 dark:text-stone-300 space-y-4">
             <p>
               テキストの下線 (underline) とテキストのベースラインとの間の垂直方向の距離 (オフセット) を設定するためのユーティリティクラスです。
             </p>
             <p>
               CSS の <code>text-underline-offset</code> プロパティを制御します。
             </p>
-          </CardContent>
-        </Card>
+          </div>
+        </section>
+
         {/* 基本的な使い方とパラメータ Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl font-semibold text-stone-800 dark:text-stone-200">
+        <section>
+          <h2 className="text-2xl font-semibold text-stone-800 dark:text-stone-200 mb-4">
               基本的な使い方とパラメータ
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="text-stone-700 dark:text-stone-300 space-y-4">
+          </h2>
+          <div className="text-stone-700 dark:text-stone-300 space-y-4">
             <p>
               <code>underline-offset-{'{amount}'}</code> の形式でクラスを要素に適用します。通常、<code>underline</code> クラスと一緒に使用します。
             </p>
@@ -87,20 +89,18 @@ const TextUnderlineOffsetPage: React.FC = () => {
              <p className="mt-4">
               任意の値 (例: <code>underline-offset-[3px]</code>) も使用可能です (Tailwind JIT モード)。
             </p>
-          </CardContent>
-        </Card>
+          </div>
+        </section>
 
         {/* 各パラメータの例 Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-xl font-semibold text-stone-800 dark:text-stone-200">
+        <section>
+          <h2 className="text-xl font-semibold text-stone-800 dark:text-stone-200 mb-2">
               使用例
-            </CardTitle>
-             <CardDescription className="text-stone-600 dark:text-stone-400">
+          </h2>
+           <p className="text-stone-600 dark:text-stone-400 mb-4">
               異なる下線オフセットの適用例。
-            </CardDescription>
-          </CardHeader>
-          <CardContent className="space-y-6">
+          </p>
+          <div className="space-y-6">
             {/* Standard Offset */}
             <div>
               <h3 className="font-semibold text-stone-700 dark:text-stone-300 mb-2">標準オフセット</h3>
@@ -117,20 +117,18 @@ const TextUnderlineOffsetPage: React.FC = () => {
               </pre>
               <ArbitraryOffsetExample />
             </div>
-          </CardContent>
-        </Card>
+          </div>
+        </section>
 
         {/* レスポンシブと状態変化 Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl font-semibold text-stone-800 dark:text-stone-200">
+        <section>
+          <h2 className="text-2xl font-semibold text-stone-800 dark:text-stone-200 mb-2">
               レスポンシブと状態変化
-            </CardTitle>
-            <CardDescription className="text-stone-600 dark:text-stone-400">
+          </h2>
+          <p className="text-stone-600 dark:text-stone-400 mb-4">
               ブレークポイント (<code>md:underline-offset-4</code> など) や状態 (<code>hover:underline-offset-2</code> など) に応じて下線のオフセットを変更できます。
-            </CardDescription>
-          </CardHeader>
-          <CardContent>
+          </p>
+          <div>
             <p className="text-stone-700 dark:text-stone-300 mb-4">
               例えば、ホバー時に下線の位置を少し上げる (オフセットを小さくする) ことができます。
             </p>
@@ -145,17 +143,15 @@ const TextUnderlineOffsetPage: React.FC = () => {
              <a href="#" className="underline underline-offset-4 hover:underline-offset-2 text-blue-600 dark:text-blue-400">
               Hover for different offset
             </a>
-          </CardContent>
-        </Card>
+          </div>
+        </section>
 
         {/* 注意点 Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl font-semibold text-stone-800 dark:text-stone-200">
+        <section>
+          <h2 className="text-2xl font-semibold text-stone-800 dark:text-stone-200 mb-4">
               注意点
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="text-stone-700 dark:text-stone-300 space-y-4">
+          </h2>
+          <div className="text-stone-700 dark:text-stone-300 space-y-4">
             <ul className="list-disc list-inside space-y-1 pl-4">
               <li>
                 下線のオフセットを変更するには、まず <code>underline</code> クラスで下線自体を適用する必要があります。
@@ -167,17 +163,15 @@ const TextUnderlineOffsetPage: React.FC = () => {
                 ブラウザのサポート状況を確認してください。<code>text-underline-offset</code> は比較的新しい CSS プロパティです。
               </li>
             </ul>
-          </CardContent>
-        </Card>
+          </div>
+        </section>
 
         {/* 関連ユーティリティ Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl font-semibold text-stone-800 dark:text-stone-200">
+        <section>
+          <h2 className="text-2xl font-semibold text-stone-800 dark:text-stone-200 mb-4">
               関連ユーティリティ
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="text-stone-700 dark:text-stone-300 space-y-4">
+          </h2>
+          <div className="text-stone-700 dark:text-stone-300 space-y-4">
             <ul className="list-disc list-inside space-y-1 pl-4">
                <li>
                 <code>text-decoration</code> (<code>underline</code>, <code>no-underline</code>): 下線を表示または非表示にします。
@@ -192,43 +186,11 @@ const TextUnderlineOffsetPage: React.FC = () => {
                 <code>text-decoration-thickness</code> (<code>decoration-*</code>): 下線の太さを設定します。
               </li>
             </ul>
-          </CardContent>
-        </Card>
-
-        {/* 公式ドキュメント参照 Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl font-semibold text-stone-800 dark:text-stone-200">
-              公式ドキュメント参照
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="text-stone-700 dark:text-stone-300 space-y-4">
-            <ul className="list-disc list-inside space-y-1 pl-4">
-              <li>
-                <a
-                  href="https://tailwindcss.com/docs/text-underline-offset"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sky-600 hover:text-sky-800 dark:text-sky-400 dark:hover:text-sky-300 underline"
-                >
-                  Tailwind CSS: Text Underline Offset
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://developer.mozilla.org/en-US/docs/Web/CSS/text-underline-offset"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sky-600 hover:text-sky-800 dark:text-sky-400 dark:hover:text-sky-300 underline"
-                >
-                  MDN: text-underline-offset
-                </a>
-              </li>
-            </ul>
-          </CardContent>
-        </Card>
+          </div>
+        </section>
+        {/* 参照リンクは ArticleLayout に移動 */}
       </div>
-    </div>
+    </ArticleLayout>
   );
 };
 

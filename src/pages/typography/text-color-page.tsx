@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import ArticleLayout from '@/components/layout/ArticleLayout';
 
 // 各コードサンプルに対応するReact実装コンポーネント
 
@@ -54,6 +54,19 @@ const ArbitraryColorExample: React.FC = () => {
 
 // ページコンポーネント本体
 const TextColorPage: React.FC = () => {
+  // ArticleLayout に渡すデータ
+  const title = 'Typography: Text Color (テキストの色)';
+  const links = [
+    {
+      title: 'Tailwind CSS: Text Color',
+      url: 'https://tailwindcss.com/docs/text-color',
+    },
+    {
+      title: 'MDN: color',
+      url: 'https://developer.mozilla.org/en-US/docs/Web/CSS/color',
+    },
+  ];
+
   // コードスニペットを定義
   const textColorHtml = `
 <p class="text-slate-500 ...">...</p>
@@ -77,40 +90,29 @@ const TextColorPage: React.FC = () => {
 
 
   return (
-    // ページ全体の背景色とパディング
-    <div className="bg-stone-200 dark:bg-stone-900 min-h-screen p-4 md:p-8 font-serif">
-      {/* コンテンツエリア: 最大幅、中央揃え、背景色、角丸、影 */}
-      <div className="max-w-4xl mx-auto bg-stone-100 dark:bg-stone-800 rounded-lg shadow-md p-6 space-y-8">
-        {' '}
-        {/* space-y で Card 間の余白を設定 */}
-        {/* ページタイトル */}
-        <h1 className="text-3xl font-bold text-center text-stone-900 dark:text-stone-100">
-          Typography: Text Color (テキストの色)
-        </h1>
-        {/* 概要 Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl font-semibold text-stone-800 dark:text-stone-200">
+    <ArticleLayout title={title} links={links}>
+      <div className="space-y-8"> {/* 元のCard間のマージンを再現 */}
+        {/* 概要 */}
+        <section>
+          <h2 className="text-2xl font-semibold text-stone-800 dark:text-stone-200 mb-4">
               概要
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="text-stone-700 dark:text-stone-300 space-y-4">
+          </h2>
+          <div className="text-stone-700 dark:text-stone-300 space-y-4">
             <p>
               テキストの色を設定するためのユーティリティクラスです。Tailwind には豊富なカラーパレットが用意されており、様々な色と濃淡を指定できます。
             </p>
             <p>
               CSS の <code>color</code> プロパティを制御します。
             </p>
-          </CardContent>
-        </Card>
+          </div>
+        </section>
+
         {/* 基本的な使い方とパラメータ Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl font-semibold text-stone-800 dark:text-stone-200">
+        <section>
+          <h2 className="text-2xl font-semibold text-stone-800 dark:text-stone-200 mb-4">
               基本的な使い方とパラメータ
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="text-stone-700 dark:text-stone-300 space-y-4">
+          </h2>
+          <div className="text-stone-700 dark:text-stone-300 space-y-4">
             <p>
               <code>text-{'{color}'}</code> または <code>text-{'{color}'}-{'{shade}'}</code> の形式でクラスを要素に適用します。
             </p>
@@ -124,53 +126,47 @@ const TextColorPage: React.FC = () => {
              <p className="mt-4">
               任意の値 (例: <code>text-[#ff00ff]</code>) も使用可能です (Tailwind JIT モード)。
             </p>
-          </CardContent>
-        </Card>
+          </div>
+        </section>
 
         {/* 色の指定例 Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-xl font-semibold text-stone-800 dark:text-stone-200">
+        <section>
+          <h2 className="text-xl font-semibold text-stone-800 dark:text-stone-200 mb-2">
               色の指定例
-            </CardTitle>
-             <CardDescription className="text-stone-600 dark:text-stone-400">
+          </h2>
+           <p className="text-stone-600 dark:text-stone-400 mb-4">
               様々な色と濃淡の適用例。
-            </CardDescription>
-          </CardHeader>
-          <CardContent>
+          </p>
+          <div>
             <pre className="bg-stone-200 dark:bg-stone-700 p-2 rounded overflow-x-auto text-sm text-stone-800 dark:text-stone-200 mb-2">
               <code className="language-html">{textColorHtml}</code>
             </pre>
             <TextColorExample />
-          </CardContent>
-        </Card>
+          </div>
+        </section>
 
          {/* 特殊な値 Card */}
-         <Card>
-          <CardHeader>
-            <CardTitle className="text-xl font-semibold text-stone-800 dark:text-stone-200">
+         <section>
+          <h2 className="text-xl font-semibold text-stone-800 dark:text-stone-200 mb-2">
               特殊な値 (current, inherit, transparent)
-            </CardTitle>
-          </CardHeader>
-          <CardContent>
+          </h2>
+          <div>
             <pre className="bg-stone-200 dark:bg-stone-700 p-2 rounded overflow-x-auto text-sm text-stone-800 dark:text-stone-200 mb-2">
               <code className="language-html">{textCurrentInheritTransparentHtml}</code>
             </pre>
             <TextCurrentInheritTransparentExample />
-          </CardContent>
-        </Card>
+          </div>
+        </section>
 
          {/* 透明度 Card */}
-         <Card>
-          <CardHeader>
-            <CardTitle className="text-xl font-semibold text-stone-800 dark:text-stone-200">
+         <section>
+          <h2 className="text-xl font-semibold text-stone-800 dark:text-stone-200 mb-2">
               透明度の変更
-            </CardTitle>
-             <CardDescription className="text-stone-600 dark:text-stone-400">
+          </h2>
+           <p className="text-stone-600 dark:text-stone-400 mb-4">
               テキストの色に透明度を追加します。
-            </CardDescription>
-          </CardHeader>
-          <CardContent>
+          </p>
+          <div>
              <p className="text-stone-700 dark:text-stone-300 mb-4">
               Tailwind CSS v3.0 以降では、スラッシュ記法 (例: <code>text-blue-600/75</code>) を使用して透明度 (アルファ値) を指定できます。古いバージョンでは <code>text-opacity-*</code> ユーティリティを使用しました。
             </p>
@@ -178,17 +174,15 @@ const TextColorPage: React.FC = () => {
               <code className="language-html">{textOpacityHtml}</code>
             </pre>
             <TextOpacityExample />
-          </CardContent>
-        </Card>
+          </div>
+        </section>
 
          {/* 任意の値 Card */}
-         <Card>
-          <CardHeader>
-            <CardTitle className="text-xl font-semibold text-stone-800 dark:text-stone-200">
+         <section>
+          <h2 className="text-xl font-semibold text-stone-800 dark:text-stone-200 mb-2">
               任意の値
-            </CardTitle>
-          </CardHeader>
-          <CardContent>
+          </h2>
+          <div>
              <p className="text-stone-700 dark:text-stone-300 mb-4">
               角括弧を使用して、任意の色コード (HEX, RGB, HSL) を直接指定できます。
             </p>
@@ -196,20 +190,18 @@ const TextColorPage: React.FC = () => {
               <code className="language-html">{arbitraryColorHtml}</code>
             </pre>
             <ArbitraryColorExample />
-          </CardContent>
-        </Card>
+          </div>
+        </section>
 
         {/* レスポンシブ Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl font-semibold text-stone-800 dark:text-stone-200">
+        <section>
+          <h2 className="text-2xl font-semibold text-stone-800 dark:text-stone-200 mb-2">
               レスポンシブと状態変化
-            </CardTitle>
-            <CardDescription className="text-stone-600 dark:text-stone-400">
+          </h2>
+          <p className="text-stone-600 dark:text-stone-400 mb-4">
               ブレークポイントや状態 (hover, focus など) に応じてテキストの色を変更できます。
-            </CardDescription>
-          </CardHeader>
-          <CardContent>
+          </p>
+          <div>
             <p className="text-stone-700 dark:text-stone-300 mb-4">
               例えば、<code>text-gray-700 hover:text-blue-600 md:text-lg</code> は、通常は灰色のテキストで、ホバー時に青色になり、中程度の画面サイズ以上でフォントサイズが大きくなります。
             </p>
@@ -221,17 +213,15 @@ const TextColorPage: React.FC = () => {
 </a>
               `.trim()}</code>
             </pre>
-          </CardContent>
-        </Card>
+          </div>
+        </section>
 
         {/* 注意点 Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl font-semibold text-stone-800 dark:text-stone-200">
+        <section>
+          <h2 className="text-2xl font-semibold text-stone-800 dark:text-stone-200 mb-4">
               注意点
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="text-stone-700 dark:text-stone-300 space-y-4">
+          </h2>
+          <div className="text-stone-700 dark:text-stone-300 space-y-4">
             <ul className="list-disc list-inside space-y-1 pl-4">
               <li>
                 テキストの色は親要素から継承されます。明示的に色を指定しない場合、祖先要素の色が適用されます。
@@ -243,17 +233,15 @@ const TextColorPage: React.FC = () => {
                 <code>text-current</code> は、SVG アイコンの色を周囲のテキストの色に合わせるのに特に便利です。SVG 側で <code>fill="currentColor"</code> または <code>stroke="currentColor"</code> を設定しておく必要があります。
               </li>
             </ul>
-          </CardContent>
-        </Card>
+          </div>
+        </section>
 
         {/* 関連ユーティリティ Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl font-semibold text-stone-800 dark:text-stone-200">
+        <section>
+          <h2 className="text-2xl font-semibold text-stone-800 dark:text-stone-200 mb-4">
               関連ユーティリティ
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="text-stone-700 dark:text-stone-300 space-y-4">
+          </h2>
+          <div className="text-stone-700 dark:text-stone-300 space-y-4">
             <ul className="list-disc list-inside space-y-1 pl-4">
                <li>
                 <code>background-color</code> (<code>bg-*</code>): 背景色を設定します。
@@ -271,43 +259,11 @@ const TextColorPage: React.FC = () => {
                 <code>ring-color</code> (<code>ring-*</code>): リング (輪郭線) の色を設定します。
               </li>
             </ul>
-          </CardContent>
-        </Card>
-
-        {/* 公式ドキュメント参照 Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl font-semibold text-stone-800 dark:text-stone-200">
-              公式ドキュメント参照
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="text-stone-700 dark:text-stone-300 space-y-4">
-            <ul className="list-disc list-inside space-y-1 pl-4">
-              <li>
-                <a
-                  href="https://tailwindcss.com/docs/text-color"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sky-600 hover:text-sky-800 dark:text-sky-400 dark:hover:text-sky-300 underline"
-                >
-                  Tailwind CSS: Text Color
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://developer.mozilla.org/en-US/docs/Web/CSS/color"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sky-600 hover:text-sky-800 dark:text-sky-400 dark:hover:text-sky-300 underline"
-                >
-                  MDN: color
-                </a>
-              </li>
-            </ul>
-          </CardContent>
-        </Card>
+          </div>
+        </section>
+        {/* 参照リンクは ArticleLayout に移動 */}
       </div>
-    </div>
+    </ArticleLayout>
   );
 };
 

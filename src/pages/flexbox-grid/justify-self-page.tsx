@@ -1,5 +1,5 @@
+import ArticleLayout from '@/components/layout/ArticleLayout';
 import React from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 
 // 各コードサンプルに対応するReact実装コンポーネント
 // justify-self は Grid アイテムに適用されます。
@@ -25,6 +25,19 @@ const JustifySelfExample: React.FC = () => {
 
 // ページコンポーネント本体
 const JustifySelfPage: React.FC = () => {
+  // ArticleLayout に渡すデータ
+  const title = 'Flexbox & Grid: Justify Self (個別アイテムのインライン軸揃え - Grid)';
+  const links = [
+    {
+      title: 'Tailwind CSS: Justify Self',
+      url: 'https://tailwindcss.com/docs/justify-self',
+    },
+    {
+      title: 'MDN: justify-self',
+      url: 'https://developer.mozilla.org/en-US/docs/Web/CSS/justify-self',
+    },
+  ];
+
   // // コードスニペットを定義
   // const justifySelfStartHtml = `<div class="justify-self-start ...">Item</div>`;
   // const justifySelfEndHtml = `<div class="justify-self-end ...">Item</div>`;
@@ -33,24 +46,14 @@ const JustifySelfPage: React.FC = () => {
   // const justifySelfAutoHtml = `<div class="justify-self-auto ...">Item</div>`; // Usually same as stretch
 
   return (
-    // ページ全体の背景色とパディング
-    <div className="bg-stone-200 dark:bg-stone-900 min-h-screen p-4 md:p-8 font-serif">
-      {/* コンテンツエリア: 最大幅、中央揃え、背景色、角丸、影 */}
-      <div className="max-w-4xl mx-auto bg-stone-100 dark:bg-stone-800 rounded-lg shadow-md p-6 space-y-8">
+    <ArticleLayout title={title} links={links}>
+      <div className="space-y-8">
         {' '}
-        {/* space-y で Card 間の余白を設定 */}
-        {/* ページタイトル */}
-        <h1 className="text-3xl font-bold text-center text-stone-900 dark:text-stone-100">
-          Flexbox & Grid: Justify Self (個別アイテムのインライン軸揃え - Grid)
-        </h1>
-        {/* 概要 Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl font-semibold text-stone-800 dark:text-stone-200">
-              概要
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="text-stone-700 dark:text-stone-300 space-y-4">
+        {/* 元のCard間のマージンを再現 */}
+        {/* 概要 */}
+        <section>
+          <h2 className="text-2xl font-semibold text-stone-800 dark:text-stone-200 mb-4">概要</h2>
+          <div className="text-stone-700 dark:text-stone-300 space-y-4">
             <p>
               個々のグリッドアイテムが、自身が配置されているグリッドエリア内でインライン軸
               (通常は水平方向)
@@ -62,16 +65,14 @@ const JustifySelfPage: React.FC = () => {
               <strong>これは Grid レイアウト専用です。</strong> Flexbox
               アイテムには効果がありません。
             </p>
-          </CardContent>
-        </Card>
+          </div>
+        </section>
         {/* 基本的な使い方とパラメータ Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl font-semibold text-stone-800 dark:text-stone-200">
-              基本的な使い方とパラメータ
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="text-stone-700 dark:text-stone-300 space-y-4">
+        <section>
+          <h2 className="text-2xl font-semibold text-stone-800 dark:text-stone-200 mb-4">
+            基本的な使い方とパラメータ
+          </h2>
+          <div className="text-stone-700 dark:text-stone-300 space-y-4">
             <p>
               <code>justify-self-{'{alignment}'}</code>{' '}
               の形式でクラスをグリッドアイテムに適用します。
@@ -115,19 +116,17 @@ const JustifySelfPage: React.FC = () => {
               書字方向に対応する <code>justify-self-normal</code> (デフォルトの揃え方、通常{' '}
               <code>stretch</code>), <code>justify-self-legacy</code> もあります (v3.3+)。
             </p>
-          </CardContent>
-        </Card>
+          </div>
+        </section>
         {/* 使用例 Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-xl font-semibold text-stone-800 dark:text-stone-200">
-              使用例 (Grid)
-            </CardTitle>
-            <CardDescription className="text-stone-600 dark:text-stone-400">
-              Grid アイテムに対する各 justify-self 値の適用例。
-            </CardDescription>
-          </CardHeader>
-          <CardContent className="space-y-6">
+        <section>
+          <h2 className="text-xl font-semibold text-stone-800 dark:text-stone-200 mb-2">
+            使用例 (Grid)
+          </h2>
+          <p className="text-stone-600 dark:text-stone-400 mb-4">
+            Grid アイテムに対する各 justify-self 値の適用例。
+          </p>
+          <div className="space-y-6">
             <div>
               {/* コード表示は各アイテムに適用するため冗長になるので省略 */}
               <pre className="bg-stone-200 dark:bg-stone-700 p-2 rounded overflow-x-auto text-sm text-stone-800 dark:text-stone-200 mb-2">
@@ -144,20 +143,18 @@ const JustifySelfPage: React.FC = () => {
               </pre>
               <JustifySelfExample />
             </div>
-          </CardContent>
-        </Card>
+          </div>
+        </section>
         {/* レスポンシブ Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl font-semibold text-stone-800 dark:text-stone-200">
-              レスポンシブ
-            </CardTitle>
-            <CardDescription className="text-stone-600 dark:text-stone-400">
-              ブレークポイントプレフィックス (<code>sm:</code>, <code>md:</code> など)
-              を使って、画面サイズに応じて個々のアイテムのインライン軸揃えを変更できます。
-            </CardDescription>
-          </CardHeader>
-          <CardContent>
+        <section>
+          <h2 className="text-2xl font-semibold text-stone-800 dark:text-stone-200 mb-2">
+            レスポンシブ
+          </h2>
+          <p className="text-stone-600 dark:text-stone-400 mb-4">
+            ブレークポイントプレフィックス (<code>sm:</code>, <code>md:</code> など)
+            を使って、画面サイズに応じて個々のアイテムのインライン軸揃えを変更できます。
+          </p>
+          <div>
             <p className="text-stone-700 dark:text-stone-300 mb-4">
               例えば、<code>justify-self-center md:justify-self-start</code>{' '}
               はデフォルトで中央揃え、中程度の画面サイズ以上で左揃えにします。
@@ -173,16 +170,12 @@ const JustifySelfPage: React.FC = () => {
               `.trim()}
               </code>
             </pre>
-          </CardContent>
-        </Card>
+          </div>
+        </section>
         {/* 注意点 Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl font-semibold text-stone-800 dark:text-stone-200">
-              注意点
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="text-stone-700 dark:text-stone-300 space-y-4">
+        <section>
+          <h2 className="text-2xl font-semibold text-stone-800 dark:text-stone-200 mb-4">注意点</h2>
+          <div className="text-stone-700 dark:text-stone-300 space-y-4">
             <ul className="list-disc list-inside space-y-1 pl-4">
               <li>
                 <code>justify-self</code>{' '}
@@ -201,16 +194,14 @@ const JustifySelfPage: React.FC = () => {
                 (グリッドエリア内で)。
               </li>
             </ul>
-          </CardContent>
-        </Card>
+          </div>
+        </section>
         {/* 関連ユーティリティ Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl font-semibold text-stone-800 dark:text-stone-200">
-              関連ユーティリティ
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="text-stone-700 dark:text-stone-300 space-y-4">
+        <section>
+          <h2 className="text-2xl font-semibold text-stone-800 dark:text-stone-200 mb-4">
+            関連ユーティリティ
+          </h2>
+          <div className="text-stone-700 dark:text-stone-300 space-y-4">
             <ul className="list-disc list-inside space-y-1 pl-4">
               <li>
                 <code>display</code> (<code>grid</code>, <code>inline-grid</code>):
@@ -229,42 +220,11 @@ const JustifySelfPage: React.FC = () => {
                 <code>justify-self</code> を一括で設定するショートハンドです。
               </li>
             </ul>
-          </CardContent>
-        </Card>
-        {/* 公式ドキュメント参照 Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl font-semibold text-stone-800 dark:text-stone-200">
-              公式ドキュメント参照
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="text-stone-700 dark:text-stone-300 space-y-4">
-            <ul className="list-disc list-inside space-y-1 pl-4">
-              <li>
-                <a
-                  href="https://tailwindcss.com/docs/justify-self"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sky-600 hover:text-sky-800 dark:text-sky-400 dark:hover:text-sky-300 underline"
-                >
-                  Tailwind CSS: Justify Self
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://developer.mozilla.org/en-US/docs/Web/CSS/justify-self"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sky-600 hover:text-sky-800 dark:text-sky-400 dark:hover:text-sky-300 underline"
-                >
-                  MDN: justify-self
-                </a>
-              </li>
-            </ul>
-          </CardContent>
-        </Card>
+          </div>
+        </section>
+        {/* 参照リンクは ArticleLayout に移動 */}
       </div>
-    </div>
+    </ArticleLayout>
   );
 };
 

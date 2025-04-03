@@ -1,9 +1,9 @@
-import tsParser from '@typescript-eslint/parser';
 import tsPlugin from '@typescript-eslint/eslint-plugin';
+import tsParser from '@typescript-eslint/parser';
+import prettierPlugin from 'eslint-plugin-prettier';
 import reactPlugin from 'eslint-plugin-react';
 import reactHooksPlugin from 'eslint-plugin-react-hooks';
 import reactRefreshPlugin from 'eslint-plugin-react-refresh';
-import prettierPlugin from 'eslint-plugin-prettier';
 
 export default [
   // 基本設定
@@ -68,6 +68,10 @@ export default [
       'no-debugger': 'warn',
       'prefer-const': 'warn',
       'no-duplicate-imports': 'error',
+
+      // tailwindcss関連
+      'no-invalid-character-class': 'off',
+      'no-invalid-regexp': 'off',
     },
   },
 ];

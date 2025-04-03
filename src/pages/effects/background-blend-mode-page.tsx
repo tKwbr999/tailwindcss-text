@@ -1,5 +1,5 @@
+import ArticleLayout from '@/components/layout/ArticleLayout';
 import React from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 
 // 各コードサンプルに対応するReact実装コンポーネント
 // 背景ブレンドモードの効果を示すため、背景色と背景画像 (グラデーションを使用) を重ねます。
@@ -8,12 +8,11 @@ const BgBlendModeExample: React.FC<{ blendMode: string; label: string }> = ({
   blendMode,
   label,
 }) => {
-  const imageUrl =
-    'url("https://images.unsplash.com/photo-1554629947-334ff61d85dc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&h=200&q=80")'; // 山の画像例
+  // const imageUrl =
+  //   'url("https://images.unsplash.com/photo-1554629947-334ff61d85dc?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&h=200&q=80")'; // 山の画像例
   return (
     <div
-      className={`h-32 w-full rounded bg-blue-500 ${blendMode} bg-center bg-cover`}
-      style={{ backgroundImage: imageUrl }}
+      className={`h-32 w-full rounded bg-blue-500 ${blendMode} bg-center bg-cover relative`} // relative を追加
     >
       <span className="text-xs p-1 bg-black/70 text-white rounded-sm absolute top-1 left-1">
         {label} ({blendMode})
@@ -25,6 +24,19 @@ const BgBlendModeExample: React.FC<{ blendMode: string; label: string }> = ({
 
 // ページコンポーネント本体
 const BackgroundBlendModePage: React.FC = () => {
+  // ArticleLayout に渡すデータ
+  const title = 'Effects: Background Blend Mode (背景ブレンドモード)';
+  const links = [
+    {
+      title: 'Tailwind CSS: Background Blend Mode',
+      url: 'https://tailwindcss.com/docs/background-blend-mode',
+    },
+    {
+      title: 'MDN: background-blend-mode',
+      url: 'https://developer.mozilla.org/en-US/docs/Web/CSS/background-blend-mode',
+    },
+  ];
+
   // // コードスニペットを定義 (代表例)
   // const blendNormalHtml = `<div class="bg-blend-normal bg-blue-500 bg-center bg-cover ..." style="background-image: url(...)">...</div>`; // Default
   // const blendMultiplyHtml = `<div class="bg-blend-multiply bg-blue-500 bg-center bg-cover ..." style="background-image: url(...)">...</div>`;
@@ -32,24 +44,14 @@ const BackgroundBlendModePage: React.FC = () => {
   // const blendOverlayHtml = `<div class="bg-blend-overlay bg-blue-500 bg-center bg-cover ..." style="background-image: url(...)">...</div>`;
 
   return (
-    // ページ全体の背景色とパディング
-    <div className="bg-stone-200 dark:bg-stone-900 min-h-screen p-4 md:p-8 font-serif">
-      {/* コンテンツエリア: 最大幅、中央揃え、背景色、角丸、影 */}
-      <div className="max-w-4xl mx-auto bg-stone-100 dark:bg-stone-800 rounded-lg shadow-md p-6 space-y-8">
+    <ArticleLayout title={title} links={links}>
+      <div className="space-y-8">
         {' '}
-        {/* space-y で Card 間の余白を設定 */}
-        {/* ページタイトル */}
-        <h1 className="text-3xl font-bold text-center text-stone-900 dark:text-stone-100">
-          Effects: Background Blend Mode (背景ブレンドモード)
-        </h1>
-        {/* 概要 Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl font-semibold text-stone-800 dark:text-stone-200">
-              概要
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="text-stone-700 dark:text-stone-300 space-y-4">
+        {/* 元のCard間のマージンを再現 */}
+        {/* 概要 */}
+        <section>
+          <h2 className="text-2xl font-semibold text-stone-800 dark:text-stone-200 mb-4">概要</h2>
+          <div className="text-stone-700 dark:text-stone-300 space-y-4">
             <p>
               要素の背景レイヤー (背景色と背景画像など) が互いにどのように混合 (ブレンド)
               されるかを設定するためのユーティリティクラスです。
@@ -62,16 +64,14 @@ const BackgroundBlendModePage: React.FC = () => {
               が要素とその下のレイヤーをブレンドするのに対し、<code>background-blend-mode</code>{' '}
               は同じ要素内の背景レイヤー同士をブレンドします。
             </p>
-          </CardContent>
-        </Card>
+          </div>
+        </section>
         {/* 基本的な使い方とパラメータ Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl font-semibold text-stone-800 dark:text-stone-200">
-              基本的な使い方とパラメータ
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="text-stone-700 dark:text-stone-300 space-y-4">
+        <section>
+          <h2 className="text-2xl font-semibold text-stone-800 dark:text-stone-200 mb-4">
+            基本的な使い方とパラメータ
+          </h2>
+          <div className="text-stone-700 dark:text-stone-300 space-y-4">
             <p>
               <code>bg-blend-{'{mode}'}</code>{' '}
               の形式でクラスを要素に適用します。要素には背景色と背景画像の両方が設定されている必要があります。
@@ -180,19 +180,15 @@ const BackgroundBlendModePage: React.FC = () => {
               {/* <li><strong><code>bg-blend-plus-lighter</code></strong>: 加算 (より明るく)。 (v3.1+)</li> */}{' '}
               {/* bg-blend には plus-lighter は通常ない */}
             </ul>
-          </CardContent>
-        </Card>
+          </div>
+        </section>
         {/* 各パラメータの例 Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-xl font-semibold text-stone-800 dark:text-stone-200">
-              使用例
-            </CardTitle>
-            <CardDescription className="text-stone-600 dark:text-stone-400">
-              異なる背景ブレンドモードの適用例。青い背景色と山の背景画像をブレンドしています。
-            </CardDescription>
-          </CardHeader>
-          <CardContent className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <section>
+          <h2 className="text-xl font-semibold text-stone-800 dark:text-stone-200 mb-2">使用例</h2>
+          <p className="text-stone-600 dark:text-stone-400 mb-4">
+            異なる背景ブレンドモードの適用例。青い背景色と山の背景画像をブレンドしています。
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             <BgBlendModeExample blendMode="bg-blend-normal" label="Normal" />
             <BgBlendModeExample blendMode="bg-blend-multiply" label="Multiply" />
             <BgBlendModeExample blendMode="bg-blend-screen" label="Screen" />
@@ -207,20 +203,18 @@ const BackgroundBlendModePage: React.FC = () => {
             <BgBlendModeExample blendMode="bg-blend-saturation" label="Saturation" />
             <BgBlendModeExample blendMode="bg-blend-color" label="Color" />
             <BgBlendModeExample blendMode="bg-blend-luminosity" label="Luminosity" />
-          </CardContent>
-        </Card>
+          </div>
+        </section>
         {/* レスポンシブと状態変化 Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl font-semibold text-stone-800 dark:text-stone-200">
-              レスポンシブと状態変化
-            </CardTitle>
-            <CardDescription className="text-stone-600 dark:text-stone-400">
-              ブレークポイント (<code>md:bg-blend-screen</code> など) や状態 (
-              <code>hover:bg-blend-multiply</code> など) に応じて背景ブレンドモードを変更できます。
-            </CardDescription>
-          </CardHeader>
-          <CardContent>
+        <section>
+          <h2 className="text-2xl font-semibold text-stone-800 dark:text-stone-200 mb-2">
+            レスポンシブと状態変化
+          </h2>
+          <p className="text-stone-600 dark:text-stone-400 mb-4">
+            ブレークポイント (<code>md:bg-blend-screen</code> など) や状態 (
+            <code>hover:bg-blend-multiply</code> など) に応じて背景ブレンドモードを変更できます。
+          </p>
+          <div>
             <p className="text-stone-700 dark:text-stone-300 mb-4">
               例えば、ホバー時にブレンドモードを変更して視覚的な効果を与えることができます。
             </p>
@@ -234,16 +228,12 @@ const BackgroundBlendModePage: React.FC = () => {
               `.trim()}
               </code>
             </pre>
-          </CardContent>
-        </Card>
+          </div>
+        </section>
         {/* 注意点 Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl font-semibold text-stone-800 dark:text-stone-200">
-              注意点
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="text-stone-700 dark:text-stone-300 space-y-4">
+        <section>
+          <h2 className="text-2xl font-semibold text-stone-800 dark:text-stone-200 mb-4">注意点</h2>
+          <div className="text-stone-700 dark:text-stone-300 space-y-4">
             <ul className="list-disc list-inside space-y-1 pl-4">
               <li>
                 <code>background-blend-mode</code> は、要素に複数の背景レイヤー
@@ -252,16 +242,14 @@ const BackgroundBlendModePage: React.FC = () => {
               <li>効果は、ブレンドされる色や画像によって大きく異なります。</li>
               <li>ブラウザのサポート状況、特に古いブラウザでは注意が必要です。</li>
             </ul>
-          </CardContent>
-        </Card>
+          </div>
+        </section>
         {/* 関連ユーティリティ Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl font-semibold text-stone-800 dark:text-stone-200">
-              関連ユーティリティ
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="text-stone-700 dark:text-stone-300 space-y-4">
+        <section>
+          <h2 className="text-2xl font-semibold text-stone-800 dark:text-stone-200 mb-4">
+            関連ユーティリティ
+          </h2>
+          <div className="text-stone-700 dark:text-stone-300 space-y-4">
             <ul className="list-disc list-inside space-y-1 pl-4">
               <li>
                 <code>mix-blend-mode</code> (<code>mix-blend-*</code>):
@@ -275,42 +263,11 @@ const BackgroundBlendModePage: React.FC = () => {
                 背景画像やグラデーションを設定します。
               </li>
             </ul>
-          </CardContent>
-        </Card>
-        {/* 公式ドキュメント参照 Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl font-semibold text-stone-800 dark:text-stone-200">
-              公式ドキュメント参照
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="text-stone-700 dark:text-stone-300 space-y-4">
-            <ul className="list-disc list-inside space-y-1 pl-4">
-              <li>
-                <a
-                  href="https://tailwindcss.com/docs/background-blend-mode"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sky-600 hover:text-sky-800 dark:text-sky-400 dark:hover:text-sky-300 underline"
-                >
-                  Tailwind CSS: Background Blend Mode
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://developer.mozilla.org/en-US/docs/Web/CSS/background-blend-mode"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sky-600 hover:text-sky-800 dark:text-sky-400 dark:hover:text-sky-300 underline"
-                >
-                  MDN: background-blend-mode
-                </a>
-              </li>
-            </ul>
-          </CardContent>
-        </Card>
+          </div>
+        </section>
+        {/* 参照リンクは ArticleLayout に移動 */}
       </div>
-    </div>
+    </ArticleLayout>
   );
 };
 

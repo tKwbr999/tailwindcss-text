@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import ArticleLayout from '@/components/layout/ArticleLayout';
 
 // 各コードサンプルに対応するReact実装コンポーネント
 // 注意: フォントがこれらの OpenType 機能をサポートしている必要があります。
@@ -43,6 +43,19 @@ const StackedFractionsExample: React.FC = () => {
 
 // ページコンポーネント本体
 const FontVariantNumericPage: React.FC = () => {
+  // ArticleLayout に渡すデータ
+  const title = 'Typography: Font Variant Numeric (数字・分数の字形)';
+  const links = [
+    {
+      title: 'Tailwind CSS: Font Variant Numeric',
+      url: 'https://tailwindcss.com/docs/font-variant-numeric',
+    },
+    {
+      title: 'MDN: font-variant-numeric',
+      url: 'https://developer.mozilla.org/en-US/docs/Web/CSS/font-variant-numeric',
+    },
+  ];
+
   // コードスニペットを定義 (代表例)
   const ordinalHtml = `<p class="ordinal ...">1st</p>`;
   const slashedZeroHtml = `<p class="slashed-zero font-mono ...">0</p>`;
@@ -51,24 +64,14 @@ const FontVariantNumericPage: React.FC = () => {
 
 
   return (
-    // ページ全体の背景色とパディング
-    <div className="bg-stone-200 dark:bg-stone-900 min-h-screen p-4 md:p-8 font-serif">
-      {/* コンテンツエリア: 最大幅、中央揃え、背景色、角丸、影 */}
-      <div className="max-w-4xl mx-auto bg-stone-100 dark:bg-stone-800 rounded-lg shadow-md p-6 space-y-8">
-        {' '}
-        {/* space-y で Card 間の余白を設定 */}
-        {/* ページタイトル */}
-        <h1 className="text-3xl font-bold text-center text-stone-900 dark:text-stone-100">
-          Typography: Font Variant Numeric (数字・分数の字形)
-        </h1>
-        {/* 概要 Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl font-semibold text-stone-800 dark:text-stone-200">
+    <ArticleLayout title={title} links={links}>
+      <div className="space-y-8"> {/* 元のCard間のマージンを再現 */}
+        {/* 概要 */}
+        <section>
+          <h2 className="text-2xl font-semibold text-stone-800 dark:text-stone-200 mb-4">
               概要
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="text-stone-700 dark:text-stone-300 space-y-4">
+          </h2>
+          <div className="text-stone-700 dark:text-stone-300 space-y-4">
             <p>
               数字、分数、序数マーカーなどの表示に使用される OpenType フォント機能を制御するためのユーティリティクラスです。これにより、フォントがサポートしていれば、特定の字形 (グリフ) を有効にできます。
             </p>
@@ -78,16 +81,15 @@ const FontVariantNumericPage: React.FC = () => {
              <p className="text-sm text-orange-700 dark:text-orange-400">
               <strong>注意:</strong> これらのクラスの効果は、使用しているフォントが対応する OpenType 機能をサポートしている場合にのみ現れます。すべてのフォントがすべての機能をサポートしているわけではありません。
             </p>
-          </CardContent>
-        </Card>
+          </div>
+        </section>
+
         {/* 基本的な使い方とパラメータ Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl font-semibold text-stone-800 dark:text-stone-200">
+        <section>
+          <h2 className="text-2xl font-semibold text-stone-800 dark:text-stone-200 mb-4">
               基本的な使い方とパラメータ
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="text-stone-700 dark:text-stone-300 space-y-4">
+          </h2>
+          <div className="text-stone-700 dark:text-stone-300 space-y-4">
             <p>
               以下のクラスをテキストを含む要素または親要素に適用します。
             </p>
@@ -102,20 +104,18 @@ const FontVariantNumericPage: React.FC = () => {
               <li><strong><code>diagonal-fractions</code></strong>: 分数 (例: 1/2) を斜線で区切られた小さなグリフで表示します。</li>
               <li><strong><code>stacked-fractions</code></strong>: 分数 (例: ½) を上下に積み重ねられた小さなグリフで表示します。</li>
             </ul>
-          </CardContent>
-        </Card>
+          </div>
+        </section>
 
         {/* 各パラメータの例 Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-xl font-semibold text-stone-800 dark:text-stone-200">
+        <section>
+          <h2 className="text-xl font-semibold text-stone-800 dark:text-stone-200 mb-2">
               使用例
-            </CardTitle>
-             <CardDescription className="text-stone-600 dark:text-stone-400">
+          </h2>
+           <p className="text-stone-600 dark:text-stone-400 mb-4">
               異なる font-variant-numeric ユーティリティの適用例。フォントによっては効果が見られない場合があります。
-            </CardDescription>
-          </CardHeader>
-          <CardContent className="space-y-6">
+          </p>
+          <div className="space-y-6">
             {/* Normal Nums */}
             <div>
               <h3 className="font-semibold text-stone-700 dark:text-stone-300 mb-2">normal-nums</h3>
@@ -173,20 +173,18 @@ const FontVariantNumericPage: React.FC = () => {
               <h3 className="font-semibold text-stone-700 dark:text-stone-300 mb-2">stacked-fractions</h3>
               <StackedFractionsExample />
             </div>
-          </CardContent>
-        </Card>
+          </div>
+        </section>
 
         {/* レスポンシブ Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl font-semibold text-stone-800 dark:text-stone-200">
+        <section>
+          <h2 className="text-2xl font-semibold text-stone-800 dark:text-stone-200 mb-2">
               レスポンシブ
-            </CardTitle>
-            <CardDescription className="text-stone-600 dark:text-stone-400">
+          </h2>
+          <p className="text-stone-600 dark:text-stone-400 mb-4">
               ブレークポイントプレフィックス (<code>sm:</code>, <code>md:</code> など) を使って、特定の画面サイズでのみこれらの機能を有効にすることは通常ありませんが、技術的には可能です。
-            </CardDescription>
-          </CardHeader>
-          <CardContent>
+          </p>
+          <div>
             {/* コード表示 */}
             <pre className="bg-stone-200 dark:bg-stone-700 p-4 rounded overflow-x-auto text-sm text-stone-800 dark:text-stone-200">
               <code className="language-html">{`
@@ -195,17 +193,15 @@ const FontVariantNumericPage: React.FC = () => {
 </p>
               `.trim()}</code>
             </pre>
-          </CardContent>
-        </Card>
+          </div>
+        </section>
 
         {/* 注意点 Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl font-semibold text-stone-800 dark:text-stone-200">
+        <section>
+          <h2 className="text-2xl font-semibold text-stone-800 dark:text-stone-200 mb-4">
               注意点
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="text-stone-700 dark:text-stone-300 space-y-4">
+          </h2>
+          <div className="text-stone-700 dark:text-stone-300 space-y-4">
             <ul className="list-disc list-inside space-y-1 pl-4">
               <li>
                 <strong>フォントのサポートが必須:</strong> これらのクラスが効果を発揮するかどうかは、使用しているフォントが対応する OpenType 機能を持っているかに完全に依存します。
@@ -220,17 +216,15 @@ const FontVariantNumericPage: React.FC = () => {
                 ブラウザや OS によって OpenType 機能のサポート状況やレンダリングが異なる場合があります。
               </li>
             </ul>
-          </CardContent>
-        </Card>
+          </div>
+        </section>
 
         {/* 関連ユーティリティ Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl font-semibold text-stone-800 dark:text-stone-200">
+        <section>
+          <h2 className="text-2xl font-semibold text-stone-800 dark:text-stone-200 mb-4">
               関連ユーティリティ
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="text-stone-700 dark:text-stone-300 space-y-4">
+          </h2>
+          <div className="text-stone-700 dark:text-stone-300 space-y-4">
             <ul className="list-disc list-inside space-y-1 pl-4">
                <li>
                 <code>font-family</code> (<code>font-*</code>): 使用するフォントファミリーを選択します。これが機能の利用可能性に影響します。
@@ -245,43 +239,11 @@ const FontVariantNumericPage: React.FC = () => {
                 <code>font-variant-alternates</code> (<code>historical-forms</code> など): 代替字形に関する OpenType 機能を制御します (Tailwind コアには含まれていない場合あり)。
               </li>
             </ul>
-          </CardContent>
-        </Card>
-
-        {/* 公式ドキュメント参照 Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl font-semibold text-stone-800 dark:text-stone-200">
-              公式ドキュメント参照
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="text-stone-700 dark:text-stone-300 space-y-4">
-            <ul className="list-disc list-inside space-y-1 pl-4">
-              <li>
-                <a
-                  href="https://tailwindcss.com/docs/font-variant-numeric"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sky-600 hover:text-sky-800 dark:text-sky-400 dark:hover:text-sky-300 underline"
-                >
-                  Tailwind CSS: Font Variant Numeric
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://developer.mozilla.org/en-US/docs/Web/CSS/font-variant-numeric"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sky-600 hover:text-sky-800 dark:text-sky-400 dark:hover:text-sky-300 underline"
-                >
-                  MDN: font-variant-numeric
-                </a>
-              </li>
-            </ul>
-          </CardContent>
-        </Card>
+          </div>
+        </section>
+        {/* 参照リンクは ArticleLayout に移動 */}
       </div>
-    </div>
+    </ArticleLayout>
   );
 };
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import ArticleLayout from '@/components/layout/ArticleLayout';
 
 // 各コードサンプルに対応するReact実装コンポーネント
 // content-* は主に ::before / ::after 疑似要素と組み合わせて使用します。
@@ -57,6 +57,23 @@ const ContentStringExample: React.FC = () => {
 
 // ページコンポーネント本体
 const ContentPage: React.FC = () => {
+  // ArticleLayout に渡すデータ
+  const title = 'Typography: Content (コンテンツ)';
+  const links = [
+    {
+      title: 'Tailwind CSS: Content (v3.0+)',
+      url: 'https://tailwindcss.com/docs/content',
+    },
+    {
+      title: 'MDN: content',
+      url: 'https://developer.mozilla.org/en-US/docs/Web/CSS/content',
+    },
+     {
+      title: 'Tailwind CSS: Before & After Pseudo-elements',
+      url: 'https://tailwindcss.com/docs/hover-focus-and-other-states#before-and-after',
+    },
+  ];
+
   // コードスニペットを定義
   const contentNoneHtml = `<div class="before:content-none ...">...</div>`;
   const contentStringHtml = `
@@ -69,43 +86,29 @@ const ContentPage: React.FC = () => {
 
 
   return (
-    // ページ全体の背景色とパディング
-    <div className="bg-stone-200 dark:bg-stone-900 min-h-screen p-4 md:p-8 font-serif">
-      {/* コンテンツエリア: 最大幅、中央揃え、背景色、角丸、影 */}
-      <div className="max-w-4xl mx-auto bg-stone-100 dark:bg-stone-800 rounded-lg shadow-md p-6 space-y-8">
-        {' '}
-        {/* space-y で Card 間の余白を設定 */}
-        {/* ページタイトル */}
-        <h1 className="text-3xl font-bold text-center text-stone-900 dark:text-stone-100">
-          Typography: Content (コンテンツ)
-        </h1>
-        {/* 概要 Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl font-semibold text-stone-800 dark:text-stone-200">
+    <ArticleLayout title={title} links={links}>
+      <div className="space-y-8"> {/* 元のCard間のマージンを再現 */}
+        {/* 概要 */}
+        <section>
+          <h2 className="text-2xl font-semibold text-stone-800 dark:text-stone-200 mb-4">
               概要
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="text-stone-700 dark:text-stone-300 space-y-4">
+          </h2>
+          <div className="text-stone-700 dark:text-stone-300 space-y-4">
             <p>
               要素の <code>::before</code> および <code>::after</code> 疑似要素の <code>content</code> プロパティを設定するためのユーティリティクラスです。これにより、CSS を使って要素の前後に装飾的なテキストや記号を追加できます。
             </p>
             <p>
               CSS の <code>content</code> プロパティを制御します。<strong>これは Tailwind CSS v3.0 で追加された機能です。</strong>
             </p>
-          </CardContent>
-        </Card>
+          </div>
+        </section>
+
         {/* 基本的な使い方とパラメータ Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl font-semibold text-stone-800 dark:text-stone-200">
-              基本的な使い方とパラメータ
-            </CardTitle>
-             <CardDescription className="text-stone-600 dark:text-stone-400">
-              (v3.0+)
-            </CardDescription>
-          </CardHeader>
-          <CardContent className="text-stone-700 dark:text-stone-300 space-y-4">
+        <section>
+          <h2 className="text-2xl font-semibold text-stone-800 dark:text-stone-200 mb-4">
+              基本的な使い方とパラメータ (v3.0+)
+          </h2>
+          <div className="text-stone-700 dark:text-stone-300 space-y-4">
             <p>
               <code>content-none</code> または任意の値 (<code>content-['...']</code>, <code>content-[attr(...)]</code> など) を、<code>before:</code> または <code>after:</code> 修飾子と組み合わせて要素に適用します。
             </p>
@@ -120,20 +123,18 @@ const ContentPage: React.FC = () => {
              <p className="mt-4">
               <code>before:</code> 修飾子は <code>::before</code> 疑似要素に、<code>after:</code> 修飾子は <code>::after</code> 疑似要素にスタイルを適用します。
             </p>
-          </CardContent>
-        </Card>
+          </div>
+        </section>
 
         {/* 各パラメータの例 Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-xl font-semibold text-stone-800 dark:text-stone-200">
+        <section>
+          <h2 className="text-xl font-semibold text-stone-800 dark:text-stone-200 mb-2">
               使用例
-            </CardTitle>
-             <CardDescription className="text-stone-600 dark:text-stone-400">
+          </h2>
+           <p className="text-stone-600 dark:text-stone-400 mb-4">
               異なる content ユーティリティの適用例 (主に <code>before:</code> 修飾子を使用)。
-            </CardDescription>
-          </CardHeader>
-          <CardContent className="space-y-6">
+          </p>
+          <div className="space-y-6">
             {/* None */}
             <div>
               <h3 className="font-semibold text-stone-700 dark:text-stone-300 mb-2">content-none</h3>
@@ -150,20 +151,18 @@ const ContentPage: React.FC = () => {
               </pre>
               <ContentStringExample />
             </div>
-          </CardContent>
-        </Card>
+          </div>
+        </section>
 
         {/* レスポンシブと状態変化 Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl font-semibold text-stone-800 dark:text-stone-200">
+        <section>
+          <h2 className="text-2xl font-semibold text-stone-800 dark:text-stone-200 mb-2">
               レスポンシブと状態変化
-            </CardTitle>
-            <CardDescription className="text-stone-600 dark:text-stone-400">
+          </h2>
+          <p className="text-stone-600 dark:text-stone-400 mb-4">
               ブレークポイント (<code>md:before:content-['Desktop:']</code> など) や状態 (<code>hover:after:content-['_↗']</code> など) に応じて疑似要素のコンテンツを変更できます。
-            </CardDescription>
-          </CardHeader>
-          <CardContent>
+          </p>
+          <div>
             <p className="text-stone-700 dark:text-stone-300 mb-4">
               例えば、リンクのホバー時にアイコンを追加できます。
             </p>
@@ -178,17 +177,15 @@ const ContentPage: React.FC = () => {
              <a href="#" className="after:content-[''] hover:after:content-['_↗'] text-blue-600 dark:text-blue-400">
               External Link
             </a>
-          </CardContent>
-        </Card>
+          </div>
+        </section>
 
         {/* 注意点 Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl font-semibold text-stone-800 dark:text-stone-200">
+        <section>
+          <h2 className="text-2xl font-semibold text-stone-800 dark:text-stone-200 mb-4">
               注意点
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="text-stone-700 dark:text-stone-300 space-y-4">
+          </h2>
+          <div className="text-stone-700 dark:text-stone-300 space-y-4">
             <ul className="list-disc list-inside space-y-1 pl-4">
               <li>
                 <code>content-*</code> ユーティリティは、<code>before:</code> または <code>after:</code> 修飾子と組み合わせて使用する必要があります。
@@ -206,17 +203,15 @@ const ContentPage: React.FC = () => {
                 <code>open-quote</code> と <code>close-quote</code> を使用するには、<code>quotes</code> プロパティ (Tailwind v3.3+ の <code>quotes-*</code> ユーティリティ) で引用符の種類を定義する必要があります。
               </li>
             </ul>
-          </CardContent>
-        </Card>
+          </div>
+        </section>
 
         {/* 関連ユーティリティ Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl font-semibold text-stone-800 dark:text-stone-200">
+        <section>
+          <h2 className="text-2xl font-semibold text-stone-800 dark:text-stone-200 mb-4">
               関連ユーティリティ
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="text-stone-700 dark:text-stone-300 space-y-4">
+          </h2>
+          <div className="text-stone-700 dark:text-stone-300 space-y-4">
             <ul className="list-disc list-inside space-y-1 pl-4">
                <li>
                 <code>before:*</code> / <code>after:*</code>: 疑似要素に他のスタイル (色、パディング、配置など) を適用するための修飾子。
@@ -225,53 +220,11 @@ const ContentPage: React.FC = () => {
                 <code>quotes</code> (<code>quotes-*</code>): <code>open-quote</code> と <code>close-quote</code> で使用される引用符の種類を定義します (v3.3+)。
               </li>
             </ul>
-          </CardContent>
-        </Card>
-
-        {/* 公式ドキュメント参照 Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl font-semibold text-stone-800 dark:text-stone-200">
-              公式ドキュメント参照
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="text-stone-700 dark:text-stone-300 space-y-4">
-            <ul className="list-disc list-inside space-y-1 pl-4">
-              <li>
-                <a
-                  href="https://tailwindcss.com/docs/content"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sky-600 hover:text-sky-800 dark:text-sky-400 dark:hover:text-sky-300 underline"
-                >
-                  Tailwind CSS: Content (v3.0+)
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://developer.mozilla.org/en-US/docs/Web/CSS/content"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sky-600 hover:text-sky-800 dark:text-sky-400 dark:hover:text-sky-300 underline"
-                >
-                  MDN: content
-                </a>
-              </li>
-               <li>
-                <a
-                  href="https://tailwindcss.com/docs/hover-focus-and-other-states#before-and-after"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sky-600 hover:text-sky-800 dark:text-sky-400 dark:hover:text-sky-300 underline"
-                >
-                  Tailwind CSS: Before & After Pseudo-elements
-                </a>
-              </li>
-            </ul>
-          </CardContent>
-        </Card>
+          </div>
+        </section>
+        {/* 参照リンクは ArticleLayout に移動 */}
       </div>
-    </div>
+    </ArticleLayout>
   );
 };
 

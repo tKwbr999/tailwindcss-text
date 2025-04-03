@@ -1,5 +1,5 @@
+import ArticleLayout from '@/components/layout/ArticleLayout';
 import React from 'react';
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 
 // 各コードサンプルに対応するReact実装コンポーネント
 // align-self は個々の Flex または Grid アイテムに適用されます。
@@ -28,6 +28,19 @@ const AlignSelfExample: React.FC = () => {
 
 // ページコンポーネント本体
 const AlignSelfPage: React.FC = () => {
+  // ArticleLayout に渡すデータ
+  const title = 'Flexbox & Grid: Align Self (個別アイテムの交差軸揃え)';
+  const links = [
+    {
+      title: 'Tailwind CSS: Align Self',
+      url: 'https://tailwindcss.com/docs/align-self',
+    },
+    {
+      title: 'MDN: align-self',
+      url: 'https://developer.mozilla.org/en-US/docs/Web/CSS/align-self',
+    },
+  ];
+
   // // コードスニペットを定義
   // const selfStartHtml = `<div class="self-start ...">Item</div>`;
   // const selfEndHtml = `<div class="self-end ...">Item</div>`;
@@ -37,24 +50,14 @@ const AlignSelfPage: React.FC = () => {
   // const selfAutoHtml = `<div class="self-auto ...">Item</div>`; // Inherits parent's align-items
 
   return (
-    // ページ全体の背景色とパディング
-    <div className="bg-stone-200 dark:bg-stone-900 min-h-screen p-4 md:p-8 font-serif">
-      {/* コンテンツエリア: 最大幅、中央揃え、背景色、角丸、影 */}
-      <div className="max-w-4xl mx-auto bg-stone-100 dark:bg-stone-800 rounded-lg shadow-md p-6 space-y-8">
+    <ArticleLayout title={title} links={links}>
+      <div className="space-y-8">
         {' '}
-        {/* space-y で Card 間の余白を設定 */}
-        {/* ページタイトル */}
-        <h1 className="text-3xl font-bold text-center text-stone-900 dark:text-stone-100">
-          Flexbox & Grid: Align Self (個別アイテムの交差軸揃え)
-        </h1>
-        {/* 概要 Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl font-semibold text-stone-800 dark:text-stone-200">
-              概要
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="text-stone-700 dark:text-stone-300 space-y-4">
+        {/* 元のCard間のマージンを再現 */}
+        {/* 概要 */}
+        <section>
+          <h2 className="text-2xl font-semibold text-stone-800 dark:text-stone-200 mb-4">概要</h2>
+          <div className="text-stone-700 dark:text-stone-300 space-y-4">
             <p>
               個々のフレックスアイテムまたはグリッドアイテムが、コンテナの <code>align-items</code>{' '}
               設定を上書きして、自身を交差軸 (cross axis) 方向 (通常は垂直方向)
@@ -63,16 +66,14 @@ const AlignSelfPage: React.FC = () => {
             <p>
               CSS の <code>align-self</code> プロパティを制御します。
             </p>
-          </CardContent>
-        </Card>
+          </div>
+        </section>
         {/* 基本的な使い方とパラメータ Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl font-semibold text-stone-800 dark:text-stone-200">
-              基本的な使い方とパラメータ
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="text-stone-700 dark:text-stone-300 space-y-4">
+        <section>
+          <h2 className="text-2xl font-semibold text-stone-800 dark:text-stone-200 mb-4">
+            基本的な使い方とパラメータ
+          </h2>
+          <div className="text-stone-700 dark:text-stone-300 space-y-4">
             <p>
               <code>self-{'{alignment}'}</code>{' '}
               の形式でクラスをフレックスアイテムまたはグリッドアイテムに適用します。
@@ -121,20 +122,18 @@ const AlignSelfPage: React.FC = () => {
               書字方向に対応する <code>self-normal</code> (デフォルトの揃え方、通常{' '}
               <code>stretch</code>) もあります (v3.3+)。
             </p>
-          </CardContent>
-        </Card>
+          </div>
+        </section>
         {/* 使用例 Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-xl font-semibold text-stone-800 dark:text-stone-200">
-              使用例 (Flexbox)
-            </CardTitle>
-            <CardDescription className="text-stone-600 dark:text-stone-400">
-              Flexbox アイテムに対する各 align-self 値の適用例。親コンテナは{' '}
-              <code>items-stretch</code> (デフォルト)。
-            </CardDescription>
-          </CardHeader>
-          <CardContent className="space-y-6">
+        <section>
+          <h2 className="text-xl font-semibold text-stone-800 dark:text-stone-200 mb-2">
+            使用例 (Flexbox)
+          </h2>
+          <p className="text-stone-600 dark:text-stone-400 mb-4">
+            Flexbox アイテムに対する各 align-self 値の適用例。親コンテナは{' '}
+            <code>items-stretch</code> (デフォルト)。
+          </p>
+          <div className="space-y-6">
             <div>
               {/* コード表示は各アイテムに適用するため冗長になるので省略 */}
               <pre className="bg-stone-200 dark:bg-stone-700 p-2 rounded overflow-x-auto text-sm text-stone-800 dark:text-stone-200 mb-2">
@@ -151,20 +150,18 @@ const AlignSelfPage: React.FC = () => {
               </pre>
               <AlignSelfExample />
             </div>
-          </CardContent>
-        </Card>
+          </div>
+        </section>
         {/* レスポンシブ Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl font-semibold text-stone-800 dark:text-stone-200">
-              レスポンシブ
-            </CardTitle>
-            <CardDescription className="text-stone-600 dark:text-stone-400">
-              ブレークポイントプレフィックス (<code>sm:</code>, <code>md:</code> など)
-              を使って、画面サイズに応じて個々のアイテムの交差軸揃えを変更できます。
-            </CardDescription>
-          </CardHeader>
-          <CardContent>
+        <section>
+          <h2 className="text-2xl font-semibold text-stone-800 dark:text-stone-200 mb-2">
+            レスポンシブ
+          </h2>
+          <p className="text-stone-600 dark:text-stone-400 mb-4">
+            ブレークポイントプレフィックス (<code>sm:</code>, <code>md:</code> など)
+            を使って、画面サイズに応じて個々のアイテムの交差軸揃えを変更できます。
+          </p>
+          <div>
             <p className="text-stone-700 dark:text-stone-300 mb-4">
               例えば、<code>self-center md:self-start</code>{' '}
               はデフォルトで中央揃え、中程度の画面サイズ以上で上揃えにします。
@@ -180,16 +177,12 @@ const AlignSelfPage: React.FC = () => {
               `.trim()}
               </code>
             </pre>
-          </CardContent>
-        </Card>
+          </div>
+        </section>
         {/* 注意点 Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl font-semibold text-stone-800 dark:text-stone-200">
-              注意点
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="text-stone-700 dark:text-stone-300 space-y-4">
+        <section>
+          <h2 className="text-2xl font-semibold text-stone-800 dark:text-stone-200 mb-4">注意点</h2>
+          <div className="text-stone-700 dark:text-stone-300 space-y-4">
             <ul className="list-disc list-inside space-y-1 pl-4">
               <li>
                 <code>align-self</code> はフレックスアイテムまたはグリッドアイテムに適用します。
@@ -207,16 +200,14 @@ const AlignSelfPage: React.FC = () => {
                 <code>align-items: baseline</code> でない場合に特に意味を持ちます。
               </li>
             </ul>
-          </CardContent>
-        </Card>
+          </div>
+        </section>
         {/* 関連ユーティリティ Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl font-semibold text-stone-800 dark:text-stone-200">
-              関連ユーティリティ
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="text-stone-700 dark:text-stone-300 space-y-4">
+        <section>
+          <h2 className="text-2xl font-semibold text-stone-800 dark:text-stone-200 mb-4">
+            関連ユーティリティ
+          </h2>
+          <div className="text-stone-700 dark:text-stone-300 space-y-4">
             <ul className="list-disc list-inside space-y-1 pl-4">
               <li>
                 <code>display</code> (<code>flex</code>, <code>inline-flex</code>, <code>grid</code>
@@ -236,42 +227,11 @@ const AlignSelfPage: React.FC = () => {
                 <code>justify-self</code> を一括で設定するショートハンドです (Grid のみ)。
               </li>
             </ul>
-          </CardContent>
-        </Card>
-        {/* 公式ドキュメント参照 Card */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-2xl font-semibold text-stone-800 dark:text-stone-200">
-              公式ドキュメント参照
-            </CardTitle>
-          </CardHeader>
-          <CardContent className="text-stone-700 dark:text-stone-300 space-y-4">
-            <ul className="list-disc list-inside space-y-1 pl-4">
-              <li>
-                <a
-                  href="https://tailwindcss.com/docs/align-self"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sky-600 hover:text-sky-800 dark:text-sky-400 dark:hover:text-sky-300 underline"
-                >
-                  Tailwind CSS: Align Self
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://developer.mozilla.org/en-US/docs/Web/CSS/align-self"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-sky-600 hover:text-sky-800 dark:text-sky-400 dark:hover:text-sky-300 underline"
-                >
-                  MDN: align-self
-                </a>
-              </li>
-            </ul>
-          </CardContent>
-        </Card>
+          </div>
+        </section>
+        {/* 参照リンクは ArticleLayout に移動 */}
       </div>
-    </div>
+    </ArticleLayout>
   );
 };
 

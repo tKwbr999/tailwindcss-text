@@ -1,6 +1,6 @@
 import ReferenceLinks from '@/components/ui/ReferenceLinks'; // ReferenceLinksをインポート
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'; // Link をインポート (ArticleLayout内で使用)
 
 interface LinkInfo {
   title: string;

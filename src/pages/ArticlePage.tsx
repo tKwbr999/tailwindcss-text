@@ -1,8 +1,8 @@
-import { useState, useEffect } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 import ReactMarkdown from 'react-markdown';
+import { Link, useParams } from 'react-router-dom';
 import remarkGfm from 'remark-gfm';
-import { sections, ArticleInfo } from '../data/markdownFiles'; // Import sections and ArticleInfo
+import { ArticleInfo, sections } from '../data/markdownFiles'; // Import sections and ArticleInfo
 
 function ArticlePage() {
   const { section: sectionParam, articleName: articleNameParam } = useParams<{
