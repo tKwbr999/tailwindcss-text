@@ -114,12 +114,6 @@ const BackdropBlurPage: React.FC = () => {
       <Helmet>
         <title>Backdrop Blur - Tailwind CSS Cheatsheet</title>
         <meta name="description" content="Learn about the Backdrop Blur utility in Tailwind CSS. Examples and usage details for Backdrop Blur." />
-        {/* OGP タグ */}
-        <meta property="og:title" content="Backdrop Blur - Tailwind CSS Cheatsheet" />
-        <meta property="og:description" content="Learn about the Backdrop Blur utility in Tailwind CSS. Examples and usage details for Backdrop Blur." />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://tKwbr999.github.io/tailwindcss-text/#/filters/backdrop-blur" />
-        {/* <meta property="og:image" content="[画像のURL]" /> */} {/* 必要に応じて画像URLを設定 */}
       </Helmet>
       <div className="space-y-8">
         {' '}

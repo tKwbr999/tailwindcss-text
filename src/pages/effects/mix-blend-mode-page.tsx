@@ -54,12 +54,6 @@ const MixBlendModePage: React.FC = () => {
       <Helmet>
         <title>Mix Blend Mode - Tailwind CSS Cheatsheet</title>
         <meta name="description" content="Learn about the Mix Blend Mode utility in Tailwind CSS. Examples and usage details for Mix Blend Mode." />
-        {/* OGP タグ */}
-        <meta property="og:title" content="Mix Blend Mode - Tailwind CSS Cheatsheet" />
-        <meta property="og:description" content="Learn about the Mix Blend Mode utility in Tailwind CSS. Examples and usage details for Mix Blend Mode." />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://tKwbr999.github.io/tailwindcss-text/#/effects/mix-blend-mode" />
-        {/* <meta property="og:image" content="[画像のURL]" /> */} {/* 必要に応じて画像URLを設定 */}
       </Helmet>
       <div className="space-y-8">
         {' '}

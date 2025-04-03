@@ -91,12 +91,6 @@ const DivideStylePage: React.FC = () => {
       <Helmet>
         <title>Divide Style - Tailwind CSS Cheatsheet</title>
         <meta name="description" content="Learn about the Divide Style utility in Tailwind CSS. Examples and usage details for Divide Style." />
-        {/* OGP タグ */}
-        <meta property="og:title" content="Divide Style - Tailwind CSS Cheatsheet" />
-        <meta property="og:description" content="Learn about the Divide Style utility in Tailwind CSS. Examples and usage details for Divide Style." />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://tKwbr999.github.io/tailwindcss-text/#/borders/divide-style" />
-        {/* <meta property="og:image" content="[画像のURL]" /> */} {/* 必要に応じて画像URLを設定 */}
       </Helmet>
       <div className="space-y-8">
         {' '}

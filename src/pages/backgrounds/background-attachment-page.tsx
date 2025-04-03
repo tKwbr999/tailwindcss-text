@@ -109,12 +109,6 @@ const BackgroundAttachmentPage: React.FC = () => {
       <Helmet>
         <title>Background Attachment - Tailwind CSS Cheatsheet</title>
         <meta name="description" content="Learn about the Background Attachment utility in Tailwind CSS. Examples and usage details for Background Attachment." />
-        {/* OGP タグ */}
-        <meta property="og:title" content="Background Attachment - Tailwind CSS Cheatsheet" />
-        <meta property="og:description" content="Learn about the Background Attachment utility in Tailwind CSS. Examples and usage details for Background Attachment." />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://tKwbr999.github.io/tailwindcss-text/#/backgrounds/background-attachment" />
-        {/* <meta property="og:image" content="[画像のURL]" /> */} {/* 必要に応じて画像URLを設定 */}
       </Helmet>
       <div className="space-y-8">
         {' '}

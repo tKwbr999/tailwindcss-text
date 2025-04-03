@@ -54,12 +54,6 @@ const SepiaPage: React.FC = () => {
       <Helmet>
         <title>Sepia - Tailwind CSS Cheatsheet</title>
         <meta name="description" content="Learn about the Sepia utility in Tailwind CSS. Examples and usage details for Sepia." />
-        {/* OGP タグ */}
-        <meta property="og:title" content="Sepia - Tailwind CSS Cheatsheet" />
-        <meta property="og:description" content="Learn about the Sepia utility in Tailwind CSS. Examples and usage details for Sepia." />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://tKwbr999.github.io/tailwindcss-text/#/filters/sepia" />
-        {/* <meta property="og:image" content="[画像のURL]" /> */} {/* 必要に応じて画像URLを設定 */}
       </Helmet>
       <div className="space-y-8">
         {' '}

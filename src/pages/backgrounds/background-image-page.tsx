@@ -88,12 +88,6 @@ const BackgroundImagePage: React.FC = () => {
       <Helmet>
         <title>Background Image - Tailwind CSS Cheatsheet</title>
         <meta name="description" content="Learn about the Background Image utility in Tailwind CSS. Examples and usage details for Background Image." />
-        {/* OGP タグ */}
-        <meta property="og:title" content="Background Image - Tailwind CSS Cheatsheet" />
-        <meta property="og:description" content="Learn about the Background Image utility in Tailwind CSS. Examples and usage details for Background Image." />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://tKwbr999.github.io/tailwindcss-text/#/backgrounds/background-image" />
-        {/* <meta property="og:image" content="[画像のURL]" /> */} {/* 必要に応じて画像URLを設定 */}
       </Helmet>
       <div className="space-y-8">
         {' '}

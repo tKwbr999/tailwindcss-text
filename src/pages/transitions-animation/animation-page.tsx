@@ -111,12 +111,6 @@ const AnimationPage: React.FC = () => {
       <Helmet>
         <title>Animation - Tailwind CSS Cheatsheet</title>
         <meta name="description" content="Learn about the Animation utility in Tailwind CSS. Examples and usage details for Animation." />
-        {/* OGP タグ */}
-        <meta property="og:title" content="Animation - Tailwind CSS Cheatsheet" />
-        <meta property="og:description" content="Learn about the Animation utility in Tailwind CSS. Examples and usage details for Animation." />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://tKwbr999.github.io/tailwindcss-text/#/transitions-animation/animation" />
-        {/* <meta property="og:image" content="[画像のURL]" /> */} {/* 必要に応じて画像URLを設定 */}
       </Helmet>
       <div className="space-y-8"> {/* 元のCard間のマージンを再現 */}
         {/* 概要 */}

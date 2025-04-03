@@ -68,12 +68,6 @@ const RingWidthPage: React.FC = () => {
       <Helmet>
         <title>Ring Width - Tailwind CSS Cheatsheet</title>
         <meta name="description" content="Learn about the Ring Width utility in Tailwind CSS. Examples and usage details for Ring Width." />
-        {/* OGP タグ */}
-        <meta property="og:title" content="Ring Width - Tailwind CSS Cheatsheet" />
-        <meta property="og:description" content="Learn about the Ring Width utility in Tailwind CSS. Examples and usage details for Ring Width." />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://tKwbr999.github.io/tailwindcss-text/#/borders/ring-width" />
-        {/* <meta property="og:image" content="[画像のURL]" /> */} {/* 必要に応じて画像URLを設定 */}
       </Helmet>
       <div className="space-y-8">
         {' '}

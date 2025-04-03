@@ -114,12 +114,6 @@ const SizePage: React.FC = () => {
       <Helmet>
         <title>Size - Tailwind CSS Cheatsheet</title>
         <meta name="description" content="Learn about the Size utility in Tailwind CSS. Examples and usage details for Size." />
-        {/* OGP タグ */}
-        <meta property="og:title" content="Size - Tailwind CSS Cheatsheet" />
-        <meta property="og:description" content="Learn about the Size utility in Tailwind CSS. Examples and usage details for Size." />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://tKwbr999.github.io/tailwindcss-text/#/sizing/size" />
-        {/* <meta property="og:image" content="[画像のURL]" /> */} {/* 必要に応じて画像URLを設定 */}
       </Helmet>
       <div className="space-y-8">
         {' '}

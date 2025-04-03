@@ -57,12 +57,6 @@ const TextUnderlineOffsetPage: React.FC = () => {
       <Helmet>
         <title>Text Underline Offset - Tailwind CSS Cheatsheet</title>
         <meta name="description" content="Learn about the Text Underline Offset utility in Tailwind CSS. Examples and usage details for Text Underline Offset." />
-        {/* OGP タグ */}
-        <meta property="og:title" content="Text Underline Offset - Tailwind CSS Cheatsheet" />
-        <meta property="og:description" content="Learn about the Text Underline Offset utility in Tailwind CSS. Examples and usage details for Text Underline Offset." />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://tKwbr999.github.io/tailwindcss-text/#/typography/text-underline-offset" />
-        {/* <meta property="og:image" content="[画像のURL]" /> */} {/* 必要に応じて画像URLを設定 */}
       </Helmet>
       <div className="space-y-8"> {/* 元のCard間のマージンを再現 */}
         {/* 概要 */}

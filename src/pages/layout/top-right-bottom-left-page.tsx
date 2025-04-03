@@ -148,12 +148,6 @@ const links = [
       <Helmet>
         <title>Layout: Top / Right / Bottom / Left - Tailwind CSS Cheatsheet</title>
         <meta name="description" content="Learn about the Layout: Top / Right / Bottom / Left utility in Tailwind CSS. Examples and usage details for Layout: Top / Right / Bottom / Left." />
-        {/* OGP タグ */}
-        <meta property="og:title" content="Layout: Top / Right / Bottom / Left - Tailwind CSS Cheatsheet" />
-        <meta property="og:description" content="Learn about the Layout: Top / Right / Bottom / Left utility in Tailwind CSS. Examples and usage details for Layout: Top / Right / Bottom / Left." />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://tKwbr999.github.io/tailwindcss-text/#/layout/top-right-bottom-left" />
-        {/* <meta property="og:image" content="[画像のURL]" /> */} {/* 必要に応じて画像URLを設定 */}
       </Helmet>
         {/* 概要 Card */}
         <Card>

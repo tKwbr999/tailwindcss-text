@@ -147,12 +147,6 @@ module.exports = {
       <Helmet>
         <title>Aspect Ratio - Tailwind CSS Cheatsheet</title>
         <meta name="description" content="Learn how to control the aspect ratio of elements using Tailwind CSS utility classes like aspect-square, aspect-video, and custom ratios." />
-        {/* OGP タグ */}
-        <meta property="og:title" content="Aspect Ratio - Tailwind CSS Cheatsheet" />
-        <meta property="og:description" content="Learn how to control the aspect ratio of elements using Tailwind CSS utility classes like aspect-square, aspect-video, and custom ratios." />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://tKwbr999.github.io/tailwindcss-text/#/layout/aspect-ratio" />
-        {/* <meta property="og:image" content="[画像のURL]" /> */} {/* 必要に応じて画像URLを設定 */}
       </Helmet>
       {/* 概要 Card */}
       <Card>

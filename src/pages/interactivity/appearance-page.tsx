@@ -100,12 +100,6 @@ const AppearancePage: React.FC = () => {
       <Helmet>
         <title>Appearance - Tailwind CSS Cheatsheet</title>
         <meta name="description" content="Learn about the Appearance utility in Tailwind CSS. Examples and usage details for Appearance." />
-        {/* OGP タグ */}
-        <meta property="og:title" content="Appearance - Tailwind CSS Cheatsheet" />
-        <meta property="og:description" content="Learn about the Appearance utility in Tailwind CSS. Examples and usage details for Appearance." />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://tKwbr999.github.io/tailwindcss-text/#/interactivity/appearance" />
-        {/* <meta property="og:image" content="[画像のURL]" /> */} {/* 必要に応じて画像URLを設定 */}
       </Helmet>
       <div className="space-y-8">
         {' '}

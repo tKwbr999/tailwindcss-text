@@ -56,12 +56,6 @@ const PointerEventsPage: React.FC = () => {
       <Helmet>
         <title>Pointer Events - Tailwind CSS Cheatsheet</title>
         <meta name="description" content="Learn about the Pointer Events utility in Tailwind CSS. Examples and usage details for Pointer Events." />
-        {/* OGP タグ */}
-        <meta property="og:title" content="Pointer Events - Tailwind CSS Cheatsheet" />
-        <meta property="og:description" content="Learn about the Pointer Events utility in Tailwind CSS. Examples and usage details for Pointer Events." />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://tKwbr999.github.io/tailwindcss-text/#/interactivity/pointer-events" />
-        {/* <meta property="og:image" content="[画像のURL]" /> */} {/* 必要に応じて画像URLを設定 */}
       </Helmet>
       <div className="space-y-8">
         {' '}

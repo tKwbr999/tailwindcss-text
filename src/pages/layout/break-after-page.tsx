@@ -143,12 +143,6 @@ const links = [
       <Helmet>
         <title>Layout: Break After - Tailwind CSS Cheatsheet</title>
         <meta name="description" content="Learn about the Layout: Break After utility in Tailwind CSS. Examples and usage details for Layout: Break After." />
-        {/* OGP タグ */}
-        <meta property="og:title" content="Layout: Break After - Tailwind CSS Cheatsheet" />
-        <meta property="og:description" content="Learn about the Layout: Break After utility in Tailwind CSS. Examples and usage details for Layout: Break After." />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://tKwbr999.github.io/tailwindcss-text/#/layout/break-after" />
-        {/* <meta property="og:image" content="[画像のURL]" /> */} {/* 必要に応じて画像URLを設定 */}
       </Helmet>
         {/* 概要 Card */}
         <Card>

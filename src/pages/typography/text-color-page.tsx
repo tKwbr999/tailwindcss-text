@@ -96,12 +96,6 @@ const TextColorPage: React.FC = () => {
       <Helmet>
         <title>Text Color - Tailwind CSS Cheatsheet</title>
         <meta name="description" content="Learn about the Text Color utility in Tailwind CSS. Examples and usage details for Text Color." />
-        {/* OGP タグ */}
-        <meta property="og:title" content="Text Color - Tailwind CSS Cheatsheet" />
-        <meta property="og:description" content="Learn about the Text Color utility in Tailwind CSS. Examples and usage details for Text Color." />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://tKwbr999.github.io/tailwindcss-text/#/typography/text-color" />
-        {/* <meta property="og:image" content="[画像のURL]" /> */} {/* 必要に応じて画像URLを設定 */}
       </Helmet>
       <div className="space-y-8"> {/* 元のCard間のマージンを再現 */}
         {/* 概要 */}

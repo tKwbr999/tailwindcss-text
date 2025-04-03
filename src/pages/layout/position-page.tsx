@@ -116,12 +116,6 @@ const links = [
       <Helmet>
         <title>Layout: Position - Tailwind CSS Cheatsheet</title>
         <meta name="description" content="Learn about the Layout: Position utility in Tailwind CSS. Examples and usage details for Layout: Position." />
-        {/* OGP タグ */}
-        <meta property="og:title" content="Layout: Position - Tailwind CSS Cheatsheet" />
-        <meta property="og:description" content="Learn about the Layout: Position utility in Tailwind CSS. Examples and usage details for Layout: Position." />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://tKwbr999.github.io/tailwindcss-text/#/layout/position" />
-        {/* <meta property="og:image" content="[画像のURL]" /> */} {/* 必要に応じて画像URLを設定 */}
       </Helmet>
         {/* 概要 Card */}
         <Card>

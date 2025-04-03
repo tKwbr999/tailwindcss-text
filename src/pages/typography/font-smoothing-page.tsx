@@ -55,12 +55,6 @@ const FontSmoothingPage: React.FC = () => {
       <Helmet>
         <title>Font Smoothing - Tailwind CSS Cheatsheet</title>
         <meta name="description" content="Learn about the Font Smoothing utility in Tailwind CSS. Examples and usage details for Font Smoothing." />
-        {/* OGP タグ */}
-        <meta property="og:title" content="Font Smoothing - Tailwind CSS Cheatsheet" />
-        <meta property="og:description" content="Learn about the Font Smoothing utility in Tailwind CSS. Examples and usage details for Font Smoothing." />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://tKwbr999.github.io/tailwindcss-text/#/typography/font-smoothing" />
-        {/* <meta property="og:image" content="[画像のURL]" /> */} {/* 必要に応じて画像URLを設定 */}
       </Helmet>
       <div className="space-y-8"> {/* 元のCard間のマージンを再現 */}
         {/* 概要 */}

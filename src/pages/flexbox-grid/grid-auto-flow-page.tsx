@@ -127,12 +127,6 @@ const GridAutoFlowPage: React.FC = () => {
       <Helmet>
         <title>Grid Auto Flow - Tailwind CSS Cheatsheet</title>
         <meta name="description" content="Learn about the Grid Auto Flow utility in Tailwind CSS. Examples and usage details for Grid Auto Flow." />
-        {/* OGP タグ */}
-        <meta property="og:title" content="Grid Auto Flow - Tailwind CSS Cheatsheet" />
-        <meta property="og:description" content="Learn about the Grid Auto Flow utility in Tailwind CSS. Examples and usage details for Grid Auto Flow." />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://tKwbr999.github.io/tailwindcss-text/#/flexbox-grid/grid-auto-flow" />
-        {/* <meta property="og:image" content="[画像のURL]" /> */} {/* 必要に応じて画像URLを設定 */}
       </Helmet>
       <div className="space-y-8">
         {' '}

@@ -72,12 +72,6 @@ const FillPage: React.FC = () => {
       <Helmet>
         <title>Fill - Tailwind CSS Cheatsheet</title>
         <meta name="description" content="Learn about the Fill utility in Tailwind CSS. Examples and usage details for Fill." />
-        {/* OGP タグ */}
-        <meta property="og:title" content="Fill - Tailwind CSS Cheatsheet" />
-        <meta property="og:description" content="Learn about the Fill utility in Tailwind CSS. Examples and usage details for Fill." />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://tKwbr999.github.io/tailwindcss-text/#/svg/fill" />
-        {/* <meta property="og:image" content="[画像のURL]" /> */} {/* 必要に応じて画像URLを設定 */}
       </Helmet>
       <div className="space-y-8">
         {' '}

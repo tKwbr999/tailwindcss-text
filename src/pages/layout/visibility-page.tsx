@@ -69,12 +69,6 @@ const links = [
       <Helmet>
         <title>Layout: Visibility - Tailwind CSS Cheatsheet</title>
         <meta name="description" content="Learn about the Layout: Visibility utility in Tailwind CSS. Examples and usage details for Layout: Visibility." />
-        {/* OGP タグ */}
-        <meta property="og:title" content="Layout: Visibility - Tailwind CSS Cheatsheet" />
-        <meta property="og:description" content="Learn about the Layout: Visibility utility in Tailwind CSS. Examples and usage details for Layout: Visibility." />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content="https://tKwbr999.github.io/tailwindcss-text/#/layout/visibility" />
-        {/* <meta property="og:image" content="[画像のURL]" /> */} {/* 必要に応じて画像URLを設定 */}
       </Helmet>
         {/* 概要 Card */}
         <Card>
