@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async'; // Helmet をインポート
 import ArticleLayout from '@/components/layout/ArticleLayout';
 import React from 'react';
 
@@ -96,6 +97,17 @@ const FlexGrowPage: React.FC = () => {
 
   return (
     <ArticleLayout title={title} links={links}>
+
+      <Helmet>
+        <title>Flex Grow - Tailwind CSS Cheatsheet</title>
+        <meta name="description" content="Learn about the Flex Grow utility in Tailwind CSS. Examples and usage details for Flex Grow." />
+        {/* OGP タグ */}
+        <meta property="og:title" content="Flex Grow - Tailwind CSS Cheatsheet" />
+        <meta property="og:description" content="Learn about the Flex Grow utility in Tailwind CSS. Examples and usage details for Flex Grow." />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content="https://tKwbr999.github.io/tailwindcss-text/#/flexbox-grid/flex-grow" />
+        {/* <meta property="og:image" content="[画像のURL]" /> */} {/* 必要に応じて画像URLを設定 */}
+      </Helmet>
       <div className="space-y-8">
         {' '}
         {/* 元のCard間のマージンを再現 */}

@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async'; // Helmet をインポート
 import ArticleLayout from '@/components/layout/ArticleLayout';
 import React from 'react';
 
@@ -89,6 +90,17 @@ const DivideWidthPage: React.FC = () => {
 
   return (
     <ArticleLayout title={title} links={links}>
+
+      <Helmet>
+        <title>Divide Width - Tailwind CSS Cheatsheet</title>
+        <meta name="description" content="Learn about the Divide Width utility in Tailwind CSS. Examples and usage details for Divide Width." />
+        {/* OGP タグ */}
+        <meta property="og:title" content="Divide Width - Tailwind CSS Cheatsheet" />
+        <meta property="og:description" content="Learn about the Divide Width utility in Tailwind CSS. Examples and usage details for Divide Width." />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content="https://tKwbr999.github.io/tailwindcss-text/#/borders/divide-width" />
+        {/* <meta property="og:image" content="[画像のURL]" /> */} {/* 必要に応じて画像URLを設定 */}
+      </Helmet>
       <div className="space-y-8">
         {' '}
         {/* 元のCard間のマージンを再現 */}

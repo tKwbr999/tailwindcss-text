@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async'; // Helmet をインポート
 import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import ArticleLayout from '@/components/layout/ArticleLayout'; // ArticleLayout をインポート
@@ -138,6 +139,17 @@ const links = [
 
   return (
     <ArticleLayout title="Layout: Break Before (要素前の改ページ/改カラム)" links={links}>
+
+      <Helmet>
+        <title>Layout: Break Before - Tailwind CSS Cheatsheet</title>
+        <meta name="description" content="Learn about the Layout: Break Before utility in Tailwind CSS. Examples and usage details for Layout: Break Before." />
+        {/* OGP タグ */}
+        <meta property="og:title" content="Layout: Break Before - Tailwind CSS Cheatsheet" />
+        <meta property="og:description" content="Learn about the Layout: Break Before utility in Tailwind CSS. Examples and usage details for Layout: Break Before." />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content="https://tKwbr999.github.io/tailwindcss-text/#/layout/break-before" />
+        {/* <meta property="og:image" content="[画像のURL]" /> */} {/* 必要に応じて画像URLを設定 */}
+      </Helmet>
         {/* 概要 Card */}
         <Card>
           <CardHeader>

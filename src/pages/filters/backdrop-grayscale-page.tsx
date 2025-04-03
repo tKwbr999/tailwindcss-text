@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async'; // Helmet をインポート
 import ArticleLayout from '@/components/layout/ArticleLayout';
 import React from 'react';
 
@@ -79,6 +80,17 @@ const BackdropGrayscalePage: React.FC = () => {
 
   return (
     <ArticleLayout title={title} links={links}>
+
+      <Helmet>
+        <title>Backdrop Grayscale - Tailwind CSS Cheatsheet</title>
+        <meta name="description" content="Learn about the Backdrop Grayscale utility in Tailwind CSS. Examples and usage details for Backdrop Grayscale." />
+        {/* OGP タグ */}
+        <meta property="og:title" content="Backdrop Grayscale - Tailwind CSS Cheatsheet" />
+        <meta property="og:description" content="Learn about the Backdrop Grayscale utility in Tailwind CSS. Examples and usage details for Backdrop Grayscale." />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content="https://tKwbr999.github.io/tailwindcss-text/#/filters/backdrop-grayscale" />
+        {/* <meta property="og:image" content="[画像のURL]" /> */} {/* 必要に応じて画像URLを設定 */}
+      </Helmet>
       <div className="space-y-8">
         {' '}
         {/* 元のCard間のマージンを再現 */}

@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async'; // Helmet をインポート
 import ArticleLayout from '@/components/layout/ArticleLayout';
 import React from 'react';
 
@@ -97,6 +98,17 @@ const SpaceBetweenPage: React.FC = () => {
 
   return (
     <ArticleLayout title={title} links={links}>
+
+      <Helmet>
+        <title>Space Between - Tailwind CSS Cheatsheet</title>
+        <meta name="description" content="Learn about the Space Between utility in Tailwind CSS. Examples and usage details for Space Between." />
+        {/* OGP タグ */}
+        <meta property="og:title" content="Space Between - Tailwind CSS Cheatsheet" />
+        <meta property="og:description" content="Learn about the Space Between utility in Tailwind CSS. Examples and usage details for Space Between." />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content="https://tKwbr999.github.io/tailwindcss-text/#/spacing/space-between" />
+        {/* <meta property="og:image" content="[画像のURL]" /> */} {/* 必要に応じて画像URLを設定 */}
+      </Helmet>
       <div className="space-y-8">
         {' '}
         {/* 元のCard間のマージンを再現 */}

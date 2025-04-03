@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async'; // Helmet をインポート
 import ArticleLayout from '@/components/layout/ArticleLayout';
 import React from 'react';
 
@@ -87,6 +88,17 @@ const RotatePage: React.FC = () => {
 
   return (
     <ArticleLayout title={title} links={links}>
+
+      <Helmet>
+        <title>Rotate - Tailwind CSS Cheatsheet</title>
+        <meta name="description" content="Learn about the Rotate utility in Tailwind CSS. Examples and usage details for Rotate." />
+        {/* OGP タグ */}
+        <meta property="og:title" content="Rotate - Tailwind CSS Cheatsheet" />
+        <meta property="og:description" content="Learn about the Rotate utility in Tailwind CSS. Examples and usage details for Rotate." />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content="https://tKwbr999.github.io/tailwindcss-text/#/transforms/rotate" />
+        {/* <meta property="og:image" content="[画像のURL]" /> */} {/* 必要に応じて画像URLを設定 */}
+      </Helmet>
       <div className="space-y-8">
         {' '}
         {/* 元のCard間のマージンを再現 */}

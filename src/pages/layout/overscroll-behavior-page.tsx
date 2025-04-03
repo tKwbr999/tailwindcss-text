@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async'; // Helmet をインポート
 import ArticleLayout from '@/components/layout/ArticleLayout'; // ArticleLayout をインポート
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import React from 'react';
@@ -136,6 +137,17 @@ const OverscrollBehaviorPage: React.FC = () => {
 
   return (
     <ArticleLayout title="Layout: Overscroll Behavior (オーバースクロール挙動)" links={links}>
+
+      <Helmet>
+        <title>Layout: Overscroll Behavior - Tailwind CSS Cheatsheet</title>
+        <meta name="description" content="Learn about the Layout: Overscroll Behavior utility in Tailwind CSS. Examples and usage details for Layout: Overscroll Behavior." />
+        {/* OGP タグ */}
+        <meta property="og:title" content="Layout: Overscroll Behavior - Tailwind CSS Cheatsheet" />
+        <meta property="og:description" content="Learn about the Layout: Overscroll Behavior utility in Tailwind CSS. Examples and usage details for Layout: Overscroll Behavior." />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content="https://tKwbr999.github.io/tailwindcss-text/#/layout/overscroll-behavior" />
+        {/* <meta property="og:image" content="[画像のURL]" /> */} {/* 必要に応じて画像URLを設定 */}
+      </Helmet>
       {/* 概要 Card */}
       <Card>
         <CardHeader>

@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async'; // Helmet をインポート
 import ArticleLayout from '@/components/layout/ArticleLayout'; // ArticleLayout をインポート
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import React from 'react';
@@ -127,6 +128,17 @@ const ObjectFitPage: React.FC = () => {
 
   return (
     <ArticleLayout title="Layout: Object Fit (置換要素のフィット方法)" links={links}>
+
+      <Helmet>
+        <title>Layout: Object Fit - Tailwind CSS Cheatsheet</title>
+        <meta name="description" content="Learn about the Layout: Object Fit utility in Tailwind CSS. Examples and usage details for Layout: Object Fit." />
+        {/* OGP タグ */}
+        <meta property="og:title" content="Layout: Object Fit - Tailwind CSS Cheatsheet" />
+        <meta property="og:description" content="Learn about the Layout: Object Fit utility in Tailwind CSS. Examples and usage details for Layout: Object Fit." />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content="https://tKwbr999.github.io/tailwindcss-text/#/layout/object-fit" />
+        {/* <meta property="og:image" content="[画像のURL]" /> */} {/* 必要に応じて画像URLを設定 */}
+      </Helmet>
       {/* 概要 Card */}
       <Card>
         <CardHeader>

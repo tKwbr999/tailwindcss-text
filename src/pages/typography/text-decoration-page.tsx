@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async'; // Helmet をインポート
 import React from 'react';
 import ArticleLayout from '@/components/layout/ArticleLayout';
 
@@ -66,6 +67,17 @@ const TextDecorationPage: React.FC = () => {
 
   return (
     <ArticleLayout title={title} links={links}>
+
+      <Helmet>
+        <title>Text Decoration - Tailwind CSS Cheatsheet</title>
+        <meta name="description" content="Learn about the Text Decoration utility in Tailwind CSS. Examples and usage details for Text Decoration." />
+        {/* OGP タグ */}
+        <meta property="og:title" content="Text Decoration - Tailwind CSS Cheatsheet" />
+        <meta property="og:description" content="Learn about the Text Decoration utility in Tailwind CSS. Examples and usage details for Text Decoration." />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content="https://tKwbr999.github.io/tailwindcss-text/#/typography/text-decoration" />
+        {/* <meta property="og:image" content="[画像のURL]" /> */} {/* 必要に応じて画像URLを設定 */}
+      </Helmet>
       <div className="space-y-8"> {/* 元のCard間のマージンを再現 */}
         {/* 概要 */}
         <section>

@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async'; // Helmet をインポート
 import React from 'react';
 import ArticleLayout from '@/components/layout/ArticleLayout';
 
@@ -49,6 +50,17 @@ const FontWeightPage: React.FC = () => {
 
   return (
     <ArticleLayout title={title} links={links}>
+
+      <Helmet>
+        <title>Font Weight - Tailwind CSS Cheatsheet</title>
+        <meta name="description" content="Learn about the Font Weight utility in Tailwind CSS. Examples and usage details for Font Weight." />
+        {/* OGP タグ */}
+        <meta property="og:title" content="Font Weight - Tailwind CSS Cheatsheet" />
+        <meta property="og:description" content="Learn about the Font Weight utility in Tailwind CSS. Examples and usage details for Font Weight." />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content="https://tKwbr999.github.io/tailwindcss-text/#/typography/font-weight" />
+        {/* <meta property="og:image" content="[画像のURL]" /> */} {/* 必要に応じて画像URLを設定 */}
+      </Helmet>
       <div className="space-y-8"> {/* 元のCard間のマージンを再現 */}
         {/* 概要 */}
         <section>

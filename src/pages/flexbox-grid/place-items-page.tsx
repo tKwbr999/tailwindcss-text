@@ -1,3 +1,4 @@
+import { Helmet } from 'react-helmet-async'; // Helmet をインポート
 import ArticleLayout from '@/components/layout/ArticleLayout';
 import React from 'react';
 
@@ -77,6 +78,17 @@ const PlaceItemsPage: React.FC = () => {
 
   return (
     <ArticleLayout title={title} links={links}>
+
+      <Helmet>
+        <title>Place Items - Tailwind CSS Cheatsheet</title>
+        <meta name="description" content="Learn about the Place Items utility in Tailwind CSS. Examples and usage details for Place Items." />
+        {/* OGP タグ */}
+        <meta property="og:title" content="Place Items - Tailwind CSS Cheatsheet" />
+        <meta property="og:description" content="Learn about the Place Items utility in Tailwind CSS. Examples and usage details for Place Items." />
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content="https://tKwbr999.github.io/tailwindcss-text/#/flexbox-grid/place-items" />
+        {/* <meta property="og:image" content="[画像のURL]" /> */} {/* 必要に応じて画像URLを設定 */}
+      </Helmet>
       <div className="space-y-8">
         {' '}
         {/* 元のCard間のマージンを再現 */}
