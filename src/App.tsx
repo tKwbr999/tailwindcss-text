@@ -65,7 +65,7 @@ function App() {
         <meta property="og:locale" content="ja_JP" />
         <meta property="og:type" content="website" />
         <meta property="og:image" content="/ogp-image.png" />
-        <meta property="og:url" content={import.meta.env.VITE_SITE_DOMAIN || ''} />
+        <meta property="og:url" content={import.meta.env.VITE_SITE_DOMAIN || 'https://tKwbr999.github.io/tailwindcss-text/'} />
         {/* Twitter Card タグ */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@tKwbr999" />
