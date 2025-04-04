@@ -1,10 +1,15 @@
 import { useEffect } from 'react'; // Reactフック
 import { Helmet } from 'react-helmet-async'; // Helmet をインポート
-
 import { Route, Routes, useLocation } from 'react-router-dom'; // ルーティング用コンポーネント
-
 import HomePage from './pages/HomePage'; // ホームページコンポーネント
-// import ArticlePage from './pages/ArticlePage'; // 必要に応じてコメント解除
+import aiSourcesConfig from './config/ai-sources.json'; // 相対パスを修正
+
+// グローバル window に dataLayer を追加
+declare global {
+  interface Window {
+    dataLayer: any[];
+  }
+}
 
 // Vite の import.meta.glob を使用してページコンポーネントを動的に読み込む
 // eager: true で同期的にモジュールを読み込む
@@ -29,14 +34,35 @@ const routes = Object.entries(modules)
       return null;
     }
 
-    // ArticlePage は動的ルートで処理するため除外 (必要に応じて調整)
-    // if (urlPath.includes('/ArticlePage')) {
-    //    return null;
-    // }
-
     return { path: urlPath, Component };
   })
   .filter((route): route is { path: string; Component: React.ComponentType } => route !== null); // null を除去し、型ガードを行う
+
+// GTMトラッキング用のコンポーネント
+function TrackingComponent() {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (window.dataLayer) {
+      window.dataLayer.push({
+        event: 'pageview',
+        page_path: location.pathname + location.search,
+      });
+
+      // 環境変数からAIソースを取得して配列に変換
+      const aiSources = aiSourcesConfig.aiSources;
+      const referrer = document.referrer;
+      if (aiSources.some((source: string) => referrer.includes(source))) {
+        window.dataLayer.push({
+          event: 'ai_referral',
+          ai_source: referrer,
+        });
+      }
+    }
+  }, [location]);
+
+  return null;
+}
 
 /**
  * アプリケーションのルートコンポーネント
@@ -77,21 +103,21 @@ function App() {
         <meta name="twitter:site" content="@tKwbr999" />
         <meta name="twitter:image" content="/ogp-image.png" />
       </Helmet>
+
+      {/* トラッキングコンポーネント */}
+      <TrackingComponent />
+
       {/* 各ページのコンテンツを表示するメインエリア */}
       <main>
         {/* ルーティング設定 */}
         <Routes>
           {/* ルートパス ("/") に HomePage を割り当て */}
           <Route path="/" element={<HomePage />} />
-          {/* 動的ルート: ArticlePage は一旦コメントアウト or 削除 (必要に応じて調整) */}
-          {/* <Route path="/:section/:articleName" element={<ArticlePage />} /> */}
 
           {/* 動的に生成されたルート */}
           {routes.map(({ path, Component }) => (
             <Route key={path} path={path} element={<Component />} />
           ))}
-
-          {/* TODO: 他の静的ページルートや動的ルートをここに追加 */}
         </Routes>
       </main>
     </div>
