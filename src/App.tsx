@@ -1,8 +1,8 @@
 import { useEffect } from 'react'; // Reactフック
 import { Helmet } from 'react-helmet-async'; // Helmet をインポート
 import { Route, Routes, useLocation } from 'react-router-dom'; // ルーティング用コンポーネント
-import HomePage from './pages/HomePage'; // ホームページコンポーネント
 import aiSourcesConfig from './config/ai-sources.json'; // 相対パスを修正
+import HomePage from './pages/HomePage'; // ホームページコンポーネント
 
 // グローバル window に dataLayer を追加
 declare global {
@@ -82,7 +82,7 @@ function App() {
       {/* デフォルトのメタ情報とHTML属性を設定 */}
       <Helmet htmlAttributes={{ lang: 'ja' }}>
         {/* 基本的なメタ情報 */}
-        <title>Tailwind CSS Text Utilities Cheatsheet</title>
+        <title>Tailwind CSS Text Utilities (日本語解説)</title>
         <meta
           name="description"
           content="A comprehensive cheatsheet for Tailwind CSS text-related utility classes. Find examples for typography, spacing, alignment, decoration, and more."
