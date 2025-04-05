@@ -1,0 +1,206 @@
+# Tailwind CSS Text Utilities
+
+> Tailwind CSSのテキスト関連ユーティリティクラスのリファレンスサイト
+
+## 主要コンテンツ
+
+*   [ホーム](https://tkwbr999.github.io/tailwindcss-text/#) - サイトのトップページ
+
+### Layout
+*   [Aspect Ratio](https://tkwbr999.github.io/tailwindcss-text/#layout/aspect-ratio) - アスペクト比
+*   [Container](https://tkwbr999.github.io/tailwindcss-text/#layout/container) - コンテナ
+*   [Columns](https://tkwbr999.github.io/tailwindcss-text/#layout/columns) - カラム
+*   [Break After](https://tkwbr999.github.io/tailwindcss-text/#layout/break-after) - 後方改ページ
+*   [Break Before](https://tkwbr999.github.io/tailwindcss-text/#layout/break-before) - 前方改ページ
+*   [Break Inside](https://tkwbr999.github.io/tailwindcss-text/#layout/break-inside) - 内部改ページ禁止
+*   [Box Decoration Break](https://tkwbr999.github.io/tailwindcss-text/#layout/box-decoration-break) - ボックス装飾の分割
+*   [Box Sizing](https://tkwbr999.github.io/tailwindcss-text/#layout/box-sizing) - ボックスサイジング
+*   [Display](https://tkwbr999.github.io/tailwindcss-text/#layout/display) - 表示タイプ
+*   [Floats](https://tkwbr999.github.io/tailwindcss-text/#layout/floats) - フロート
+*   [Clear](https://tkwbr999.github.io/tailwindcss-text/#layout/clear) - フロート解除
+*   [Isolation](https://tkwbr999.github.io/tailwindcss-text/#layout/isolation) - スタッキングコンテキスト分離
+*   [Object Fit](https://tkwbr999.github.io/tailwindcss-text/#layout/object-fit) - オブジェクトフィット
+*   [Object Position](https://tkwbr999.github.io/tailwindcss-text/#layout/object-position) - オブジェクト位置
+*   [Overflow](https://tkwbr999.github.io/tailwindcss-text/#layout/overflow) - オーバーフロー
+*   [Overscroll Behavior](https://tkwbr999.github.io/tailwindcss-text/#layout/overscroll-behavior) - オーバースクロール挙動
+*   [Position](https://tkwbr999.github.io/tailwindcss-text/#layout/position) - 配置方法
+*   [Top / Right / Bottom / Left](https://tkwbr999.github.io/tailwindcss-text/#layout/top-right-bottom-left) - 配置位置
+*   [Visibility](https://tkwbr999.github.io/tailwindcss-text/#layout/visibility) - 表示/非表示
+*   [Z-Index](https://tkwbr999.github.io/tailwindcss-text/#layout/z-index) - 重なり順序
+
+### Flexbox & Grid
+*   [Flex Basis](https://tkwbr999.github.io/tailwindcss-text/#flexbox-grid/flex-basis) - フレックス基本サイズ
+*   [Flex Direction](https://tkwbr999.github.io/tailwindcss-text/#flexbox-grid/flex-direction) - フレックス方向
+*   [Flex Wrap](https://tkwbr999.github.io/tailwindcss-text/#flexbox-grid/flex-wrap) - フレックス折り返し
+*   [Flex](https://tkwbr999.github.io/tailwindcss-text/#flexbox-grid/flex) - フレックス
+*   [Flex Grow](https://tkwbr999.github.io/tailwindcss-text/#flexbox-grid/flex-grow) - フレックス伸長係数
+*   [Flex Shrink](https://tkwbr999.github.io/tailwindcss-text/#flexbox-grid/flex-shrink) - フレックス縮小係数
+*   [Order](https://tkwbr999.github.io/tailwindcss-text/#flexbox-grid/order) - フレックスアイテム順序
+*   [Grid Template Columns](https://tkwbr999.github.io/tailwindcss-text/#flexbox-grid/grid-template-columns) - グリッド列テンプレート
+*   [Grid Column Start / End](https://tkwbr999.github.io/tailwindcss-text/#flexbox-grid/grid-column) - グリッド列開始/終了
+*   [Grid Template Rows](https://tkwbr999.github.io/tailwindcss-text/#flexbox-grid/grid-template-rows) - グリッド行テンプレート
+*   [Grid Row Start / End](https://tkwbr999.github.io/tailwindcss-text/#flexbox-grid/grid-row) - グリッド行開始/終了
+*   [Grid Auto Flow](https://tkwbr999.github.io/tailwindcss-text/#flexbox-grid/grid-auto-flow) - グリッド自動配置フロー
+*   [Grid Auto Columns](https://tkwbr999.github.io/tailwindcss-text/#flexbox-grid/grid-auto-columns) - グリッド自動列サイズ
+*   [Grid Auto Rows](https://tkwbr999.github.io/tailwindcss-text/#flexbox-grid/grid-auto-rows) - グリッド自動行サイズ
+*   [Gap](https://tkwbr999.github.io/tailwindcss-text/#flexbox-grid/gap) - グリッドアイテム間隔
+*   [Justify Content](https://tkwbr999.github.io/tailwindcss-text/#flexbox-grid/justify-content) - 主軸方向の配置 (コンテナ)
+*   [Justify Items](https://tkwbr999.github.io/tailwindcss-text/#flexbox-grid/justify-items) - 主軸方向の配置 (アイテム)
+*   [Justify Self](https://tkwbr999.github.io/tailwindcss-text/#flexbox-grid/justify-self) - 主軸方向の個別配置 (アイテム)
+*   [Align Content](https://tkwbr999.github.io/tailwindcss-text/#flexbox-grid/align-content) - 交差軸方向の配置 (コンテナ)
+*   [Align Items](https://tkwbr999.github.io/tailwindcss-text/#flexbox-grid/align-items) - 交差軸方向の配置 (アイテム)
+*   [Align Self](https://tkwbr999.github.io/tailwindcss-text/#flexbox-grid/align-self) - 交差軸方向の個別配置 (アイテム)
+*   [Place Content](https://tkwbr999.github.io/tailwindcss-text/#flexbox-grid/place-content) - 配置 (コンテナ、justify/align一括)
+*   [Place Items](https://tkwbr999.github.io/tailwindcss-text/#flexbox-grid/place-items) - 配置 (アイテム、justify/align一括)
+*   [Place Self](https://tkwbr999.github.io/tailwindcss-text/#flexbox-grid/place-self) - 個別配置 (アイテム、justify/align一括)
+
+### Spacing
+*   [Padding](https://tkwbr999.github.io/tailwindcss-text/#spacing/padding) - パディング
+*   [Margin](https://tkwbr999.github.io/tailwindcss-text/#spacing/margin) - マージン
+*   [Space Between](https://tkwbr999.github.io/tailwindcss-text/#spacing/space-between) - 子要素間のスペース
+
+### Sizing
+*   [Width](https://tkwbr999.github.io/tailwindcss-text/#sizing/width) - 幅
+*   [Min-Width](https://tkwbr999.github.io/tailwindcss-text/#sizing/min-width) - 最小幅
+*   [Max-Width](https://tkwbr999.github.io/tailwindcss-text/#sizing/max-width) - 最大幅
+*   [Height](https://tkwbr999.github.io/tailwindcss-text/#sizing/height) - 高さ
+*   [Min-Height](https://tkwbr999.github.io/tailwindcss-text/#sizing/min-height) - 最小高さ
+*   [Max-Height](https://tkwbr999.github.io/tailwindcss-text/#sizing/max-height) - 最大高さ
+*   [Size](https://tkwbr999.github.io/tailwindcss-text/#sizing/size) - 幅と高さ (一括)
+
+### Typography
+*   [Font Family](https://tkwbr999.github.io/tailwindcss-text/#typography/font-family) - フォントファミリー
+*   [Font Size](https://tkwbr999.github.io/tailwindcss-text/#typography/font-size) - フォントサイズ
+*   [Font Smoothing](https://tkwbr999.github.io/tailwindcss-text/#typography/font-smoothing) - フォントスムージング
+*   [Font Style](https://tkwbr999.github.io/tailwindcss-text/#typography/font-style) - フォントスタイル
+*   [Font Weight](https://tkwbr999.github.io/tailwindcss-text/#typography/font-weight) - フォントウェイト
+*   [Font Variant Numeric](https://tkwbr999.github.io/tailwindcss-text/#typography/font-variant-numeric) - 数字の字形
+*   [Letter Spacing](https://tkwbr999.github.io/tailwindcss-text/#typography/letter-spacing) - 文字間隔
+*   [Line Clamp](https://tkwbr999.github.io/tailwindcss-text/#typography/line-clamp) - 行数制限
+*   [Line Height](https://tkwbr999.github.io/tailwindcss-text/#typography/line-height) - 行の高さ
+*   [List Style Image](https://tkwbr999.github.io/tailwindcss-text/#typography/list-style-image) - リストマーカー画像
+*   [List Style Position](https://tkwbr999.github.io/tailwindcss-text/#typography/list-style-position) - リストマーカー位置
+*   [List Style Type](https://tkwbr999.github.io/tailwindcss-text/#typography/list-style-type) - リストマーカー種類
+*   [Text Align](https://tkwbr999.github.io/tailwindcss-text/#typography/text-align) - テキスト揃え
+*   [Text Color](https://tkwbr999.github.io/tailwindcss-text/#typography/text-color) - テキスト色
+*   [Text Decoration](https://tkwbr999.github.io/tailwindcss-text/#typography/text-decoration) - テキスト装飾線
+*   [Text Decoration Color](https://tkwbr999.github.io/tailwindcss-text/#typography/text-decoration-color) - テキスト装飾線の色
+*   [Text Decoration Style](https://tkwbr999.github.io/tailwindcss-text/#typography/text-decoration-style) - テキスト装飾線のスタイル
+*   [Text Decoration Thickness](https://tkwbr999.github.io/tailwindcss-text/#typography/text-decoration-thickness) - テキスト装飾線の太さ
+*   [Text Underline Offset](https://tkwbr999.github.io/tailwindcss-text/#typography/text-underline-offset) - 下線のオフセット
+*   [Text Transform](https://tkwbr999.github.io/tailwindcss-text/#typography/text-transform) - 大文字/小文字変換
+*   [Text Overflow](https://tkwbr999.github.io/tailwindcss-text/#typography/text-overflow) - テキストオーバーフロー
+*   [Text Wrap](https://tkwbr999.github.io/tailwindcss-text/#typography/text-wrap) - テキスト折り返し
+*   [Text Indent](https://tkwbr999.github.io/tailwindcss-text/#typography/text-indent) - テキストインデント
+*   [Vertical Align](https://tkwbr999.github.io/tailwindcss-text/#typography/vertical-align) - 垂直方向の揃え
+*   [Whitespace](https://tkwbr999.github.io/tailwindcss-text/#typography/whitespace) - 空白文字の扱い
+*   [Word Break](https://tkwbr999.github.io/tailwindcss-text/#typography/word-break) - 単語の改行
+*   [Hyphens](https://tkwbr999.github.io/tailwindcss-text/#typography/hyphens) - ハイフネーション
+*   [Content](https://tkwbr999.github.io/tailwindcss-text/#typography/content) - コンテンツ生成
+
+### Backgrounds
+*   [Background Attachment](https://tkwbr999.github.io/tailwindcss-text/#backgrounds/background-attachment) - 背景画像の固定
+*   [Background Clip](https://tkwbr999.github.io/tailwindcss-text/#backgrounds/background-clip) - 背景のクリッピング領域
+*   [Background Color](https://tkwbr999.github.io/tailwindcss-text/#backgrounds/background-color) - 背景色
+*   [Background Origin](https://tkwbr999.github.io/tailwindcss-text/#backgrounds/background-origin) - 背景画像の描画起点
+*   [Background Position](https://tkwbr999.github.io/tailwindcss-text/#backgrounds/background-position) - 背景画像の位置
+*   [Background Repeat](https://tkwbr999.github.io/tailwindcss-text/#backgrounds/background-repeat) - 背景画像の繰り返し
+*   [Background Size](https://tkwbr999.github.io/tailwindcss-text/#backgrounds/background-size) - 背景画像のサイズ
+*   [Background Image](https://tkwbr999.github.io/tailwindcss-text/#backgrounds/background-image) - 背景画像
+*   [Gradient Color Stops](https://tkwbr999.github.io/tailwindcss-text/#backgrounds/gradient-color-stops) - グラデーションの色分岐点
+
+### Borders
+*   [Border Radius](https://tkwbr999.github.io/tailwindcss-text/#borders/border-radius) - 角丸
+*   [Border Width](https://tkwbr999.github.io/tailwindcss-text/#borders/border-width) - ボーダー幅
+*   [Border Color](https://tkwbr999.github.io/tailwindcss-text/#borders/border-color) - ボーダー色
+*   [Border Style](https://tkwbr999.github.io/tailwindcss-text/#borders/border-style) - ボーダースタイル
+*   [Divide Width](https://tkwbr999.github.io/tailwindcss-text/#borders/divide-width) - 子要素間のボーダー幅
+*   [Divide Color](https://tkwbr999.github.io/tailwindcss-text/#borders/divide-color) - 子要素間のボーダー色
+*   [Divide Style](https://tkwbr999.github.io/tailwindcss-text/#borders/divide-style) - 子要素間のボーダースタイル
+*   [Outline Width](https://tkwbr999.github.io/tailwindcss-text/#borders/outline-width) - アウトライン幅
+*   [Outline Color](https://tkwbr999.github.io/tailwindcss-text/#borders/outline-color) - アウトライン色
+*   [Outline Style](https://tkwbr999.github.io/tailwindcss-text/#borders/outline-style) - アウトラインスタイル
+*   [Outline Offset](https://tkwbr999.github.io/tailwindcss-text/#borders/outline-offset) - アウトラインオフセット
+*   [Ring Width](https://tkwbr999.github.io/tailwindcss-text/#borders/ring-width) - リング幅
+*   [Ring Color](https://tkwbr999.github.io/tailwindcss-text/#borders/ring-color) - リング色
+*   [Ring Offset Width](https://tkwbr999.github.io/tailwindcss-text/#borders/ring-offset-width) - リングオフセット幅
+*   [Ring Offset Color](https://tkwbr999.github.io/tailwindcss-text/#borders/ring-offset-color) - リングオフセット色
+
+### Effects
+*   [Box Shadow](https://tkwbr999.github.io/tailwindcss-text/#effects/box-shadow) - ボックスシャドウ
+*   [Box Shadow Color](https://tkwbr999.github.io/tailwindcss-text/#effects/box-shadow-color) - ボックスシャドウ色
+*   [Opacity](https://tkwbr999.github.io/tailwindcss-text/#effects/opacity) - 不透明度
+*   [Mix Blend Mode](https://tkwbr999.github.io/tailwindcss-text/#effects/mix-blend-mode) - 要素のブレンドモード
+*   [Background Blend Mode](https://tkwbr999.github.io/tailwindcss-text/#effects/background-blend-mode) - 背景のブレンドモード
+
+### Filters
+*   [Blur](https://tkwbr999.github.io/tailwindcss-text/#filters/blur) - ぼかし
+*   [Brightness](https://tkwbr999.github.io/tailwindcss-text/#filters/brightness) - 明るさ
+*   [Contrast](https://tkwbr999.github.io/tailwindcss-text/#filters/contrast) - コントラスト
+*   [Drop Shadow](https://tkwbr999.github.io/tailwindcss-text/#filters/drop-shadow) - ドロップシャドウ
+*   [Grayscale](https://tkwbr999.github.io/tailwindcss-text/#filters/grayscale) - グレースケール
+*   [Hue Rotate](https://tkwbr999.github.io/tailwindcss-text/#filters/hue-rotate) - 色相回転
+*   [Invert](https://tkwbr999.github.io/tailwindcss-text/#filters/invert) - 色反転
+*   [Saturate](https://tkwbr999.github.io/tailwindcss-text/#filters/saturate) - 彩度
+*   [Sepia](https://tkwbr999.github.io/tailwindcss-text/#filters/sepia) - セピア
+*   [Backdrop Blur](https://tkwbr999.github.io/tailwindcss-text/#filters/backdrop-blur) - 背景ぼかし
+*   [Backdrop Brightness](https://tkwbr999.github.io/tailwindcss-text/#filters/backdrop-brightness) - 背景明るさ
+*   [Backdrop Contrast](https://tkwbr999.github.io/tailwindcss-text/#filters/backdrop-contrast) - 背景コントラスト
+*   [Backdrop Grayscale](https://tkwbr999.github.io/tailwindcss-text/#filters/backdrop-grayscale) - 背景グレースケール
+*   [Backdrop Hue Rotate](https://tkwbr999.github.io/tailwindcss-text/#filters/backdrop-hue-rotate) - 背景色相回転
+*   [Backdrop Invert](https://tkwbr999.github.io/tailwindcss-text/#filters/backdrop-invert) - 背景色反転
+*   [Backdrop Opacity](https://tkwbr999.github.io/tailwindcss-text/#filters/backdrop-opacity) - 背景不透明度
+*   [Backdrop Saturate](https://tkwbr999.github.io/tailwindcss-text/#filters/backdrop-saturate) - 背景彩度
+*   [Backdrop Sepia](https://tkwbr999.github.io/tailwindcss-text/#filters/backdrop-sepia) - 背景セピア
+
+### Tables
+*   [Border Collapse](https://tkwbr999.github.io/tailwindcss-text/#tables/border-collapse) - テーブルボーダー結合
+*   [Border Spacing](https://tkwbr999.github.io/tailwindcss-text/#tables/border-spacing) - テーブルボーダー間隔
+*   [Table Layout](https://tkwbr999.github.io/tailwindcss-text/#tables/table-layout) - テーブルレイアウトアルゴリズム
+*   [Caption Side](https://tkwbr999.github.io/tailwindcss-text/#tables/caption-side) - キャプション位置
+
+### Transitions & Animation
+*   [Transition Property](https://tkwbr999.github.io/tailwindcss-text/#transitions-animation/transition-property) - トランジション対象プロパティ
+*   [Transition Duration](https://tkwbr999.github.io/tailwindcss-text/#transitions-animation/transition-duration) - トランジション時間
+*   [Transition Timing Function](https://tkwbr999.github.io/tailwindcss-text/#transitions-animation/transition-timing-function) - トランジション変化率
+*   [Transition Delay](https://tkwbr999.github.io/tailwindcss-text/#transitions-animation/transition-delay) - トランジション遅延
+*   [Animation](https://tkwbr999.github.io/tailwindcss-text/#transitions-animation/animation) - アニメーション
+
+### Transforms
+*   [Scale](https://tkwbr999.github.io/tailwindcss-text/#transforms/scale) - 拡大縮小
+*   [Rotate](https://tkwbr999.github.io/tailwindcss-text/#transforms/rotate) - 回転
+*   [Translate](https://tkwbr999.github.io/tailwindcss-text/#transforms/translate) - 移動
+*   [Skew](https://tkwbr999.github.io/tailwindcss-text/#transforms/skew) - 傾斜
+*   [Transform Origin](https://tkwbr999.github.io/tailwindcss-text/#transforms/transform-origin) - 変形基点
+
+### Interactivity
+*   [Accent Color](https://tkwbr999.github.io/tailwindcss-text/#interactivity/accent-color) - アクセントカラー
+*   [Appearance](https://tkwbr999.github.io/tailwindcss-text/#interactivity/appearance) - ネイティブ外観
+*   [Cursor](https://tkwbr999.github.io/tailwindcss-text/#interactivity/cursor) - カーソルスタイル
+*   [Caret Color](https://tkwbr999.github.io/tailwindcss-text/#interactivity/caret-color) - キャレット色
+*   [Pointer Events](https://tkwbr999.github.io/tailwindcss-text/#interactivity/pointer-events) - ポインターイベント
+*   [Resize](https://tkwbr999.github.io/tailwindcss-text/#interactivity/resize) - リサイズ可否
+*   [Scroll Behavior](https://tkwbr999.github.io/tailwindcss-text/#interactivity/scroll-behavior) - スクロール挙動
+*   [Scroll Margin](https://tkwbr999.github.io/tailwindcss-text/#interactivity/scroll-margin) - スクロールマージン
+*   [Scroll Padding](https://tkwbr999.github.io/tailwindcss-text/#interactivity/scroll-padding) - スクロールパディング
+*   [Scroll Snap Align](https://tkwbr999.github.io/tailwindcss-text/#interactivity/scroll-snap-align) - スクロールスナップ位置揃え
+*   [Scroll Snap Stop](https://tkwbr999.github.io/tailwindcss-text/#interactivity/scroll-snap-stop) - スクロールスナップ停止
+*   [Scroll Snap Type](https://tkwbr999.github.io/tailwindcss-text/#interactivity/scroll-snap-type) - スクロールスナップタイプ
+*   [Touch Action](https://tkwbr999.github.io/tailwindcss-text/#interactivity/touch-action) - タッチ操作
+*   [User Select](https://tkwbr999.github.io/tailwindcss-text/#interactivity/user-select) - テキスト選択可否
+*   [Will Change](https://tkwbr999.github.io/tailwindcss-text/#interactivity/will-change) - 変更予測ヒント
+
+### SVG
+*   [Fill](https://tkwbr999.github.io/tailwindcss-text/#svg/fill) - SVGフィルカラー
+*   [Stroke](https://tkwbr999.github.io/tailwindcss-text/#svg/stroke) - SVGストロークカラー
+*   [Stroke Width](https://tkwbr999.github.io/tailwindcss-text/#svg/stroke-width) - SVGストローク幅
+
+### Accessibility
+*   [Screen Readers](https://tkwbr999.github.io/tailwindcss-text/#accessibility/screen-readers) - スクリーンリーダー用ユーティリティ
+
+## 作者情報
+*   @tkwr999
+*   X: https://x.com/tkwbr999
+*   Zenn: https://zenn.dev/tkwbr999
+*   Wantedly: https://wantedly.com/id/tkwbr999
+*   GitHub: https://github.com/tKwbr999/
