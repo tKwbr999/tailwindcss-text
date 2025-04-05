@@ -173,7 +173,8 @@ const ContentStretchExample: React.FC = () => {
 // ページコンポーネント本体
 const AlignContentPage: React.FC = () => {
   // ArticleLayout に渡すデータ
-  const title = 'Flexbox & Grid: Align Content (複数行/列の交差軸揃え)';
+  const enTitle = 'Flexbox & Grid: Align Content ';
+const jaTitle = '複数行/列の交差軸揃え';
   const links = [
     {
       title: 'Tailwind CSS: Align Content',
@@ -195,7 +196,7 @@ const AlignContentPage: React.FC = () => {
   const contentStretchHtml = `<div class="flex flex-wrap content-stretch h-48 ...">...</div>`; // v3.3+
 
   return (
-    <ArticleLayout title={title} links={links}>
+    <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
 
       <Helmet>
         <title>Align Content - Tailwind CSS Cheatsheet</title>

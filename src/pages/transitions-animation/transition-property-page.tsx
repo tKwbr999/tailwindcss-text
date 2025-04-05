@@ -50,7 +50,8 @@ const ArbitraryTransitionPropertyExample: React.FC = () => {
 // ページコンポーネント本体
 const TransitionPropertyPage: React.FC = () => {
   // ArticleLayout に渡すデータ
-  const title = 'Transitions & Animation: Transition Property (トランジション対象プロパティ)';
+  const enTitle = 'Transitions & Animation: Transition Property ';
+const jaTitle = 'トランジション対象プロパティ';
   const links = [
     {
       title: 'Tailwind CSS: Transition Property',
@@ -81,7 +82,7 @@ const TransitionPropertyPage: React.FC = () => {
 
 
   return (
-    <ArticleLayout title={title} links={links}>
+    <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
 
       <Helmet>
         <title>Transition Property - Tailwind CSS Cheatsheet</title>

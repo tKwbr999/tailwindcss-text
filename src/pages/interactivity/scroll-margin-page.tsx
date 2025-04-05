@@ -129,7 +129,8 @@ const ArbitraryScrollMarginExample: React.FC = () => {
 // ページコンポーネント本体
 const ScrollMarginPage: React.FC = () => {
   // ArticleLayout に渡すデータ
-  const title = 'Interactivity: Scroll Margin (スクロールマージン)';
+  const enTitle = 'Interactivity: Scroll Margin ';
+const jaTitle = 'スクロールマージン';
   const links = [
     {
       title: 'Tailwind CSS: Scroll Margin',
@@ -160,7 +161,7 @@ const ScrollMarginPage: React.FC = () => {
   const arbitraryScrollMarginHtml = `<div id="section3" class="scroll-mt-[50px] ...">...</div>`;
 
   return (
-    <ArticleLayout title={title} links={links}>
+    <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
 
       <Helmet>
         <title>Scroll Margin - Tailwind CSS Cheatsheet</title>

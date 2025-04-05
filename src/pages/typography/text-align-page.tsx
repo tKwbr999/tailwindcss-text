@@ -54,7 +54,8 @@ const TextAlignStartEndExample: React.FC = () => {
 // ページコンポーネント本体
 const TextAlignPage: React.FC = () => {
   // ArticleLayout に渡すデータ
-  const title = 'Typography: Text Align (テキスト揃え)';
+  const enTitle = 'Typography: Text Align ';
+const jaTitle = 'テキスト揃え';
   const links = [
     {
       title: 'Tailwind CSS: Text Align',
@@ -78,7 +79,7 @@ const TextAlignPage: React.FC = () => {
 
 
   return (
-    <ArticleLayout title={title} links={links}>
+    <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
 
       <Helmet>
         <title>Text Align - Tailwind CSS Cheatsheet</title>

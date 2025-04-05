@@ -33,7 +33,8 @@ const ListImageCustomExample: React.FC = () => {
 // ページコンポーネント本体
 const ListStyleImagePage: React.FC = () => {
   // ArticleLayout に渡すデータ
-  const title = 'Typography: List Style Image (リストマーカー画像)';
+  const enTitle = 'Typography: List Style Image ';
+const jaTitle = 'リストマーカー画像';
   const links = [
     {
       title: 'Tailwind CSS: List Style Image (v3.3+)',
@@ -50,7 +51,7 @@ const ListStyleImagePage: React.FC = () => {
   const listImageCustomHtml = `<ul class="list-image-[url('/img/check.svg')] list-inside ...">...</ul>`; // カスタム値
 
   return (
-    <ArticleLayout title={title} links={links}>
+    <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
 
       <Helmet>
         <title>List Style Image - Tailwind CSS Cheatsheet</title>

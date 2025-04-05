@@ -28,7 +28,8 @@ const ArbitraryThicknessExample: React.FC = () => {
 // ページコンポーネント本体
 const TextDecorationThicknessPage: React.FC = () => {
   // ArticleLayout に渡すデータ
-  const title = 'Typography: Text Decoration Thickness (テキスト装飾線の太さ)';
+  const enTitle = 'Typography: Text Decoration Thickness ';
+const jaTitle = 'テキスト装飾線の太さ';
   const links = [
     {
       title: 'Tailwind CSS: Text Decoration Thickness',
@@ -54,7 +55,7 @@ const TextDecorationThicknessPage: React.FC = () => {
 
 
   return (
-    <ArticleLayout title={title} links={links}>
+    <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
 
       <Helmet>
         <title>Text Decoration Thickness - Tailwind CSS Cheatsheet</title>

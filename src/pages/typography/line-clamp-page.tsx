@@ -27,7 +27,8 @@ const LineClampExample: React.FC = () => {
 // ページコンポーネント本体
 const LineClampPage: React.FC = () => {
   // ArticleLayout に渡すデータ
-  const title = 'Typography: Line Clamp (行数制限)';
+  const enTitle = 'Typography: Line Clamp ';
+const jaTitle = '行数制限';
   const links = [
     {
       title: '@tailwindcss/line-clamp Plugin',
@@ -52,7 +53,7 @@ const LineClampPage: React.FC = () => {
 
 
   return (
-    <ArticleLayout title={title} links={links}>
+    <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
 
       <Helmet>
         <title>Line Clamp - Tailwind CSS Cheatsheet</title>

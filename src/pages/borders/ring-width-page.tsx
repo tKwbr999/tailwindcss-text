@@ -38,7 +38,8 @@ const ArbitraryRingWidthExample: React.FC = () => {
 // ページコンポーネント本体
 const RingWidthPage: React.FC = () => {
   // ArticleLayout に渡すデータ
-  const title = 'Borders: Ring Width (リングの太さ)';
+  const enTitle = 'Borders: Ring Width ';
+const jaTitle = 'リングの太さ';
   const links = [
     {
       title: 'Tailwind CSS: Ring Width',
@@ -63,7 +64,7 @@ const RingWidthPage: React.FC = () => {
   const arbitraryRingWidthHtml = `<button class="ring ring-[3px] ...">...</button>`;
 
   return (
-    <ArticleLayout title={title} links={links}>
+    <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
 
       <Helmet>
         <title>Ring Width - Tailwind CSS Cheatsheet</title>

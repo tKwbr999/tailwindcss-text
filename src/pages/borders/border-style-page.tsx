@@ -33,7 +33,8 @@ const BorderStyleExample: React.FC = () => {
 // ページコンポーネント本体
 const BorderStylePage: React.FC = () => {
   // ArticleLayout に渡すデータ
-  const title = 'Borders: Border Style (境界線のスタイル)';
+  const enTitle = 'Borders: Border Style ';
+const jaTitle = '境界線のスタイル';
   const links = [
     {
       title: 'Tailwind CSS: Border Style',
@@ -56,7 +57,7 @@ const BorderStylePage: React.FC = () => {
   `.trim();
 
   return (
-    <ArticleLayout title={title} links={links}>
+    <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
 
       <Helmet>
         <title>Border Style - Tailwind CSS Cheatsheet</title>

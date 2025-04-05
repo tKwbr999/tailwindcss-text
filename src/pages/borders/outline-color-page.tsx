@@ -72,7 +72,8 @@ const ArbitraryOutlineColorExample: React.FC = () => {
 // ページコンポーネント本体
 const OutlineColorPage: React.FC = () => {
   // ArticleLayout に渡すデータ
-  const title = 'Borders: Outline Color (アウトラインの色)';
+  const enTitle = 'Borders: Outline Color ';
+const jaTitle = 'アウトラインの色';
   const links = [
     {
       title: 'Tailwind CSS: Outline Color',
@@ -95,7 +96,7 @@ const OutlineColorPage: React.FC = () => {
   const arbitraryOutlineColorHtml = `<button class="outline outline-2 outline-[#ff7f50] ...">...</button>`;
 
   return (
-    <ArticleLayout title={title} links={links}>
+    <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
 
       <Helmet>
         <title>Outline Color - Tailwind CSS Cheatsheet</title>

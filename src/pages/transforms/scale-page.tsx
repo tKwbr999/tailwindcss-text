@@ -88,7 +88,8 @@ const ArbitraryScaleExample: React.FC = () => {
 // ページコンポーネント本体
 const ScalePage: React.FC = () => {
   // ArticleLayout に渡すデータ
-  const title = 'Transforms: Scale (拡大縮小)';
+  const enTitle = 'Transforms: Scale ';
+const jaTitle = '拡大縮小';
   const links = [
     {
       title: 'Tailwind CSS: Scale',
@@ -115,7 +116,7 @@ const ScalePage: React.FC = () => {
   const arbitraryScaleHtml = `<img class="scale-[1.75] ..." src="...">`;
 
   return (
-    <ArticleLayout title={title} links={links}>
+    <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
 
       <Helmet>
         <title>Scale - Tailwind CSS Cheatsheet</title>

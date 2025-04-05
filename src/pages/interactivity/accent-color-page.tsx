@@ -57,7 +57,8 @@ const ArbitraryAccentColorExample: React.FC = () => {
 // ページコンポーネント本体
 const AccentColorPage: React.FC = () => {
   // ArticleLayout に渡すデータ
-  const title = 'Interactivity: Accent Color (アクセントカラー)';
+  const enTitle = 'Interactivity: Accent Color ';
+const jaTitle = 'アクセントカラー';
   const links = [
     {
       title: 'Tailwind CSS: Accent Color',
@@ -83,7 +84,7 @@ const AccentColorPage: React.FC = () => {
   const arbitraryAccentColorHtml = `<input type="checkbox" checked class="accent-[#ff7f50] ...">`;
 
   return (
-    <ArticleLayout title={title} links={links}>
+    <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
 
       <Helmet>
         <title>Accent Color - Tailwind CSS Cheatsheet</title>

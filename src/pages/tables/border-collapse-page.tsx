@@ -69,7 +69,8 @@ const BorderCollapseExample: React.FC = () => {
 // ページコンポーネント本体
 const BorderCollapsePage: React.FC = () => {
   // ArticleLayout に渡すデータ
-  const title = 'Tables: Border Collapse (境界線の結合/分離)';
+  const enTitle = 'Tables: Border Collapse ';
+const jaTitle = '境界線の結合/分離';
   const links = [
     {
       title: 'Tailwind CSS: Border Collapse',
@@ -119,7 +120,7 @@ const BorderCollapsePage: React.FC = () => {
   `.trim();
 
   return (
-    <ArticleLayout title={title} links={links}>
+    <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
 
       <Helmet>
         <title>Border Collapse - Tailwind CSS Cheatsheet</title>

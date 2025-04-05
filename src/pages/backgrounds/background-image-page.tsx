@@ -57,7 +57,8 @@ const ArbitraryGradientExample: React.FC = () => {
 // ページコンポーネント本体
 const BackgroundImagePage: React.FC = () => {
   // ArticleLayout に渡すデータ
-  const title = 'Backgrounds: Background Image (背景画像)';
+  const enTitle = 'Backgrounds: Background Image ';
+const jaTitle = '背景画像';
   const links = [
     {
       title: 'Tailwind CSS: Background Image',
@@ -83,7 +84,7 @@ const BackgroundImagePage: React.FC = () => {
   const arbitraryGradientHtml = `<div class="bg-[linear-gradient(...)] ...">...</div>`;
 
   return (
-    <ArticleLayout title={title} links={links}>
+    <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
 
       <Helmet>
         <title>Background Image - Tailwind CSS Cheatsheet</title>

@@ -40,7 +40,8 @@ const HyphensAutoExample: React.FC = () => {
 // ページコンポーネント本体
 const HyphensPage: React.FC = () => {
   // ArticleLayout に渡すデータ
-  const title = 'Typography: Hyphens (ハイフネーション)';
+  const enTitle = 'Typography: Hyphens ';
+const jaTitle = 'ハイフネーション';
   const links = [
     {
       title: 'Tailwind CSS: Hyphens',
@@ -59,7 +60,7 @@ const HyphensPage: React.FC = () => {
 
 
   return (
-    <ArticleLayout title={title} links={links}>
+    <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
 
       <Helmet>
         <title>Hyphens - Tailwind CSS Cheatsheet</title>

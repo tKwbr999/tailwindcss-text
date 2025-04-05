@@ -87,7 +87,8 @@ const ArbitraryBorderColorExample: React.FC = () => {
 // ページコンポーネント本体
 const BorderColorPage: React.FC = () => {
   // ArticleLayout に渡すデータ
-  const title = 'Borders: Border Color (境界線の色)';
+  const enTitle = 'Borders: Border Color ';
+const jaTitle = '境界線の色';
   const links = [
     {
       title: 'Tailwind CSS: Border Color',
@@ -121,7 +122,7 @@ const BorderColorPage: React.FC = () => {
   const arbitraryBorderColorHtml = `<div class="border-4 border-[#ff7f50] ...">...</div>`;
 
   return (
-    <ArticleLayout title={title} links={links}>
+    <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
 
       <Helmet>
         <title>Border Color - Tailwind CSS Cheatsheet</title>

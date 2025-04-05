@@ -47,7 +47,8 @@ const OutlineDoubleExample: React.FC = () => {
 // ページコンポーネント本体
 const OutlineStylePage: React.FC = () => {
   // ArticleLayout に渡すデータ
-  const title = 'Borders: Outline Style (アウトラインのスタイル)';
+  const enTitle = 'Borders: Outline Style ';
+const jaTitle = 'アウトラインのスタイル';
   const links = [
     {
       title: 'Tailwind CSS: Outline Style',
@@ -67,7 +68,7 @@ const OutlineStylePage: React.FC = () => {
   const outlineDoubleHtml = `<button class="outline-double outline-4 ...">...</button>`; // Needs sufficient width
 
   return (
-    <ArticleLayout title={title} links={links}>
+    <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
 
       <Helmet>
         <title>Outline Style - Tailwind CSS Cheatsheet</title>

@@ -56,7 +56,8 @@ const ArbitraryColorExample: React.FC = () => {
 // ページコンポーネント本体
 const TextColorPage: React.FC = () => {
   // ArticleLayout に渡すデータ
-  const title = 'Typography: Text Color (テキストの色)';
+  const enTitle = 'Typography: Text Color ';
+const jaTitle = 'テキストの色';
   const links = [
     {
       title: 'Tailwind CSS: Text Color',
@@ -91,7 +92,7 @@ const TextColorPage: React.FC = () => {
 
 
   return (
-    <ArticleLayout title={title} links={links}>
+    <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
 
       <Helmet>
         <title>Text Color - Tailwind CSS Cheatsheet</title>

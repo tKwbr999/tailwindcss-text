@@ -66,7 +66,8 @@ const ResizeExample: React.FC = () => {
 // ページコンポーネント本体
 const ResizePage: React.FC = () => {
   // ArticleLayout に渡すデータ
-  const title = 'Interactivity: Resize (リサイズ)';
+  const enTitle = 'Interactivity: Resize ';
+const jaTitle = 'リサイズ';
   const links = [
     {
       title: 'Tailwind CSS: Resize',
@@ -94,7 +95,7 @@ const ResizePage: React.FC = () => {
   `.trim();
 
   return (
-    <ArticleLayout title={title} links={links}>
+    <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
 
       <Helmet>
         <title>Resize - Tailwind CSS Cheatsheet</title>

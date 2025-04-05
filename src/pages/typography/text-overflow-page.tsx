@@ -39,7 +39,8 @@ const TextClipExample: React.FC = () => {
 // ページコンポーネント本体
 const TextOverflowPage: React.FC = () => {
   // ArticleLayout に渡すデータ
-  const title = 'Typography: Text Overflow (テキストオーバーフロー)';
+  const enTitle = 'Typography: Text Overflow ';
+const jaTitle = 'テキストオーバーフロー';
   const links = [
     {
       title: 'Tailwind CSS: Text Overflow',
@@ -58,7 +59,7 @@ const TextOverflowPage: React.FC = () => {
 
 
   return (
-    <ArticleLayout title={title} links={links}>
+    <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
 
       <Helmet>
         <title>Text Overflow - Tailwind CSS Cheatsheet</title>

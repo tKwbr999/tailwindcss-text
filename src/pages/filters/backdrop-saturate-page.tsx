@@ -69,7 +69,8 @@ const ArbitraryBackdropSaturateExample: React.FC = () => {
 // ページコンポーネント本体
 const BackdropSaturatePage: React.FC = () => {
   // ArticleLayout に渡すデータ
-  const title = 'Filters: Backdrop Saturate (背景の彩度)';
+  const enTitle = 'Filters: Backdrop Saturate ';
+const jaTitle = '背景の彩度';
   const links = [
     {
       title: 'Tailwind CSS: Backdrop Saturate',
@@ -94,7 +95,7 @@ const BackdropSaturatePage: React.FC = () => {
   const arbitraryBackdropSaturateHtml = `<div class="backdrop-filter backdrop-saturate-[.85] ...">...</div> {/* Requires JIT & backdrop-filter enabled */} `;
 
   return (
-    <ArticleLayout title={title} links={links}>
+    <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
 
       <Helmet>
         <title>Backdrop Saturate - Tailwind CSS Cheatsheet</title>

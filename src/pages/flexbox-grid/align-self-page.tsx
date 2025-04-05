@@ -30,7 +30,8 @@ const AlignSelfExample: React.FC = () => {
 // ページコンポーネント本体
 const AlignSelfPage: React.FC = () => {
   // ArticleLayout に渡すデータ
-  const title = 'Flexbox & Grid: Align Self (個別アイテムの交差軸揃え)';
+  const enTitle = 'Flexbox & Grid: Align Self ';
+const jaTitle = '個別アイテムの交差軸揃え';
   const links = [
     {
       title: 'Tailwind CSS: Align Self',
@@ -51,7 +52,7 @@ const AlignSelfPage: React.FC = () => {
   // const selfAutoHtml = `<div class="self-auto ...">Item</div>`; // Inherits parent's align-items
 
   return (
-    <ArticleLayout title={title} links={links}>
+    <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
 
       <Helmet>
         <title>Align Self - Tailwind CSS Cheatsheet</title>

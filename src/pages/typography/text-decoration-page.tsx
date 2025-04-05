@@ -42,7 +42,8 @@ const NoUnderlineExample: React.FC = () => {
 // ページコンポーネント本体
 const TextDecorationPage: React.FC = () => {
   // ArticleLayout に渡すデータ
-  const title = 'Typography: Text Decoration (テキスト装飾線)';
+  const enTitle = 'Typography: Text Decoration ';
+const jaTitle = 'テキスト装飾線';
   const links = [
     {
       title: 'Tailwind CSS: Text Decoration',
@@ -66,7 +67,7 @@ const TextDecorationPage: React.FC = () => {
 
 
   return (
-    <ArticleLayout title={title} links={links}>
+    <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
 
       <Helmet>
         <title>Text Decoration - Tailwind CSS Cheatsheet</title>

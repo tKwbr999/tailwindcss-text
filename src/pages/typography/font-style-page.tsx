@@ -24,7 +24,8 @@ const NotItalicExample: React.FC = () => {
 // ページコンポーネント本体
 const FontStylePage: React.FC = () => {
   // ArticleLayout に渡すデータ
-  const title = 'Typography: Font Style (フォントスタイル)';
+  const enTitle = 'Typography: Font Style ';
+const jaTitle = 'フォントスタイル';
   const links = [
     {
       title: 'Tailwind CSS: Font Style',
@@ -42,7 +43,7 @@ const FontStylePage: React.FC = () => {
 
 
   return (
-    <ArticleLayout title={title} links={links}>
+    <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
 
       <Helmet>
         <title>Font Style - Tailwind CSS Cheatsheet</title>

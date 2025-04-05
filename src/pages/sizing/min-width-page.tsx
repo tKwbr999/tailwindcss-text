@@ -64,7 +64,8 @@ const MinWFitExample: React.FC = () => {
 // ページコンポーネント本体
 const MinWidthPage: React.FC = () => {
   // ArticleLayout に渡すデータ
-  const title = 'Sizing: Min-Width (最小幅)';
+  const enTitle = 'Sizing: Min-Width ';
+const jaTitle = '最小幅';
   const links = [
     {
       title: 'Tailwind CSS: Min-Width',
@@ -84,7 +85,7 @@ const MinWidthPage: React.FC = () => {
   const minWFitHtml = `<div class="min-w-fit ...">...</div>`; // v3.3+
 
   return (
-    <ArticleLayout title={title} links={links}>
+    <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
 
       <Helmet>
         <title>Min Width - Tailwind CSS Cheatsheet</title>

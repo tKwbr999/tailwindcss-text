@@ -62,7 +62,8 @@ const ArbitraryColsExample: React.FC = () => {
 // ページコンポーネント本体
 const GridTemplateColumnsPage: React.FC = () => {
   // ArticleLayout に渡すデータ
-  const title = 'Flexbox & Grid: Grid Template Columns (グリッド列テンプレート)';
+  const enTitle = 'Flexbox & Grid: Grid Template Columns ';
+const jaTitle = 'グリッド列テンプレート';
   const links = [
     {
       title: 'Tailwind CSS: Grid Template Columns',
@@ -115,7 +116,7 @@ const GridTemplateColumnsPage: React.FC = () => {
   `.trim();
 
   return (
-    <ArticleLayout title={title} links={links}>
+    <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
 
       <Helmet>
         <title>Grid Template Columns - Tailwind CSS Cheatsheet</title>

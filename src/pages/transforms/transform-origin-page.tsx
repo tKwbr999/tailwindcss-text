@@ -47,7 +47,8 @@ const ArbitraryTransformOriginExample: React.FC = () => {
 // ページコンポーネント本体
 const TransformOriginPage: React.FC = () => {
   // ArticleLayout に渡すデータ
-  const title = 'Transforms: Transform Origin (変形の原点)';
+  const enTitle = 'Transforms: Transform Origin ';
+const jaTitle = '変形の原点';
   const links = [
     {
       title: 'Tailwind CSS: Transform Origin',
@@ -72,7 +73,7 @@ const TransformOriginPage: React.FC = () => {
 
 
   return (
-    <ArticleLayout title={title} links={links}>
+    <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
 
       <Helmet>
         <title>Transform Origin - Tailwind CSS Cheatsheet</title>

@@ -35,7 +35,8 @@ const ListDecimalExample: React.FC = () => {
 // ページコンポーネント本体
 const ListStyleTypePage: React.FC = () => {
   // ArticleLayout に渡すデータ
-  const title = 'Typography: List Style Type (リストマーカーの種類)';
+  const enTitle = 'Typography: List Style Type ';
+const jaTitle = 'リストマーカーの種類';
   const links = [
     {
       title: 'Tailwind CSS: List Style Type',
@@ -54,7 +55,7 @@ const ListStyleTypePage: React.FC = () => {
 
 
   return (
-    <ArticleLayout title={title} links={links}>
+    <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
 
       <Helmet>
         <title>List Style Type - Tailwind CSS Cheatsheet</title>

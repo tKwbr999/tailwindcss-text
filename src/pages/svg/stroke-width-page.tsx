@@ -39,7 +39,8 @@ const ArbitraryStrokeWidthExample: React.FC = () => {
 // ページコンポーネント本体
 const StrokeWidthPage: React.FC = () => {
   // ArticleLayout に渡すデータ
-  const title = 'SVG: Stroke Width (線の太さ)';
+  const enTitle = 'SVG: Stroke Width ';
+const jaTitle = '線の太さ';
   const links = [
     {
       title: 'Tailwind CSS: Stroke Width',
@@ -61,7 +62,7 @@ const StrokeWidthPage: React.FC = () => {
   const arbitraryStrokeWidthHtml = `<svg class="stroke-[3] ...">...</svg>`;
 
   return (
-    <ArticleLayout title={title} links={links}>
+    <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
 
       <Helmet>
         <title>Stroke Width - Tailwind CSS Cheatsheet</title>

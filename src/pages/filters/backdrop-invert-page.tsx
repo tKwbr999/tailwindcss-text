@@ -55,7 +55,8 @@ const ArbitraryBackdropInvertExample: React.FC = () => {
 // ページコンポーネント本体
 const BackdropInvertPage: React.FC = () => {
   // ArticleLayout に渡すデータ
-  const title = 'Filters: Backdrop Invert (背景の色反転)';
+  const enTitle = 'Filters: Backdrop Invert ';
+const jaTitle = '背景の色反転';
   const links = [
     {
       title: 'Tailwind CSS: Backdrop Invert',
@@ -79,7 +80,7 @@ const BackdropInvertPage: React.FC = () => {
   const arbitraryBackdropInvertHtml = `<div class="backdrop-filter backdrop-invert-[.75] ...">...</div> {/* Requires JIT & backdrop-filter enabled */} `;
 
   return (
-    <ArticleLayout title={title} links={links}>
+    <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
 
       <Helmet>
         <title>Backdrop Invert - Tailwind CSS Cheatsheet</title>

@@ -56,7 +56,8 @@ const CaptionSideExample: React.FC = () => {
 // ページコンポーネント本体
 const CaptionSidePage: React.FC = () => {
   // ArticleLayout に渡すデータ
-  const title = 'Tables: Caption Side (キャプションの位置)';
+  const enTitle = 'Tables: Caption Side ';
+const jaTitle = 'キャプションの位置';
   const links = [
     {
       title: 'Tailwind CSS: Caption Side',
@@ -94,7 +95,7 @@ const CaptionSidePage: React.FC = () => {
   `.trim();
 
   return (
-    <ArticleLayout title={title} links={links}>
+    <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
 
       <Helmet>
         <title>Caption Side - Tailwind CSS Cheatsheet</title>

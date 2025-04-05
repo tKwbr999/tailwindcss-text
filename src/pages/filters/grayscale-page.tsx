@@ -35,7 +35,8 @@ const ArbitraryGrayscaleExample: React.FC = () => {
 // ページコンポーネント本体
 const GrayscalePage: React.FC = () => {
   // ArticleLayout に渡すデータ
-  const title = 'Filters: Grayscale (グレースケール)';
+  const enTitle = 'Filters: Grayscale ';
+const jaTitle = 'グレースケール';
   const links = [
     {
       title: 'Tailwind CSS: Grayscale',
@@ -55,7 +56,7 @@ const GrayscalePage: React.FC = () => {
   const arbitraryGrayscaleHtml = `<img class="filter grayscale-[50%] ..." src="..." alt="..."> {/* Requires JIT & filter enabled */} `;
 
   return (
-    <ArticleLayout title={title} links={links}>
+    <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
 
       <Helmet>
         <title>Grayscale - Tailwind CSS Cheatsheet</title>

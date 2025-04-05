@@ -29,7 +29,8 @@ const ArbitrarySepiaExample: React.FC = () => {
 // ページコンポーネント本体
 const SepiaPage: React.FC = () => {
   // ArticleLayout に渡すデータ
-  const title = 'Filters: Sepia (セピア)';
+  const enTitle = 'Filters: Sepia ';
+const jaTitle = 'セピア';
   const links = [
     {
       title: 'Tailwind CSS: Sepia',
@@ -49,7 +50,7 @@ const SepiaPage: React.FC = () => {
   const arbitrarySepiaHtml = `<img class="filter sepia-[.65] ..." src="..." alt="..."> {/* Requires JIT & filter enabled */} `;
 
   return (
-    <ArticleLayout title={title} links={links}>
+    <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
 
       <Helmet>
         <title>Sepia - Tailwind CSS Cheatsheet</title>

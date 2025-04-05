@@ -26,7 +26,8 @@ const GradientStopsExample: React.FC = () => {
 // ページコンポーネント本体
 const GradientColorStopsPage: React.FC = () => {
   // ArticleLayout に渡すデータ
-  const title = 'Backgrounds: Gradient Color Stops (グラデーションの色停止点)';
+  const enTitle = 'Backgrounds: Gradient Color Stops ';
+const jaTitle = 'グラデーションの色停止点';
   const links = [
     {
       title: 'Tailwind CSS: Gradient Color Stops',
@@ -51,7 +52,7 @@ const GradientColorStopsPage: React.FC = () => {
   const gradientOpacityHtml = `<div class="bg-gradient-to-r from-yellow-400/50 via-red-500/75 to-rose-600 ...">...</div>`;
 
   return (
-    <ArticleLayout title={title} links={links}>
+    <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
 
       <Helmet>
         <title>Gradient Color Stops - Tailwind CSS Cheatsheet</title>

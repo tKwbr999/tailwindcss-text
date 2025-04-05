@@ -73,7 +73,8 @@ const MinHMinMaxFitExample: React.FC = () => {
 // ページコンポーネント本体
 const MinHeightPage: React.FC = () => {
   // ArticleLayout に渡すデータ
-  const title = 'Sizing: Min-Height (最小高さ)';
+  const enTitle = 'Sizing: Min-Height ';
+const jaTitle = '最小高さ';
   const links = [
     {
       title: 'Tailwind CSS: Min-Height',
@@ -96,7 +97,7 @@ const MinHeightPage: React.FC = () => {
   `.trim();
 
   return (
-    <ArticleLayout title={title} links={links}>
+    <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
 
       <Helmet>
         <title>Min Height - Tailwind CSS Cheatsheet</title>

@@ -45,7 +45,8 @@ const StackedFractionsExample: React.FC = () => {
 // ページコンポーネント本体
 const FontVariantNumericPage: React.FC = () => {
   // ArticleLayout に渡すデータ
-  const title = 'Typography: Font Variant Numeric (数字・分数の字形)';
+  const enTitle = 'Typography: Font Variant Numeric ';
+const jaTitle = '数字・分数の字形';
   const links = [
     {
       title: 'Tailwind CSS: Font Variant Numeric',
@@ -65,7 +66,7 @@ const FontVariantNumericPage: React.FC = () => {
 
 
   return (
-    <ArticleLayout title={title} links={links}>
+    <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
 
       <Helmet>
         <title>Font Variant Numeric - Tailwind CSS Cheatsheet</title>

@@ -32,7 +32,8 @@ const ScreenReadersExample: React.FC = () => {
 // ページコンポーネント本体
 const ScreenReadersPage: React.FC = () => {
   // ArticleLayout に渡すデータ
-  const title = 'Accessibility: Screen Readers (スクリーンリーダー)';
+  const enTitle = 'Accessibility: Screen Readers ';
+const jaTitle = 'スクリーンリーダー';
   const links = [
     {
       title: 'Tailwind CSS: Screen Readers',
@@ -169,7 +170,7 @@ const ScreenReadersPage: React.FC = () => {
   );
 
   return (
-    <ArticleLayout title={title} links={links}>
+    <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
 
       <Helmet>
         <title>Screen Readers - Tailwind CSS Cheatsheet</title>

@@ -61,7 +61,8 @@ const ColFullExample: React.FC = () => {
 // ページコンポーネント本体
 const GridColumnPage: React.FC = () => {
   // ArticleLayout に渡すデータ
-  const title = 'Flexbox & Grid: Grid Column Start / End (グリッド列の開始/終了)';
+  const enTitle = 'Flexbox & Grid: Grid Column Start / End ';
+const jaTitle = 'グリッド列の開始/終了';
   const links = [
     {
       title: 'Tailwind CSS: Grid Column Start / End',
@@ -110,7 +111,7 @@ const GridColumnPage: React.FC = () => {
   `.trim();
 
   return (
-    <ArticleLayout title={title} links={links}>
+    <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
 
       <Helmet>
         <title>Grid Column - Tailwind CSS Cheatsheet</title>

@@ -65,7 +65,8 @@ const ArbitraryRowsExample: React.FC = () => {
 // ページコンポーネント本体
 const GridTemplateRowsPage: React.FC = () => {
   // ArticleLayout に渡すデータ
-  const title = 'Flexbox & Grid: Grid Template Rows (グリッド行テンプレート)';
+  const enTitle = 'Flexbox & Grid: Grid Template Rows ';
+const jaTitle = 'グリッド行テンプレート';
   const links = [
     {
       title: 'Tailwind CSS: Grid Template Rows',
@@ -119,7 +120,7 @@ const GridTemplateRowsPage: React.FC = () => {
 
 
   return (
-    <ArticleLayout title={title} links={links}>
+    <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
 
       <Helmet>
         <title>Grid Template Rows - Tailwind CSS Cheatsheet</title>

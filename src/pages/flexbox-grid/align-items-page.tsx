@@ -68,7 +68,8 @@ const ItemsStretchExample: React.FC = () => {
 // ページコンポーネント本体
 const AlignItemsPage: React.FC = () => {
   // ArticleLayout に渡すデータ
-  const title = 'Flexbox & Grid: Align Items (アイテムの交差軸揃え)';
+  const enTitle = 'Flexbox & Grid: Align Items ';
+const jaTitle = 'アイテムの交差軸揃え';
   const links = [
     {
       title: 'Tailwind CSS: Align Items',
@@ -88,7 +89,7 @@ const AlignItemsPage: React.FC = () => {
   const itemsStretchHtml = `<div class="flex items-stretch h-24 ...">...</div>`; // Default
 
   return (
-    <ArticleLayout title={title} links={links}>
+    <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
 
       <Helmet>
         <title>Align Items - Tailwind CSS Cheatsheet</title>

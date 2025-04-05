@@ -24,7 +24,8 @@ const SubpixelAntialiasedExample: React.FC = () => {
 // ページコンポーネント本体
 const FontSmoothingPage: React.FC = () => {
   // ArticleLayout に渡すデータ
-  const title = 'Typography: Font Smoothing (フォントスムージング)';
+  const enTitle = 'Typography: Font Smoothing ';
+const jaTitle = 'フォントスムージング';
   const links = [
     {
       title: 'Tailwind CSS: Font Smoothing',
@@ -50,7 +51,7 @@ const FontSmoothingPage: React.FC = () => {
 
 
   return (
-    <ArticleLayout title={title} links={links}>
+    <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
 
       <Helmet>
         <title>Font Smoothing - Tailwind CSS Cheatsheet</title>

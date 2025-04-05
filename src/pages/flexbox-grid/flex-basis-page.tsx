@@ -61,7 +61,8 @@ const BasisFullExample: React.FC = () => {
 // ページコンポーネント本体
 const FlexBasisPage: React.FC = () => {
   // ArticleLayout に渡すデータ
-  const title = 'Flexbox & Grid: Flex Basis (フレックス基準サイズ)';
+  const enTitle = 'Flexbox & Grid: Flex Basis ';
+const jaTitle = 'フレックス基準サイズ';
   const links = [
     {
       title: 'Tailwind CSS: Flex Basis',
@@ -108,7 +109,7 @@ const FlexBasisPage: React.FC = () => {
   `.trim();
 
   return (
-    <ArticleLayout title={title} links={links}>
+    <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
 
       <Helmet>
         <title>Flex Basis - Tailwind CSS Cheatsheet</title>

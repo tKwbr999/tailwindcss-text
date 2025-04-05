@@ -55,7 +55,8 @@ const ArbitraryBackdropSepiaExample: React.FC = () => {
 // ページコンポーネント本体
 const BackdropSepiaPage: React.FC = () => {
   // ArticleLayout に渡すデータ
-  const title = 'Filters: Backdrop Sepia (背景セピア)';
+  const enTitle = 'Filters: Backdrop Sepia ';
+const jaTitle = '背景セピア';
   const links = [
     {
       title: 'Tailwind CSS: Backdrop Sepia',
@@ -79,7 +80,7 @@ const BackdropSepiaPage: React.FC = () => {
   const arbitraryBackdropSepiaHtml = `<div class="backdrop-filter backdrop-sepia-[.65] ...">...</div> {/* Requires JIT & backdrop-filter enabled */} `;
 
   return (
-    <ArticleLayout title={title} links={links}>
+    <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
 
       <Helmet>
         <title>Backdrop Sepia - Tailwind CSS Cheatsheet</title>

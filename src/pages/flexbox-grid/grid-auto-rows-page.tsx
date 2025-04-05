@@ -55,7 +55,8 @@ const AutoRowsFrExample: React.FC = () => {
 // ページコンポーネント本体
 const GridAutoRowsPage: React.FC = () => {
   // ArticleLayout に渡すデータ
-  const title = 'Flexbox & Grid: Grid Auto Rows (グリッド自動行サイズ)';
+  const enTitle = 'Flexbox & Grid: Grid Auto Rows ';
+const jaTitle = 'グリッド自動行サイズ';
   const links = [
     {
       title: 'Tailwind CSS: Grid Auto Rows',
@@ -98,7 +99,7 @@ const GridAutoRowsPage: React.FC = () => {
   `.trim();
 
   return (
-    <ArticleLayout title={title} links={links}>
+    <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
 
       <Helmet>
         <title>Grid Auto Rows - Tailwind CSS Cheatsheet</title>

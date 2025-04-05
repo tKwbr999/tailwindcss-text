@@ -72,7 +72,8 @@ const RowFullExample: React.FC = () => {
 // ページコンポーネント本体
 const GridRowPage: React.FC = () => {
   // ArticleLayout に渡すデータ
-  const title = 'Flexbox & Grid: Grid Row Start / End (グリッド行の開始/終了)';
+  const enTitle = 'Flexbox & Grid: Grid Row Start / End ';
+const jaTitle = 'グリッド行の開始/終了';
   const links = [
     {
       title: 'Tailwind CSS: Grid Row Start / End',
@@ -122,7 +123,7 @@ const GridRowPage: React.FC = () => {
   `.trim();
 
   return (
-    <ArticleLayout title={title} links={links}>
+    <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
 
       <Helmet>
         <title>Grid Row - Tailwind CSS Cheatsheet</title>

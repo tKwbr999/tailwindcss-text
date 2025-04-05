@@ -28,7 +28,8 @@ const ListOutsideExample: React.FC = () => {
 // ページコンポーネント本体
 const ListStylePositionPage: React.FC = () => {
   // ArticleLayout に渡すデータ
-  const title = 'Typography: List Style Position (リストマーカー位置)';
+  const enTitle = 'Typography: List Style Position ';
+const jaTitle = 'リストマーカー位置';
   const links = [
     {
       title: 'Tailwind CSS: List Style Position',
@@ -46,7 +47,7 @@ const ListStylePositionPage: React.FC = () => {
 
 
   return (
-    <ArticleLayout title={title} links={links}>
+    <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
 
       <Helmet>
         <title>List Style Position - Tailwind CSS Cheatsheet</title>

@@ -69,7 +69,8 @@ const AnimationExample: React.FC = () => {
 // ページコンポーネント本体
 const AnimationPage: React.FC = () => {
   // ArticleLayout に渡すデータ
-  const title = 'Transitions & Animation: Animation (アニメーション)';
+  const enTitle = 'Transitions & Animation: Animation ';
+const jaTitle = 'アニメーション';
   const links = [
     {
       title: 'Tailwind CSS: Animation',
@@ -106,7 +107,7 @@ const AnimationPage: React.FC = () => {
 
 
   return (
-    <ArticleLayout title={title} links={links}>
+    <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
 
       <Helmet>
         <title>Animation - Tailwind CSS Cheatsheet</title>

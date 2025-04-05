@@ -59,7 +59,8 @@ const ScrollSnapStopExample: React.FC = () => {
 // ページコンポーネント本体
 const ScrollSnapStopPage: React.FC = () => {
   // ArticleLayout に渡すデータ
-  const title = 'Interactivity: Scroll Snap Stop (スクロールスナップ停止)';
+  const enTitle = 'Interactivity: Scroll Snap Stop ';
+const jaTitle = 'スクロールスナップ停止';
   const links = [
     {
       title: 'Tailwind CSS: Scroll Snap Stop',
@@ -87,7 +88,7 @@ const ScrollSnapStopPage: React.FC = () => {
   `.trim();
 
   return (
-    <ArticleLayout title={title} links={links}>
+    <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
 
       <Helmet>
         <title>Scroll Snap Stop - Tailwind CSS Cheatsheet</title>

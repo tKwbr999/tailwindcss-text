@@ -31,7 +31,8 @@ const ArbitraryBlurExample: React.FC = () => {
 // ページコンポーネント本体
 const BlurPage: React.FC = () => {
   // ArticleLayout に渡すデータ
-  const title = 'Filters: Blur (ぼかし)';
+  const enTitle = 'Filters: Blur ';
+const jaTitle = 'ぼかし';
   const links = [
     {
       title: 'Tailwind CSS: Blur',
@@ -57,7 +58,7 @@ const BlurPage: React.FC = () => {
   const arbitraryBlurHtml = `<img class="blur-[2px] ..." src="..." alt="...">`;
 
   return (
-    <ArticleLayout title={title} links={links}>
+    <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
 
       <Helmet>
         <title>Blur - Tailwind CSS Cheatsheet</title>

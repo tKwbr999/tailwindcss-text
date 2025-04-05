@@ -83,7 +83,8 @@ const ArbitraryBackdropBlurExample: React.FC = () => {
 // ページコンポーネント本体
 const BackdropBlurPage: React.FC = () => {
   // ArticleLayout に渡すデータ
-  const title = 'Filters: Backdrop Blur (背景ぼかし)';
+  const enTitle = 'Filters: Backdrop Blur ';
+const jaTitle = '背景ぼかし';
   const links = [
     {
       title: 'Tailwind CSS: Backdrop Blur',
@@ -109,7 +110,7 @@ const BackdropBlurPage: React.FC = () => {
   const arbitraryBackdropBlurHtml = `<div class="backdrop-blur-[2px] ...">...</div>`;
 
   return (
-    <ArticleLayout title={title} links={links}>
+    <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
 
       <Helmet>
         <title>Backdrop Blur - Tailwind CSS Cheatsheet</title>

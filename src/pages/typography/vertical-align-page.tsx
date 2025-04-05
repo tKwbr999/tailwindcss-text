@@ -96,7 +96,8 @@ const AlignSuperExample: React.FC = () => {
 // ページコンポーネント本体
 const VerticalAlignPage: React.FC = () => {
   // ArticleLayout に渡すデータ
-  const title = 'Typography: Vertical Align (垂直方向の揃え)';
+  const enTitle = 'Typography: Vertical Align ';
+const jaTitle = '垂直方向の揃え';
   const links = [
     {
       title: 'Tailwind CSS: Vertical Align',
@@ -119,7 +120,7 @@ const VerticalAlignPage: React.FC = () => {
   const alignSuperHtml = `<span class="align-super ...">...</span>`;
 
   return (
-    <ArticleLayout title={title} links={links}>
+    <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
 
       <Helmet>
         <title>Vertical Align - Tailwind CSS Cheatsheet</title>

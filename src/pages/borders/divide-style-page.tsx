@@ -66,7 +66,8 @@ const DivideNoneExample: React.FC = () => {
 // ページコンポーネント本体
 const DivideStylePage: React.FC = () => {
   // ArticleLayout に渡すデータ
-  const title = 'Borders: Divide Style (要素間の境界線のスタイル)';
+  const enTitle = 'Borders: Divide Style ';
+const jaTitle = '要素間の境界線のスタイル';
   const links = [
     {
       title: 'Tailwind CSS: Divide Style',
@@ -86,7 +87,7 @@ const DivideStylePage: React.FC = () => {
   const divideNoneHtml = `<div class="flex divide-x-4 divide-none ...">...</div>`;
 
   return (
-    <ArticleLayout title={title} links={links}>
+    <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
 
       <Helmet>
         <title>Divide Style - Tailwind CSS Cheatsheet</title>

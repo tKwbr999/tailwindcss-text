@@ -40,7 +40,8 @@ const UserSelectExample: React.FC = () => {
 // ページコンポーネント本体
 const UserSelectPage: React.FC = () => {
   // ArticleLayout に渡すデータ
-  const title = 'Interactivity: User Select (ユーザー選択)';
+  const enTitle = 'Interactivity: User Select ';
+const jaTitle = 'ユーザー選択';
   const links = [
     {
       title: 'Tailwind CSS: User Select',
@@ -68,7 +69,7 @@ const UserSelectPage: React.FC = () => {
   `.trim();
 
   return (
-    <ArticleLayout title={title} links={links}>
+    <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
 
       <Helmet>
         <title>User Select - Tailwind CSS Cheatsheet</title>

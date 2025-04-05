@@ -68,7 +68,8 @@ const ArbitrarySizeExample: React.FC = () => {
 // ページコンポーネント本体
 const BackgroundSizePage: React.FC = () => {
   // ArticleLayout に渡すデータ
-  const title = 'Backgrounds: Background Size (背景画像のサイズ)';
+  const enTitle = 'Backgrounds: Background Size ';
+const jaTitle = '背景画像のサイズ';
   const links = [
     {
       title: 'Tailwind CSS: Background Size',
@@ -87,7 +88,7 @@ const BackgroundSizePage: React.FC = () => {
   const arbitrarySizeHtml = `<div class="bg-[length:50%_75%] bg-no-repeat ..." style="background-image: url(...)">...</div>`;
 
   return (
-    <ArticleLayout title={title} links={links}>
+    <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
 
       <Helmet>
         <title>Background Size - Tailwind CSS Cheatsheet</title>

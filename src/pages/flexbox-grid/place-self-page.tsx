@@ -30,7 +30,8 @@ const PlaceSelfExample: React.FC = () => {
 const PlaceSelfPage: React.FC = () => {
   // ★修正: JustifySelfPage -> PlaceSelfPage
   // ArticleLayout に渡すデータ
-  const title = 'Flexbox & Grid: Place Self (個別アイテムの揃え - Grid)';
+  const enTitle = 'Flexbox & Grid: Place Self ';
+const jaTitle = '個別アイテムの揃え - Grid';
   const links = [
     {
       title: 'Tailwind CSS: Place Self',
@@ -50,7 +51,7 @@ const PlaceSelfPage: React.FC = () => {
   // const justifySelfAutoHtml = `<div class="justify-self-auto ...">Item</div>`; // Usually same as stretch
 
   return (
-    <ArticleLayout title={title} links={links}>
+    <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
 
       <Helmet>
         <title>Place Self - Tailwind CSS Cheatsheet</title>

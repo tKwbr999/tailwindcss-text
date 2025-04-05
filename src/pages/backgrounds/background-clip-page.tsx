@@ -51,7 +51,8 @@ const BgClipTextExample: React.FC = () => {
 // ページコンポーネント本体
 const BackgroundClipPage: React.FC = () => {
   // ArticleLayout に渡すデータ
-  const title = 'Backgrounds: Background Clip (背景のクリッピング領域)';
+  const enTitle = 'Backgrounds: Background Clip ';
+const jaTitle = '背景のクリッピング領域';
   const links = [
     {
       title: 'Tailwind CSS: Background Clip',
@@ -70,7 +71,7 @@ const BackgroundClipPage: React.FC = () => {
   const clipTextHtml = `<span class="bg-clip-text text-transparent bg-gradient-to-r ...">...</span>`;
 
   return (
-    <ArticleLayout title={title} links={links}>
+    <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
 
       <Helmet>
         <title>Background Clip - Tailwind CSS Cheatsheet</title>

@@ -27,7 +27,8 @@ const ArbitraryTrackingExample: React.FC = () => {
 // ページコンポーネント本体
 const LetterSpacingPage: React.FC = () => {
   // ArticleLayout に渡すデータ
-  const title = 'Typography: Letter Spacing (文字間隔)';
+  const enTitle = 'Typography: Letter Spacing ';
+const jaTitle = '文字間隔';
   const links = [
     {
       title: 'Tailwind CSS: Letter Spacing',
@@ -53,7 +54,7 @@ const LetterSpacingPage: React.FC = () => {
 
 
   return (
-    <ArticleLayout title={title} links={links}>
+    <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
 
       <Helmet>
         <title>Letter Spacing - Tailwind CSS Cheatsheet</title>

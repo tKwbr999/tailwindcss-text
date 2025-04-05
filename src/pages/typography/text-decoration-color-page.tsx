@@ -37,7 +37,8 @@ const DecorationCurrentInheritTransparentExample: React.FC = () => {
 // ページコンポーネント本体
 const TextDecorationColorPage: React.FC = () => {
   // ArticleLayout に渡すデータ
-  const title = 'Typography: Text Decoration Color (テキスト装飾線の色)';
+  const enTitle = 'Typography: Text Decoration Color ';
+const jaTitle = 'テキスト装飾線の色';
   const links = [
     {
       title: 'Tailwind CSS: Text Decoration Color',
@@ -63,7 +64,7 @@ const TextDecorationColorPage: React.FC = () => {
 
 
   return (
-    <ArticleLayout title={title} links={links}>
+    <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
 
       <Helmet>
         <title>Text Decoration Color - Tailwind CSS Cheatsheet</title>

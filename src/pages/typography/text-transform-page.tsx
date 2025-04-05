@@ -41,7 +41,8 @@ const NormalCaseExample: React.FC = () => {
 // ページコンポーネント本体
 const TextTransformPage: React.FC = () => {
   // ArticleLayout に渡すデータ
-  const title = 'Typography: Text Transform (テキスト変換)';
+  const enTitle = 'Typography: Text Transform ';
+const jaTitle = 'テキスト変換';
   const links = [
     {
       title: 'Tailwind CSS: Text Transform',
@@ -61,7 +62,7 @@ const TextTransformPage: React.FC = () => {
 
 
   return (
-    <ArticleLayout title={title} links={links}>
+    <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
 
       <Helmet>
         <title>Text Transform - Tailwind CSS Cheatsheet</title>

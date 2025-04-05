@@ -40,7 +40,8 @@ const ArbitraryFillExample: React.FC = () => {
 // ページコンポーネント本体
 const FillPage: React.FC = () => {
   // ArticleLayout に渡すデータ
-  const title = 'SVG: Fill (塗りつぶし)';
+  const enTitle = 'SVG: Fill ';
+const jaTitle = '塗りつぶし';
   const links = [
     {
       title: 'Tailwind CSS: Fill',
@@ -67,7 +68,7 @@ const FillPage: React.FC = () => {
   const arbitraryFillHtml = `<svg class="fill-[#ff7f50] ...">...</svg>`;
 
   return (
-    <ArticleLayout title={title} links={links}>
+    <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
 
       <Helmet>
         <title>Fill - Tailwind CSS Cheatsheet</title>

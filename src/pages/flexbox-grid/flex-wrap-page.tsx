@@ -71,7 +71,8 @@ const FlexNoWrapExample: React.FC = () => {
 // ページコンポーネント本体
 const FlexWrapPage: React.FC = () => {
   // ArticleLayout に渡すデータ
-  const title = 'Flexbox & Grid: Flex Wrap (フレックス折り返し)';
+  const enTitle = 'Flexbox & Grid: Flex Wrap ';
+const jaTitle = 'フレックス折り返し';
   const links = [
     {
       title: 'Tailwind CSS: Flex Wrap',
@@ -112,7 +113,7 @@ const FlexWrapPage: React.FC = () => {
   `.trim();
 
   return (
-    <ArticleLayout title={title} links={links}>
+    <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
 
       <Helmet>
         <title>Flex Wrap - Tailwind CSS Cheatsheet</title>

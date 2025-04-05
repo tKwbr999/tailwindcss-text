@@ -27,7 +27,8 @@ const ArbitraryOffsetExample: React.FC = () => {
 // ページコンポーネント本体
 const TextUnderlineOffsetPage: React.FC = () => {
   // ArticleLayout に渡すデータ
-  const title = 'Typography: Text Underline Offset (下線のオフセット)';
+  const enTitle = 'Typography: Text Underline Offset ';
+const jaTitle = '下線のオフセット';
   const links = [
     {
       title: 'Tailwind CSS: Text Underline Offset',
@@ -52,7 +53,7 @@ const TextUnderlineOffsetPage: React.FC = () => {
 
 
   return (
-    <ArticleLayout title={title} links={links}>
+    <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
 
       <Helmet>
         <title>Text Underline Offset - Tailwind CSS Cheatsheet</title>

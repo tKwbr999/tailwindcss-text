@@ -60,7 +60,8 @@ const GrowSpecificExample: React.FC = () => {
 // ページコンポーネント本体
 const FlexGrowPage: React.FC = () => {
   // ArticleLayout に渡すデータ
-  const title = 'Flexbox & Grid: Flex Grow (フレックス拡大係数)';
+  const enTitle = 'Flexbox & Grid: Flex Grow ';
+const jaTitle = 'フレックス拡大係数';
   const links = [
     {
       title: 'Tailwind CSS: Flex Grow',
@@ -96,7 +97,7 @@ const FlexGrowPage: React.FC = () => {
   `.trim(); // 任意の値を使用
 
   return (
-    <ArticleLayout title={title} links={links}>
+    <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
 
       <Helmet>
         <title>Flex Grow - Tailwind CSS Cheatsheet</title>

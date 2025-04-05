@@ -68,7 +68,8 @@ const ShrinkSpecificExample: React.FC = () => {
 // ページコンポーネント本体
 const FlexShrinkPage: React.FC = () => {
   // ArticleLayout に渡すデータ
-  const title = 'Flexbox & Grid: Flex Shrink (フレックス縮小係数)';
+  const enTitle = 'Flexbox & Grid: Flex Shrink ';
+const jaTitle = 'フレックス縮小係数';
   const links = [
     {
       title: 'Tailwind CSS: Flex Shrink',
@@ -105,7 +106,7 @@ const FlexShrinkPage: React.FC = () => {
   `.trim(); // 任意の値を使用
 
   return (
-    <ArticleLayout title={title} links={links}>
+    <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
 
       <Helmet>
         <title>Flex Shrink - Tailwind CSS Cheatsheet</title>

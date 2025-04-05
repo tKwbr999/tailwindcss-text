@@ -33,7 +33,8 @@ const ArbitraryInvertExample: React.FC = () => {
 // ページコンポーネント本体
 const InvertPage: React.FC = () => {
   // ArticleLayout に渡すデータ
-  const title = 'Filters: Invert (色反転)';
+  const enTitle = 'Filters: Invert ';
+const jaTitle = '色反転';
   const links = [
     {
       title: 'Tailwind CSS: Invert',
@@ -53,7 +54,7 @@ const InvertPage: React.FC = () => {
   const arbitraryInvertHtml = `<img class="filter invert-[.75] ..." src="..." alt="..."> {/* Requires JIT & filter enabled */} `;
 
   return (
-    <ArticleLayout title={title} links={links}>
+    <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
 
       <Helmet>
         <title>Invert - Tailwind CSS Cheatsheet</title>

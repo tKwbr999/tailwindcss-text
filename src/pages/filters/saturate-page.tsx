@@ -28,7 +28,8 @@ const ArbitrarySaturateExample: React.FC = () => {
 // ページコンポーネント本体
 const SaturatePage: React.FC = () => {
   // ArticleLayout に渡すデータ
-  const title = 'Filters: Saturate (彩度)';
+  const enTitle = 'Filters: Saturate ';
+const jaTitle = '彩度';
   const links = [
     {
       title: 'Tailwind CSS: Saturate',
@@ -51,7 +52,7 @@ const SaturatePage: React.FC = () => {
   const arbitrarySaturateHtml = `<img class="saturate-[.85] ..." src="..." alt="...">`;
 
   return (
-    <ArticleLayout title={title} links={links}>
+    <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
 
       <Helmet>
         <title>Saturate - Tailwind CSS Cheatsheet</title>

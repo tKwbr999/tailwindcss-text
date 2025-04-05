@@ -42,7 +42,8 @@ const ArbitraryRingOffsetWidthExample: React.FC = () => {
 // ページコンポーネント本体
 const RingOffsetWidthPage: React.FC = () => {
   // ArticleLayout に渡すデータ
-  const title = 'Borders: Ring Offset Width (リングオフセットの太さ)';
+  const enTitle = 'Borders: Ring Offset Width ';
+const jaTitle = 'リングオフセットの太さ';
   const links = [
     {
       title: 'Tailwind CSS: Ring Offset Width',
@@ -65,7 +66,7 @@ const RingOffsetWidthPage: React.FC = () => {
   const arbitraryRingOffsetWidthHtml = `<button class="ring ring-offset-[3px] ring-offset-white ...">...</button>`;
 
   return (
-    <ArticleLayout title={title} links={links}>
+    <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
 
       <Helmet>
         <title>Ring Offset Width - Tailwind CSS Cheatsheet</title>

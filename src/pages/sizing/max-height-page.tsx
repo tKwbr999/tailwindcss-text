@@ -120,7 +120,8 @@ const MaxHMinMaxFitExample: React.FC = () => {
 // ページコンポーネント本体
 const MaxHeightPage: React.FC = () => {
   // ArticleLayout に渡すデータ
-  const title = 'Sizing: Max-Height (最大高さ)';
+  const enTitle = 'Sizing: Max-Height ';
+const jaTitle = '最大高さ';
   const links = [
     {
       title: 'Tailwind CSS: Max-Height',
@@ -144,7 +145,7 @@ const MaxHeightPage: React.FC = () => {
   `.trim();
 
   return (
-    <ArticleLayout title={title} links={links}>
+    <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
 
       <Helmet>
         <title>Max Height - Tailwind CSS Cheatsheet</title>

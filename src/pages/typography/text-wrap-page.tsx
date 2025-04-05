@@ -44,7 +44,8 @@ const TextBalanceExample: React.FC = () => {
 // ページコンポーネント本体
 const TextWrapPage: React.FC = () => {
   // ArticleLayout に渡すデータ
-  const title = 'Typography: Text Wrap (テキスト折り返し)';
+  const enTitle = 'Typography: Text Wrap ';
+const jaTitle = 'テキスト折り返し';
   const links = [
     {
       title: 'Tailwind CSS: Text Wrap (v3.3+)',
@@ -67,7 +68,7 @@ const TextWrapPage: React.FC = () => {
 
 
   return (
-    <ArticleLayout title={title} links={links}>
+    <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
 
       <Helmet>
         <title>Text Wrap - Tailwind CSS Cheatsheet</title>

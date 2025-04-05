@@ -67,7 +67,8 @@ const FlexGapExample: React.FC = () => {
 // ページコンポーネント本体
 const GapPage: React.FC = () => {
   // ArticleLayout に渡すデータ
-  const title = 'Flexbox & Grid: Gap (溝)';
+  const enTitle = 'Flexbox & Grid: Gap ';
+const jaTitle = '溝';
   const links = [
     {
       title: 'Tailwind CSS: Gap',
@@ -113,7 +114,7 @@ const GapPage: React.FC = () => {
   `.trim();
 
   return (
-    <ArticleLayout title={title} links={links}>
+    <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
 
       <Helmet>
         <title>Gap - Tailwind CSS Cheatsheet</title>

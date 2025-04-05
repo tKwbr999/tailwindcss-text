@@ -87,7 +87,8 @@ const WidthFitExample: React.FC = () => {
 // ページコンポーネント本体
 const WidthPage: React.FC = () => {
   // ArticleLayout に渡すデータ
-  const title = 'Sizing: Width (幅)';
+  const enTitle = 'Sizing: Width ';
+const jaTitle = '幅';
   const links = [
     {
       title: 'Tailwind CSS: Width',
@@ -111,7 +112,7 @@ const WidthPage: React.FC = () => {
   const wFitHtml = `<div class="w-fit ...">Fit</div>`; // v3.0+
 
   return (
-    <ArticleLayout title={title} links={links}>
+    <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
 
       <Helmet>
         <title>Width - Tailwind CSS Cheatsheet</title>

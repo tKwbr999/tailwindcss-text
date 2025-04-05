@@ -45,7 +45,8 @@ const ArbitraryTransitionTimingFunctionExample: React.FC = () => {
 // ページコンポーネント本体
 const TransitionTimingFunctionPage: React.FC = () => {
   // ArticleLayout に渡すデータ
-  const title = 'Transitions & Animation: Transition Timing Function (イージング関数)';
+  const enTitle = 'Transitions & Animation: Transition Timing Function ';
+const jaTitle = 'イージング関数';
   const links = [
     {
       title: 'Tailwind CSS: Transition Timing Function',
@@ -76,7 +77,7 @@ const TransitionTimingFunctionPage: React.FC = () => {
 
 
   return (
-    <ArticleLayout title={title} links={links}>
+    <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
 
       <Helmet>
         <title>Transition Timing Function - Tailwind CSS Cheatsheet</title>

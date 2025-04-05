@@ -40,7 +40,8 @@ const ArbitraryStrokeExample: React.FC = () => {
 // ページコンポーネント本体
 const StrokePage: React.FC = () => {
   // ArticleLayout に渡すデータ
-  const title = 'SVG: Stroke (線)';
+  const enTitle = 'SVG: Stroke ';
+const jaTitle = '線';
   const links = [
     {
       title: 'Tailwind CSS: Stroke',
@@ -67,7 +68,7 @@ const StrokePage: React.FC = () => {
   const arbitraryStrokeHtml = `<svg class="stroke-[#ff7f50] fill-none stroke-2 ...">...</svg>`;
 
   return (
-    <ArticleLayout title={title} links={links}>
+    <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
 
       <Helmet>
         <title>Stroke - Tailwind CSS Cheatsheet</title>

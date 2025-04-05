@@ -63,7 +63,8 @@ const ArbitraryRotateExample: React.FC = () => {
 // ページコンポーネント本体
 const RotatePage: React.FC = () => {
   // ArticleLayout に渡すデータ
-  const title = 'Transforms: Rotate (回転)';
+  const enTitle = 'Transforms: Rotate ';
+const jaTitle = '回転';
   const links = [
     {
       title: 'Tailwind CSS: Rotate',
@@ -87,7 +88,7 @@ const RotatePage: React.FC = () => {
   const arbitraryRotateHtml = `<img class="rotate-[22.5deg] ..." src="...">`;
 
   return (
-    <ArticleLayout title={title} links={links}>
+    <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
 
       <Helmet>
         <title>Rotate - Tailwind CSS Cheatsheet</title>

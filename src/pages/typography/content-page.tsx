@@ -59,7 +59,8 @@ const ContentStringExample: React.FC = () => {
 // ページコンポーネント本体
 const ContentPage: React.FC = () => {
   // ArticleLayout に渡すデータ
-  const title = 'Typography: Content (コンテンツ)';
+  const enTitle = 'Typography: Content ';
+const jaTitle = 'コンテンツ';
   const links = [
     {
       title: 'Tailwind CSS: Content (v3.0+)',
@@ -87,7 +88,7 @@ const ContentPage: React.FC = () => {
 
 
   return (
-    <ArticleLayout title={title} links={links}>
+    <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
 
       <Helmet>
         <title>Content - Tailwind CSS Cheatsheet</title>

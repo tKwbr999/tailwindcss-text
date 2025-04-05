@@ -28,7 +28,8 @@ const ArbitraryOutlineWidthExample: React.FC = () => {
 // ページコンポーネント本体
 const OutlineWidthPage: React.FC = () => {
   // ArticleLayout に渡すデータ
-  const title = 'Borders: Outline Width (アウトラインの太さ)';
+  const enTitle = 'Borders: Outline Width ';
+const jaTitle = 'アウトラインの太さ';
   const links = [
     {
       title: 'Tailwind CSS: Outline Width',
@@ -51,7 +52,7 @@ const OutlineWidthPage: React.FC = () => {
   const arbitraryOutlineWidthHtml = `<button class="outline outline-[3px] ...">...</button>`;
 
   return (
-    <ArticleLayout title={title} links={links}>
+    <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
 
       <Helmet>
         <title>Outline Width - Tailwind CSS Cheatsheet</title>

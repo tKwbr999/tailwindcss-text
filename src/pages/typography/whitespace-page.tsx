@@ -78,7 +78,8 @@ Whitespace Break Spaces (v3.0+):
 // ページコンポーネント本体
 const WhitespacePage: React.FC = () => {
   // ArticleLayout に渡すデータ
-  const title = 'Typography: Whitespace (空白文字の扱い)';
+  const enTitle = 'Typography: Whitespace ';
+const jaTitle = '空白文字の扱い';
   const links = [
     {
       title: 'Tailwind CSS: Whitespace',
@@ -104,7 +105,7 @@ const WhitespacePage: React.FC = () => {
 
 
   return (
-    <ArticleLayout title={title} links={links}>
+    <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
 
       <Helmet>
         <title>Whitespace - Tailwind CSS Cheatsheet</title>

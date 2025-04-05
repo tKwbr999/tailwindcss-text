@@ -81,7 +81,8 @@ const SizeFullExample: React.FC = () => {
 // ページコンポーネント本体
 const SizePage: React.FC = () => {
   // ArticleLayout に渡すデータ
-  const title = 'Sizing: Size (サイズ - 幅と高さ)';
+  const enTitle = 'Sizing: Size ';
+const jaTitle = 'サイズ - 幅と高さ';
   const links = [
     {
       title: 'Tailwind CSS: Size (v3.3+)',
@@ -109,7 +110,7 @@ const SizePage: React.FC = () => {
   const sizeFullHtml = `<div class="size-full ...">...</div>`; // Requires parent size
 
   return (
-    <ArticleLayout title={title} links={links}>
+    <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
 
       <Helmet>
         <title>Size - Tailwind CSS Cheatsheet</title>

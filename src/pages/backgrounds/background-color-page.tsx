@@ -61,7 +61,8 @@ const ArbitraryBgColorExample: React.FC = () => {
 // ページコンポーネント本体
 const BackgroundColorPage: React.FC = () => {
   // ArticleLayout に渡すデータ
-  const title = 'Backgrounds: Background Color (背景色)';
+  const enTitle = 'Backgrounds: Background Color ';
+const jaTitle = '背景色';
   const links = [
     {
       title: 'Tailwind CSS: Background Color',
@@ -87,7 +88,7 @@ const BackgroundColorPage: React.FC = () => {
   const arbitraryBgColorHtml = `<div class="bg-[#ff7f50] ...">...</div>`;
 
   return (
-    <ArticleLayout title={title} links={links}>
+    <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
 
       <Helmet>
         <title>Background Color - Tailwind CSS Cheatsheet</title>

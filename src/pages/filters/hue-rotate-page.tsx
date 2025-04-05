@@ -31,7 +31,8 @@ const ArbitraryHueRotateExample: React.FC = () => {
 // ページコンポーネント本体
 const HueRotatePage: React.FC = () => {
   // ArticleLayout に渡すデータ
-  const title = 'Filters: Hue Rotate (色相回転)';
+  const enTitle = 'Filters: Hue Rotate ';
+const jaTitle = '色相回転';
   const links = [
     {
       title: 'Tailwind CSS: Hue Rotate',
@@ -55,7 +56,7 @@ const HueRotatePage: React.FC = () => {
   const arbitraryHueRotateHtml = `<img class="hue-rotate-[270deg] ..." src="..." alt="...">`;
 
   return (
-    <ArticleLayout title={title} links={links}>
+    <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
 
       <Helmet>
         <title>Hue Rotate - Tailwind CSS Cheatsheet</title>

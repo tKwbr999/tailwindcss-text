@@ -40,7 +40,8 @@ const ArbitraryIndentExample: React.FC = () => {
 // ページコンポーネント本体
 const TextIndentPage: React.FC = () => {
   // ArticleLayout に渡すデータ
-  const title = 'Typography: Text Indent (テキストインデント)';
+  const enTitle = 'Typography: Text Indent ';
+const jaTitle = 'テキストインデント';
   const links = [
     {
       title: 'Tailwind CSS: Text Indent',
@@ -62,7 +63,7 @@ const TextIndentPage: React.FC = () => {
 
 
   return (
-    <ArticleLayout title={title} links={links}>
+    <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
 
       <Helmet>
         <title>Text Indent - Tailwind CSS Cheatsheet</title>

@@ -94,7 +94,8 @@ const ArbitraryRadiusExample: React.FC = () => {
 // ページコンポーネント本体
 const BorderRadiusPage: React.FC = () => {
   // ArticleLayout に渡すデータ
-  const title = 'Borders: Border Radius (角丸)';
+  const enTitle = 'Borders: Border Radius ';
+const jaTitle = '角丸';
   const links = [
     {
       title: 'Tailwind CSS: Border Radius',
@@ -138,7 +139,7 @@ const BorderRadiusPage: React.FC = () => {
   const arbitraryRadiusHtml = `<div class="rounded-[10px] ...">...</div>`;
 
   return (
-    <ArticleLayout title={title} links={links}>
+    <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
 
       <Helmet>
         <title>Border Radius - Tailwind CSS Cheatsheet</title>

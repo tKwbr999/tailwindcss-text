@@ -54,7 +54,8 @@ const NegativeSpaceExample: React.FC = () => {
 // ページコンポーネント本体
 const SpaceBetweenPage: React.FC = () => {
   // ArticleLayout に渡すデータ
-  const title = 'Spacing: Space Between (要素間のスペース)';
+  const enTitle = 'Spacing: Space Between ';
+const jaTitle = '要素間のスペース';
   const links = [
     {
       title: 'Tailwind CSS: Space Between',
@@ -97,7 +98,7 @@ const SpaceBetweenPage: React.FC = () => {
   `.trim();
 
   return (
-    <ArticleLayout title={title} links={links}>
+    <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
 
       <Helmet>
         <title>Space Between - Tailwind CSS Cheatsheet</title>

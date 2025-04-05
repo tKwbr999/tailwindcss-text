@@ -103,7 +103,8 @@ const NegativeMarginExample: React.FC = () => {
 // ページコンポーネント本体
 const MarginPage: React.FC = () => {
   // ArticleLayout に渡すデータ
-  const title = 'Spacing: Margin (マージン)';
+  const enTitle = 'Spacing: Margin ';
+const jaTitle = 'マージン';
   const links = [
     {
       title: 'Tailwind CSS: Margin',
@@ -125,7 +126,7 @@ const MarginPage: React.FC = () => {
   const mNegativeHtml = `<div class="-m-4 ...">...</div>`; // 負のマージン
 
   return (
-    <ArticleLayout title={title} links={links}>
+    <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
 
       <Helmet>
         <title>Margin - Tailwind CSS Cheatsheet</title>

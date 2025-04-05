@@ -24,7 +24,8 @@ const FontWeightExample: React.FC = () => {
 // ページコンポーネント本体
 const FontWeightPage: React.FC = () => {
   // ArticleLayout に渡すデータ
-  const title = 'Typography: Font Weight (フォントの太さ)';
+  const enTitle = 'Typography: Font Weight ';
+const jaTitle = 'フォントの太さ';
   const links = [
     {
       title: 'Tailwind CSS: Font Weight',
@@ -49,7 +50,7 @@ const FontWeightPage: React.FC = () => {
 
 
   return (
-    <ArticleLayout title={title} links={links}>
+    <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
 
       <Helmet>
         <title>Font Weight - Tailwind CSS Cheatsheet</title>

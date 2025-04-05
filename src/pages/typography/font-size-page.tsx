@@ -30,7 +30,8 @@ const ArbitrarySizeExample: React.FC = () => {
 // ページコンポーネント本体
 const FontSizePage: React.FC = () => {
   // ArticleLayout に渡すデータ
-  const title = 'Typography: Font Size (フォントサイズ)';
+  const enTitle = 'Typography: Font Size ';
+const jaTitle = 'フォントサイズ';
   const links = [
     {
       title: 'Tailwind CSS: Font Size',
@@ -55,7 +56,7 @@ const FontSizePage: React.FC = () => {
   const arbitrarySizeHtml = `<p class="text-[22px] leading-[30px] ...">...</p>`;
 
   return (
-    <ArticleLayout title={title} links={links}>
+    <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
 
       <Helmet>
         <title>Font Size - Tailwind CSS Cheatsheet</title>

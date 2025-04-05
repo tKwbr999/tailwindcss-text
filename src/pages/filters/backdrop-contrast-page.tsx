@@ -78,7 +78,8 @@ const ArbitraryBackdropContrastExample: React.FC = () => {
 // ページコンポーネント本体
 const BackdropContrastPage: React.FC = () => {
   // ArticleLayout に渡すデータ
-  const title = 'Filters: Backdrop Contrast (背景コントラスト)';
+  const enTitle = 'Filters: Backdrop Contrast ';
+const jaTitle = '背景コントラスト';
   const links = [
     {
       title: 'Tailwind CSS: Backdrop Contrast',
@@ -103,7 +104,7 @@ const BackdropContrastPage: React.FC = () => {
   const arbitraryBackdropContrastHtml = `<div class="backdrop-contrast-[.85] ...">...</div>`;
 
   return (
-    <ArticleLayout title={title} links={links}>
+    <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
 
       <Helmet>
         <title>Backdrop Contrast - Tailwind CSS Cheatsheet</title>

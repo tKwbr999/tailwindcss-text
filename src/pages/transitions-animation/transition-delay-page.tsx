@@ -38,7 +38,8 @@ const ArbitraryTransitionDelayExample: React.FC = () => {
 // ページコンポーネント本体
 const TransitionDelayPage: React.FC = () => {
   // ArticleLayout に渡すデータ
-  const title = 'Transitions & Animation: Transition Delay (トランジション遅延)';
+  const enTitle = 'Transitions & Animation: Transition Delay ';
+const jaTitle = 'トランジション遅延';
   const links = [
     {
       title: 'Tailwind CSS: Transition Delay',
@@ -66,7 +67,7 @@ const TransitionDelayPage: React.FC = () => {
 
 
   return (
-    <ArticleLayout title={title} links={links}>
+    <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
 
       <Helmet>
         <title>Transition Delay - Tailwind CSS Cheatsheet</title>

@@ -85,7 +85,8 @@ const ScrollBehaviorExample: React.FC = () => {
 // ページコンポーネント本体
 const ScrollBehaviorPage: React.FC = () => {
   // ArticleLayout に渡すデータ
-  const title = 'Interactivity: Scroll Behavior (スクロール動作)';
+  const enTitle = 'Interactivity: Scroll Behavior ';
+const jaTitle = 'スクロール動作';
   const links = [
     {
       title: 'Tailwind CSS: Scroll Behavior',
@@ -111,7 +112,7 @@ const ScrollBehaviorPage: React.FC = () => {
   `.trim();
 
   return (
-    <ArticleLayout title={title} links={links}>
+    <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
 
       <Helmet>
         <title>Scroll Behavior - Tailwind CSS Cheatsheet</title>

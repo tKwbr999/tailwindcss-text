@@ -98,7 +98,8 @@ const ScrollSnapAlignExample: React.FC = () => {
 // ページコンポーネント本体
 const ScrollSnapAlignPage: React.FC = () => {
   // ArticleLayout に渡すデータ
-  const title = 'Interactivity: Scroll Snap Align (スクロールスナップ位置揃え)';
+  const enTitle = 'Interactivity: Scroll Snap Align ';
+const jaTitle = 'スクロールスナップ位置揃え';
   const links = [
     {
       title: 'Tailwind CSS: Scroll Snap Align',
@@ -121,7 +122,7 @@ const ScrollSnapAlignPage: React.FC = () => {
   `.trim();
 
   return (
-    <ArticleLayout title={title} links={links}>
+    <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
 
       <Helmet>
         <title>Scroll Snap Align - Tailwind CSS Cheatsheet</title>

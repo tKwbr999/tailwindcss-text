@@ -27,7 +27,8 @@ const JustifySelfExample: React.FC = () => {
 // ページコンポーネント本体
 const JustifySelfPage: React.FC = () => {
   // ArticleLayout に渡すデータ
-  const title = 'Flexbox & Grid: Justify Self (個別アイテムのインライン軸揃え - Grid)';
+  const enTitle = 'Flexbox & Grid: Justify Self ';
+const jaTitle = '個別アイテムのインライン軸揃え - Grid';
   const links = [
     {
       title: 'Tailwind CSS: Justify Self',
@@ -47,7 +48,7 @@ const JustifySelfPage: React.FC = () => {
   // const justifySelfAutoHtml = `<div class="justify-self-auto ...">Item</div>`; // Usually same as stretch
 
   return (
-    <ArticleLayout title={title} links={links}>
+    <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
 
       <Helmet>
         <title>Justify Self - Tailwind CSS Cheatsheet</title>

@@ -38,7 +38,8 @@ const ArbitraryTransitionDurationExample: React.FC = () => {
 // ページコンポーネント本体
 const TransitionDurationPage: React.FC = () => {
   // ArticleLayout に渡すデータ
-  const title = 'Transitions & Animation: Transition Duration (トランジション時間)';
+  const enTitle = 'Transitions & Animation: Transition Duration ';
+const jaTitle = 'トランジション時間';
   const links = [
     {
       title: 'Tailwind CSS: Transition Duration',
@@ -66,7 +67,7 @@ const TransitionDurationPage: React.FC = () => {
 
 
   return (
-    <ArticleLayout title={title} links={links}>
+    <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
 
       <Helmet>
         <title>Transition Duration - Tailwind CSS Cheatsheet</title>

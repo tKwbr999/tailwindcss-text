@@ -45,7 +45,8 @@ const ArbitraryLeadingExample: React.FC = () => {
 // ページコンポーネント本体
 const LineHeightPage: React.FC = () => {
   // ArticleLayout に渡すデータ
-  const title = 'Typography: Line Height (行の高さ)';
+  const enTitle = 'Typography: Line Height ';
+const jaTitle = '行の高さ';
   const links = [
     {
       title: 'Tailwind CSS: Line Height',
@@ -75,7 +76,7 @@ const LineHeightPage: React.FC = () => {
 
 
   return (
-    <ArticleLayout title={title} links={links}>
+    <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
 
       <Helmet>
         <title>Line Height - Tailwind CSS Cheatsheet</title>

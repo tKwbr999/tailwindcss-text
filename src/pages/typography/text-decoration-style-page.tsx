@@ -48,7 +48,8 @@ const DecorationWavyExample: React.FC = () => {
 // ページコンポーネント本体
 const TextDecorationStylePage: React.FC = () => {
   // ArticleLayout に渡すデータ
-  const title = 'Typography: Text Decoration Style (テキスト装飾線のスタイル)';
+  const enTitle = 'Typography: Text Decoration Style ';
+const jaTitle = 'テキスト装飾線のスタイル';
   const links = [
     {
       title: 'Tailwind CSS: Text Decoration Style',
@@ -69,7 +70,7 @@ const TextDecorationStylePage: React.FC = () => {
 
 
   return (
-    <ArticleLayout title={title} links={links}>
+    <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
 
       <Helmet>
         <title>Text Decoration Style - Tailwind CSS Cheatsheet</title>

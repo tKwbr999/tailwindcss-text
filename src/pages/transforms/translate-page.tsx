@@ -38,7 +38,8 @@ const ArbitraryTranslateExample: React.FC = () => {
 // ページコンポーネント本体
 const TranslatePage: React.FC = () => {
   // ArticleLayout に渡すデータ
-  const title = 'Transforms: Translate (移動)';
+  const enTitle = 'Transforms: Translate ';
+const jaTitle = '移動';
   const links = [
     {
       title: 'Tailwind CSS: Translate',
@@ -67,7 +68,7 @@ const TranslatePage: React.FC = () => {
 
 
   return (
-    <ArticleLayout title={title} links={links}>
+    <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
 
       <Helmet>
         <title>Translate - Tailwind CSS Cheatsheet</title>

@@ -63,7 +63,8 @@ const AppearanceExample: React.FC = () => {
 // ページコンポーネント本体
 const AppearancePage: React.FC = () => {
   // ArticleLayout に渡すデータ
-  const title = 'Interactivity: Appearance (外観)';
+  const enTitle = 'Interactivity: Appearance ';
+const jaTitle = '外観';
   const links = [
     {
       title: 'Tailwind CSS: Appearance',
@@ -95,7 +96,7 @@ const AppearancePage: React.FC = () => {
   `.trim();
 
   return (
-    <ArticleLayout title={title} links={links}>
+    <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
 
       <Helmet>
         <title>Appearance - Tailwind CSS Cheatsheet</title>

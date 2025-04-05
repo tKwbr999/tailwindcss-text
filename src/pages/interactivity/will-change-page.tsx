@@ -59,7 +59,8 @@ const WillChangeExample: React.FC = () => {
 // ページコンポーネント本体
 const WillChangePage: React.FC = () => {
   // ArticleLayout に渡すデータ
-  const title = 'Interactivity: Will Change (変更予測)';
+  const enTitle = 'Interactivity: Will Change ';
+const jaTitle = '変更予測';
   const links = [
     {
       title: 'Tailwind CSS: Will Change',
@@ -87,7 +88,7 @@ const WillChangePage: React.FC = () => {
   `.trim();
 
   return (
-    <ArticleLayout title={title} links={links}>
+    <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
 
       <Helmet>
         <title>Will Change - Tailwind CSS Cheatsheet</title>

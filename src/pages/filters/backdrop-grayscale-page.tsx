@@ -55,7 +55,8 @@ const ArbitraryBackdropGrayscaleExample: React.FC = () => {
 // ページコンポーネント本体
 const BackdropGrayscalePage: React.FC = () => {
   // ArticleLayout に渡すデータ
-  const title = 'Filters: Backdrop Grayscale (背景グレースケール)';
+  const enTitle = 'Filters: Backdrop Grayscale ';
+const jaTitle = '背景グレースケール';
   const links = [
     {
       title: 'Tailwind CSS: Backdrop Grayscale',
@@ -79,7 +80,7 @@ const BackdropGrayscalePage: React.FC = () => {
   const arbitraryBackdropGrayscaleHtml = `<div class="backdrop-filter backdrop-grayscale-[50%] ...">...</div> {/* Requires JIT & backdrop-filter enabled */} `;
 
   return (
-    <ArticleLayout title={title} links={links}>
+    <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
 
       <Helmet>
         <title>Backdrop Grayscale - Tailwind CSS Cheatsheet</title>

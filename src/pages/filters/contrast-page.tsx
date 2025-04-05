@@ -30,7 +30,8 @@ const ArbitraryContrastExample: React.FC = () => {
 // ページコンポーネント本体
 const ContrastPage: React.FC = () => {
   // ArticleLayout に渡すデータ
-  const title = 'Filters: Contrast (コントラスト)';
+  const enTitle = 'Filters: Contrast ';
+const jaTitle = 'コントラスト';
   const links = [
     {
       title: 'Tailwind CSS: Contrast',
@@ -53,7 +54,7 @@ const ContrastPage: React.FC = () => {
   const arbitraryContrastHtml = `<img class="contrast-[.85] ..." src="..." alt="...">`;
 
   return (
-    <ArticleLayout title={title} links={links}>
+    <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
 
       <Helmet>
         <title>Contrast - Tailwind CSS Cheatsheet</title>

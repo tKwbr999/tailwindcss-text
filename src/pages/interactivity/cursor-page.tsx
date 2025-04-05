@@ -122,7 +122,8 @@ const CursorExample: React.FC = () => {
 // ページコンポーネント本体
 const CursorPage: React.FC = () => {
   // ArticleLayout に渡すデータ
-  const title = 'Interactivity: Cursor (カーソル)';
+  const enTitle = 'Interactivity: Cursor ';
+const jaTitle = 'カーソル';
   const links = [
     {
       title: 'Tailwind CSS: Cursor',
@@ -143,7 +144,7 @@ const CursorPage: React.FC = () => {
   `.trim();
 
   return (
-    <ArticleLayout title={title} links={links}>
+    <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
 
       <Helmet>
         <title>Cursor - Tailwind CSS Cheatsheet</title>

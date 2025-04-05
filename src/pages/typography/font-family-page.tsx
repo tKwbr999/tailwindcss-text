@@ -19,7 +19,8 @@ const FontMonoExample: React.FC = () => {
 // ページコンポーネント本体
 const FontFamilyPage: React.FC = () => {
   // ArticleLayout に渡すデータ
-  const title = 'Typography: Font Family (フォントファミリー)';
+  const enTitle = 'Typography: Font Family ';
+const jaTitle = 'フォントファミリー';
   const links = [
     {
       title: 'Tailwind CSS: Font Family',
@@ -51,7 +52,7 @@ module.exports = {
   const customFontHtml = `<p class="font-display ...">カスタムディスプレイフォント</p>`;
 
   return (
-    <ArticleLayout title={title} links={links}>
+    <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
 
       <Helmet>
         <title>Font Family - Tailwind CSS Cheatsheet</title>

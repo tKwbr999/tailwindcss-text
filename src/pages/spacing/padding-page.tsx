@@ -53,7 +53,8 @@ const PaddingLogicalExample: React.FC = () => {
 // ページコンポーネント本体
 const PaddingPage: React.FC = () => {
   // ArticleLayout に渡すデータ
-  const title = 'Spacing: Padding (パディング)';
+  const enTitle = 'Spacing: Padding ';
+const jaTitle = 'パディング';
   const links = [
     {
       title: 'Tailwind CSS: Padding',
@@ -73,7 +74,7 @@ const PaddingPage: React.FC = () => {
   const pLogicalHtml = `<div class="ps-8 pe-4 ...">...</div>`; // v3.3+
 
   return (
-    <ArticleLayout title={title} links={links}>
+    <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
 
       <Helmet>
         <title>Padding - Tailwind CSS Cheatsheet</title>

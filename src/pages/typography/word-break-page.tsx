@@ -52,7 +52,8 @@ const BreakKeepExample: React.FC = () => {
 // ページコンポーネント本体
 const WordBreakPage: React.FC = () => {
   // ArticleLayout に渡すデータ
-  const title = 'Typography: Word Break (単語の改行)';
+  const enTitle = 'Typography: Word Break ';
+const jaTitle = '単語の改行';
   const links = [
     {
       title: 'Tailwind CSS: Word Break',
@@ -80,7 +81,7 @@ const WordBreakPage: React.FC = () => {
 
 
   return (
-    <ArticleLayout title={title} links={links}>
+    <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
 
       <Helmet>
         <title>Word Break - Tailwind CSS Cheatsheet</title>
