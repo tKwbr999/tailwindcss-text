@@ -97,7 +97,7 @@ const PlaceContentStretchExample: React.FC = () => {
 const PlaceContentPage: React.FC = () => {
   // ArticleLayout に渡すデータ
   const enTitle = 'Flexbox & Grid: Place Content ';
-const jaTitle = '複数行/列の揃えとスペース配分';
+  const jaTitle = '複数行/列の揃えとスペース配分';
   const links = [
     {
       title: 'Tailwind CSS: Place Content',
@@ -120,10 +120,12 @@ const jaTitle = '複数行/列の揃えとスペース配分';
 
   return (
     <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
-
       <Helmet>
         <title>Place Content - Tailwind CSS Cheatsheet</title>
-        <meta name="description" content="Learn about the Place Content utility in Tailwind CSS. Examples and usage details for Place Content." />
+        <meta
+          name="description"
+          content="Learn about the Place Content utility in Tailwind CSS. Examples and usage details for Place Content."
+        />
       </Helmet>
       <div className="space-y-8">
         {' '}

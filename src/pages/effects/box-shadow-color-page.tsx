@@ -42,7 +42,7 @@ const ArbitraryShadowColorExample: React.FC = () => {
 const BoxShadowColorPage: React.FC = () => {
   // ArticleLayout に渡すデータ
   const enTitle = 'Effects: Box Shadow Color ';
-const jaTitle = 'ボックスシャドウの色';
+  const jaTitle = 'ボックスシャドウの色';
   const links = [
     {
       title: 'Tailwind CSS: Box Shadow Color (v3.0+)',
@@ -67,10 +67,12 @@ const jaTitle = 'ボックスシャドウの色';
 
   return (
     <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
-
       <Helmet>
         <title>Box Shadow Color - Tailwind CSS Cheatsheet</title>
-        <meta name="description" content="Learn about the Box Shadow Color utility in Tailwind CSS. Examples and usage details for Box Shadow Color." />
+        <meta
+          name="description"
+          content="Learn about the Box Shadow Color utility in Tailwind CSS. Examples and usage details for Box Shadow Color."
+        />
       </Helmet>
       <div className="space-y-8">
         {' '}

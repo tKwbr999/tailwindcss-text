@@ -64,7 +64,7 @@ const ArbitrarySkewExample: React.FC = () => {
 const SkewPage: React.FC = () => {
   // ArticleLayout に渡すデータ
   const enTitle = 'Transforms: Skew ';
-const jaTitle = '傾斜';
+  const jaTitle = '傾斜';
   const links = [
     {
       title: 'Tailwind CSS: Skew',
@@ -97,10 +97,12 @@ const jaTitle = '傾斜';
 
   return (
     <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
-
       <Helmet>
         <title>Skew - Tailwind CSS Cheatsheet</title>
-        <meta name="description" content="Learn about the Skew utility in Tailwind CSS. Examples and usage details for Skew." />
+        <meta
+          name="description"
+          content="Learn about the Skew utility in Tailwind CSS. Examples and usage details for Skew."
+        />
       </Helmet>
       <div className="space-y-8">
         {' '}

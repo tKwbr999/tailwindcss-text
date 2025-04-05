@@ -31,7 +31,7 @@ const PlaceSelfPage: React.FC = () => {
   // ★修正: JustifySelfPage -> PlaceSelfPage
   // ArticleLayout に渡すデータ
   const enTitle = 'Flexbox & Grid: Place Self ';
-const jaTitle = '個別アイテムの揃え - Grid';
+  const jaTitle = '個別アイテムの揃え - Grid';
   const links = [
     {
       title: 'Tailwind CSS: Place Self',
@@ -52,10 +52,12 @@ const jaTitle = '個別アイテムの揃え - Grid';
 
   return (
     <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
-
       <Helmet>
         <title>Place Self - Tailwind CSS Cheatsheet</title>
-        <meta name="description" content="Learn about the Place Self utility in Tailwind CSS. Examples and usage details for Place Self." />
+        <meta
+          name="description"
+          content="Learn about the Place Self utility in Tailwind CSS. Examples and usage details for Place Self."
+        />
       </Helmet>
       <div className="space-y-8">
         {' '}

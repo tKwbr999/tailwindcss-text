@@ -133,7 +133,7 @@ const ArbitraryScrollPaddingExample: React.FC = () => {
 const ScrollPaddingPage: React.FC = () => {
   // ArticleLayout に渡すデータ
   const enTitle = 'Interactivity: Scroll Padding ';
-const jaTitle = 'スクロールパディング';
+  const jaTitle = 'スクロールパディング';
   const links = [
     {
       title: 'Tailwind CSS: Scroll Padding',
@@ -165,10 +165,12 @@ const jaTitle = 'スクロールパディング';
 
   return (
     <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
-
       <Helmet>
         <title>Scroll Padding - Tailwind CSS Cheatsheet</title>
-        <meta name="description" content="Learn about the Scroll Padding utility in Tailwind CSS. Examples and usage details for Scroll Padding." />
+        <meta
+          name="description"
+          content="Learn about the Scroll Padding utility in Tailwind CSS. Examples and usage details for Scroll Padding."
+        />
       </Helmet>
       <div className="space-y-8">
         {' '}

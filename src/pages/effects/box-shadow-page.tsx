@@ -47,7 +47,7 @@ const ArbitraryShadowExample: React.FC = () => {
 const BoxShadowPage: React.FC = () => {
   // ArticleLayout に渡すデータ
   const enTitle = 'Effects: Box Shadow ';
-const jaTitle = 'ボックスシャドウ';
+  const jaTitle = 'ボックスシャドウ';
   const links = [
     {
       title: 'Tailwind CSS: Box Shadow',
@@ -78,10 +78,12 @@ const jaTitle = 'ボックスシャドウ';
 
   return (
     <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
-
       <Helmet>
         <title>Box Shadow - Tailwind CSS Cheatsheet</title>
-        <meta name="description" content="Learn about the Box Shadow utility in Tailwind CSS. Examples and usage details for Box Shadow." />
+        <meta
+          name="description"
+          content="Learn about the Box Shadow utility in Tailwind CSS. Examples and usage details for Box Shadow."
+        />
       </Helmet>
       <div className="space-y-8">
         {' '}

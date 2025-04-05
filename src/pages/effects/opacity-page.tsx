@@ -38,7 +38,7 @@ const ArbitraryOpacityExample: React.FC = () => {
 const OpacityPage: React.FC = () => {
   // ArticleLayout に渡すデータ
   const enTitle = 'Effects: Opacity ';
-const jaTitle = '不透明度';
+  const jaTitle = '不透明度';
   const links = [
     {
       title: 'Tailwind CSS: Opacity',
@@ -62,10 +62,12 @@ const jaTitle = '不透明度';
 
   return (
     <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
-
       <Helmet>
         <title>Opacity - Tailwind CSS Cheatsheet</title>
-        <meta name="description" content="Learn about the Opacity utility in Tailwind CSS. Examples and usage details for Opacity." />
+        <meta
+          name="description"
+          content="Learn about the Opacity utility in Tailwind CSS. Examples and usage details for Opacity."
+        />
       </Helmet>
       <div className="space-y-8">
         {' '}

@@ -76,7 +76,7 @@ const GridFlowColDenseExample: React.FC = () => {
 const GridAutoFlowPage: React.FC = () => {
   // ArticleLayout に渡すデータ
   const enTitle = 'Flexbox & Grid: Grid Auto Flow ';
-const jaTitle = 'グリッド自動配置フロー';
+  const jaTitle = 'グリッド自動配置フロー';
   const links = [
     {
       title: 'Tailwind CSS: Grid Auto Flow',
@@ -124,10 +124,12 @@ const jaTitle = 'グリッド自動配置フロー';
 
   return (
     <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
-
       <Helmet>
         <title>Grid Auto Flow - Tailwind CSS Cheatsheet</title>
-        <meta name="description" content="Learn about the Grid Auto Flow utility in Tailwind CSS. Examples and usage details for Grid Auto Flow." />
+        <meta
+          name="description"
+          content="Learn about the Grid Auto Flow utility in Tailwind CSS. Examples and usage details for Grid Auto Flow."
+        />
       </Helmet>
       <div className="space-y-8">
         {' '}

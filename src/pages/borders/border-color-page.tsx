@@ -88,7 +88,7 @@ const ArbitraryBorderColorExample: React.FC = () => {
 const BorderColorPage: React.FC = () => {
   // ArticleLayout に渡すデータ
   const enTitle = 'Borders: Border Color ';
-const jaTitle = '境界線の色';
+  const jaTitle = '境界線の色';
   const links = [
     {
       title: 'Tailwind CSS: Border Color',
@@ -123,10 +123,12 @@ const jaTitle = '境界線の色';
 
   return (
     <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
-
       <Helmet>
         <title>Border Color - Tailwind CSS Cheatsheet</title>
-        <meta name="description" content="Learn about the Border Color utility in Tailwind CSS. Examples and usage details for Border Color." />
+        <meta
+          name="description"
+          content="Learn about the Border Color utility in Tailwind CSS. Examples and usage details for Border Color."
+        />
       </Helmet>
       <div className="space-y-8">
         {' '}

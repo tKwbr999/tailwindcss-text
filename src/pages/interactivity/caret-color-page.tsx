@@ -89,7 +89,7 @@ const ArbitraryCaretColorExample: React.FC = () => {
 const CaretColorPage: React.FC = () => {
   // ArticleLayout に渡すデータ
   const enTitle = 'Interactivity: Caret Color ';
-const jaTitle = 'キャレットカラー';
+  const jaTitle = 'キャレットカラー';
   const links = [
     {
       title: 'Tailwind CSS: Caret Color',
@@ -122,10 +122,12 @@ const jaTitle = 'キャレットカラー';
 
   return (
     <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
-
       <Helmet>
         <title>Caret Color - Tailwind CSS Cheatsheet</title>
-        <meta name="description" content="Learn about the Caret Color utility in Tailwind CSS. Examples and usage details for Caret Color." />
+        <meta
+          name="description"
+          content="Learn about the Caret Color utility in Tailwind CSS. Examples and usage details for Caret Color."
+        />
       </Helmet>
       <div className="space-y-8">
         {' '}

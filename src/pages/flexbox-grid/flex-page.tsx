@@ -78,7 +78,7 @@ const FlexNoneExample: React.FC = () => {
 const FlexPage: React.FC = () => {
   // ArticleLayout に渡すデータ
   const enTitle = 'Flexbox & Grid: Flex ';
-const jaTitle = 'フレックス';
+  const jaTitle = 'フレックス';
   const links = [
     {
       title: 'Tailwind CSS: Flex',
@@ -122,10 +122,12 @@ const jaTitle = 'フレックス';
 
   return (
     <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
-
       <Helmet>
         <title>Flex - Tailwind CSS Cheatsheet</title>
-        <meta name="description" content="Learn about the Flex utility in Tailwind CSS. Examples and usage details for Flex." />
+        <meta
+          name="description"
+          content="Learn about the Flex utility in Tailwind CSS. Examples and usage details for Flex."
+        />
       </Helmet>
       <div className="space-y-8">
         {' '}

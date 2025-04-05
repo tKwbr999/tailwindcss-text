@@ -88,7 +88,7 @@ const WidthFitExample: React.FC = () => {
 const WidthPage: React.FC = () => {
   // ArticleLayout に渡すデータ
   const enTitle = 'Sizing: Width ';
-const jaTitle = '幅';
+  const jaTitle = '幅';
   const links = [
     {
       title: 'Tailwind CSS: Width',
@@ -113,10 +113,12 @@ const jaTitle = '幅';
 
   return (
     <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
-
       <Helmet>
         <title>Width - Tailwind CSS Cheatsheet</title>
-        <meta name="description" content="Learn about the Width utility in Tailwind CSS. Examples and usage details for Width." />
+        <meta
+          name="description"
+          content="Learn about the Width utility in Tailwind CSS. Examples and usage details for Width."
+        />
       </Helmet>
       <div className="space-y-8">
         {' '}

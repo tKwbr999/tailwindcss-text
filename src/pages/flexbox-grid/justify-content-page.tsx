@@ -95,7 +95,7 @@ const JustifyStretchExample: React.FC = () => {
 const JustifyContentPage: React.FC = () => {
   // ArticleLayout に渡すデータ
   const enTitle = 'Flexbox & Grid: Justify Content ';
-const jaTitle = '主軸方向の揃え';
+  const jaTitle = '主軸方向の揃え';
   const links = [
     {
       title: 'Tailwind CSS: Justify Content',
@@ -118,10 +118,12 @@ const jaTitle = '主軸方向の揃え';
 
   return (
     <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
-
       <Helmet>
         <title>Justify Content - Tailwind CSS Cheatsheet</title>
-        <meta name="description" content="Learn about the Justify Content utility in Tailwind CSS. Examples and usage details for Justify Content." />
+        <meta
+          name="description"
+          content="Learn about the Justify Content utility in Tailwind CSS. Examples and usage details for Justify Content."
+        />
       </Helmet>
       <div className="space-y-8">
         {' '}

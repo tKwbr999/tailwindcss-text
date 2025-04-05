@@ -27,19 +27,18 @@ const TransitionDelayExample: React.FC = () => {
 };
 
 const ArbitraryTransitionDelayExample: React.FC = () => {
-    return (
-      <button className="transition duration-300 ease-in-out delay-[2000ms] hover:scale-110 bg-teal-500 text-white px-4 py-2 rounded">
-        Hover me (Delay 2000ms)
-      </button>
-    );
-  };
-
+  return (
+    <button className="transition duration-300 ease-in-out delay-[2000ms] hover:scale-110 bg-teal-500 text-white px-4 py-2 rounded">
+      Hover me (Delay 2000ms)
+    </button>
+  );
+};
 
 // ページコンポーネント本体
 const TransitionDelayPage: React.FC = () => {
   // ArticleLayout に渡すデータ
   const enTitle = 'Transitions & Animation: Transition Delay ';
-const jaTitle = 'トランジション遅延';
+  const jaTitle = 'トランジション遅延';
   const links = [
     {
       title: 'Tailwind CSS: Transition Delay',
@@ -65,20 +64,21 @@ const jaTitle = 'トランジション遅延';
 
   const arbitraryTransitionDelayHtml = `<button class="transition delay-[2000ms] ...">...</button>`;
 
-
   return (
     <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
-
       <Helmet>
         <title>Transition Delay - Tailwind CSS Cheatsheet</title>
-        <meta name="description" content="Learn about the Transition Delay utility in Tailwind CSS. Examples and usage details for Transition Delay." />
+        <meta
+          name="description"
+          content="Learn about the Transition Delay utility in Tailwind CSS. Examples and usage details for Transition Delay."
+        />
       </Helmet>
-      <div className="space-y-8"> {/* 元のCard間のマージンを再現 */}
+      <div className="space-y-8">
+        {' '}
+        {/* 元のCard間のマージンを再現 */}
         {/* 概要 */}
         <section>
-          <h2 className="text-2xl font-semibold text-stone-800 dark:text-stone-200 mb-4">
-              概要
-          </h2>
+          <h2 className="text-2xl font-semibold text-stone-800 dark:text-stone-200 mb-4">概要</h2>
           <div className="text-stone-700 dark:text-stone-300 space-y-4">
             <p>
               CSS トランジションが開始するまでの待機時間を制御するためのユーティリティクラスです。
@@ -88,46 +88,93 @@ const jaTitle = 'トランジション遅延';
             </p>
           </div>
         </section>
-
         {/* 基本的な使い方とパラメータ Card */}
         <section>
           <h2 className="text-2xl font-semibold text-stone-800 dark:text-stone-200 mb-4">
-              基本的な使い方とパラメータ
+            基本的な使い方とパラメータ
           </h2>
           <div className="text-stone-700 dark:text-stone-300 space-y-4">
             <p>
-              <code>delay-{'{amount}'}</code> の形式でクラスを要素に適用します。<code>transition</code> または他の <code>transition-*</code> ユーティリティと一緒に使用します。
+              <code>delay-{'{amount}'}</code> の形式でクラスを要素に適用します。
+              <code>transition</code> または他の <code>transition-*</code>{' '}
+              ユーティリティと一緒に使用します。
             </p>
-            <p><code>{'{amount}'}</code> には、ミリ秒 (ms) を示す数値を指定します。</p>
+            <p>
+              <code>{'{amount}'}</code> には、ミリ秒 (ms) を示す数値を指定します。
+            </p>
             <ul className="list-disc list-inside space-y-1 pl-4">
-              <li><strong><code>delay-0</code></strong> (0ms - デフォルト)</li>
-              <li><strong><code>delay-75</code></strong> (75ms)</li>
-              <li><strong><code>delay-100</code></strong> (100ms)</li>
-              <li><strong><code>delay-150</code></strong> (150ms)</li>
-              <li><strong><code>delay-200</code></strong> (200ms)</li>
-              <li><strong><code>delay-300</code></strong> (300ms)</li>
-              <li><strong><code>delay-500</code></strong> (500ms)</li>
-              <li><strong><code>delay-700</code></strong> (700ms)</li>
-              <li><strong><code>delay-1000</code></strong> (1000ms)</li>
+              <li>
+                <strong>
+                  <code>delay-0</code>
+                </strong>{' '}
+                (0ms - デフォルト)
+              </li>
+              <li>
+                <strong>
+                  <code>delay-75</code>
+                </strong>{' '}
+                (75ms)
+              </li>
+              <li>
+                <strong>
+                  <code>delay-100</code>
+                </strong>{' '}
+                (100ms)
+              </li>
+              <li>
+                <strong>
+                  <code>delay-150</code>
+                </strong>{' '}
+                (150ms)
+              </li>
+              <li>
+                <strong>
+                  <code>delay-200</code>
+                </strong>{' '}
+                (200ms)
+              </li>
+              <li>
+                <strong>
+                  <code>delay-300</code>
+                </strong>{' '}
+                (300ms)
+              </li>
+              <li>
+                <strong>
+                  <code>delay-500</code>
+                </strong>{' '}
+                (500ms)
+              </li>
+              <li>
+                <strong>
+                  <code>delay-700</code>
+                </strong>{' '}
+                (700ms)
+              </li>
+              <li>
+                <strong>
+                  <code>delay-1000</code>
+                </strong>{' '}
+                (1000ms)
+              </li>
             </ul>
-             <p className="mt-4">
+            <p className="mt-4">
               任意の値 (例: <code>delay-[2000ms]</code>) も使用可能です (Tailwind JIT モード)。
             </p>
           </div>
         </section>
-
         {/* 各パラメータの例 Card */}
         <section>
-          <h2 className="text-xl font-semibold text-stone-800 dark:text-stone-200 mb-2">
-              使用例
-          </h2>
-           <p className="text-stone-600 dark:text-stone-400 mb-4">
-              異なるトランジション遅延時間の適用例。ホバーしてから指定時間後にトランジションが開始します。
+          <h2 className="text-xl font-semibold text-stone-800 dark:text-stone-200 mb-2">使用例</h2>
+          <p className="text-stone-600 dark:text-stone-400 mb-4">
+            異なるトランジション遅延時間の適用例。ホバーしてから指定時間後にトランジションが開始します。
           </p>
           <div className="space-y-6">
             {/* Standard Transition Delay */}
             <div>
-              <h3 className="font-semibold text-stone-700 dark:text-stone-300 mb-2">標準のトランジション遅延時間</h3>
+              <h3 className="font-semibold text-stone-700 dark:text-stone-300 mb-2">
+                標準のトランジション遅延時間
+              </h3>
               <pre className="bg-stone-200 dark:bg-stone-700 p-2 rounded overflow-x-auto text-sm text-stone-800 dark:text-stone-200 mb-2">
                 <code className="language-html">{transitionDelayHtml}</code>
               </pre>
@@ -143,14 +190,14 @@ const jaTitle = 'トランジション遅延';
             </div>
           </div>
         </section>
-
         {/* レスポンシブと状態変化 Card */}
         <section>
           <h2 className="text-2xl font-semibold text-stone-800 dark:text-stone-200 mb-2">
-              レスポンシブと状態変化
+            レスポンシブと状態変化
           </h2>
           <p className="text-stone-600 dark:text-stone-400 mb-4">
-              トランジション遅延時間は通常、要素の基本スタイルとして定義されます。ブレークポイント (<code>md:delay-500</code> など) で遅延時間を変更することも可能です。
+            トランジション遅延時間は通常、要素の基本スタイルとして定義されます。ブレークポイント (
+            <code>md:delay-500</code> など) で遅延時間を変更することも可能です。
           </p>
           <div>
             <p className="text-stone-700 dark:text-stone-300 mb-4">
@@ -158,30 +205,35 @@ const jaTitle = 'トランジション遅延';
             </p>
             {/* コード表示 */}
             <pre className="bg-stone-200 dark:bg-stone-700 p-4 rounded overflow-x-auto text-sm text-stone-800 dark:text-stone-200">
-              <code className="language-html">{`
+              <code className="language-html">
+                {`
 <button class="transition-colors duration-300 ease-in-out delay-500 bg-blue-500 hover:bg-red-500 ...">
   Hover Me (500ms delay)
 </button>
-              `.trim()}</code>
+              `.trim()}
+              </code>
             </pre>
           </div>
         </section>
-
         {/* 関連ユーティリティ Card */}
         <section>
           <h2 className="text-2xl font-semibold text-stone-800 dark:text-stone-200 mb-4">
-              関連ユーティリティ
+            関連ユーティリティ
           </h2>
           <div className="text-stone-700 dark:text-stone-300 space-y-4">
             <ul className="list-disc list-inside space-y-1 pl-4">
-               <li>
-                <code>transition-property-*</code> (<code>transition</code>, <code>transition-colors</code> など): どのプロパティをトランジションさせるかを指定します。
+              <li>
+                <code>transition-property-*</code> (<code>transition</code>,{' '}
+                <code>transition-colors</code> など):
+                どのプロパティをトランジションさせるかを指定します。
               </li>
               <li>
-                <code>transition-duration-*</code> (<code>duration-*</code>): トランジションの継続時間を設定します。
+                <code>transition-duration-*</code> (<code>duration-*</code>):
+                トランジションの継続時間を設定します。
               </li>
               <li>
-                <code>transition-timing-function-*</code> (<code>ease-*</code>): トランジションの速度カーブを設定します。
+                <code>transition-timing-function-*</code> (<code>ease-*</code>):
+                トランジションの速度カーブを設定します。
               </li>
             </ul>
           </div>

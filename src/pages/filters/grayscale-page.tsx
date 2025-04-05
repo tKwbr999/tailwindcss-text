@@ -36,7 +36,7 @@ const ArbitraryGrayscaleExample: React.FC = () => {
 const GrayscalePage: React.FC = () => {
   // ArticleLayout に渡すデータ
   const enTitle = 'Filters: Grayscale ';
-const jaTitle = 'グレースケール';
+  const jaTitle = 'グレースケール';
   const links = [
     {
       title: 'Tailwind CSS: Grayscale',
@@ -57,10 +57,12 @@ const jaTitle = 'グレースケール';
 
   return (
     <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
-
       <Helmet>
         <title>Grayscale - Tailwind CSS Cheatsheet</title>
-        <meta name="description" content="Learn about the Grayscale utility in Tailwind CSS. Examples and usage details for Grayscale." />
+        <meta
+          name="description"
+          content="Learn about the Grayscale utility in Tailwind CSS. Examples and usage details for Grayscale."
+        />
       </Helmet>
       <div className="space-y-8">
         {' '}

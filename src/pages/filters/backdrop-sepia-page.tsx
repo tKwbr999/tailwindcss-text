@@ -56,7 +56,7 @@ const ArbitraryBackdropSepiaExample: React.FC = () => {
 const BackdropSepiaPage: React.FC = () => {
   // ArticleLayout に渡すデータ
   const enTitle = 'Filters: Backdrop Sepia ';
-const jaTitle = '背景セピア';
+  const jaTitle = '背景セピア';
   const links = [
     {
       title: 'Tailwind CSS: Backdrop Sepia',
@@ -81,10 +81,12 @@ const jaTitle = '背景セピア';
 
   return (
     <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
-
       <Helmet>
         <title>Backdrop Sepia - Tailwind CSS Cheatsheet</title>
-        <meta name="description" content="Learn about the Backdrop Sepia utility in Tailwind CSS. Examples and usage details for Backdrop Sepia." />
+        <meta
+          name="description"
+          content="Learn about the Backdrop Sepia utility in Tailwind CSS. Examples and usage details for Backdrop Sepia."
+        />
       </Helmet>
       <div className="space-y-8">
         {' '}

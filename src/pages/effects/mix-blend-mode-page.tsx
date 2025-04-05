@@ -31,7 +31,7 @@ const BlendModeExample: React.FC<{ blendMode: string; label: string }> = ({ blen
 const MixBlendModePage: React.FC = () => {
   // ArticleLayout に渡すデータ
   const enTitle = 'Effects: Mix Blend Mode ';
-const jaTitle = '混合ブレンドモード';
+  const jaTitle = '混合ブレンドモード';
   const links = [
     {
       title: 'Tailwind CSS: Mix Blend Mode',
@@ -51,10 +51,12 @@ const jaTitle = '混合ブレンドモード';
 
   return (
     <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
-
       <Helmet>
         <title>Mix Blend Mode - Tailwind CSS Cheatsheet</title>
-        <meta name="description" content="Learn about the Mix Blend Mode utility in Tailwind CSS. Examples and usage details for Mix Blend Mode." />
+        <meta
+          name="description"
+          content="Learn about the Mix Blend Mode utility in Tailwind CSS. Examples and usage details for Mix Blend Mode."
+        />
       </Helmet>
       <div className="space-y-8">
         {' '}

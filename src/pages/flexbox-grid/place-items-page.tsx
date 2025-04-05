@@ -59,7 +59,7 @@ const PlaceItemsStretchExample: React.FC = () => {
 const PlaceItemsPage: React.FC = () => {
   // ArticleLayout に渡すデータ
   const enTitle = 'Flexbox & Grid: Place Items ';
-const jaTitle = 'アイテムの揃え - Grid';
+  const jaTitle = 'アイテムの揃え - Grid';
   const links = [
     {
       title: 'Tailwind CSS: Place Items',
@@ -79,10 +79,12 @@ const jaTitle = 'アイテムの揃え - Grid';
 
   return (
     <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
-
       <Helmet>
         <title>Place Items - Tailwind CSS Cheatsheet</title>
-        <meta name="description" content="Learn about the Place Items utility in Tailwind CSS. Examples and usage details for Place Items." />
+        <meta
+          name="description"
+          content="Learn about the Place Items utility in Tailwind CSS. Examples and usage details for Place Items."
+        />
       </Helmet>
       <div className="space-y-8">
         {' '}

@@ -97,7 +97,7 @@ const AlignSuperExample: React.FC = () => {
 const VerticalAlignPage: React.FC = () => {
   // ArticleLayout に渡すデータ
   const enTitle = 'Typography: Vertical Align ';
-const jaTitle = '垂直方向の揃え';
+  const jaTitle = '垂直方向の揃え';
   const links = [
     {
       title: 'Tailwind CSS: Vertical Align',
@@ -121,10 +121,12 @@ const jaTitle = '垂直方向の揃え';
 
   return (
     <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
-
       <Helmet>
         <title>Vertical Align - Tailwind CSS Cheatsheet</title>
-        <meta name="description" content="Learn about the Vertical Align utility in Tailwind CSS. Examples and usage details for Vertical Align." />
+        <meta
+          name="description"
+          content="Learn about the Vertical Align utility in Tailwind CSS. Examples and usage details for Vertical Align."
+        />
       </Helmet>
       <div className="space-y-8">
         {' '}

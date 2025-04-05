@@ -128,7 +128,7 @@ const ScrollSnapTypeExample: React.FC = () => {
 const ScrollSnapTypePage: React.FC = () => {
   // ArticleLayout に渡すデータ
   const enTitle = 'Interactivity: Scroll Snap Type ';
-const jaTitle = 'スクロールスナップタイプ';
+  const jaTitle = 'スクロールスナップタイプ';
   const links = [
     {
       title: 'Tailwind CSS: Scroll Snap Type',
@@ -163,10 +163,12 @@ const jaTitle = 'スクロールスナップタイプ';
 
   return (
     <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
-
       <Helmet>
         <title>Scroll Snap Type - Tailwind CSS Cheatsheet</title>
-        <meta name="description" content="Learn about the Scroll Snap Type utility in Tailwind CSS. Examples and usage details for Scroll Snap Type." />
+        <meta
+          name="description"
+          content="Learn about the Scroll Snap Type utility in Tailwind CSS. Examples and usage details for Scroll Snap Type."
+        />
       </Helmet>
       <div className="space-y-8">
         {' '}

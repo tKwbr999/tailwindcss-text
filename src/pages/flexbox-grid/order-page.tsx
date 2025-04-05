@@ -62,7 +62,7 @@ const OrderNoneExample: React.FC = () => {
 const OrderPage: React.FC = () => {
   // ArticleLayout に渡すデータ
   const enTitle = 'Flexbox & Grid: Order ';
-const jaTitle = '順序';
+  const jaTitle = '順序';
   const links = [
     {
       title: 'Tailwind CSS: Order',
@@ -101,10 +101,12 @@ const jaTitle = '順序';
 
   return (
     <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
-
       <Helmet>
         <title>Order - Tailwind CSS Cheatsheet</title>
-        <meta name="description" content="Learn about the Order utility in Tailwind CSS. Examples and usage details for Order." />
+        <meta
+          name="description"
+          content="Learn about the Order utility in Tailwind CSS. Examples and usage details for Order."
+        />
       </Helmet>
       <div className="space-y-8">
         {' '}

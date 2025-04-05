@@ -77,7 +77,7 @@ const ArbitraryBackdropHueRotateExample: React.FC = () => {
 const BackdropHueRotatePage: React.FC = () => {
   // ArticleLayout に渡すデータ
   const enTitle = 'Filters: Backdrop Hue Rotate ';
-const jaTitle = '背景の色相回転';
+  const jaTitle = '背景の色相回転';
   const links = [
     {
       title: 'Tailwind CSS: Backdrop Hue Rotate',
@@ -104,10 +104,12 @@ const jaTitle = '背景の色相回転';
 
   return (
     <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
-
       <Helmet>
         <title>Backdrop Hue Rotate - Tailwind CSS Cheatsheet</title>
-        <meta name="description" content="Learn about the Backdrop Hue Rotate utility in Tailwind CSS. Examples and usage details for Backdrop Hue Rotate." />
+        <meta
+          name="description"
+          content="Learn about the Backdrop Hue Rotate utility in Tailwind CSS. Examples and usage details for Backdrop Hue Rotate."
+        />
       </Helmet>
       <div className="space-y-8">
         {' '}

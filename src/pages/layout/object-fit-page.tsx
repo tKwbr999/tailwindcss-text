@@ -127,11 +127,13 @@ const ObjectFitPage: React.FC = () => {
   ];
 
   return (
-    <ArticleLayout title="Layout: Object Fit (置換要素のフィット方法)" links={links}>
-
+    <ArticleLayout enTitle="Layout: Object Fit" jaTitle="置換要素のフィット方法" links={links}>
       <Helmet>
         <title>Layout: Object Fit - Tailwind CSS Cheatsheet</title>
-        <meta name="description" content="Learn about the Layout: Object Fit utility in Tailwind CSS. Examples and usage details for Layout: Object Fit." />
+        <meta
+          name="description"
+          content="Learn about the Layout: Object Fit utility in Tailwind CSS. Examples and usage details for Layout: Object Fit."
+        />
       </Helmet>
       {/* 概要 Card */}
       <Card>

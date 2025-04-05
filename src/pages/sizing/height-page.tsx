@@ -98,7 +98,7 @@ const HeightMinMaxAutoFitExample: React.FC = () => {
 const HeightPage: React.FC = () => {
   // ArticleLayout に渡すデータ
   const enTitle = 'Sizing: Height ';
-const jaTitle = '高さ';
+  const jaTitle = '高さ';
   const links = [
     {
       title: 'Tailwind CSS: Height',
@@ -123,10 +123,12 @@ const jaTitle = '高さ';
 
   return (
     <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
-
       <Helmet>
         <title>Height - Tailwind CSS Cheatsheet</title>
-        <meta name="description" content="Learn about the Height utility in Tailwind CSS. Examples and usage details for Height." />
+        <meta
+          name="description"
+          content="Learn about the Height utility in Tailwind CSS. Examples and usage details for Height."
+        />
       </Helmet>
       <div className="space-y-8">
         {' '}

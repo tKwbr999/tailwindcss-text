@@ -32,8 +32,9 @@ const ArticleLayout: React.FC<ArticleLayoutProps> = ({ enTitle, jaTitle, links, 
       <div className="max-w-4xl mx-auto bg-stone-100 dark:bg-stone-800 rounded-lg shadow-md p-6 space-y-8">
         {/* ページタイトル */}
         <h1 className="text-3xl font-bold text-center text-stone-900 dark:text-stone-100 leading-tight">
-          <span className="block">{enTitle}</span>
-          <span className="block text-lg font-medium">{jaTitle}</span> {/* 日本語は少し小さく */}
+          {enTitle}
+          <br />
+          <span className="text-lg font-medium">{jaTitle}</span> {/* 日本語は少し小さく */}
         </h1>
         {/* 参照リンク */}
         <ReferenceLinks links={links} />

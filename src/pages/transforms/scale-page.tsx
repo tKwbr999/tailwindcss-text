@@ -89,7 +89,7 @@ const ArbitraryScaleExample: React.FC = () => {
 const ScalePage: React.FC = () => {
   // ArticleLayout に渡すデータ
   const enTitle = 'Transforms: Scale ';
-const jaTitle = '拡大縮小';
+  const jaTitle = '拡大縮小';
   const links = [
     {
       title: 'Tailwind CSS: Scale',
@@ -117,10 +117,12 @@ const jaTitle = '拡大縮小';
 
   return (
     <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
-
       <Helmet>
         <title>Scale - Tailwind CSS Cheatsheet</title>
-        <meta name="description" content="Learn about the Scale utility in Tailwind CSS. Examples and usage details for Scale." />
+        <meta
+          name="description"
+          content="Learn about the Scale utility in Tailwind CSS. Examples and usage details for Scale."
+        />
       </Helmet>
       <div className="space-y-8">
         {' '}

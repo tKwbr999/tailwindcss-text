@@ -27,7 +27,7 @@ const BgBlendModeExample: React.FC<{ blendMode: string; label: string }> = ({
 const BackgroundBlendModePage: React.FC = () => {
   // ArticleLayout に渡すデータ
   const enTitle = 'Effects: Background Blend Mode ';
-const jaTitle = '背景ブレンドモード';
+  const jaTitle = '背景ブレンドモード';
   const links = [
     {
       title: 'Tailwind CSS: Background Blend Mode',
@@ -47,10 +47,12 @@ const jaTitle = '背景ブレンドモード';
 
   return (
     <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
-
       <Helmet>
         <title>Background Blend Mode - Tailwind CSS Cheatsheet</title>
-        <meta name="description" content="Learn about the Background Blend Mode utility in Tailwind CSS. Examples and usage details for Background Blend Mode." />
+        <meta
+          name="description"
+          content="Learn about the Background Blend Mode utility in Tailwind CSS. Examples and usage details for Background Blend Mode."
+        />
       </Helmet>
       <div className="space-y-8">
         {' '}

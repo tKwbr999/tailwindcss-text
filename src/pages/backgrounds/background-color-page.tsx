@@ -62,7 +62,7 @@ const ArbitraryBgColorExample: React.FC = () => {
 const BackgroundColorPage: React.FC = () => {
   // ArticleLayout に渡すデータ
   const enTitle = 'Backgrounds: Background Color ';
-const jaTitle = '背景色';
+  const jaTitle = '背景色';
   const links = [
     {
       title: 'Tailwind CSS: Background Color',
@@ -89,10 +89,12 @@ const jaTitle = '背景色';
 
   return (
     <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
-
       <Helmet>
         <title>Background Color - Tailwind CSS Cheatsheet</title>
-        <meta name="description" content="Learn about the Background Color utility in Tailwind CSS. Examples and usage details for Background Color." />
+        <meta
+          name="description"
+          content="Learn about the Background Color utility in Tailwind CSS. Examples and usage details for Background Color."
+        />
       </Helmet>
       <div className="space-y-8">
         {' '}

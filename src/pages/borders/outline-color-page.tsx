@@ -73,7 +73,7 @@ const ArbitraryOutlineColorExample: React.FC = () => {
 const OutlineColorPage: React.FC = () => {
   // ArticleLayout に渡すデータ
   const enTitle = 'Borders: Outline Color ';
-const jaTitle = 'アウトラインの色';
+  const jaTitle = 'アウトラインの色';
   const links = [
     {
       title: 'Tailwind CSS: Outline Color',
@@ -97,10 +97,12 @@ const jaTitle = 'アウトラインの色';
 
   return (
     <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
-
       <Helmet>
         <title>Outline Color - Tailwind CSS Cheatsheet</title>
-        <meta name="description" content="Learn about the Outline Color utility in Tailwind CSS. Examples and usage details for Outline Color." />
+        <meta
+          name="description"
+          content="Learn about the Outline Color utility in Tailwind CSS. Examples and usage details for Outline Color."
+        />
       </Helmet>
       <div className="space-y-8">
         {' '}

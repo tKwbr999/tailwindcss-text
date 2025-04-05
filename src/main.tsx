@@ -19,9 +19,15 @@ const root = createRoot(rootElement);
 
 // アプリケーションをレンダリング
 root.render(
-  <StrictMode> {/* 潜在的な問題を検出するための StrictMode */}
-    <HashRouter> {/* ルーティング機能を提供 */}
-      <HelmetProvider> {/* HelmetProvider で App をラップ */}
+  <StrictMode>
+    {' '}
+    {/* 潜在的な問題を検出するための StrictMode */}
+    <HashRouter>
+      {' '}
+      {/* ルーティング機能を提供 */}
+      <HelmetProvider>
+        {' '}
+        {/* HelmetProvider で App をラップ */}
         <App /> {/* アプリケーション本体 */}
       </HelmetProvider>
     </HashRouter>

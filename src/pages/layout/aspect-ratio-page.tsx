@@ -143,10 +143,13 @@ module.exports = {
   ];
 
   return (
-    <ArticleLayout title="Layout: Aspect Ratio (アスペクト比)" links={links}>
+    <ArticleLayout enTitle="Layout: Aspect Ratio" jaTitle="アスペクト比" links={links}>
       <Helmet>
         <title>Aspect Ratio - Tailwind CSS Cheatsheet</title>
-        <meta name="description" content="Learn how to control the aspect ratio of elements using Tailwind CSS utility classes like aspect-square, aspect-video, and custom ratios." />
+        <meta
+          name="description"
+          content="Learn how to control the aspect ratio of elements using Tailwind CSS utility classes like aspect-square, aspect-video, and custom ratios."
+        />
       </Helmet>
       {/* 概要 Card */}
       <Card>

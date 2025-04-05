@@ -1,6 +1,6 @@
-import { Helmet } from 'react-helmet-async'; // Helmet をインポート
 import ArticleLayout from '@/components/layout/ArticleLayout';
 import React from 'react';
+import { Helmet } from 'react-helmet-async'; // Helmet をインポート
 
 // 各コードサンプルに対応するReact実装コンポーネント
 
@@ -33,7 +33,7 @@ const ScreenReadersExample: React.FC = () => {
 const ScreenReadersPage: React.FC = () => {
   // ArticleLayout に渡すデータ
   const enTitle = 'Accessibility: Screen Readers ';
-const jaTitle = 'スクリーンリーダー';
+  const jaTitle = 'スクリーンリーダー';
   const links = [
     {
       title: 'Tailwind CSS: Screen Readers',
@@ -171,10 +171,12 @@ const jaTitle = 'スクリーンリーダー';
 
   return (
     <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
-
       <Helmet>
         <title>Screen Readers - Tailwind CSS Cheatsheet</title>
-        <meta name="description" content="Learn about the Screen Readers utility in Tailwind CSS. Examples and usage details for Screen Readers." />
+        <meta
+          name="description"
+          content="Learn about the Screen Readers utility in Tailwind CSS. Examples and usage details for Screen Readers."
+        />
       </Helmet>
       {content}
     </ArticleLayout>

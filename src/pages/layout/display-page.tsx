@@ -159,11 +159,13 @@ const DisplayPage: React.FC = () => {
   ];
 
   return (
-    <ArticleLayout title="Layout: Display (表示タイプ)" links={links}>
-
+    <ArticleLayout enTitle="Layout: Display" jaTitle="表示タイプ" links={links}>
       <Helmet>
         <title>Layout: Display - Tailwind CSS Cheatsheet</title>
-        <meta name="description" content="Learn about the Layout: Display utility in Tailwind CSS. Examples and usage details for Layout: Display." />
+        <meta
+          name="description"
+          content="Learn about the Layout: Display utility in Tailwind CSS. Examples and usage details for Layout: Display."
+        />
       </Helmet>
       {/* 概要 Card */}
       <Card>

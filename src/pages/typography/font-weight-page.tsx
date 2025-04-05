@@ -20,12 +20,11 @@ const FontWeightExample: React.FC = () => {
   );
 };
 
-
 // ページコンポーネント本体
 const FontWeightPage: React.FC = () => {
   // ArticleLayout に渡すデータ
   const enTitle = 'Typography: Font Weight ';
-const jaTitle = 'フォントの太さ';
+  const jaTitle = 'フォントの太さ';
   const links = [
     {
       title: 'Tailwind CSS: Font Weight',
@@ -48,34 +47,35 @@ const jaTitle = 'フォントの太さ';
 <p class="font-black ...">Black</p>
   `.trim();
 
-
   return (
     <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
-
       <Helmet>
         <title>Font Weight - Tailwind CSS Cheatsheet</title>
-        <meta name="description" content="Learn about the Font Weight utility in Tailwind CSS. Examples and usage details for Font Weight." />
+        <meta
+          name="description"
+          content="Learn about the Font Weight utility in Tailwind CSS. Examples and usage details for Font Weight."
+        />
       </Helmet>
-      <div className="space-y-8"> {/* 元のCard間のマージンを再現 */}
+      <div className="space-y-8">
+        {' '}
+        {/* 元のCard間のマージンを再現 */}
         {/* 概要 */}
         <section>
-          <h2 className="text-2xl font-semibold text-stone-800 dark:text-stone-200 mb-4">
-              概要
-          </h2>
+          <h2 className="text-2xl font-semibold text-stone-800 dark:text-stone-200 mb-4">概要</h2>
           <div className="text-stone-700 dark:text-stone-300 space-y-4">
             <p>
-              テキストのフォントの太さ (weight) を制御するためのユーティリティクラスです。Thin から Black までの様々な太さを指定できます。
+              テキストのフォントの太さ (weight) を制御するためのユーティリティクラスです。Thin から
+              Black までの様々な太さを指定できます。
             </p>
             <p>
               CSS の <code>font-weight</code> プロパティを制御します。
             </p>
           </div>
         </section>
-
         {/* 基本的な使い方とパラメータ Card */}
         <section>
           <h2 className="text-2xl font-semibold text-stone-800 dark:text-stone-200 mb-4">
-              基本的な使い方とパラメータ
+            基本的な使い方とパラメータ
           </h2>
           <div className="text-stone-700 dark:text-stone-300 space-y-4">
             <p>
@@ -83,33 +83,74 @@ const jaTitle = 'フォントの太さ';
             </p>
             <p>デフォルトで用意されている太さ:</p>
             <ul className="list-disc list-inside space-y-1 pl-4 columns-2">
-              <li><strong><code>font-thin</code></strong> (100)</li>
-              <li><strong><code>font-extralight</code></strong> (200)</li>
-              <li><strong><code>font-light</code></strong> (300)</li>
-              <li><strong><code>font-normal</code></strong> (400 - デフォルト)</li>
-              <li><strong><code>font-medium</code></strong> (500)</li>
-              <li><strong><code>font-semibold</code></strong> (600)</li>
-              <li><strong><code>font-bold</code></strong> (700)</li>
-              <li><strong><code>font-extrabold</code></strong> (800)</li>
-              <li><strong><code>font-black</code></strong> (900)</li>
+              <li>
+                <strong>
+                  <code>font-thin</code>
+                </strong>{' '}
+                (100)
+              </li>
+              <li>
+                <strong>
+                  <code>font-extralight</code>
+                </strong>{' '}
+                (200)
+              </li>
+              <li>
+                <strong>
+                  <code>font-light</code>
+                </strong>{' '}
+                (300)
+              </li>
+              <li>
+                <strong>
+                  <code>font-normal</code>
+                </strong>{' '}
+                (400 - デフォルト)
+              </li>
+              <li>
+                <strong>
+                  <code>font-medium</code>
+                </strong>{' '}
+                (500)
+              </li>
+              <li>
+                <strong>
+                  <code>font-semibold</code>
+                </strong>{' '}
+                (600)
+              </li>
+              <li>
+                <strong>
+                  <code>font-bold</code>
+                </strong>{' '}
+                (700)
+              </li>
+              <li>
+                <strong>
+                  <code>font-extrabold</code>
+                </strong>{' '}
+                (800)
+              </li>
+              <li>
+                <strong>
+                  <code>font-black</code>
+                </strong>{' '}
+                (900)
+              </li>
             </ul>
-             <p className="mt-4">
+            <p className="mt-4">
               数値は CSS の <code>font-weight</code> 値に対応します。
             </p>
-             <p>
-              任意の値 (例: <code>font-[550]</code>) も使用可能です (Tailwind JIT モード)。ただし、使用するフォントがその太さをサポートしている必要があります。
+            <p>
+              任意の値 (例: <code>font-[550]</code>) も使用可能です (Tailwind JIT
+              モード)。ただし、使用するフォントがその太さをサポートしている必要があります。
             </p>
           </div>
         </section>
-
         {/* 使用例 Card */}
         <section>
-          <h2 className="text-xl font-semibold text-stone-800 dark:text-stone-200 mb-2">
-              使用例
-          </h2>
-           <p className="text-stone-600 dark:text-stone-400 mb-4">
-              異なるフォントの太さの適用例。
-          </p>
+          <h2 className="text-xl font-semibold text-stone-800 dark:text-stone-200 mb-2">使用例</h2>
+          <p className="text-stone-600 dark:text-stone-400 mb-4">異なるフォントの太さの適用例。</p>
           <div>
             <pre className="bg-stone-200 dark:bg-stone-700 p-2 rounded overflow-x-auto text-sm text-stone-800 dark:text-stone-200 mb-2">
               <code className="language-html">{fontWeightHtml}</code>
@@ -117,62 +158,64 @@ const jaTitle = 'フォントの太さ';
             <FontWeightExample />
           </div>
         </section>
-
         {/* レスポンシブ Card */}
         <section>
           <h2 className="text-2xl font-semibold text-stone-800 dark:text-stone-200 mb-2">
-              レスポンシブ
+            レスポンシブ
           </h2>
           <p className="text-stone-600 dark:text-stone-400 mb-4">
-              ブレークポイントプレフィックス (<code>sm:</code>, <code>md:</code> など) を使って、画面サイズに応じてフォントの太さを変更できます。
+            ブレークポイントプレフィックス (<code>sm:</code>, <code>md:</code> など)
+            を使って、画面サイズに応じてフォントの太さを変更できます。
           </p>
           <div>
             <p className="text-stone-700 dark:text-stone-300 mb-4">
-              例えば、<code>font-normal md:font-bold</code> はデフォルトで通常の太さ、中程度の画面サイズ以上で太字になります。
+              例えば、<code>font-normal md:font-bold</code>{' '}
+              はデフォルトで通常の太さ、中程度の画面サイズ以上で太字になります。
             </p>
             {/* コード表示 */}
             <pre className="bg-stone-200 dark:bg-stone-700 p-4 rounded overflow-x-auto text-sm text-stone-800 dark:text-stone-200">
-              <code className="language-html">{`
+              <code className="language-html">
+                {`
 <p class="font-normal md:font-bold ...">
   Responsive Font Weight
 </p>
-              `.trim()}</code>
+              `.trim()}
+              </code>
             </pre>
           </div>
         </section>
-
         {/* 注意点 Card */}
         <section>
-          <h2 className="text-2xl font-semibold text-stone-800 dark:text-stone-200 mb-4">
-              注意点
-          </h2>
+          <h2 className="text-2xl font-semibold text-stone-800 dark:text-stone-200 mb-4">注意点</h2>
           <div className="text-stone-700 dark:text-stone-300 space-y-4">
             <ul className="list-disc list-inside space-y-1 pl-4">
               <li>
-                指定した太さが使用するフォントファミリーで利用可能である必要があります。利用できない場合、ブラウザは最も近い利用可能な太さで表示しようとするか、太さを合成しようとすることがあります (faux bold)。
+                指定した太さが使用するフォントファミリーで利用可能である必要があります。利用できない場合、ブラウザは最も近い利用可能な太さで表示しようとするか、太さを合成しようとすることがあります
+                (faux bold)。
               </li>
               <li>
-                Web フォントを使用する場合、必要な太さのフォントファイルをすべて読み込んでいることを確認してください。
+                Web
+                フォントを使用する場合、必要な太さのフォントファイルをすべて読み込んでいることを確認してください。
               </li>
             </ul>
           </div>
         </section>
-
         {/* 関連ユーティリティ Card */}
         <section>
           <h2 className="text-2xl font-semibold text-stone-800 dark:text-stone-200 mb-4">
-              関連ユーティリティ
+            関連ユーティリティ
           </h2>
           <div className="text-stone-700 dark:text-stone-300 space-y-4">
             <ul className="list-disc list-inside space-y-1 pl-4">
-               <li>
+              <li>
                 <code>font-family</code> (<code>font-*</code>): フォントファミリーを設定します。
               </li>
               <li>
                 <code>font-size</code> (<code>text-*</code>): フォントサイズを設定します。
               </li>
               <li>
-                <code>font-style</code> (<code>italic</code>, <code>not-italic</code>): フォントスタイルを設定します。
+                <code>font-style</code> (<code>italic</code>, <code>not-italic</code>):
+                フォントスタイルを設定します。
               </li>
             </ul>
           </div>

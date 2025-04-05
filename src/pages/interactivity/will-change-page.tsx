@@ -60,7 +60,7 @@ const WillChangeExample: React.FC = () => {
 const WillChangePage: React.FC = () => {
   // ArticleLayout に渡すデータ
   const enTitle = 'Interactivity: Will Change ';
-const jaTitle = '変更予測';
+  const jaTitle = '変更予測';
   const links = [
     {
       title: 'Tailwind CSS: Will Change',
@@ -89,10 +89,12 @@ const jaTitle = '変更予測';
 
   return (
     <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
-
       <Helmet>
         <title>Will Change - Tailwind CSS Cheatsheet</title>
-        <meta name="description" content="Learn about the Will Change utility in Tailwind CSS. Examples and usage details for Will Change." />
+        <meta
+          name="description"
+          content="Learn about the Will Change utility in Tailwind CSS. Examples and usage details for Will Change."
+        />
       </Helmet>
       <div className="space-y-8">
         {' '}

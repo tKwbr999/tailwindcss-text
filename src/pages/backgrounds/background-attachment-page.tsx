@@ -87,7 +87,7 @@ const BgScrollExample: React.FC = () => {
 const BackgroundAttachmentPage: React.FC = () => {
   // ArticleLayout に渡すデータ
   const enTitle = 'Backgrounds: Background Attachment ';
-const jaTitle = '背景の固定';
+  const jaTitle = '背景の固定';
   const links = [
     {
       title: 'Tailwind CSS: Background Attachment',
@@ -106,10 +106,12 @@ const jaTitle = '背景の固定';
 
   return (
     <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
-
       <Helmet>
         <title>Background Attachment - Tailwind CSS Cheatsheet</title>
-        <meta name="description" content="Learn about the Background Attachment utility in Tailwind CSS. Examples and usage details for Background Attachment." />
+        <meta
+          name="description"
+          content="Learn about the Background Attachment utility in Tailwind CSS. Examples and usage details for Background Attachment."
+        />
       </Helmet>
       <div className="space-y-8">
         {' '}

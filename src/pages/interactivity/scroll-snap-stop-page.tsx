@@ -60,7 +60,7 @@ const ScrollSnapStopExample: React.FC = () => {
 const ScrollSnapStopPage: React.FC = () => {
   // ArticleLayout に渡すデータ
   const enTitle = 'Interactivity: Scroll Snap Stop ';
-const jaTitle = 'スクロールスナップ停止';
+  const jaTitle = 'スクロールスナップ停止';
   const links = [
     {
       title: 'Tailwind CSS: Scroll Snap Stop',
@@ -89,10 +89,12 @@ const jaTitle = 'スクロールスナップ停止';
 
   return (
     <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
-
       <Helmet>
         <title>Scroll Snap Stop - Tailwind CSS Cheatsheet</title>
-        <meta name="description" content="Learn about the Scroll Snap Stop utility in Tailwind CSS. Examples and usage details for Scroll Snap Stop." />
+        <meta
+          name="description"
+          content="Learn about the Scroll Snap Stop utility in Tailwind CSS. Examples and usage details for Scroll Snap Stop."
+        />
       </Helmet>
       <div className="space-y-8">
         {' '}

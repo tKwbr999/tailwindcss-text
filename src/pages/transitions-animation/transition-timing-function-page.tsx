@@ -24,29 +24,30 @@ const TransitionTimingFunctionExample: React.FC = () => {
 };
 
 const ArbitraryTransitionTimingFunctionExample: React.FC = () => {
-    // cubic-bezier 関数は CSS で直接指定するか、Tailwind の設定でカスタムする必要があります。
-    return (
-      <div className="space-y-2">
-         <p className="text-sm text-stone-600 dark:text-stone-400">
-          任意の <code>cubic-bezier()</code> 値は通常 <code>tailwind.config.js</code> で設定します。
-        </p>
-        <button
-          className="transition duration-500 hover:translate-x-10 bg-teal-500 text-white px-4 py-2 rounded w-32 text-left"
-          style={{ transitionTimingFunction: 'cubic-bezier(0.1, 0.7, 1.0, 0.1)' }} // インラインスタイルで例示
-        >
-          cubic-bezier(...)
-        </button>
-         <p className="text-xs text-gray-500">(上記ボタンはインラインスタイルで cubic-bezier を適用)</p>
-      </div>
-    );
-  };
-
+  // cubic-bezier 関数は CSS で直接指定するか、Tailwind の設定でカスタムする必要があります。
+  return (
+    <div className="space-y-2">
+      <p className="text-sm text-stone-600 dark:text-stone-400">
+        任意の <code>cubic-bezier()</code> 値は通常 <code>tailwind.config.js</code> で設定します。
+      </p>
+      <button
+        className="transition duration-500 hover:translate-x-10 bg-teal-500 text-white px-4 py-2 rounded w-32 text-left"
+        style={{ transitionTimingFunction: 'cubic-bezier(0.1, 0.7, 1.0, 0.1)' }} // インラインスタイルで例示
+      >
+        cubic-bezier(...)
+      </button>
+      <p className="text-xs text-gray-500">
+        (上記ボタンはインラインスタイルで cubic-bezier を適用)
+      </p>
+    </div>
+  );
+};
 
 // ページコンポーネント本体
 const TransitionTimingFunctionPage: React.FC = () => {
   // ArticleLayout に渡すデータ
   const enTitle = 'Transitions & Animation: Transition Timing Function ';
-const jaTitle = 'イージング関数';
+  const jaTitle = 'イージング関数';
   const links = [
     {
       title: 'Tailwind CSS: Transition Timing Function',
@@ -75,63 +76,87 @@ const jaTitle = 'イージング関数';
 <button class="transition ease-[cubic-bezier(0.1,0.7,1.0,0.1)] ...">...</button>
   `.trim();
 
-
   return (
     <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
-
       <Helmet>
         <title>Transition Timing Function - Tailwind CSS Cheatsheet</title>
-        <meta name="description" content="Learn about the Transition Timing Function utility in Tailwind CSS. Examples and usage details for Transition Timing Function." />
+        <meta
+          name="description"
+          content="Learn about the Transition Timing Function utility in Tailwind CSS. Examples and usage details for Transition Timing Function."
+        />
       </Helmet>
-      <div className="space-y-8"> {/* 元のCard間のマージンを再現 */}
+      <div className="space-y-8">
+        {' '}
+        {/* 元のCard間のマージンを再現 */}
         {/* 概要 */}
         <section>
-          <h2 className="text-2xl font-semibold text-stone-800 dark:text-stone-200 mb-4">
-              概要
-          </h2>
+          <h2 className="text-2xl font-semibold text-stone-800 dark:text-stone-200 mb-4">概要</h2>
           <div className="text-stone-700 dark:text-stone-300 space-y-4">
             <p>
-              CSS トランジションの速度カーブ (イージング関数) を制御するためのユーティリティクラスです。トランジション中の変化の仕方を定義します。
+              CSS トランジションの速度カーブ (イージング関数)
+              を制御するためのユーティリティクラスです。トランジション中の変化の仕方を定義します。
             </p>
             <p>
               CSS の <code>transition-timing-function</code> プロパティを制御します。
             </p>
           </div>
         </section>
-
         {/* 基本的な使い方とパラメータ Card */}
         <section>
           <h2 className="text-2xl font-semibold text-stone-800 dark:text-stone-200 mb-4">
-              基本的な使い方とパラメータ
+            基本的な使い方とパラメータ
           </h2>
           <div className="text-stone-700 dark:text-stone-300 space-y-4">
             <p>
-              <code>ease-{'{keyword}'}</code> の形式でクラスを要素に適用します。<code>transition</code> または他の <code>transition-*</code> ユーティリティと一緒に使用します。
+              <code>ease-{'{keyword}'}</code> の形式でクラスを要素に適用します。
+              <code>transition</code> または他の <code>transition-*</code>{' '}
+              ユーティリティと一緒に使用します。
             </p>
             <ul className="list-disc list-inside space-y-1 pl-4">
-              <li><strong><code>ease-linear</code></strong>: 一定の速度で変化します。</li>
-              <li><strong><code>ease-in</code></strong>: ゆっくり始まり、徐々に加速します。</li>
-              <li><strong><code>ease-out</code></strong>: 速く始まり、徐々に減速します。</li>
-              <li><strong><code>ease-in-out</code></strong>: ゆっくり始まり、中間で加速し、ゆっくり終わります。これがデフォルトのイージング関数です。</li>
+              <li>
+                <strong>
+                  <code>ease-linear</code>
+                </strong>
+                : 一定の速度で変化します。
+              </li>
+              <li>
+                <strong>
+                  <code>ease-in</code>
+                </strong>
+                : ゆっくり始まり、徐々に加速します。
+              </li>
+              <li>
+                <strong>
+                  <code>ease-out</code>
+                </strong>
+                : 速く始まり、徐々に減速します。
+              </li>
+              <li>
+                <strong>
+                  <code>ease-in-out</code>
+                </strong>
+                :
+                ゆっくり始まり、中間で加速し、ゆっくり終わります。これがデフォルトのイージング関数です。
+              </li>
             </ul>
-             <p className="mt-4">
-              任意の値 (例: <code>ease-[cubic-bezier(0.1,0.7,1.0,0.1)]</code>) も使用可能です (Tailwind JIT モード)。カスタムの <code>cubic-bezier()</code> 関数を指定できます。
+            <p className="mt-4">
+              任意の値 (例: <code>ease-[cubic-bezier(0.1,0.7,1.0,0.1)]</code>) も使用可能です
+              (Tailwind JIT モード)。カスタムの <code>cubic-bezier()</code> 関数を指定できます。
             </p>
           </div>
         </section>
-
         {/* 各パラメータの例 Card */}
         <section>
-          <h2 className="text-xl font-semibold text-stone-800 dark:text-stone-200 mb-2">
-              使用例
-          </h2>
-           <p className="text-stone-600 dark:text-stone-400 mb-4">
-              異なるイージング関数の適用例。ホバーしてボタンの動きを確認してください。
+          <h2 className="text-xl font-semibold text-stone-800 dark:text-stone-200 mb-2">使用例</h2>
+          <p className="text-stone-600 dark:text-stone-400 mb-4">
+            異なるイージング関数の適用例。ホバーしてボタンの動きを確認してください。
           </p>
           <div className="space-y-6">
             {/* Standard Transition Timing Function */}
             <div>
-              <h3 className="font-semibold text-stone-700 dark:text-stone-300 mb-2">標準のイージング関数</h3>
+              <h3 className="font-semibold text-stone-700 dark:text-stone-300 mb-2">
+                標準のイージング関数
+              </h3>
               <pre className="bg-stone-200 dark:bg-stone-700 p-2 rounded overflow-x-auto text-sm text-stone-800 dark:text-stone-200 mb-2">
                 <code className="language-html">{transitionTimingFunctionHtml}</code>
               </pre>
@@ -139,7 +164,9 @@ const jaTitle = 'イージング関数';
             </div>
             {/* Arbitrary Transition Timing Function */}
             <div>
-              <h3 className="font-semibold text-stone-700 dark:text-stone-300 mb-2">任意の値 (cubic-bezier)</h3>
+              <h3 className="font-semibold text-stone-700 dark:text-stone-300 mb-2">
+                任意の値 (cubic-bezier)
+              </h3>
               <pre className="bg-stone-200 dark:bg-stone-700 p-2 rounded overflow-x-auto text-sm text-stone-800 dark:text-stone-200 mb-2">
                 <code className="language-html">{arbitraryTransitionTimingFunctionHtml}</code>
               </pre>
@@ -147,45 +174,51 @@ const jaTitle = 'イージング関数';
             </div>
           </div>
         </section>
-
         {/* レスポンシブと状態変化 Card */}
         <section>
           <h2 className="text-2xl font-semibold text-stone-800 dark:text-stone-200 mb-2">
-              レスポンシブと状態変化
+            レスポンシブと状態変化
           </h2>
           <p className="text-stone-600 dark:text-stone-400 mb-4">
-              イージング関数は通常、要素の基本スタイルとして定義されます。ブレークポイントで変更することは稀ですが可能です (例: <code>md:ease-in</code>)。
+            イージング関数は通常、要素の基本スタイルとして定義されます。ブレークポイントで変更することは稀ですが可能です
+            (例: <code>md:ease-in</code>)。
           </p>
           <div>
             <p className="text-stone-700 dark:text-stone-300 mb-4">
-              通常は <code>ease-in-out</code> を使用し、中程度の画面サイズ以上で <code>ease-linear</code> に変更する場合:
+              通常は <code>ease-in-out</code> を使用し、中程度の画面サイズ以上で{' '}
+              <code>ease-linear</code> に変更する場合:
             </p>
             {/* コード表示 */}
             <pre className="bg-stone-200 dark:bg-stone-700 p-4 rounded overflow-x-auto text-sm text-stone-800 dark:text-stone-200">
-              <code className="language-html">{`
+              <code className="language-html">
+                {`
 <button class="transition duration-500 ease-in-out md:ease-linear hover:translate-x-10 ...">
   Hover Me
 </button>
-              `.trim()}</code>
+              `.trim()}
+              </code>
             </pre>
           </div>
         </section>
-
         {/* 関連ユーティリティ Card */}
         <section>
           <h2 className="text-2xl font-semibold text-stone-800 dark:text-stone-200 mb-4">
-              関連ユーティリティ
+            関連ユーティリティ
           </h2>
           <div className="text-stone-700 dark:text-stone-300 space-y-4">
             <ul className="list-disc list-inside space-y-1 pl-4">
-               <li>
-                <code>transition-property-*</code> (<code>transition</code>, <code>transition-colors</code> など): どのプロパティをトランジションさせるかを指定します。
+              <li>
+                <code>transition-property-*</code> (<code>transition</code>,{' '}
+                <code>transition-colors</code> など):
+                どのプロパティをトランジションさせるかを指定します。
               </li>
               <li>
-                <code>transition-duration-*</code> (<code>duration-*</code>): トランジションの継続時間を設定します。
+                <code>transition-duration-*</code> (<code>duration-*</code>):
+                トランジションの継続時間を設定します。
               </li>
               <li>
-                <code>transition-delay-*</code> (<code>delay-*</code>): トランジションが開始するまでの遅延時間を設定します。
+                <code>transition-delay-*</code> (<code>delay-*</code>):
+                トランジションが開始するまでの遅延時間を設定します。
               </li>
             </ul>
           </div>

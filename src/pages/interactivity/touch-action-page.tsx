@@ -94,7 +94,7 @@ const TouchActionExample: React.FC = () => {
 const TouchActionPage: React.FC = () => {
   // ArticleLayout に渡すデータ
   const enTitle = 'Interactivity: Touch Action ';
-const jaTitle = 'タッチ操作';
+  const jaTitle = 'タッチ操作';
   const links = [
     {
       title: 'Tailwind CSS: Touch Action',
@@ -129,10 +129,12 @@ const jaTitle = 'タッチ操作';
 
   return (
     <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
-
       <Helmet>
         <title>Touch Action - Tailwind CSS Cheatsheet</title>
-        <meta name="description" content="Learn about the Touch Action utility in Tailwind CSS. Examples and usage details for Touch Action." />
+        <meta
+          name="description"
+          content="Learn about the Touch Action utility in Tailwind CSS. Examples and usage details for Touch Action."
+        />
       </Helmet>
       <div className="space-y-8">
         {' '}

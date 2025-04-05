@@ -136,11 +136,17 @@ const OverscrollBehaviorPage: React.FC = () => {
   ];
 
   return (
-    <ArticleLayout title="Layout: Overscroll Behavior (オーバースクロール挙動)" links={links}>
-
+    <ArticleLayout
+      enTitle="Layout: Overscroll Behavior"
+      jaTitle="オーバースクロール挙動"
+      links={links}
+    >
       <Helmet>
         <title>Layout: Overscroll Behavior - Tailwind CSS Cheatsheet</title>
-        <meta name="description" content="Learn about the Layout: Overscroll Behavior utility in Tailwind CSS. Examples and usage details for Layout: Overscroll Behavior." />
+        <meta
+          name="description"
+          content="Learn about the Layout: Overscroll Behavior utility in Tailwind CSS. Examples and usage details for Layout: Overscroll Behavior."
+        />
       </Helmet>
       {/* 概要 Card */}
       <Card>

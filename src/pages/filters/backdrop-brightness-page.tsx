@@ -81,7 +81,7 @@ const ArbitraryBackdropBrightnessExample: React.FC = () => {
 const BackdropBrightnessPage: React.FC = () => {
   // ArticleLayout に渡すデータ
   const enTitle = 'Filters: Backdrop Brightness ';
-const jaTitle = '背景の明るさ';
+  const jaTitle = '背景の明るさ';
   const links = [
     {
       title: 'Tailwind CSS: Backdrop Brightness',
@@ -107,10 +107,12 @@ const jaTitle = '背景の明るさ';
 
   return (
     <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
-
       <Helmet>
         <title>Backdrop Brightness - Tailwind CSS Cheatsheet</title>
-        <meta name="description" content="Learn about the Backdrop Brightness utility in Tailwind CSS. Examples and usage details for Backdrop Brightness." />
+        <meta
+          name="description"
+          content="Learn about the Backdrop Brightness utility in Tailwind CSS. Examples and usage details for Backdrop Brightness."
+        />
       </Helmet>
       <div className="space-y-8">
         {' '}

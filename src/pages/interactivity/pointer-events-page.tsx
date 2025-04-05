@@ -24,7 +24,7 @@ const PointerEventsExample: React.FC = () => {
 const PointerEventsPage: React.FC = () => {
   // ArticleLayout に渡すデータ
   const enTitle = 'Interactivity: Pointer Events ';
-const jaTitle = 'ポインターイベント';
+  const jaTitle = 'ポインターイベント';
   const links = [
     {
       title: 'Tailwind CSS: Pointer Events',
@@ -53,10 +53,12 @@ const jaTitle = 'ポインターイベント';
 
   return (
     <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
-
       <Helmet>
         <title>Pointer Events - Tailwind CSS Cheatsheet</title>
-        <meta name="description" content="Learn about the Pointer Events utility in Tailwind CSS. Examples and usage details for Pointer Events." />
+        <meta
+          name="description"
+          content="Learn about the Pointer Events utility in Tailwind CSS. Examples and usage details for Pointer Events."
+        />
       </Helmet>
       <div className="space-y-8">
         {' '}
