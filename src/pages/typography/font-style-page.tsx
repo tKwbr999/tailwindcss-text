@@ -20,12 +20,11 @@ const NotItalicExample: React.FC = () => {
   );
 };
 
-
 // ページコンポーネント本体
 const FontStylePage: React.FC = () => {
   // ArticleLayout に渡すデータ
   const enTitle = 'Typography: Font Style ';
-const jaTitle = 'フォントスタイル';
+  const jaTitle = 'フォントスタイル';
   const links = [
     {
       title: 'Tailwind CSS: Font Style',
@@ -41,20 +40,21 @@ const jaTitle = 'フォントスタイル';
   const italicHtml = `<p class="italic ...">...</p>`;
   const notItalicHtml = `<p class="not-italic ...">...</p>`;
 
-
   return (
     <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
-
       <Helmet>
         <title>Font Style - Tailwind CSS Cheatsheet</title>
-        <meta name="description" content="Learn about the Font Style utility in Tailwind CSS. Examples and usage details for Font Style." />
+        <meta
+          name="description"
+          content="Learn about the Font Style utility in Tailwind CSS. Examples and usage details for Font Style."
+        />
       </Helmet>
-      <div className="space-y-8"> {/* 元のCard間のマージンを再現 */}
+      <div className="space-y-8">
+        {' '}
+        {/* 元のCard間のマージンを再現 */}
         {/* 概要 */}
         <section>
-          <h2 className="text-2xl font-semibold text-stone-800 dark:text-stone-200 mb-4">
-              概要
-          </h2>
+          <h2 className="text-2xl font-semibold text-stone-800 dark:text-stone-200 mb-4">概要</h2>
           <div className="text-stone-700 dark:text-stone-300 space-y-4">
             <p>
               テキストをイタリック体で表示するか、通常のスタイルで表示するかを制御するためのユーティリティクラスです。
@@ -64,30 +64,35 @@ const jaTitle = 'フォントスタイル';
             </p>
           </div>
         </section>
-
         {/* 基本的な使い方とパラメータ Card */}
         <section>
           <h2 className="text-2xl font-semibold text-stone-800 dark:text-stone-200 mb-4">
-              基本的な使い方とパラメータ
+            基本的な使い方とパラメータ
           </h2>
           <div className="text-stone-700 dark:text-stone-300 space-y-4">
-            <p>
-              以下のクラスをテキストを含む要素または親要素に適用します。
-            </p>
+            <p>以下のクラスをテキストを含む要素または親要素に適用します。</p>
             <ul className="list-disc list-inside space-y-1 pl-4">
-              <li><strong><code>italic</code></strong>: テキストをイタリック体で表示します (<code>font-style: italic;</code>)。</li>
-              <li><strong><code>not-italic</code></strong>: テキストを通常のスタイルで表示します (<code>font-style: normal;</code>)。これは、親要素からイタリック体が継承されている場合に、それを打ち消すために使用します。</li>
+              <li>
+                <strong>
+                  <code>italic</code>
+                </strong>
+                : テキストをイタリック体で表示します (<code>font-style: italic;</code>)。
+              </li>
+              <li>
+                <strong>
+                  <code>not-italic</code>
+                </strong>
+                : テキストを通常のスタイルで表示します (<code>font-style: normal;</code>
+                )。これは、親要素からイタリック体が継承されている場合に、それを打ち消すために使用します。
+              </li>
             </ul>
           </div>
         </section>
-
         {/* 各パラメータの例 Card */}
         <section>
-          <h2 className="text-xl font-semibold text-stone-800 dark:text-stone-200 mb-2">
-              使用例
-          </h2>
-           <p className="text-stone-600 dark:text-stone-400 mb-4">
-              フォントスタイルユーティリティの適用例。
+          <h2 className="text-xl font-semibold text-stone-800 dark:text-stone-200 mb-2">使用例</h2>
+          <p className="text-stone-600 dark:text-stone-400 mb-4">
+            フォントスタイルユーティリティの適用例。
           </p>
           <div className="space-y-6">
             {/* Italic */}
@@ -104,61 +109,65 @@ const jaTitle = 'フォントスタイル';
               <pre className="bg-stone-200 dark:bg-stone-700 p-2 rounded overflow-x-auto text-sm text-stone-800 dark:text-stone-200 mb-2">
                 <code className="language-html">{notItalicHtml}</code>
               </pre>
-              <div className="italic text-gray-500 dark:text-gray-400"> {/* 親でイタリックを適用 */}
+              <div className="italic text-gray-500 dark:text-gray-400">
+                {' '}
+                {/* 親でイタリックを適用 */}
                 <NotItalicExample />
               </div>
             </div>
           </div>
         </section>
-
         {/* レスポンシブ Card */}
         <section>
           <h2 className="text-2xl font-semibold text-stone-800 dark:text-stone-200 mb-2">
-              レスポンシブ
+            レスポンシブ
           </h2>
           <p className="text-stone-600 dark:text-stone-400 mb-4">
-              ブレークポイントプレフィックス (<code>sm:</code>, <code>md:</code> など) を使って、特定の画面サイズでのみフォントスタイルを変更できます。
+            ブレークポイントプレフィックス (<code>sm:</code>, <code>md:</code> など)
+            を使って、特定の画面サイズでのみフォントスタイルを変更できます。
           </p>
           <div>
             <p className="text-stone-700 dark:text-stone-300 mb-4">
-              例えば、<code>not-italic md:italic</code> はデフォルトで通常スタイル、中程度の画面サイズ以上でイタリック体になります。
+              例えば、<code>not-italic md:italic</code>{' '}
+              はデフォルトで通常スタイル、中程度の画面サイズ以上でイタリック体になります。
             </p>
             {/* コード表示 */}
             <pre className="bg-stone-200 dark:bg-stone-700 p-4 rounded overflow-x-auto text-sm text-stone-800 dark:text-stone-200">
-              <code className="language-html">{`
+              <code className="language-html">
+                {`
 <p class="not-italic md:italic ...">
   Responsive Font Style
 </p>
-              `.trim()}</code>
+              `.trim()}
+              </code>
             </pre>
           </div>
         </section>
-
         {/* 注意点 Card */}
         <section>
-          <h2 className="text-2xl font-semibold text-stone-800 dark:text-stone-200 mb-4">
-              注意点
-          </h2>
+          <h2 className="text-2xl font-semibold text-stone-800 dark:text-stone-200 mb-4">注意点</h2>
           <div className="text-stone-700 dark:text-stone-300 space-y-4">
             <ul className="list-disc list-inside space-y-1 pl-4">
               <li>
-                多くのフォントには専用のイタリック体 (またはオブリーク体) が含まれています。フォントがイタリック体をサポートしていない場合、ブラウザは通常のフォントを傾けて表示しようとすることがあります (faux italic)。
+                多くのフォントには専用のイタリック体 (またはオブリーク体)
+                が含まれています。フォントがイタリック体をサポートしていない場合、ブラウザは通常のフォントを傾けて表示しようとすることがあります
+                (faux italic)。
               </li>
               <li>
-                <code>not-italic</code> は、主に親要素から継承された <code>italic</code> スタイルをリセットするために使用されます。
+                <code>not-italic</code> は、主に親要素から継承された <code>italic</code>{' '}
+                スタイルをリセットするために使用されます。
               </li>
             </ul>
           </div>
         </section>
-
         {/* 関連ユーティリティ Card */}
         <section>
           <h2 className="text-2xl font-semibold text-stone-800 dark:text-stone-200 mb-4">
-              関連ユーティリティ
+            関連ユーティリティ
           </h2>
           <div className="text-stone-700 dark:text-stone-300 space-y-4">
             <ul className="list-disc list-inside space-y-1 pl-4">
-               <li>
+              <li>
                 <code>font-family</code> (<code>font-*</code>): フォントファミリーを設定します。
               </li>
               <li>

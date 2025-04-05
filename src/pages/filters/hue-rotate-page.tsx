@@ -32,7 +32,7 @@ const ArbitraryHueRotateExample: React.FC = () => {
 const HueRotatePage: React.FC = () => {
   // ArticleLayout に渡すデータ
   const enTitle = 'Filters: Hue Rotate ';
-const jaTitle = '色相回転';
+  const jaTitle = '色相回転';
   const links = [
     {
       title: 'Tailwind CSS: Hue Rotate',
@@ -57,10 +57,12 @@ const jaTitle = '色相回転';
 
   return (
     <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
-
       <Helmet>
         <title>Hue Rotate - Tailwind CSS Cheatsheet</title>
-        <meta name="description" content="Learn about the Hue Rotate utility in Tailwind CSS. Examples and usage details for Hue Rotate." />
+        <meta
+          name="description"
+          content="Learn about the Hue Rotate utility in Tailwind CSS. Examples and usage details for Hue Rotate."
+        />
       </Helmet>
       <div className="space-y-8">
         {' '}

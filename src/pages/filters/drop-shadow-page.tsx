@@ -68,7 +68,7 @@ const ArbitraryDropShadowExample: React.FC = () => {
 const DropShadowPage: React.FC = () => {
   // ArticleLayout に渡すデータ
   const enTitle = 'Filters: Drop Shadow ';
-const jaTitle = 'ドロップシャドウ';
+  const jaTitle = 'ドロップシャドウ';
   const links = [
     {
       title: 'Tailwind CSS: Drop Shadow',
@@ -94,10 +94,12 @@ const jaTitle = 'ドロップシャドウ';
 
   return (
     <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
-
       <Helmet>
         <title>Drop Shadow - Tailwind CSS Cheatsheet</title>
-        <meta name="description" content="Learn about the Drop Shadow utility in Tailwind CSS. Examples and usage details for Drop Shadow." />
+        <meta
+          name="description"
+          content="Learn about the Drop Shadow utility in Tailwind CSS. Examples and usage details for Drop Shadow."
+        />
       </Helmet>
       <div className="space-y-8">
         {' '}

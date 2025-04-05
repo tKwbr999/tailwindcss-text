@@ -12,5 +12,6 @@
   "jsxSingleQuote": false,
   "htmlWhitespaceSensitivity": "css",
   "vueIndentScriptAndStyle": false,
-  "embeddedLanguageFormatting": "auto"
+  "embeddedLanguageFormatting": "auto",
+  "useTabs": false
 }

@@ -64,7 +64,7 @@ const ArbitraryRotateExample: React.FC = () => {
 const RotatePage: React.FC = () => {
   // ArticleLayout に渡すデータ
   const enTitle = 'Transforms: Rotate ';
-const jaTitle = '回転';
+  const jaTitle = '回転';
   const links = [
     {
       title: 'Tailwind CSS: Rotate',
@@ -89,10 +89,12 @@ const jaTitle = '回転';
 
   return (
     <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
-
       <Helmet>
         <title>Rotate - Tailwind CSS Cheatsheet</title>
-        <meta name="description" content="Learn about the Rotate utility in Tailwind CSS. Examples and usage details for Rotate." />
+        <meta
+          name="description"
+          content="Learn about the Rotate utility in Tailwind CSS. Examples and usage details for Rotate."
+        />
       </Helmet>
       <div className="space-y-8">
         {' '}

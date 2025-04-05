@@ -58,7 +58,7 @@ const ArbitraryAccentColorExample: React.FC = () => {
 const AccentColorPage: React.FC = () => {
   // ArticleLayout に渡すデータ
   const enTitle = 'Interactivity: Accent Color ';
-const jaTitle = 'アクセントカラー';
+  const jaTitle = 'アクセントカラー';
   const links = [
     {
       title: 'Tailwind CSS: Accent Color',
@@ -85,10 +85,12 @@ const jaTitle = 'アクセントカラー';
 
   return (
     <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
-
       <Helmet>
         <title>Accent Color - Tailwind CSS Cheatsheet</title>
-        <meta name="description" content="Learn about the Accent Color utility in Tailwind CSS. Examples and usage details for Accent Color." />
+        <meta
+          name="description"
+          content="Learn about the Accent Color utility in Tailwind CSS. Examples and usage details for Accent Color."
+        />
       </Helmet>
       <div className="space-y-8">
         {' '}

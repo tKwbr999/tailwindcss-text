@@ -39,7 +39,7 @@ const ArbitraryOutlineOffsetExample: React.FC = () => {
 const OutlineOffsetPage: React.FC = () => {
   // ArticleLayout に渡すデータ
   const enTitle = 'Borders: Outline Offset ';
-const jaTitle = 'アウトラインのオフセット';
+  const jaTitle = 'アウトラインのオフセット';
   const links = [
     {
       title: 'Tailwind CSS: Outline Offset',
@@ -63,10 +63,12 @@ const jaTitle = 'アウトラインのオフセット';
 
   return (
     <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
-
       <Helmet>
         <title>Outline Offset - Tailwind CSS Cheatsheet</title>
-        <meta name="description" content="Learn about the Outline Offset utility in Tailwind CSS. Examples and usage details for Outline Offset." />
+        <meta
+          name="description"
+          content="Learn about the Outline Offset utility in Tailwind CSS. Examples and usage details for Outline Offset."
+        />
       </Helmet>
       <div className="space-y-8">
         {' '}

@@ -51,7 +51,7 @@ const BgOriginContentExample: React.FC = () => {
 const BackgroundOriginPage: React.FC = () => {
   // ArticleLayout に渡すデータ
   const enTitle = 'Backgrounds: Background Origin ';
-const jaTitle = '背景画像の原点';
+  const jaTitle = '背景画像の原点';
   const links = [
     {
       title: 'Tailwind CSS: Background Origin',
@@ -70,10 +70,12 @@ const jaTitle = '背景画像の原点';
 
   return (
     <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
-
       <Helmet>
         <title>Background Origin - Tailwind CSS Cheatsheet</title>
-        <meta name="description" content="Learn about the Background Origin utility in Tailwind CSS. Examples and usage details for Background Origin." />
+        <meta
+          name="description"
+          content="Learn about the Background Origin utility in Tailwind CSS. Examples and usage details for Background Origin."
+        />
       </Helmet>
       <div className="space-y-8">
         {' '}

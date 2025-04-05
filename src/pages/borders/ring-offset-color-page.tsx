@@ -46,7 +46,7 @@ const ArbitraryRingOffsetColorExample: React.FC = () => {
 const RingOffsetColorPage: React.FC = () => {
   // ArticleLayout に渡すデータ
   const enTitle = 'Borders: Ring Offset Color ';
-const jaTitle = 'リングオフセットの色';
+  const jaTitle = 'リングオフセットの色';
   const links = [
     {
       title: 'Tailwind CSS: Ring Offset Color',
@@ -64,10 +64,12 @@ const jaTitle = 'リングオフセットの色';
 
   return (
     <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
-
       <Helmet>
         <title>Ring Offset Color - Tailwind CSS Cheatsheet</title>
-        <meta name="description" content="Learn about the Ring Offset Color utility in Tailwind CSS. Examples and usage details for Ring Offset Color." />
+        <meta
+          name="description"
+          content="Learn about the Ring Offset Color utility in Tailwind CSS. Examples and usage details for Ring Offset Color."
+        />
       </Helmet>
       <div className="space-y-8">
         {' '}

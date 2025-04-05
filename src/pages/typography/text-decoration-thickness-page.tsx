@@ -19,17 +19,14 @@ const DecorationThicknessExample: React.FC = () => {
 };
 
 const ArbitraryThicknessExample: React.FC = () => {
-    return (
-      <p className="underline decoration-[3px] text-lg">任意の値: decoration-[3px]</p>
-    );
-  };
-
+  return <p className="underline decoration-[3px] text-lg">任意の値: decoration-[3px]</p>;
+};
 
 // ページコンポーネント本体
 const TextDecorationThicknessPage: React.FC = () => {
   // ArticleLayout に渡すデータ
   const enTitle = 'Typography: Text Decoration Thickness ';
-const jaTitle = 'テキスト装飾線の太さ';
+  const jaTitle = 'テキスト装飾線の太さ';
   const links = [
     {
       title: 'Tailwind CSS: Text Decoration Thickness',
@@ -53,62 +50,99 @@ const jaTitle = 'テキスト装飾線の太さ';
   `.trim();
   const arbitraryThicknessHtml = `<p class="underline decoration-[3px] ...">...</p>`;
 
-
   return (
     <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
-
       <Helmet>
         <title>Text Decoration Thickness - Tailwind CSS Cheatsheet</title>
-        <meta name="description" content="Learn about the Text Decoration Thickness utility in Tailwind CSS. Examples and usage details for Text Decoration Thickness." />
+        <meta
+          name="description"
+          content="Learn about the Text Decoration Thickness utility in Tailwind CSS. Examples and usage details for Text Decoration Thickness."
+        />
       </Helmet>
-      <div className="space-y-8"> {/* 元のCard間のマージンを再現 */}
+      <div className="space-y-8">
+        {' '}
+        {/* 元のCard間のマージンを再現 */}
         {/* 概要 */}
         <section>
-          <h2 className="text-2xl font-semibold text-stone-800 dark:text-stone-200 mb-4">
-              概要
-          </h2>
+          <h2 className="text-2xl font-semibold text-stone-800 dark:text-stone-200 mb-4">概要</h2>
           <div className="text-stone-700 dark:text-stone-300 space-y-4">
             <p>
-              テキストに追加された装飾線 (下線、上線、取り消し線) の太さを設定するためのユーティリティクラスです。
+              テキストに追加された装飾線 (下線、上線、取り消し線)
+              の太さを設定するためのユーティリティクラスです。
             </p>
             <p>
               CSS の <code>text-decoration-thickness</code> プロパティを制御します。
             </p>
           </div>
         </section>
-
         {/* 基本的な使い方とパラメータ Card */}
         <section>
           <h2 className="text-2xl font-semibold text-stone-800 dark:text-stone-200 mb-4">
-              基本的な使い方とパラメータ
+            基本的な使い方とパラメータ
           </h2>
           <div className="text-stone-700 dark:text-stone-300 space-y-4">
             <p>
-              <code>decoration-{'{thickness}'}</code> の形式でクラスを要素に適用します。通常、<code>underline</code>, <code>overline</code>, <code>line-through</code> のいずれかと一緒に使用します。
+              <code>decoration-{'{thickness}'}</code> の形式でクラスを要素に適用します。通常、
+              <code>underline</code>, <code>overline</code>, <code>line-through</code>{' '}
+              のいずれかと一緒に使用します。
             </p>
             <p>デフォルトで用意されている太さ:</p>
             <ul className="list-disc list-inside space-y-1 pl-4">
-              <li><strong><code>decoration-auto</code></strong>: デフォルト。ブラウザが適切な太さを決定します。</li>
-              <li><strong><code>decoration-from-font</code></strong>: フォントファイルに推奨される太さがあればそれを使用します。サポートされていない場合は <code>auto</code> と同様の挙動になります。</li>
-              <li><strong><code>decoration-0</code></strong> (0px)</li>
-              <li><strong><code>decoration-1</code></strong> (1px)</li>
-              <li><strong><code>decoration-2</code></strong> (2px)</li>
-              <li><strong><code>decoration-4</code></strong> (4px)</li>
-              <li><strong><code>decoration-8</code></strong> (8px)</li>
+              <li>
+                <strong>
+                  <code>decoration-auto</code>
+                </strong>
+                : デフォルト。ブラウザが適切な太さを決定します。
+              </li>
+              <li>
+                <strong>
+                  <code>decoration-from-font</code>
+                </strong>
+                :
+                フォントファイルに推奨される太さがあればそれを使用します。サポートされていない場合は{' '}
+                <code>auto</code> と同様の挙動になります。
+              </li>
+              <li>
+                <strong>
+                  <code>decoration-0</code>
+                </strong>{' '}
+                (0px)
+              </li>
+              <li>
+                <strong>
+                  <code>decoration-1</code>
+                </strong>{' '}
+                (1px)
+              </li>
+              <li>
+                <strong>
+                  <code>decoration-2</code>
+                </strong>{' '}
+                (2px)
+              </li>
+              <li>
+                <strong>
+                  <code>decoration-4</code>
+                </strong>{' '}
+                (4px)
+              </li>
+              <li>
+                <strong>
+                  <code>decoration-8</code>
+                </strong>{' '}
+                (8px)
+              </li>
             </ul>
-             <p className="mt-4">
+            <p className="mt-4">
               任意の値 (例: <code>decoration-[3px]</code>) も使用可能です (Tailwind JIT モード)。
             </p>
           </div>
         </section>
-
         {/* 各パラメータの例 Card */}
         <section>
-          <h2 className="text-xl font-semibold text-stone-800 dark:text-stone-200 mb-2">
-              使用例
-          </h2>
-           <p className="text-stone-600 dark:text-stone-400 mb-4">
-              異なるテキスト装飾線の太さの適用例。
+          <h2 className="text-xl font-semibold text-stone-800 dark:text-stone-200 mb-2">使用例</h2>
+          <p className="text-stone-600 dark:text-stone-400 mb-4">
+            異なるテキスト装飾線の太さの適用例。
           </p>
           <div className="space-y-6">
             {/* Standard Thickness */}
@@ -129,14 +163,14 @@ const jaTitle = 'テキスト装飾線の太さ';
             </div>
           </div>
         </section>
-
         {/* レスポンシブと状態変化 Card */}
         <section>
           <h2 className="text-2xl font-semibold text-stone-800 dark:text-stone-200 mb-2">
-              レスポンシブと状態変化
+            レスポンシブと状態変化
           </h2>
           <p className="text-stone-600 dark:text-stone-400 mb-4">
-              ブレークポイント (<code>md:decoration-4</code> など) や状態 (<code>hover:decoration-2</code> など) に応じて装飾線の太さを変更できます。
+            ブレークポイント (<code>md:decoration-4</code> など) や状態 (
+            <code>hover:decoration-2</code> など) に応じて装飾線の太さを変更できます。
           </p>
           <div>
             <p className="text-stone-700 dark:text-stone-300 mb-4">
@@ -144,56 +178,64 @@ const jaTitle = 'テキスト装飾線の太さ';
             </p>
             {/* コード表示 */}
             <pre className="bg-stone-200 dark:bg-stone-700 p-4 rounded overflow-x-auto text-sm text-stone-800 dark:text-stone-200">
-              <code className="language-html">{`
+              <code className="language-html">
+                {`
 <a href="#" class="underline decoration-1 hover:decoration-4 ...">
   Hover for thicker underline
 </a>
-              `.trim()}</code>
+              `.trim()}
+              </code>
             </pre>
-             <a href="#" className="underline decoration-1 hover:decoration-4 text-blue-600 dark:text-blue-400">
+            <a
+              href="#"
+              className="underline decoration-1 hover:decoration-4 text-blue-600 dark:text-blue-400"
+            >
               Hover for thicker underline
             </a>
           </div>
         </section>
-
         {/* 注意点 Card */}
         <section>
-          <h2 className="text-2xl font-semibold text-stone-800 dark:text-stone-200 mb-4">
-              注意点
-          </h2>
+          <h2 className="text-2xl font-semibold text-stone-800 dark:text-stone-200 mb-4">注意点</h2>
           <div className="text-stone-700 dark:text-stone-300 space-y-4">
             <ul className="list-disc list-inside space-y-1 pl-4">
               <li>
-                装飾線の太さを変更するには、まず <code>underline</code>, <code>overline</code>, <code>line-through</code> のいずれかで装飾線自体を適用する必要があります。
+                装飾線の太さを変更するには、まず <code>underline</code>, <code>overline</code>,{' '}
+                <code>line-through</code> のいずれかで装飾線自体を適用する必要があります。
               </li>
               <li>
-                <code>decoration-from-font</code> の挙動は、使用するフォントがこの情報を持っているかに依存します。
+                <code>decoration-from-font</code>{' '}
+                の挙動は、使用するフォントがこの情報を持っているかに依存します。
               </li>
-               <li>
-                ブラウザのサポート状況を確認してください。<code>text-decoration-thickness</code> は比較的新しい CSS プロパティです。
+              <li>
+                ブラウザのサポート状況を確認してください。<code>text-decoration-thickness</code>{' '}
+                は比較的新しい CSS プロパティです。
               </li>
             </ul>
           </div>
         </section>
-
         {/* 関連ユーティリティ Card */}
         <section>
           <h2 className="text-2xl font-semibold text-stone-800 dark:text-stone-200 mb-4">
-              関連ユーティリティ
+            関連ユーティリティ
           </h2>
           <div className="text-stone-700 dark:text-stone-300 space-y-4">
             <ul className="list-disc list-inside space-y-1 pl-4">
-               <li>
-                <code>text-decoration</code> (<code>underline</code>, <code>overline</code>, <code>line-through</code>, <code>no-underline</code>): 装飾線の種類を設定します。
+              <li>
+                <code>text-decoration</code> (<code>underline</code>, <code>overline</code>,{' '}
+                <code>line-through</code>, <code>no-underline</code>): 装飾線の種類を設定します。
               </li>
               <li>
-                <code>text-decoration-color</code> (<code>decoration-*</code>): 装飾線の色を設定します。
+                <code>text-decoration-color</code> (<code>decoration-*</code>):
+                装飾線の色を設定します。
               </li>
               <li>
-                <code>text-decoration-style</code> (<code>decoration-solid</code>, <code>decoration-dashed</code> など): 装飾線のスタイルを設定します。
+                <code>text-decoration-style</code> (<code>decoration-solid</code>,{' '}
+                <code>decoration-dashed</code> など): 装飾線のスタイルを設定します。
               </li>
-               <li>
-                <code>text-underline-offset</code> (<code>underline-offset-*</code>): 下線のテキストからのオフセット距離を設定します。
+              <li>
+                <code>text-underline-offset</code> (<code>underline-offset-*</code>):
+                下線のテキストからのオフセット距離を設定します。
               </li>
             </ul>
           </div>

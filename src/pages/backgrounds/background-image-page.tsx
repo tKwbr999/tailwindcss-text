@@ -58,7 +58,7 @@ const ArbitraryGradientExample: React.FC = () => {
 const BackgroundImagePage: React.FC = () => {
   // ArticleLayout に渡すデータ
   const enTitle = 'Backgrounds: Background Image ';
-const jaTitle = '背景画像';
+  const jaTitle = '背景画像';
   const links = [
     {
       title: 'Tailwind CSS: Background Image',
@@ -85,10 +85,12 @@ const jaTitle = '背景画像';
 
   return (
     <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
-
       <Helmet>
         <title>Background Image - Tailwind CSS Cheatsheet</title>
-        <meta name="description" content="Learn about the Background Image utility in Tailwind CSS. Examples and usage details for Background Image." />
+        <meta
+          name="description"
+          content="Learn about the Background Image utility in Tailwind CSS. Examples and usage details for Background Image."
+        />
       </Helmet>
       <div className="space-y-8">
         {' '}

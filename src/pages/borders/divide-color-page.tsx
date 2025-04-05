@@ -56,7 +56,7 @@ const DivideCurrentInheritTransparentExample: React.FC = () => {
 const DivideColorPage: React.FC = () => {
   // ArticleLayout に渡すデータ
   const enTitle = 'Borders: Divide Color ';
-const jaTitle = '要素間の境界線の色';
+  const jaTitle = '要素間の境界線の色';
   const links = [
     {
       title: 'Tailwind CSS: Divide Color',
@@ -84,10 +84,12 @@ const jaTitle = '要素間の境界線の色';
 
   return (
     <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
-
       <Helmet>
         <title>Divide Color - Tailwind CSS Cheatsheet</title>
-        <meta name="description" content="Learn about the Divide Color utility in Tailwind CSS. Examples and usage details for Divide Color." />
+        <meta
+          name="description"
+          content="Learn about the Divide Color utility in Tailwind CSS. Examples and usage details for Divide Color."
+        />
       </Helmet>
       <div className="space-y-8">
         {' '}

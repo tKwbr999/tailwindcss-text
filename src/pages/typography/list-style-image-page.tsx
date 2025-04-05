@@ -34,7 +34,7 @@ const ListImageCustomExample: React.FC = () => {
 const ListStyleImagePage: React.FC = () => {
   // ArticleLayout に渡すデータ
   const enTitle = 'Typography: List Style Image ';
-const jaTitle = 'リストマーカー画像';
+  const jaTitle = 'リストマーカー画像';
   const links = [
     {
       title: 'Tailwind CSS: List Style Image (v3.3+)',
@@ -52,10 +52,12 @@ const jaTitle = 'リストマーカー画像';
 
   return (
     <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
-
       <Helmet>
         <title>List Style Image - Tailwind CSS Cheatsheet</title>
-        <meta name="description" content="Learn about the List Style Image utility in Tailwind CSS. Examples and usage details for List Style Image." />
+        <meta
+          name="description"
+          content="Learn about the List Style Image utility in Tailwind CSS. Examples and usage details for List Style Image."
+        />
       </Helmet>
       <div className="space-y-8">
         {' '}

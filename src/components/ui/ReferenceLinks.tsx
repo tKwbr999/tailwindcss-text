@@ -15,7 +15,9 @@ const ReferenceLinks: React.FC<ReferenceLinksProps> = ({ links }) => {
   }
 
   return (
-    <div className="flex items-center space-x-2 mb-4"> {/* z-10を追加して他の要素より手前に表示 */}
+    <div className="flex items-center space-x-2 mb-4">
+      {' '}
+      {/* z-10を追加して他の要素より手前に表示 */}
       <span className="text-xs text-gray-400 dark:text-gray-500">参照:</span>
       {links.map((link, index) => (
         <a

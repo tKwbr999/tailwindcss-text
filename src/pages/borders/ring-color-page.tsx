@@ -58,7 +58,7 @@ const ArbitraryRingColorExample: React.FC = () => {
 const RingColorPage: React.FC = () => {
   // ArticleLayout に渡すデータ
   const enTitle = 'Borders: Ring Color ';
-const jaTitle = 'リングの色';
+  const jaTitle = 'リングの色';
   const links = [
     {
       title: 'Tailwind CSS: Ring Color',
@@ -82,10 +82,12 @@ const jaTitle = 'リングの色';
 
   return (
     <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
-
       <Helmet>
         <title>Ring Color - Tailwind CSS Cheatsheet</title>
-        <meta name="description" content="Learn about the Ring Color utility in Tailwind CSS. Examples and usage details for Ring Color." />
+        <meta
+          name="description"
+          content="Learn about the Ring Color utility in Tailwind CSS. Examples and usage details for Ring Color."
+        />
       </Helmet>
       <div className="space-y-8">
         {' '}

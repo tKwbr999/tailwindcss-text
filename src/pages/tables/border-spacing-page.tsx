@@ -80,7 +80,7 @@ const ArbitraryBorderSpacingExample: React.FC = () => {
 const BorderSpacingPage: React.FC = () => {
   // ArticleLayout に渡すデータ
   const enTitle = 'Tables: Border Spacing ';
-const jaTitle = '境界線の間隔';
+  const jaTitle = '境界線の間隔';
   const links = [
     {
       title: 'Tailwind CSS: Border Spacing',
@@ -109,10 +109,12 @@ const jaTitle = '境界線の間隔';
 
   return (
     <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
-
       <Helmet>
         <title>Border Spacing - Tailwind CSS Cheatsheet</title>
-        <meta name="description" content="Learn about the Border Spacing utility in Tailwind CSS. Examples and usage details for Border Spacing." />
+        <meta
+          name="description"
+          content="Learn about the Border Spacing utility in Tailwind CSS. Examples and usage details for Border Spacing."
+        />
       </Helmet>
       <div className="space-y-8">
         {' '}

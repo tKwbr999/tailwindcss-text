@@ -41,7 +41,7 @@ const ArbitraryFillExample: React.FC = () => {
 const FillPage: React.FC = () => {
   // ArticleLayout に渡すデータ
   const enTitle = 'SVG: Fill ';
-const jaTitle = '塗りつぶし';
+  const jaTitle = '塗りつぶし';
   const links = [
     {
       title: 'Tailwind CSS: Fill',
@@ -69,10 +69,12 @@ const jaTitle = '塗りつぶし';
 
   return (
     <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
-
       <Helmet>
         <title>Fill - Tailwind CSS Cheatsheet</title>
-        <meta name="description" content="Learn about the Fill utility in Tailwind CSS. Examples and usage details for Fill." />
+        <meta
+          name="description"
+          content="Learn about the Fill utility in Tailwind CSS. Examples and usage details for Fill."
+        />
       </Helmet>
       <div className="space-y-8">
         {' '}

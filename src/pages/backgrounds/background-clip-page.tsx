@@ -52,7 +52,7 @@ const BgClipTextExample: React.FC = () => {
 const BackgroundClipPage: React.FC = () => {
   // ArticleLayout に渡すデータ
   const enTitle = 'Backgrounds: Background Clip ';
-const jaTitle = '背景のクリッピング領域';
+  const jaTitle = '背景のクリッピング領域';
   const links = [
     {
       title: 'Tailwind CSS: Background Clip',
@@ -72,10 +72,12 @@ const jaTitle = '背景のクリッピング領域';
 
   return (
     <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
-
       <Helmet>
         <title>Background Clip - Tailwind CSS Cheatsheet</title>
-        <meta name="description" content="Learn about the Background Clip utility in Tailwind CSS. Examples and usage details for Background Clip." />
+        <meta
+          name="description"
+          content="Learn about the Background Clip utility in Tailwind CSS. Examples and usage details for Background Clip."
+        />
       </Helmet>
       <div className="space-y-8">
         {' '}

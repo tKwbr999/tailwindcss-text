@@ -104,7 +104,7 @@ const NegativeMarginExample: React.FC = () => {
 const MarginPage: React.FC = () => {
   // ArticleLayout に渡すデータ
   const enTitle = 'Spacing: Margin ';
-const jaTitle = 'マージン';
+  const jaTitle = 'マージン';
   const links = [
     {
       title: 'Tailwind CSS: Margin',
@@ -127,10 +127,12 @@ const jaTitle = 'マージン';
 
   return (
     <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
-
       <Helmet>
         <title>Margin - Tailwind CSS Cheatsheet</title>
-        <meta name="description" content="Learn about the Margin utility in Tailwind CSS. Examples and usage details for Margin." />
+        <meta
+          name="description"
+          content="Learn about the Margin utility in Tailwind CSS. Examples and usage details for Margin."
+        />
       </Helmet>
       <div className="space-y-8">
         {' '}

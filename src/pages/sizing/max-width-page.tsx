@@ -72,7 +72,7 @@ const MaxWProseExample: React.FC = () => {
 const MaxWidthPage: React.FC = () => {
   // ArticleLayout に渡すデータ
   const enTitle = 'Sizing: Max-Width ';
-const jaTitle = '最大幅';
+  const jaTitle = '最大幅';
   const links = [
     {
       title: 'Tailwind CSS: Max-Width',
@@ -97,10 +97,12 @@ const jaTitle = '最大幅';
 
   return (
     <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
-
       <Helmet>
         <title>Max Width - Tailwind CSS Cheatsheet</title>
-        <meta name="description" content="Learn about the Max Width utility in Tailwind CSS. Examples and usage details for Max Width." />
+        <meta
+          name="description"
+          content="Learn about the Max Width utility in Tailwind CSS. Examples and usage details for Max Width."
+        />
       </Helmet>
       <div className="space-y-8">
         {' '}

@@ -82,7 +82,7 @@ const SizeFullExample: React.FC = () => {
 const SizePage: React.FC = () => {
   // ArticleLayout に渡すデータ
   const enTitle = 'Sizing: Size ';
-const jaTitle = 'サイズ - 幅と高さ';
+  const jaTitle = 'サイズ - 幅と高さ';
   const links = [
     {
       title: 'Tailwind CSS: Size (v3.3+)',
@@ -111,10 +111,12 @@ const jaTitle = 'サイズ - 幅と高さ';
 
   return (
     <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
-
       <Helmet>
         <title>Size - Tailwind CSS Cheatsheet</title>
-        <meta name="description" content="Learn about the Size utility in Tailwind CSS. Examples and usage details for Size." />
+        <meta
+          name="description"
+          content="Learn about the Size utility in Tailwind CSS. Examples and usage details for Size."
+        />
       </Helmet>
       <div className="space-y-8">
         {' '}

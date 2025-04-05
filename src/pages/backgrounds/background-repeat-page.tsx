@@ -100,7 +100,7 @@ const BgRepeatSpaceExample: React.FC = () => {
 const BackgroundRepeatPage: React.FC = () => {
   // ArticleLayout に渡すデータ
   const enTitle = 'Backgrounds: Background Repeat ';
-const jaTitle = '背景画像の繰り返し';
+  const jaTitle = '背景画像の繰り返し';
   const links = [
     {
       title: 'Tailwind CSS: Background Repeat',
@@ -122,10 +122,12 @@ const jaTitle = '背景画像の繰り返し';
 
   return (
     <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
-
       <Helmet>
         <title>Background Repeat - Tailwind CSS Cheatsheet</title>
-        <meta name="description" content="Learn about the Background Repeat utility in Tailwind CSS. Examples and usage details for Background Repeat." />
+        <meta
+          name="description"
+          content="Learn about the Background Repeat utility in Tailwind CSS. Examples and usage details for Background Repeat."
+        />
       </Helmet>
       <div className="space-y-8">
         {' '}

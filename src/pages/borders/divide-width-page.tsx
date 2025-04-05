@@ -53,7 +53,7 @@ const ArbitraryDivideWidthExample: React.FC = () => {
 const DivideWidthPage: React.FC = () => {
   // ArticleLayout に渡すデータ
   const enTitle = 'Borders: Divide Width ';
-const jaTitle = '要素間の境界線の太さ';
+  const jaTitle = '要素間の境界線の太さ';
   const links = [
     {
       title: 'Tailwind CSS: Divide Width',
@@ -91,10 +91,12 @@ const jaTitle = '要素間の境界線の太さ';
 
   return (
     <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
-
       <Helmet>
         <title>Divide Width - Tailwind CSS Cheatsheet</title>
-        <meta name="description" content="Learn about the Divide Width utility in Tailwind CSS. Examples and usage details for Divide Width." />
+        <meta
+          name="description"
+          content="Learn about the Divide Width utility in Tailwind CSS. Examples and usage details for Divide Width."
+        />
       </Helmet>
       <div className="space-y-8">
         {' '}

@@ -48,7 +48,7 @@ const OutlineDoubleExample: React.FC = () => {
 const OutlineStylePage: React.FC = () => {
   // ArticleLayout に渡すデータ
   const enTitle = 'Borders: Outline Style ';
-const jaTitle = 'アウトラインのスタイル';
+  const jaTitle = 'アウトラインのスタイル';
   const links = [
     {
       title: 'Tailwind CSS: Outline Style',
@@ -69,10 +69,12 @@ const jaTitle = 'アウトラインのスタイル';
 
   return (
     <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
-
       <Helmet>
         <title>Outline Style - Tailwind CSS Cheatsheet</title>
-        <meta name="description" content="Learn about the Outline Style utility in Tailwind CSS. Examples and usage details for Outline Style." />
+        <meta
+          name="description"
+          content="Learn about the Outline Style utility in Tailwind CSS. Examples and usage details for Outline Style."
+        />
       </Helmet>
       <div className="space-y-8">
         {' '}

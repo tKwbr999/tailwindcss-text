@@ -30,7 +30,7 @@ const ArbitrarySepiaExample: React.FC = () => {
 const SepiaPage: React.FC = () => {
   // ArticleLayout に渡すデータ
   const enTitle = 'Filters: Sepia ';
-const jaTitle = 'セピア';
+  const jaTitle = 'セピア';
   const links = [
     {
       title: 'Tailwind CSS: Sepia',
@@ -51,10 +51,12 @@ const jaTitle = 'セピア';
 
   return (
     <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
-
       <Helmet>
         <title>Sepia - Tailwind CSS Cheatsheet</title>
-        <meta name="description" content="Learn about the Sepia utility in Tailwind CSS. Examples and usage details for Sepia." />
+        <meta
+          name="description"
+          content="Learn about the Sepia utility in Tailwind CSS. Examples and usage details for Sepia."
+        />
       </Helmet>
       <div className="space-y-8">
         {' '}

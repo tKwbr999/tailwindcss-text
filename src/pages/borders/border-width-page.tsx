@@ -49,7 +49,7 @@ const ArbitraryWidthExample: React.FC = () => {
 const BorderWidthPage: React.FC = () => {
   // ArticleLayout に渡すデータ
   const enTitle = 'Borders: Border Width ';
-const jaTitle = '境界線の太さ';
+  const jaTitle = '境界線の太さ';
   const links = [
     {
       title: 'Tailwind CSS: Border Width',
@@ -86,10 +86,12 @@ const jaTitle = '境界線の太さ';
 
   return (
     <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
-
       <Helmet>
         <title>Border Width - Tailwind CSS Cheatsheet</title>
-        <meta name="description" content="Learn about the Border Width utility in Tailwind CSS. Examples and usage details for Border Width." />
+        <meta
+          name="description"
+          content="Learn about the Border Width utility in Tailwind CSS. Examples and usage details for Border Width."
+        />
       </Helmet>
       <div className="space-y-8">
         {' '}

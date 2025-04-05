@@ -34,7 +34,7 @@ const ArbitraryBrightnessExample: React.FC = () => {
 const BrightnessPage: React.FC = () => {
   // ArticleLayout に渡すデータ
   const enTitle = 'Filters: Brightness ';
-const jaTitle = '明るさ';
+  const jaTitle = '明るさ';
   const links = [
     {
       title: 'Tailwind CSS: Brightness',
@@ -58,10 +58,12 @@ const jaTitle = '明るさ';
 
   return (
     <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
-
       <Helmet>
         <title>Brightness - Tailwind CSS Cheatsheet</title>
-        <meta name="description" content="Learn about the Brightness utility in Tailwind CSS. Examples and usage details for Brightness." />
+        <meta
+          name="description"
+          content="Learn about the Brightness utility in Tailwind CSS. Examples and usage details for Brightness."
+        />
       </Helmet>
       <div className="space-y-8">
         {' '}

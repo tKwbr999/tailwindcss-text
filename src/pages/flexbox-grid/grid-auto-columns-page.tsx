@@ -62,7 +62,7 @@ const AutoColsFrExample: React.FC = () => {
 const GridAutoColumnsPage: React.FC = () => {
   // ArticleLayout に渡すデータ
   const enTitle = 'Flexbox & Grid: Grid Auto Columns ';
-const jaTitle = 'グリッド自動列サイズ';
+  const jaTitle = 'グリッド自動列サイズ';
   const links = [
     {
       title: 'Tailwind CSS: Grid Auto Columns',
@@ -106,10 +106,12 @@ const jaTitle = 'グリッド自動列サイズ';
 
   return (
     <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
-
       <Helmet>
         <title>Grid Auto Columns - Tailwind CSS Cheatsheet</title>
-        <meta name="description" content="Learn about the Grid Auto Columns utility in Tailwind CSS. Examples and usage details for Grid Auto Columns." />
+        <meta
+          name="description"
+          content="Learn about the Grid Auto Columns utility in Tailwind CSS. Examples and usage details for Grid Auto Columns."
+        />
       </Helmet>
       <div className="space-y-8">
         {' '}

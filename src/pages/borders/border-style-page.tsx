@@ -34,7 +34,7 @@ const BorderStyleExample: React.FC = () => {
 const BorderStylePage: React.FC = () => {
   // ArticleLayout に渡すデータ
   const enTitle = 'Borders: Border Style ';
-const jaTitle = '境界線のスタイル';
+  const jaTitle = '境界線のスタイル';
   const links = [
     {
       title: 'Tailwind CSS: Border Style',
@@ -58,10 +58,12 @@ const jaTitle = '境界線のスタイル';
 
   return (
     <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
-
       <Helmet>
         <title>Border Style - Tailwind CSS Cheatsheet</title>
-        <meta name="description" content="Learn about the Border Style utility in Tailwind CSS. Examples and usage details for Border Style." />
+        <meta
+          name="description"
+          content="Learn about the Border Style utility in Tailwind CSS. Examples and usage details for Border Style."
+        />
       </Helmet>
       <div className="space-y-8">
         {' '}

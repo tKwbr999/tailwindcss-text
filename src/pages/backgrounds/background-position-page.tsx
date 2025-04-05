@@ -86,7 +86,7 @@ const ArbitraryPositionExample: React.FC = () => {
 const BackgroundPositionPage: React.FC = () => {
   // ArticleLayout に渡すデータ
   const enTitle = 'Backgrounds: Background Position ';
-const jaTitle = '背景画像の位置';
+  const jaTitle = '背景画像の位置';
   const links = [
     {
       title: 'Tailwind CSS: Background Position',
@@ -109,10 +109,12 @@ const jaTitle = '背景画像の位置';
 
   return (
     <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
-
       <Helmet>
         <title>Background Position - Tailwind CSS Cheatsheet</title>
-        <meta name="description" content="Learn about the Background Position utility in Tailwind CSS. Examples and usage details for Background Position." />
+        <meta
+          name="description"
+          content="Learn about the Background Position utility in Tailwind CSS. Examples and usage details for Background Position."
+        />
       </Helmet>
       <div className="space-y-8">
         {' '}

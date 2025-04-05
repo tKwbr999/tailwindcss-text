@@ -68,7 +68,7 @@ const TableLayoutExample: React.FC = () => {
 const TableLayoutPage: React.FC = () => {
   // ArticleLayout に渡すデータ
   const enTitle = 'Tables: Table Layout ';
-const jaTitle = 'テーブルレイアウト';
+  const jaTitle = 'テーブルレイアウト';
   const links = [
     {
       title: 'Tailwind CSS: Table Layout',
@@ -119,10 +119,12 @@ const jaTitle = 'テーブルレイアウト';
 
   return (
     <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
-
       <Helmet>
         <title>Table Layout - Tailwind CSS Cheatsheet</title>
-        <meta name="description" content="Learn about the Table Layout utility in Tailwind CSS. Examples and usage details for Table Layout." />
+        <meta
+          name="description"
+          content="Learn about the Table Layout utility in Tailwind CSS. Examples and usage details for Table Layout."
+        />
       </Helmet>
       <div className="space-y-8">
         {' '}

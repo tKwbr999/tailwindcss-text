@@ -54,7 +54,7 @@ const FlexColReverseExample: React.FC = () => {
 const FlexDirectionPage: React.FC = () => {
   // ArticleLayout に渡すデータ
   const enTitle = 'Flexbox & Grid: Flex Direction ';
-const jaTitle = 'フレックス方向';
+  const jaTitle = 'フレックス方向';
   const links = [
     {
       title: 'Tailwind CSS: Flex Direction',
@@ -101,10 +101,12 @@ const jaTitle = 'フレックス方向';
 
   return (
     <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
-
       <Helmet>
         <title>Flex Direction - Tailwind CSS Cheatsheet</title>
-        <meta name="description" content="Learn about the Flex Direction utility in Tailwind CSS. Examples and usage details for Flex Direction." />
+        <meta
+          name="description"
+          content="Learn about the Flex Direction utility in Tailwind CSS. Examples and usage details for Flex Direction."
+        />
       </Helmet>
       <div className="space-y-8">
         {' '}

@@ -76,7 +76,7 @@ const ArbitraryBackdropOpacityExample: React.FC = () => {
 const BackdropOpacityPage: React.FC = () => {
   // ArticleLayout に渡すデータ
   const enTitle = 'Filters: Backdrop Opacity ';
-const jaTitle = '背景の不透明度';
+  const jaTitle = '背景の不透明度';
   const links = [
     {
       title: 'Tailwind CSS: Backdrop Opacity',
@@ -101,10 +101,12 @@ const jaTitle = '背景の不透明度';
 
   return (
     <ArticleLayout enTitle={enTitle} jaTitle={jaTitle} links={links}>
-
       <Helmet>
         <title>Backdrop Opacity - Tailwind CSS Cheatsheet</title>
-        <meta name="description" content="Learn about the Backdrop Opacity utility in Tailwind CSS. Examples and usage details for Backdrop Opacity." />
+        <meta
+          name="description"
+          content="Learn about the Backdrop Opacity utility in Tailwind CSS. Examples and usage details for Backdrop Opacity."
+        />
       </Helmet>
       <div className="space-y-8">
         {' '}
