@@ -46,6 +46,8 @@ function HomePage() {
         {/* メインタイトル: サイズ、太さ、色 */}
         <h1 className="text-3xl font-bold mb-8 text-center text-stone-900 dark:text-stone-100">
           Tailwind CSS Utilities
+          <br />
+          <span className="text-lg font-medium">日本語解説</span>
         </h1>
 
         {/* サイト内検索フォーム (コメントアウト)
