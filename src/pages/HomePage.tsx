@@ -28,29 +28,30 @@ function HomePage() {
   // };
 
   return (
-    // ページ全体に背景色とパディング (もう一段暗く)
-    <div className="bg-stone-200 dark:bg-stone-900 min-h-screen p-4 md:p-8 font-serif">
-      <Helmet>
-        {/* ページタイトル: App.tsx のデフォルトを上書き */}
-        <title>Tailwind CSS Utilities Cheatsheet - Home</title>
-        {/* ページの説明: App.tsx のデフォルトを上書き */}
-        <meta
-          name="description"
-          content="Explore all Tailwind CSS utility classes with examples. Find sections for layout, flexbox, grid, spacing, typography, and more."
-        />
-        {/* OGP タグは App.tsx でデフォルト設定 */}
-      </Helmet>{' '}
-      {/* bg-stone-100 を bg-stone-200 に変更 */}
-      {/* コンテナ: 最大幅、中央揃え、背景色、角丸、影 */}
-      <div className="max-w-3xl mx-auto bg-stone-100 dark:bg-stone-800 rounded-lg shadow-md p-6">
-        {/* メインタイトル: サイズ、太さ、色 */}
-        <h1 className="text-3xl font-bold mb-8 text-center text-stone-900 dark:text-stone-100">
-          Tailwind CSS Utilities
-          <br />
-          <span className="text-lg font-medium">日本語解説</span>
-        </h1>
+    <>
+      {/* Main Content */}
+      <div className="max-w-2xl mx-auto min-h-screen p-4 md:p-8 font-serif bg-stone-200 dark:bg-stone-900">
+        <Helmet>
+          {/* ページタイトル: App.tsx のデフォルトを上書き */}
+          <title>Tailwind CSS Utilities Cheatsheet - Home</title>
+          {/* ページの説明: App.tsx のデフォルトを上書き */}
+          <meta
+            name="description"
+            content="Explore all Tailwind CSS utility classes with examples. Find sections for layout, flexbox, grid, spacing, typography, and more."
+          />
+          {/* OGP タグは App.tsx でデフォルト設定 */}
+        </Helmet>{' '}
+        {/* bg-stone-100 を bg-stone-200 に変更 */}
+        {/* コンテナ: 最大幅、中央揃え、背景色、角丸、影 */}
+        <div className="max-w-2xl mx-auto bg-stone-100 dark:bg-stone-800 rounded-lg shadow-md p-6">
+          {/* メインタイトル: サイズ、太さ、色 */}
+          <h1 className="text-3xl font-bold mb-8 text-center text-stone-900 dark:text-stone-100">
+            Tailwind CSS Utilities
+            <br />
+            <span className="text-lg font-medium">日本語解説</span>
+          </h1>
 
-        {/* サイト内検索フォーム (コメントアウト)
+          {/* サイト内検索フォーム (コメントアウト)
         <div className="mb-2">
           <label htmlFor="site-search-input" className="sr-only">
             サイト内検索
@@ -78,37 +79,38 @@ function HomePage() {
           </div>
         </div>
         */}
-        {/* ドメイン未設定時のエラーメッセージ (コメントアウト)
+          {/* ドメイン未設定時のエラーメッセージ (コメントアウト)
         {domainError && (
           <p className="mb-6 text-sm text-red-600 dark:text-red-400">
             検索機能を利用するには、管理者によるサイトドメインの設定が必要です。(.env ファイルの VITE_SITE_DOMAIN)
           </p>
         )}
         */}
-        {sections.map(section => (
-          <section key={section.name} className="mb-8 last:mb-0">
-            {/* セクションタイトル: サイズ、太さ、色、下線 */}
-            <h2 className="text-2xl font-semibold mb-4 text-stone-800 dark:text-stone-200 border-b border-stone-300 dark:border-stone-700 pb-2">
-              {section.name}
-            </h2>
-            {/* リスト: Flexboxで横並び、折り返し、間隔調整 */}
-            <ul className="list-none flex flex-wrap gap-x-3 gap-y-1">
-              {section.articles.map(article => (
-                <li key={article.path}>
-                  <Link
-                    to={article.path}
-                    // リンク: 落ち着いた色、ホバー時の色と下線、トランジション、フォントの太さ
-                    className="text-stone-600 dark:text-stone-400 hover:text-stone-800 dark:hover:text-stone-200 hover:underline transition-colors duration-150 font-medium"
-                  >
-                    {article.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </section>
-        ))}
+          {sections.map(section => (
+            <section key={section.name} className="mb-8 last:mb-0">
+              {/* セクションタイトル: サイズ、太さ、色、下線 */}
+              <h2 className="text-2xl font-semibold mb-4 text-stone-800 dark:text-stone-200 border-b border-stone-300 dark:border-stone-700 pb-2">
+                {section.name}
+              </h2>
+              {/* リスト: Flexboxで横並び、折り返し、間隔調整 */}
+              <ul className="list-none flex flex-wrap gap-x-3 gap-y-1">
+                {section.articles.map(article => (
+                  <li key={article.path}>
+                    <Link
+                      to={article.path}
+                      // リンク: 落ち着いた色、ホバー時の色と下線、トランジション、フォントの太さ
+                      className="text-stone-600 dark:text-stone-400 hover:text-stone-800 dark:hover:text-stone-200 hover:underline transition-colors duration-150 font-medium"
+                    >
+                      {article.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          ))}
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 
